@@ -26,7 +26,7 @@ function randomQuestions() {
   let randomIndexes = []
   let index = 0
 
-  while (index < 2) {
+  while (index < questionsAll.length) {
     const randomIndex = Math.floor(Math.random() * questionsAll.length)
 
     if (!randomIndexes.includes(randomIndex)) {
