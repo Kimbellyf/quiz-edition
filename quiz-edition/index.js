@@ -26,7 +26,7 @@ function randomQuestions() {
   let randomIndexes = []
   let index = 0
 
-  while (index < 20) {
+  while (index < 2) {
     const randomIndex = Math.floor(Math.random() * questionsAll.length)
 
     if (!randomIndexes.includes(randomIndex)) {
@@ -45,8 +45,25 @@ function displayNextQuestion() {
     return finishGame()
   }
 
-  $questionText.textContent = questions[currentQuestionIndex].question
-  questions[currentQuestionIndex].answers.forEach(answer => {
+  let questaoDoMomento = questions[currentQuestionIndex]
+
+  $questionText.textContent = questaoDoMomento.question
+  if (questaoDoMomento.hasOwnProperty("typeQuestion")) {
+    questoesSelectOuDragDrop(questaoDoMomento);
+  } else {
+    questoesSimENao(questaoDoMomento)
+  }
+}
+
+function questoesSelectOuDragDrop(questao) {
+  if (questao.typeQuestion !== "dragdrop") {
+    addQuestionSelect(questao)
+  } else {
+    addQuestionDragDrop(questao)
+  }
+}
+function questoesSimENao(questao) {
+  questao.answers.forEach(answer => {
     const newAsnwer = document.createElement("button")
     newAsnwer.classList.add("button", "answer")
     newAsnwer.textContent = answer.text
@@ -57,6 +74,27 @@ function displayNextQuestion() {
 
     newAsnwer.addEventListener("click", selectAnswer)
   })
+}
+function addQuestionSelect(questao) {
+  questao.answers.forEach(answeroptions => {
+    const newAsnwer = document.createElement("select")
+    answeroptions.forEach(answer => {
+      const option = document.createElement("option")
+      option.textContent = answer.text
+
+      if (answer.correct) {
+        option.dataset.correct = answer.correct
+      }
+      newAsnwer.appendChild(newAsnwer)
+    });
+
+    $answersContainer.appendChild(newAsnwer)
+
+    newAsnwer.addEventListener("change", selectAnswer)
+  })
+}
+function addQuestionDragDrop(questao) {
+
 }
 
 function resetState() {
@@ -70,6 +108,12 @@ function resetState() {
 
 function selectAnswer(event) {
   const answerClicked = event.target
+
+  if (answerClicked.tagName === "SELECT") {
+    if (answerClicked.options[answerClicked.selectedIndex].dataset.correct) {
+      answerClicked.classList.add("correct")
+    }
+  }
 
   if (answerClicked.dataset.correct) {
     document.body.classList.add("correct")
