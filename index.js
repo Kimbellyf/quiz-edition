@@ -14,6 +14,21 @@ $nextQuestionButton.addEventListener("click", displayNextQuestion)
 
 let questions = []
 
+window.onload = function(){
+  var buttons = document.querySelectorAll('.button');
+
+  var maxWidth = 0;
+
+  for(var i=0; i< buttons.length; i++){
+    if(buttons[i].offsetWidth> maxWidth){
+      maxWidth = buttons[i].offsetWidth;
+    }
+  }
+  for(var i = 0; i<buttons.length; i++){
+    buttons[i].style.minWidth = maxWidthh + px;
+  }
+}
+
 function startGame() {
   $startGameButton.classList.add("hide")
   $questionsContainer.classList.remove("hide")
