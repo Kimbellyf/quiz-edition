@@ -1,5 +1,4 @@
 * {
-  padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: Helvetica, Arial, sans-serif;
@@ -71,8 +70,8 @@ body {
   border: 0;
   border-radius: 6px;
   min-height: 48px;
-  margin: 2px;
-  padding: 2 32px;
+  margin: 3px;
+  padding: 3 32px;
 
   transition: filter 0.1s;
 }
@@ -110,4 +109,14 @@ body {
   height: 35px;
   margin: 10px;
   border: 1px solid black;
+}
+.explication-container{
+  width:100%;
+}
+#btverresp{
+  width: 100%;
+  margin-bottom: 10px;
+}
+textarea{
+  text-align: center;
 }
