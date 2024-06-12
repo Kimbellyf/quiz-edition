@@ -51,6 +51,7 @@ function startGame() {
   $startGameButton.classList.add("hide")
   $elementSoStart.classList.add("hide")
   $questionsContainer.classList.remove("hide")
+  $textAnswerContainer.classList.remove("hide")
   randomQuestions()
   displayNextQuestion()
 }
@@ -136,6 +137,7 @@ function resetState() {
   document.body.removeAttribute("class")
   $nextQuestionButton.classList.add("hide")
   $textAnswerOrigin.classList.add("hide")
+  $textAnswerContainer.classList.add("hide")
 }
 
 function selectAnswer(event) {
