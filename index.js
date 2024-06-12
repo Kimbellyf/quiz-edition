@@ -6,6 +6,23 @@ const $questionText = document.querySelector(".question")
 const $answersContainer = document.querySelector(".answers-container")
 const $answers = document.querySelectorAll(".answer")
 
+
+const $textAnswerContainer = document.querySelector(".explication-container")
+const $textAnswerOrigin = document.querySelector(".textAAnswer")
+
+const $buttonVerResp = document.querySelector(".btresp")
+
+const $elementSoStart = document.querySelector(".controls-container-just-inicio")
+const $titlebancoquestoes = document.getElementById("titlebancoquestoes")
+
+const totalQuestoes = questionsAll.length;
+
+const $elementIntervaloQuestaoInicio = document.getElementById("intervaloinicio")
+const $elementIntervaloQuestaoFim = document.getElementById("intervalofim")
+
+let intervaloQuestaoInicio = 0
+let intervaloQuestaoFim = 0
+
 let currentQuestionIndex = 0
 let totalCorrect = 0
 
@@ -27,30 +44,24 @@ window.onload = function(){
   for(var i = 0; i<buttons.length; i++){
     buttons[i].style.minWidth = maxWidthh + px;
   }
+  $titlebancoquestoes.textContent = "Banco de questões da AZ-104 com " + totalQuestoes.toString() + " questões";
 }
 
 function startGame() {
   $startGameButton.classList.add("hide")
+  $elementSoStart.classList.add("hide")
   $questionsContainer.classList.remove("hide")
   randomQuestions()
   displayNextQuestion()
 }
 
 function randomQuestions() {
-  let randomQuestions = []
-  let randomIndexes = []
-  let index = 0
-
-  while (index < questionsAll.length) {
-    const randomIndex = Math.floor(Math.random() * questionsAll.length)
-
-    if (!randomIndexes.includes(randomIndex)) {
-      randomIndexes.push(randomIndex)
-      randomQuestions.push(questionsAll[randomIndex])
-      index++
-    }
-  }
-  questions = randomQuestions
+  getIntervaloQuestoes()
+  questions = questionsAll.slice(intervaloQuestaoInicio, intervaloQuestaoFim)
+}
+function getIntervaloQuestoes(){
+  intervaloQuestaoInicio = parseInt(document.getElementById('intervaloinicio').value)
+  intervaloQuestaoFim = parseInt(document.getElementById('intervalofim').value)
 }
 
 function displayNextQuestion() {
@@ -89,6 +100,8 @@ function questoesSimENao(questao) {
 
     newAsnwer.addEventListener("click", selectAnswer)
   })
+  $textAnswerOrigin.textContet = questao.explication
+  $buttonVerResp.classList.remove("hide")
 }
 function addQuestionSelect(questao) {
   questao.answers.forEach(answeroptions => {
@@ -111,6 +124,9 @@ function addQuestionSelect(questao) {
 function addQuestionDragDrop(questao) {
 
 }
+function showAnswer(){
+  $textAnswerOrigin.classList.remove("hide")
+}
 
 function resetState() {
   while ($answersContainer.firstChild) {
@@ -119,6 +135,7 @@ function resetState() {
 
   document.body.removeAttribute("class")
   $nextQuestionButton.classList.add("hide")
+  $textAnswerOrigin.classList.add("hide")
 }
 
 function selectAnswer(event) {
