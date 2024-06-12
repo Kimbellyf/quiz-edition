@@ -100,7 +100,7 @@ function questoesSimENao(questao) {
 
     newAsnwer.addEventListener("click", selectAnswer)
   })
-  $textAnswerOrigin.textContet = questao.explication
+  $textAnswerOrigin.textContent = questao.explication
   $buttonVerResp.classList.remove("hide")
 }
 function addQuestionSelect(questao) {
