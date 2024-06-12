@@ -42,7 +42,7 @@ window.onload = function(){
     }
   }
   for(var i = 0; i<buttons.length; i++){
-    buttons[i].style.minWidth = maxWidthh + px;
+    buttons[i].style.minWidth = maxWidth + px;
   }
   $titlebancoquestoes.textContent = "Banco de questões da AZ-104 com " + totalQuestoes.toString() + " questões";
 }
