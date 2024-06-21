@@ -31,17 +31,17 @@ $nextQuestionButton.addEventListener("click", displayNextQuestion)
 
 let questions = []
 
-window.onload = function(){
+window.onload = function () {
   var buttons = document.querySelectorAll('.button');
 
   var maxWidth = 0;
 
-  for(var i=0; i< buttons.length; i++){
-    if(buttons[i].offsetWidth> maxWidth){
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].offsetWidth > maxWidth) {
       maxWidth = buttons[i].offsetWidth;
     }
   }
-  for(var i = 0; i<buttons.length; i++){
+  for (var i = 0; i < buttons.length; i++) {
     buttons[i].style.minWidth = maxWidth + px;
   }
   $titlebancoquestoes.textContent = "Banco de questões da AZ-104 com " + totalQuestoes.toString() + " questões";
@@ -59,7 +59,7 @@ function randomQuestions() {
   getIntervaloQuestoes()
   questions = questionsAll.slice(intervaloQuestaoInicio, intervaloQuestaoFim)
 }
-function getIntervaloQuestoes(){
+function getIntervaloQuestoes() {
   intervaloQuestaoInicio = parseInt(document.getElementById('intervaloinicio').value)
   intervaloQuestaoFim = parseInt(document.getElementById('intervalofim').value)
 }
@@ -105,18 +105,28 @@ function questoesSimENao(questao) {
 }
 function addQuestionSelect(questao) {
   questao.answers.forEach(answeroptions => {
+    const textAnswer = document.createElement("p")
+    textAnswer.textContent = answeroptions.text;
+    $answersContainer.appendChild(textAnswer)
     const newAsnwer = document.createElement("select")
-    answeroptions.forEach(answer => {
+    answeroptions.options.forEach(answer => {
       const option = document.createElement("option")
       option.textContent = answer.text
 
       if (answer.correct) {
         option.dataset.correct = answer.correct
       }
-      newAsnwer.appendChild(newAsnwer)
-    });
+      newAsnwer.appendChild(option)
+    }
+
+    );
+    const textAnswerAfter = document.createElement("h5")
+    textAnswer.textContent = answeroptions.text;
+    $answersContainer.appendChild(textAnswerAfter)
 
     $answersContainer.appendChild(newAsnwer)
+    $textAnswerOrigin.textContent = questao.explication
+    $buttonVerResp.classList.remove("hide")
 
     newAsnwer.addEventListener("change", selectAnswer)
   })
@@ -124,7 +134,7 @@ function addQuestionSelect(questao) {
 function addQuestionDragDrop(questao) {
 
 }
-function showAnswer(){
+function showAnswer() {
   $textAnswerOrigin.classList.remove("hide")
 }
 
@@ -136,7 +146,7 @@ function resetState() {
   document.body.removeAttribute("class")
   $nextQuestionButton.classList.add("hide")
   $textAnswerOrigin.classList.add("hide")
-  
+
 }
 
 function selectAnswer(event) {
@@ -203,5 +213,4 @@ function finishGame() {
     </button>
   `
 }
-
 

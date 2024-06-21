@@ -16,28 +16,29 @@
 <body>
   <div class="container">
     <div class="questions-container hide">
-      <span class="question">Pergunta aqui?</span>
-      <div class="answers-container">
+      <span class="question" style="overflow: auto;">Pergunta aqui?</span>
+      <div class="answers-container" style="overflow: auto;">
         <button class="answer button">Resposta 1</button>
         <select class="selectAnswer button" name="cars" id="cars">
           <option value="voc"></option>
         </select>
       </div>
       <div class="explication-container">
-       <div>
-         <button id="btverresp" class="btresp" onclick="showAnswer()"> Ver resposta </button>
-       </div>
-       <div>
-         <textarea id="textAreaAnswerX" class="textAAnswer" style="width:100%" title="resposta explicada" rows="5"></textarea> 
-       </div>
+        <div>
+          <button id="btverresp" class="btresp" onclick="showAnswer()"> Ver resposta </button>
+        </div>
+        <div>
+          <textarea id="textAreaAnswerX" class="textAAnswer" style="width:100%" title="resposta explicada"
+            rows="5"></textarea>
+        </div>
       </div>
     </div>
     <div class="controls-container">
       <div class="controls-container-just-inicio">
         <h2 id="titlebancoquestoes"> Banco de questões </h2>
         <h2> Coloque o intervalo das questões a serem feitas </h2>
-        <input type="number" title="intervalo inicio" id="intervaloinicio"/>
-        <input type="number" title="intervalo inicio" id="intervalofim"/>
+        <input type="number" title="intervalo inicio" id="intervaloinicio" />
+        <input type="number" title="intervalo fim" id="intervalofim" />
         <button class="start-quiz button">Começar Quiz!</button>
       </div>
       <button class="next-question button hide">Próxima pergunta</button>

@@ -17,6 +17,10 @@ body {
   align-items: center;
 }
 
+div {
+  overflow: auto;
+}
+
 .container {
   background-color: #e5e5ef;
   width: 90%;
@@ -110,13 +114,20 @@ body {
   margin: 10px;
   border: 1px solid black;
 }
-.explication-container{
-  width:100%;
+
+.explication-container {
+  width: 100%;
 }
-#btverresp{
+
+#btverresp {
   width: 100%;
   margin-bottom: 10px;
 }
-textarea{
+
+textarea {
   text-align: center;
+}
+
+span.question {
+  overflow: auto;
 }
