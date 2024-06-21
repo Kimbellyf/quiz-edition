@@ -1,24 +1,25 @@
 //import  questions  from "./questions.js"
-const $startGameButton = document.querySelector(".start-quiz")
-const $nextQuestionButton = document.querySelector(".next-question")
-const $questionsContainer = document.querySelector(".questions-container")
-const $questionText = document.querySelector(".question")
-const $answersContainer = document.querySelector(".answers-container")
-const $answers = document.querySelectorAll(".answer")
+
+let $startGameButton = ".start-quiz";
+let $nextQuestionButton = 0;
+let $questionsContainer = 0;
+let $questionText = ".question";
+let $answersContainer = ".answers-container";
+let $answers = ".answer";
 
 
-const $textAnswerContainer = document.querySelector(".explication-container")
-const $textAnswerOrigin = document.querySelector(".textAAnswer")
+let $textAnswerContainer = ".explication-container";
+let $textAnswerOrigin = ".textAAnswer";
 
-const $buttonVerResp = document.querySelector(".btresp")
+let $buttonVerResp = ".btresp";
 
-const $elementSoStart = document.querySelector(".controls-container-just-inicio")
-const $titlebancoquestoes = document.getElementById("titlebancoquestoes")
+let $elementSoStart = ".controls-container-just-inicio";
+let $titlebancoquestoes = "titlebancoquestoes";
 
-const totalQuestoes = questionsAll.length;
+let totalQuestoes = questionsAll.length;
 
-const $elementIntervaloQuestaoInicio = document.getElementById("intervaloinicio")
-const $elementIntervaloQuestaoFim = document.getElementById("intervalofim")
+let $elementIntervaloQuestaoInicio = "intervaloinicio";
+let $elementIntervaloQuestaoFim = "intervalofim";
 
 let intervaloQuestaoInicio = 0
 let intervaloQuestaoFim = 0
@@ -30,13 +31,34 @@ let totalCorrect = 0
 let questions = []
 
 window.onload = function () {
+  $startGameButton = document.querySelector(".start-quiz")
+  $nextQuestionButton = document.querySelector(".next-question")
+  $questionsContainer = document.querySelector(".questions-container")
+  $questionText = document.querySelector(".question")
+  $answersContainer = document.querySelector(".answers-container")
+  $answers = document.querySelectorAll(".answer")
 
-}
-window.addEventListener("DOMContentLoaded", (event) => {
+
+  $textAnswerContainer = document.querySelector(".explication-container")
+  $textAnswerOrigin = document.querySelector(".textAAnswer")
+
+  $buttonVerResp = document.querySelector(".btresp")
+
+  $elementSoStart = document.querySelector(".controls-container-just-inicio")
+  $titlebancoquestoes = document.getElementById("titlebancoquestoes")
+
+  totalQuestoes = questionsAll.length;
+
+  $elementIntervaloQuestaoInicio = document.getElementById("intervaloinicio")
+  $elementIntervaloQuestaoFim = document.getElementById("intervalofim")
+
   $startGameButton.addEventListener("click", startGame)
   $nextQuestionButton.addEventListener("click", displayNextQuestion)
-  botoesAndOnLoad()
-});
+  botoesAndOnLoad();
+
+
+}
+
 function botoesAndOnLoad() {
   var buttons = document.querySelectorAll('.button');
 
