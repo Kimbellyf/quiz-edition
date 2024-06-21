@@ -26,23 +26,32 @@ let intervaloQuestaoFim = 0
 let currentQuestionIndex = 0
 let totalCorrect = 0
 
-$startGameButton.addEventListener("click", startGame)
-$nextQuestionButton.addEventListener("click", displayNextQuestion)
 
 let questions = []
 
 window.onload = function () {
+
+}
+window.addEventListener("DOMContentLoaded", (event) => {
+  $startGameButton.addEventListener("click", startGame)
+  $nextQuestionButton.addEventListener("click", displayNextQuestion)
+  botoesAndOnLoad()
+});
+function botoesAndOnLoad() {
   var buttons = document.querySelectorAll('.button');
 
   var maxWidth = 0;
 
   for (var i = 0; i < buttons.length; i++) {
-    if (buttons[i].offsetWidth > maxWidth) {
+    if ((buttons[i] && buttons[i].offsetWidthbuttons) && buttons[i].offsetWidthbuttons[i].offsetWidth > maxWidth) {
       maxWidth = buttons[i].offsetWidth;
     }
   }
+  if (!maxWidth | isNaN(maxWidth)) {
+    maxWidth = 50;
+  }
   for (var i = 0; i < buttons.length; i++) {
-    buttons[i].style.minWidth = maxWidth + px;
+    buttons[i].style.minWidth = maxWidth + 'px';
   }
   $titlebancoquestoes.textContent = "Banco de questões da AZ-104 com " + totalQuestoes.toString() + " questões";
 }
