@@ -10,6 +10,7 @@ let $answers = ".answer";
 
 let $textAnswerContainer = ".explication-container";
 let $textAnswerOrigin = ".textAAnswer";
+let $imgOuTabelaAnswer = "imgoutabelaAnswerX";
 
 let $buttonVerResp = ".btresp";
 
@@ -41,6 +42,7 @@ window.onload = function () {
 
   $textAnswerContainer = document.querySelector(".explication-container")
   $textAnswerOrigin = document.querySelector(".textAAnswer")
+  $imgOuTabelaAnswer = document.getElementById("imgoutabelaAnswerX");
 
   $buttonVerResp = document.querySelector(".btresp")
 
@@ -113,10 +115,12 @@ function displayNextQuestion() {
 }
 
 function questoesSelectOuDragDrop(questao) {
-  if (questao.typeQuestion !== "dragdrop") {
-    addQuestionSelect(questao)
-  } else {
+  if (questao.typeQuestion === "dragdrop") {
     addQuestionDragDrop(questao)
+  } else if (questao.typeQuestion === "multiplecheckboxyesorno") {
+    addMultipleCheckbox(questao)
+  } else {
+    addQuestionSelect(questao)
   }
 }
 function questoesSimENao(questao) {
@@ -163,10 +167,74 @@ function addQuestionSelect(questao) {
   })
 }
 function addQuestionDragDrop(questao) {
+  questao.answers.forEach(answeroptions => {
+    answeroptions.forEach(caixa => {
+      let divAnswerFinal = `<div id="divanswerdragdrop">`
+      if (caixa.function === 'origin') {
+        let divdrag = `<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">`
+        let optionnumber = 1;
+        caixa.options.forEach(option => {
+          const idh5 = "id='" + optionnumber + "'";
+          const textOption = `<h5 draggable="true" ondragstart="drag(event)"` + idh5 + ` style='margin:auto'>` + option.text + `</h5>`;
+          divdrag = divdrag + textOption;
+          optionnumber++;
+          if (option.correct) {
+            divAnswerFinal += `<h5>` + option.text + `</h5>`
+          }
+        })
+        divdrag = divdrag + `</div>`
+        divdragAllOptionsAnswer = `<div id="divalloptionsdragdrop"` + divdrag.slice(14) + `</div>`
+        divAnswerFinal += `</div>`
+        let answerDragDrop = divdragAllOptionsAnswer + divAnswerFinal;
+        $answersContainer.insertAdjacentHTML('beforeend', divdrag);
+        $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', answerDragDrop);
+      }
+      else {
+        let divdragrecept = `<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>`;
+        $answersContainer.insertAdjacentHTML('beforeend', divdragrecept);
+      }
+    })
+  });
+  $textAnswerOrigin.textContent = questao.explication
+  //trat abaixo pq n chama o selectanswer
+  $nextQuestionButton.classList.remove("hide")
+  currentQuestionIndex++
+
+}
+
+function addMultipleCheckbox(questao) {
+  let newAsnwerCheckBoxHtml = '';
+  questao.answers.forEach(answer => {
+    let optionNumber = 1;
+    newAsnwerCheckBoxHtml += `<br><div>` + answer.text;
+    if (answer.correct) {
+      //newAsnwer.dataset.correct = answer.correct
+      newAsnwerCheckBoxHtml += `<input type="radio" id="check` + optionNumber + `" value=true checked > Sim`
+      newAsnwerCheckBoxHtml += `<input type="radio" id="checkf` + optionNumber + `" value=false> Não`
+    } else {
+      newAsnwerCheckBoxHtml += `<input type="radio" id="check` + optionNumber + `" value=true > Sim`
+      newAsnwerCheckBoxHtml += `<input type="radio" id="checkf` + optionNumber + `" value=false checked> Não`
+    }
+    newAsnwerCheckBoxHtml += `</div>`;
+    //$answersContainer.appendChild(newAsnwer)
+
+    //newAsnwer.addEventListener("click", selectAnswer)
+    optionNumber++;
+  })
+  $answersContainer.insertAdjacentHTML('beforeend', newAsnwerCheckBoxHtml);
+  $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', newAsnwerCheckBoxHtml);
+  $textAnswerOrigin.textContent = questao.explication
+
+  $buttonVerResp.classList.remove("hide")
+  //trat abaixo pq n chama o selectanswer
+  $nextQuestionButton.classList.remove("hide")
+  currentQuestionIndex++
+
 
 }
 function showAnswer() {
   $textAnswerOrigin.classList.remove("hide")
+  $imgOuTabelaAnswer.classList.remove("hide")
 }
 
 function resetState() {
@@ -177,10 +245,28 @@ function resetState() {
   document.body.removeAttribute("class")
   $nextQuestionButton.classList.add("hide")
   $textAnswerOrigin.classList.add("hide")
+  $imgOuTabelaAnswer.classList.add("hide")
+  while ($imgOuTabelaAnswer.firstChild) {
+    $imgOuTabelaAnswer.removeChild($imgOuTabelaAnswer.firstChild)
+  }
 
+}
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 
 function selectAnswer(event) {
+  console.log(event)
   const answerClicked = event.target
 
   if (answerClicked.tagName === "SELECT") {
