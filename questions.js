@@ -1889,13 +1889,13 @@ const questionsAll = [
 
             'text': ' A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento de Blobs.\n',
             'correct': true
-        }, , {
+        }, {
             'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento da Tabela do Azure..\n',
             'correct': false
-        }, , {
+        } , {
             'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao Armazenamento de Arquivos do Azure.\n',
             'correct': false
-        },],
+        }],
 
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `Caixa 1: Sim -
@@ -1999,7 +1999,8 @@ const questionsAll = [
 
         {
             text: 'Compartilhar1(File1)',
-            options: [{
+            options: [
+            {
                 text: "somente armazenamento2",
                 correct: true
             }, {
