@@ -11,7 +11,6 @@ button {
 body {
   background-color: #121214;
   color: #312e2e;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,11 +108,36 @@ div {
 #div1,
 #div2 {
   float: left;
-  width: 100px;
-  height: 35px;
   margin: 10px;
   border: 1px solid black;
+  padding: 5%;
+  max-width: 90%;
+  max-height: 90%;
 }
+
+#divanswerdragdrop {
+  float: left;
+  width: auto;
+  height: auto;
+  margin: 10px;
+  border: 1px solid black;
+  padding: 5%;
+
+}
+
+#divalloptionsdragdrop {
+  float: left;
+  width: auto;
+  height: auto;
+  margin: 10px;
+  border: 1px solid black;
+  padding: 5%;
+}
+
+h5 {
+  padding-top: 15% !important;
+}
+
 
 .explication-container {
   width: 100%;
@@ -130,4 +154,8 @@ textarea {
 
 span.question {
   overflow: auto;
+}
+
+input[type="radio" i] {
+  max-width: 20px;
 }
