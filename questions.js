@@ -1817,7 +1817,332 @@ const questionsAll = [
             'correct': false
         },],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 3 tópico 10. 
+            Informações introdutórias
+            Estudo de caso -
+            Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que quiser para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve gerenciar seu tempo para garantir que consiga concluir todas as questões incluídas neste exame no tempo fornecido.
+            Para responder às questões incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exibições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada questão é independente das outras questões neste estudo de caso.
+            No final deste estudo de caso, uma tela de revisão será exibida. Esta tela permite que você revise suas respostas e faça alterações antes de passar para a próxima seção do exame. Depois de começar uma nova seção, você não pode retornar a esta seção.
+
+            Para iniciar o estudo de caso -
+            Para exibir a primeira questão neste estudo de caso, clique no botão Avançar. Use os botões no painel esquerdo para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para retornar à pergunta.
+
+            Visão geral -
+            A Contoso, Ltd. é uma empresa de manufatura que tem escritórios em todo o mundo. A Contoso trabalha com organizações parceiras para levar produtos ao mercado.
+            Os produtos da Contoso são fabricados usando arquivos de blueprint que a empresa cria e mantém.
+
+            Ambiente existente -
+            Atualmente, a Contoso usa vários tipos de servidores para operações comerciais, incluindo o seguinte:
+            Servidores de arquivos
+            Controladores de domínio
+            Servidores Microsoft SQL Server
+            Sua rede contém uma floresta do Active Directory chamada contoso.com. Todos os servidores e computadores clientes são associados ao Active Directory.
+            Você tem um aplicativo público chamado App1. O App1 é composto pelas três camadas a seguir:
+            Um banco de dados SQL
+            Um front-end da Web
+
+            Uma camada intermediária de processamento -
+
+            Cada camada é composta por cinco máquinas virtuais. Os usuários acessam o front-end da Web usando apenas HTTPS.
+
+            Requisitos -
+
+            Alterações planejadas -
+            A Contoso planeja implementar as seguintes alterações na infraestrutura:
+            Mover todas as camadas do App1 para o Azure.
+            Mova os arquivos de blueprint do produto existentes para o armazenamento do Azure Blob.
+            Crie um diretório híbrido para dar suporte a um futuro projeto de migração do Microsoft 365.
+
+            Requisitos técnicos -
+            A Contoso deve atender aos seguintes requisitos técnicos:
+            Mova todas as máquinas virtuais do App1 para o Azure.
+            Minimize o número de portas abertas entre as camadas do App1.
+            Garanta que todas as máquinas virtuais do App1 estejam protegidas por backups.
+            Copie os arquivos do blueprint para o Azure pela Internet.
+            Garanta que os arquivos do blueprint estejam armazenados na camada de armazenamento de arquivo morto.
+            Garanta que o acesso do parceiro aos arquivos do blueprint seja seguro e temporário.
+            Impeça que senhas de usuário ou hashes de senhas sejam armazenados no Azure.
+            Use armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais.
+            Garanta que, quando os usuários ingressarem dispositivos no Azure Active Directory (Azure AD), eles usem um telefone celular para verificar sua identidade.
+            Minimize o esforço administrativo sempre que possível.
+
+            Requisitos do usuário -
+            A Contoso identifica os seguintes requisitos para os usuários:
+            Garanta que somente usuários que fazem parte de um grupo chamado Pilot possam ingressar dispositivos no Azure AD.
+            Designe um novo usuário chamado Admin1 como o administrador de serviço para a assinatura do Azure.
+            O Admin1 deve receber alertas por e-mail sobre interrupções de serviço.
+            Certifique-se de que um novo usuário chamado User3 possa criar objetos de rede para a assinatura do Azure.
+            Pergunta
+            HOTSPOT -
+            Você precisa identificar os requisitos de armazenamento para a Contoso.
+            Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+            NOTA: Cada seleção correta vale um ponto.
+            Hot Area:
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': true,
+        'answers': [{
+
+            'text': ' A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento de Blobs.\n',
+            'correct': true
+        }, , {
+            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento da Tabela do Azure..\n',
+            'correct': false
+        }, , {
+            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao Armazenamento de Arquivos do Azure.\n',
+            'correct': false
+        },],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Caixa 1: Sim -
+            A Contoso está movendo os arquivos de blueprint do produto existente para o armazenamento de Blobs do Azure.
+            Use o armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais. Usamos Page Blobs para isso.
+
+            Caixa 2: Não -
+            Caixa 3: Não`
+    },
+
+    {
+        question: `Questão 1.Tópico 11. Informações introdutórias
+            Estudo de caso -
+            Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que quiser para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve gerenciar seu tempo para garantir que consiga concluir todas as questões incluídas neste exame no tempo fornecido.
+            Para responder às questões incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exibições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada questão é independente das outras questões neste estudo de caso.
+            No final deste estudo de caso, uma tela de revisão será exibida. Esta tela permite que você revise suas respostas e faça alterações antes de passar para a próxima seção do exame. Depois de começar uma nova seção, você não pode retornar a esta seção.
+
+            Para iniciar o estudo de caso -
+            Para exibir a primeira questão neste estudo de caso, clique no botão Avançar. Use os botões no painel esquerdo para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para retornar à pergunta.
+
+            Visão geral -
+
+            Visão geral -
+            A Contoso, Ltd. é uma empresa de consultoria que tem um escritório principal em Montreal e filiais em Seattle e Nova York.
+
+            Ambiente -
+
+            Ambiente existente -
+            A Contoso tem uma assinatura do Azure chamada Sub1 que está vinculada a um locatário do Azure Active Directory (Azure AD). A rede contém um domínio do Active Directory local
+            que sincroniza com o locatário do Azure AD.
+            O locatário do Azure AD contém os usuários mostrados na tabela a seguir.
+
+            O Sub1 contém dois grupos de recursos chamados RG1 e RG2 e as redes virtuais mostradas na tabela a seguir.
+
+            O Usuário1 gerencia os recursos no RG1. O Usuário4 gerencia os recursos no RG2.
+            O Sub1 contém máquinas virtuais que executam o Windows Server 2019, conforme mostrado na tabela a seguir .
+
+            Nenhum grupo de segurança de rede (NSGs) está associado às interfaces de rede ou às sub-redes.
+            O Sub1 contém as contas de armazenamento mostradas na tabela a seguir.
+
+
+            Requisitos -
+
+            Alterações planejadas -
+            A Contoso planeja implementar as seguintes alterações:
+            Crie um contêiner de blob chamado container1 e um compartilhamento de arquivo chamado share1 que usará a camada de armazenamento Cool.
+            Crie uma conta de armazenamento chamada storage5 e configure a replicação de armazenamento para o serviço Blob.
+            Crie um NSG chamado NSG1 que terá as regras de segurança de entrada personalizadas mostradas na tabela a seguir.
+
+            Associe NSG1 à interface de rede da VM1.
+            Crie um NSG chamado NSG2 que terá as regras de segurança de saída personalizadas mostradas na tabela a seguir.
+
+
+            Associe NSG2 à VNET1/Subnet2.
+
+            Requisitos técnicos -
+            A Contoso deve atender aos seguintes requisitos técnicos:
+            Crie container1 e share1.
+            Use o princípio do menor privilégio.
+            Crie um grupo de segurança do Azure AD chamado Group4.
+            Faça backup dos compartilhamentos de arquivos e máquinas virtuais do Azure usando o Backup do Azure.
+            Dispare um alerta se a VM1 ou a VM2 tiver menos de 20 GB de espaço livre no volume C.
+            Habilite o User1 para criar definições de política do Azure e o User2 para atribuir políticas do Azure ao RG1.
+            Crie um Basic Azure Load Balancer interno chamado LB1 e conecte o load balancer à VNET1/Subnet1
+            Habilite o log de fluxo para tráfego IP da VM5 e retenha os logs de fluxo por um período de oito meses.
+            Sempre que possível, conceda ao Group4 permissões somente leitura de controle de acesso baseado em função do Azure (Azure RBAC) para os compartilhamentos de arquivos do Azure.
+            Pergunta
+            HOTSPOT -
+            Você precisa criar container1 e share1.
+            Quais contas de armazenamento você deve usar para cada recurso? Para responder, selecione as opções apropriadas na área de resposta.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+            Área de Hot:
+            `,
+        number: 1,
+        page: 540,
+        studyCase: true,
+
+        answers: [{
+            text: 'contêiner1:',
+            options: [{
+                text: "Somente armazenamento2",
+                correct: false
+            }, {
+                text: "somente armazenamento2 e armazenamento3",
+                correct: true
+            }, {
+                text: "somente armazenamento1, armazenamento2 e armazenamento3",
+                correct: false
+            },
+            {
+                text: "somente armazenamento2, armazenamento3 e armazenamento4",
+                correct: false
+            },
+            {
+                text: "armazenamento 1, armazenamento2, armazenamento3 e armazenamento4",
+                correct: false
+            }
+            ]
+        },
+
+
+        {
+            text: 'Compartilhar1(File1)',
+            options: [{
+                text: "somente armazenamento2",
+                correct: true
+            }, {
+                text: "armazenamento4 apenas",
+                correct: false
+            }, {
+                text: "somente armazenamento2 e armazenamento4",
+                correct: false
+            },
+            {
+                text: "somente armazenamento1, armazenamento2 e armazenamento4",
+                correct: false
+            },
+            {
+                text: "armazenamento1, armazenamento2, armazenamento3 e armazenamento4",
+                correct: false
+            },
+
+            ]
+        }
+        ],
+        typeQuestion: 'select',
+        caseStudy: true,
+        explication: `Referência:
+            https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview.
+            Há discordância nos comentários
+        `
+    },
+
+    {
+        question: `Questão 2. Informações introdutórias
+            Estudo de caso -
+            Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que quiser para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve gerenciar seu tempo para garantir que consiga concluir todas as questões incluídas neste exame no tempo fornecido.
+            Para responder às questões incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exibições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada questão é independente das outras questões neste estudo de caso.
+            No final deste estudo de caso, uma tela de revisão será exibida. Esta tela permite que você revise suas respostas e faça alterações antes de passar para a próxima seção do exame. Depois de começar uma nova seção, você não pode retornar a esta seção.
+
+            Para iniciar o estudo de caso -
+            Para exibir a primeira questão neste estudo de caso, clique no botão Avançar. Use os botões no painel esquerdo para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para retornar à pergunta.
+
+            Visão geral -
+
+            Visão geral -
+            A Contoso, Ltd. é uma empresa de consultoria que tem um escritório principal em Montreal e filiais em Seattle e Nova York.
+
+            Ambiente -
+
+            Ambiente existente -
+            A Contoso tem uma assinatura do Azure chamada Sub1 que está vinculada a um locatário do Azure Active Directory (Azure AD). A rede contém um domínio do Active Directory local
+            que sincroniza com o locatário do Azure AD.
+            O locatário do Azure AD contém os usuários mostrados na tabela a seguir.
+
+            O Sub1 contém dois grupos de recursos chamados RG1 e RG2 e as redes virtuais mostradas na tabela a seguir.
+
+            O Usuário1 gerencia os recursos no RG1. O Usuário4 gerencia os recursos no RG2.
+            O Sub1 contém máquinas virtuais que executam o Windows Server 2019, conforme mostrado na tabela a seguir .
+
+            Nenhum grupo de segurança de rede (NSGs) está associado às interfaces de rede ou às sub-redes.
+            O Sub1 contém as contas de armazenamento mostradas na tabela a seguir.
+
+
+            Requisitos -
+
+            Alterações planejadas -
+            A Contoso planeja implementar as seguintes alterações:
+            Crie um contêiner de blob chamado container1 e um compartilhamento de arquivo chamado share1 que usará a camada de armazenamento Cool.
+            Crie uma conta de armazenamento chamada storage5 e configure a replicação de armazenamento para o serviço Blob.
+            Crie um NSG chamado NSG1 que terá as regras de segurança de entrada personalizadas mostradas na tabela a seguir.
+
+            Associe NSG1 à interface de rede da VM1.
+            Crie um NSG chamado NSG2 que terá as regras de segurança de saída personalizadas mostradas na tabela a seguir.
+
+
+            Associe NSG2 à VNET1/Subnet2.
+
+            Requisitos técnicos -
+            A Contoso deve atender aos seguintes requisitos técnicos:
+            Crie container1 e share1.
+            Use o princípio do menor privilégio.
+            Crie um grupo de segurança do Azure AD chamado Group4.
+            Faça backup dos compartilhamentos de arquivos e máquinas virtuais do Azure usando o Backup do Azure.
+            Dispare um alerta se a VM1 ou a VM2 tiver menos de 20 GB de espaço livre no volume C.
+            Habilite o User1 para criar definições de política do Azure e o User2 para atribuir políticas do Azure ao RG1.
+            Crie um Basic Azure Load Balancer interno chamado LB1 e conecte o load balancer à VNET1/Subnet1
+            Habilite o log de fluxo para tráfego IP da VM5 e retenha os logs de fluxo por um período de oito meses.
+            Sempre que possível, conceda ao Group4 permissões somente leitura de controle de acesso baseado em função do Azure (Azure RBAC) para os compartilhamentos de arquivos do Azure.
+            Pergunta
+            HOTSPOT -
+            Você precisa criar um storage5. A solução deve suportar as alterações planejadas.
+            Qual tipo de conta de armazenamento você deve usar e qual conta você deve configurar como a conta de armazenamento de destino? Para responder, selecione as opções apropriadas na área de resposta.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+            Hot Area:
+            `,
+        number: 1,
+        page: 540,
+        studyCase: true,
+
+
+        answers: [{
+            text: 'Tipo de conta:',
+            options: [{
+                text: "Armazenamento de Blobs",
+                correct: false
+            }, {
+                text: "BlockBlobStorage",
+                correct: false
+            }, {
+                text: "Armazenamento (uso geral v1)",
+                correct: false
+            },
+            {
+                text: "StorageV2 (uso geral v2)",
+                correct: true
+            }
+            ]
+        },
+
+        {
+            text: 'Destino',
+            options: [{
+                text: "Armazenamento1",
+                correct: false
+            }, {
+                text: "Armazenamento2",
+                correct: true
+            }, {
+                text: "Armazenamento3",
+                correct: false
+            },
+            {
+                text: "Armazenamento4",
+                correct: false
+            }
+            ]
+        }
+        ],
+        typeQuestion: 'select',
+        caseStudy: true,
+        explication: `https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-configure?tabs=portal: 
+        `
+    },
+
+
+    {
         'question': '1\nVocê tem uma assinatura do Azure chamada Subscription1 que contém as contas de armazenamento mostradas na tabela a seguir:\nVocê planeja usar o serviço Azure Import/Export para exportar dados da Assinatura1.\nVocê precisa identificar qual conta de armazenamento pode ser usada para exportar os dados.\nO que você deve identificar?\n',
         'number': '',
         'page': 114,
@@ -6234,7 +6559,122 @@ const questionsAll = [
             'correct': false
         },],
         'explication': 'C\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal\nDistribuição de votos da comunidade\nB (89%) 11%'
-    }, {
+    },
+
+    {
+        question: `Questão 1. Tópico 14. Informações introdutórias
+            Estudo de caso -
+            Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que quiser para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve gerenciar seu tempo para garantir que consiga concluir todas as questões incluídas neste exame no tempo fornecido.
+            Para responder às questões incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exibições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada questão é independente das outras questões neste estudo de caso.
+            No final deste estudo de caso, uma tela de revisão será exibida. Esta tela permite que você revise suas respostas e faça alterações antes de passar para a próxima seção do exame. Depois de começar uma nova seção, você não pode retornar a esta seção.
+
+            Para iniciar o estudo de caso -
+            Para exibir a primeira questão neste estudo de caso, clique no botão Avançar. Use os botões no painel esquerdo para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para retornar à pergunta.
+
+            Visão geral -
+            A Contoso, Ltd. é uma empresa de manufatura que tem escritórios em todo o mundo. A Contoso trabalha com organizações parceiras para levar produtos ao mercado.
+            Os produtos da Contoso são fabricados usando arquivos de blueprint que a empresa cria e mantém.
+
+            Ambiente existente -
+            Atualmente, a Contoso usa vários tipos de servidores para operações comerciais, incluindo o seguinte:
+            Servidores de arquivos
+            Controladores de domínio
+            Servidores Microsoft SQL Server
+            Sua rede contém uma floresta do Active Directory chamada contoso.com. Todos os servidores e computadores clientes são associados ao Active Directory.
+            Você tem um aplicativo público chamado App1. O App1 é composto pelas três camadas a seguir:
+            Um banco de dados SQL
+            Um front-end da Web
+
+            Uma camada intermediária de processamento -
+
+            Cada camada é composta por cinco máquinas virtuais. Os usuários acessam o front-end da Web usando apenas HTTPS.
+
+            Requisitos -
+
+            Alterações planejadas -
+            A Contoso planeja implementar as seguintes alterações na infraestrutura:
+            Mover todas as camadas do App1 para o Azure.
+            Mova os arquivos de blueprint do produto existentes para o armazenamento do Azure Blob.
+            Crie um diretório híbrido para dar suporte a um futuro projeto de migração do Microsoft 365.
+
+            Requisitos técnicos -
+            A Contoso deve atender aos seguintes requisitos técnicos:
+            Mova todas as máquinas virtuais do App1 para o Azure.
+            Minimize o número de portas abertas entre as camadas do App1.
+            Garanta que todas as máquinas virtuais do App1 estejam protegidas por backups.
+            Copie os arquivos do blueprint para o Azure pela Internet.
+            Garanta que os arquivos do blueprint estejam armazenados na camada de armazenamento de arquivo morto.
+            Garanta que o acesso do parceiro aos arquivos do blueprint seja seguro e temporário.
+            Impeça que senhas de usuário ou hashes de senhas sejam armazenados no Azure.
+            Use armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais.
+            Garanta que, quando os usuários ingressarem dispositivos no Azure Active Directory (Azure AD), eles usem um telefone celular para verificar sua identidade.
+            Minimize o esforço administrativo sempre que possível.
+
+            Requisitos do usuário -
+            A Contoso identifica os seguintes requisitos para os usuários:
+            Garanta que somente usuários que fazem parte de um grupo chamado Pilot possam ingressar dispositivos no Azure AD.
+            Designe um novo usuário chamado Admin1 como o administrador de serviço para a assinatura do Azure.
+            O Admin1 deve receber alertas por e-mail sobre interrupções de serviço.
+            Certifique-se de que um novo usuário chamado User3 possa criar objetos de rede para a assinatura do Azure.
+            Pergunta
+            HOTSPOT -
+            Você precisa recomendar uma solução para o App1. A solução deve atender aos requisitos técnicos.
+            O que você deve incluir na recomendação? Para responder, selecione as opções apropriadas na área de resposta.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+            Área Hot:
+            `,
+        number: 1,
+        page: 540,
+        studyCase: true,
+
+
+        answers: [{
+            text: 'Número de redes virtuais',
+            options: [{
+                text: "1",
+                correct: true
+            }, {
+                text: "2",
+                correct: false
+            }, {
+                text: "3",
+                correct: false
+            }]
+        },
+
+        {
+            text: 'Número de sub-redes por rede virtual',
+            options: [{
+                text: "1",
+                correct: fale
+            }, {
+                text: "2",
+                correct: false
+            }, {
+                text: "3",
+                correct: true
+            }
+            ]
+        }
+        ],
+        typeQuestion: 'select',
+        explication: `Comentário mais votado: Conforme os requisitos: 
+        - Você tem um aplicativo público chamado App1. 
+        O App1 é composto pelas três camadas a seguir: Um banco de dados SQL,
+         Um front-end da Web e Uma camada intermediária de processamento. 
+         Cada camada é composta por cinco máquinas virtuais. 
+         Os usuários acessam o front-end da Web usando apenas HTTPS. 
+         - Mova todas as máquinas virtuais do App1 para o Azure. 
+         - Minimize o número de portas abertas entre as camadas do App1.
+          Caixa 1: 1 1 VNET e siga a arquitetura do aplicativo N-tier. 
+          Caixa 2: 3 3 sub-redes (1 sub-rede para cada camada do App1).
+           As camadas podem se comunicar entre si, porque estão dentro da mesma VNET. Claro que você precisaria de NSGs adicionais para restringir o tráfego. Referência: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/n-tier/n-tier-sql-server
+        `
+    },
+
+
+
+    {
         'question': 'Requisitos do usuário -\nA Contoso identifica os seguintes requisitos para usuários:\nCertifique-se de que apenas os utilizadores que fazem parte de um grupo chamado Piloto podem aderir dispositivos ao Azure AD.\nDesigne um novo usuário chamado Admin1 como administrador de serviço da assinatura do Azure.\nAdmin1 deve receber alertas por email sobre interrupções de serviço.\nCertifique-se de que um novo utilizador chamado User3 pode criar objetos de rede para a subscrição do Azure.\nPergunta\nVocê está planejando a mudança do App1 para o Azure.\nVocê cria um grupo de segurança de rede (NSG).\nVocê precisa recomendar uma solução para fornecer aos usuários acesso ao App1.\nO que você deve recomendar?\n',
         'number': '',
         'page': 545,
@@ -6373,7 +6813,7 @@ const questionsAll = [
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)'
     },
 
-     {
+    {
         question: `Informações introdutórias
         Estudo de caso -
         Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que desejar para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve administrar seu tempo para garantir que será capaz de responder a todas as questões incluídas neste exame no tempo fornecido.
