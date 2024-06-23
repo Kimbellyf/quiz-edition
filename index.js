@@ -118,7 +118,7 @@ function questoesSelectOuDragDrop(questao) {
   if (questao.typeQuestion === "dragdrop") {
     addQuestionDragDrop(questao)
   } else if (questao.typeQuestion === "multiplecheckboxyesorno") {
-    //addMultipleCheckbox(questao)
+    addMultipleCheckbox(questao)
   } else {
     addQuestionSelect(questao)
   }

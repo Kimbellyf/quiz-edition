@@ -1907,7 +1907,7 @@ const questionsAll = [
     },
 
     {
-        question: `Questão 1.Tópico 11. Informações introdutórias
+        'question': `Questão 1.Tópico 11. Informações introdutórias
             Estudo de caso -
             Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que quiser para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve gerenciar seu tempo para garantir que consiga concluir todas as questões incluídas neste exame no tempo fornecido.
             Para responder às questões incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exibições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada questão é independente das outras questões neste estudo de caso.
@@ -1969,69 +1969,69 @@ const questionsAll = [
             OBSERVAÇÃO: Cada seleção correta vale um ponto.
             Área de Hot:
             `,
-        number: 1,
-        page: 540,
-        studyCase: true,
+        'number': 1,
+        'page': 540,
+        'studyCase': true,
 
-        answers: [{
-            text: 'contêiner1:',
-            options: [{
-                text: "Somente armazenamento2",
-                correct: false
+        'answers': [{
+            'text': 'contêiner1:',
+            'options': [{
+                'text': "Somente armazenamento2",
+                'correct': false
             }, {
-                text: "somente armazenamento2 e armazenamento3",
-                correct: true
+                'text': "somente armazenamento2 e armazenamento3",
+                'correct': true
             }, {
-                text: "somente armazenamento1, armazenamento2 e armazenamento3",
-                correct: false
+                'text': "somente armazenamento1, armazenamento2 e armazenamento3",
+                'correct': false
             },
             {
-                text: "somente armazenamento2, armazenamento3 e armazenamento4",
-                correct: false
+                'text': "somente armazenamento2, armazenamento3 e armazenamento4",
+                'correct': false
             },
             {
-                text: "armazenamento 1, armazenamento2, armazenamento3 e armazenamento4",
-                correct: false
+                'text': "armazenamento 1, armazenamento2, armazenamento3 e armazenamento4",
+                'correct': false
             }
             ]
         },
 
 
         {
-            text: 'Compartilhar1(File1)',
-            options: [
+            'text': 'Compartilhar1(File1)',
+            'options': [
             {
-                text: "somente armazenamento2",
-                correct: true
+                'text': "somente armazenamento2",
+                'correct': true
             }, {
-                text: "armazenamento4 apenas",
-                correct: false
+                'text': "armazenamento4 apenas",
+                'correct': false
             }, {
-                text: "somente armazenamento2 e armazenamento4",
-                correct: false
+                'text': "somente armazenamento2 e armazenamento4",
+                'correct': false
             },
             {
-                text: "somente armazenamento1, armazenamento2 e armazenamento4",
-                correct: false
+                'text': "somente armazenamento1, armazenamento2 e armazenamento4",
+                'correct': false
             },
             {
-                text: "armazenamento1, armazenamento2, armazenamento3 e armazenamento4",
-                correct: false
+                'text': "armazenamento1, armazenamento2, armazenamento3 e armazenamento4",
+                'correct': false
             },
 
             ]
         }
         ],
-        typeQuestion: 'select',
-        caseStudy: true,
-        explication: `Referência:
+        'typeQuestion': 'select',
+        'caseStudy': true,
+        'explication': `Referência:
             https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview.
             Há discordância nos comentários
         `
     },
 
     {
-        question: `Questão 2. Informações introdutórias
+        'question': `Questão 2. Informações introdutórias
             Estudo de caso -
             Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que quiser para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve gerenciar seu tempo para garantir que consiga concluir todas as questões incluídas neste exame no tempo fornecido.
             Para responder às questões incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exibições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada questão é independente das outras questões neste estudo de caso.
@@ -2093,52 +2093,52 @@ const questionsAll = [
             OBSERVAÇÃO: Cada seleção correta vale um ponto.
             Hot Area:
             `,
-        number: 1,
-        page: 540,
-        studyCase: true,
+        'number': 1,
+        'page': 540,
+        'studyCase': true,
 
 
-        answers: [{
-            text: 'Tipo de conta:',
-            options: [{
-                text: "Armazenamento de Blobs",
-                correct: false
+        'answers': [{
+            'text': 'Tipo de conta:',
+            'options': [{
+                'text': "Armazenamento de Blobs",
+                'correct': false
             }, {
-                text: "BlockBlobStorage",
-                correct: false
+                'text': "BlockBlobStorage",
+                'correct': false
             }, {
-                text: "Armazenamento (uso geral v1)",
-                correct: false
+                'text': "Armazenamento (uso geral v1)",
+                'correct': false
             },
             {
-                text: "StorageV2 (uso geral v2)",
-                correct: true
+                'text': "StorageV2 (uso geral v2)",
+                'correct': true
             }
             ]
         },
 
         {
-            text: 'Destino',
-            options: [{
-                text: "Armazenamento1",
-                correct: false
+            'text': 'Destino',
+            'options': [{
+                'text': "Armazenamento1",
+                'correct': false
             }, {
-                text: "Armazenamento2",
-                correct: true
+                'text': "Armazenamento2",
+                'correct': true
             }, {
-                text: "Armazenamento3",
-                correct: false
+                'text': "Armazenamento3",
+                'correct': false
             },
             {
-                text: "Armazenamento4",
-                correct: false
+                'text': "Armazenamento4",
+                'correct': false
             }
             ]
         }
         ],
-        typeQuestion: 'select',
-        caseStudy: true,
-        explication: `https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-configure?tabs=portal: 
+        'typeQuestion': 'select',
+        'caseStudy': true,
+        'explication': `https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-configure?tabs=portal: 
         `
     },
 
@@ -3934,12 +3934,12 @@ const questionsAll = [
             'correct': false
         }, , {
             'text': 'B. 2\n',
-            correct: true
+            'correct': true
         }, {
-            text: 'C.3',
+            'text': 'C.3',
             'correct': false
         }, {
-            text: '\nD. 4',
+            'text': '\nD. 4',
             'correct': false
         },],
         'explication': 'B\nDistribuição de votos da comunidade\nB (95%) 5%'
@@ -6624,42 +6624,42 @@ const questionsAll = [
             OBSERVAÇÃO: Cada seleção correta vale um ponto.
             Área Hot:
             `,
-        number: 1,
-        page: 540,
-        studyCase: true,
+        'number': 1,
+        'page': 540,
+        'studyCase': true,
 
 
-        answers: [{
-            text: 'Número de redes virtuais',
-            options: [{
-                text: "1",
-                correct: true
+        'answers': [{
+            'text': 'Número de redes virtuais',
+            'options': [{
+                'text': "1",
+                'correct': true
             }, {
-                text: "2",
-                correct: false
+                'text': "2",
+                'correct': false
             }, {
-                text: "3",
-                correct: false
+                'text': "3",
+                'correct': false
             }]
         },
 
         {
-            text: 'Número de sub-redes por rede virtual',
-            options: [{
-                text: "1",
-                correct: fale
+            'text': 'Número de sub-redes por rede virtual',
+            'options': [{
+                'text': "1",
+                'correct': false
             }, {
-                text: "2",
-                correct: false
+                'text': "2",
+                'correct': false
             }, {
-                text: "3",
-                correct: true
+                'text': "3",
+                'correct': true
             }
             ]
         }
         ],
-        typeQuestion: 'select',
-        explication: `Comentário mais votado: Conforme os requisitos: 
+        'typeQuestion': 'select',
+        'explication': `Comentário mais votado: Conforme os requisitos: 
         - Você tem um aplicativo público chamado App1. 
         O App1 é composto pelas três camadas a seguir: Um banco de dados SQL,
          Um front-end da Web e Uma camada intermediária de processamento. 
@@ -6815,7 +6815,7 @@ const questionsAll = [
     },
 
     {
-        question: `Informações introdutórias
+        'question': `Informações introdutórias
         Estudo de caso -
         Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que desejar para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve administrar seu tempo para garantir que será capaz de responder a todas as questões incluídas neste exame no tempo fornecido.
         Para responder às perguntas incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exposições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada pergunta é independente das outras perguntas neste estudo de caso.
@@ -6872,47 +6872,47 @@ const questionsAll = [
         NOTA: Cada seleção correta vale um ponto.
         Área quente:
             `,
-        number: 1,
-        page: 3,
-        studyCase: true,
+        'number': 1,
+        'page': 3,
+        'studyCase': true,
 
 
-        answers: [{
-            text: '',
-            options: [{
-                text: "Find-RoleCapability",
-                correct: false
+        'answers': [{
+            'text': '',
+            'options': [{
+                'text': "Find-RoleCapability",
+                'correct': false
             }, {
-                text: "Get-AzureADDirectoryRole",
-                correct: false
+                'text': "Get-AzureADDirectoryRole",
+                'correct': false
             }, {
-                text: "Get-AzRoleDefinition",
-                correct: true
+                'text': "Get-AzRoleDefinition",
+                'correct': true
             }, {
-                text: "Get-AzResourceProvider",
-                correct: false
+                'text': "Get-AzResourceProvider",
+                'correct': false
             }]
         },
 
         {
-            text: '-Name Reader',
-            options: [{
-                text: "ConvertFrom-Json",
-                correct: false
+            'text': '-Name Reader',
+            'options': [{
+                'text': "ConvertFrom-Json",
+                'correct': false
             }, {
-                text: "ConvertFrom-String",
-                correct: false
+                'text': "ConvertFrom-String",
+                'correct': false
             }, {
-                text: "ConvertTo-Json",
-                correct: true
+                'text': "ConvertTo-Json",
+                'correct': true
             }, {
-                text: "ConvertTo-XML",
-                correct: false
+                'text': "ConvertTo-XML",
+                'correct': false
             }]
         }
         ],
-        typeQuestion: 'select',
-        explication: 'Get-AzRoleDefinition e ConvertTo-Json'
+        'typeQuestion': 'select',
+        'explication': 'Get-AzRoleDefinition e ConvertTo-Json'
     },
 
     {
