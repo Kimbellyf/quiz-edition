@@ -22,7 +22,7 @@ let totalQuestoes = questionsAll.length;
 let $elementIntervaloQuestaoInicio = "intervaloinicio";
 let $elementIntervaloQuestaoFim = "intervalofim";
 
-let $$elementProxButton = "proxbutton"
+let $elementProxButton = "proxbutton"
 
 let intervaloQuestaoInicio = 0
 let intervaloQuestaoFim = 0
