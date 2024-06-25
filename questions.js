@@ -823,7 +823,41 @@ const questionsAll = [
         'typeQuestion': "multiplecheckboxyesorno"
     }
 
-    , {
+    ,
+
+    {
+        'question': `Questao 5. Tópico 2.
+
+        Você tem os grupos de gerenciamento do Azure mostrados na tabela a seguir:
+
+        Você adiciona assinaturas do Azure aos grupos de gerenciamento conforme mostrado na tabela a seguir:
+
+        Você cria as políticas do Azure mostradas na tabela a seguir:
+
+        Para cada uma das instruções a seguir, selecione Sim se a afirmação é verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto.
+        Área Quente:
+        `,
+        'number': '5',
+        'page': 2,
+        'answers': [{
+            'text': 'Você pode criar uma rede virtual na Assinatura 1.',
+            'correct': false
+        }, , {
+            'text': 'Você pode criar uma máquina virtual em Subscription2.',
+            'correct': false
+        }, , {
+            'text': 'Você pode adicionar Subscription1 ao ManagementGroup11.',
+            'correct': false
+        },
+        ],
+        'explication': ` Muita discussão sobre essa questão, parece não ter um consenso explicito sobre a resposta 2 se é falso ou verdadeiro`,
+        'typeQuestion': "multiplecheckboxyesorno"
+    },
+
+
+
+    {
         'question': '6\nVocê tem uma política do Azure conforme mostrado na seguinte exposição:\nQual é o efeito da política?\n',
         'number': '',
         'page': 28,
@@ -1053,7 +1087,7 @@ const questionsAll = [
                 'correct': false
             }, {
                 'text': 'O usuário2 pode adicionar o dispositivo1 ao grupo1',
-                'correct': false
+                'correct': true
             }, {
                 'text': 'User2 pode adicionar Device2 ao Group2',
                 'correct': false
@@ -1119,7 +1153,56 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nTem acesso total a todos os recursos, incluindo o direito de delegar acesso a outros.\nObservação:\nHá várias versões desta questão no exame. A questão tem duas possíveis respostas corretas:\n✑ Atribuir ao Usuário1 a função de Administrador de Acesso do Usuário para VNet1.\n✑ Atribuir ao Usuário1 a função de Proprietário para VNet1.\nOutras opções de resposta incorretas que você pode ver no exame incluem o seguinte:\n✑ Atribuir ao Usuário1 a função de Colaborador para VNet1.\n✑ Remover o Usuário1 das funções de Leitor de Segurança e Leitor para Assinatura1. Atribuir ao Usuário1 a função de Colaborador para Assinatura1.\n✑ Remover o Usuário1 da função de Leitor de Segurança para Assinatura1. Atribuir ao Usuário1 a função de Colaborador para RG1.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/overview\nDistribuição de votos da comunidade\nB (85%) C (15%)'
-    }, {
+    },
+
+    {
+        'question': `17\n
+
+            Você tem um locatário do Azure Active Directory (Azure AD) chamado contosocloud.onmicrosoft.com.
+            Sua empresa tem uma zona DNS pública para contoso.com.
+            Você adiciona contoso.com como um nome de domínio personalizado ao Azure AD.
+            Você precisa garantir que o Azure possa verificar o nome de domínio.
+            Que tipo de registro DNS você deve criar?
+        
+        `,
+        'number': '17',
+        'page': 36,
+
+        'answers': [{
+            'text': 'A. MX.\n',
+            'correct': true
+        }, {
+            'text': 'B. Segurança Nacional.\n',
+            'correct': false
+        }, {
+            'text': 'C. PTR.\n',
+            'correct': false
+        }, {
+            'text': 'D. RRSIG.',
+            'correct': false
+        }
+        ],
+        'explication': `Resposta correta: A 🗳️
+            Para verificar seu nome de domínio personalizado (exemplo)
+            1. Entre no portal do Azure usando uma conta de administrador global para o diretório.
+            2. Selecione Azure Active Directory e, em seguida, selecione Nomes de domínio personalizados.
+            3. Na página Fabrikam - Nomes de domínio personalizados, selecione o nome de domínio personalizado, Contoso.
+            4. Na página Contoso, selecione Verificar para certificar-se de que seu domínio personalizado esteja registrado corretamente e seja válido para o Azure AD. Use o tipo de registro TXT ou MX.
+            Observação:
+            há várias versões desta questão no exame. A questão pode ter duas respostas corretas:
+            1. MX
+            2. TXT
+            A questão também pode ter outras opções de resposta incorretas, incluindo as seguintes:
+            1. SRV
+            2. NSEC3
+            Referência:
+            https://docs.microsoft.com/en-us/azure/dns/dns-web-sites-custom-domain
+            Distribuição de votos na comunidade
+            Um (100%)`
+    },
+
+
+    {
         'question': '18\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um locatário do Azure Directory (Azure AD) chamado Adatum e uma assinatura do Azure chamada Subscription1. Adatum contém um grupo chamado\nDesenvolvedores.\nSubscription1 contém um grupo de recursos denominado Dev.\nVocê precisa fornecer ao grupo de Desenvolvedores a capacidade de criar aplicativos lógicos do Azure no grupo de recursos Dev.\nSolução: na Assinatura1, você atribui a função de usuário do DevTest Labs ao grupo Desenvolvedores.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 38,
@@ -1218,7 +1301,51 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nPara pesquisar um termo em uma tabela específica, adicione o nome da tabela logo após o operador de pesquisa\nObservação:\nExistem várias versões desta questão no exame. A pergunta tem duas possíveis respostas corretas:\n1. Evento | pesquise "erro"\n2. Evento | onde EventType == "erro"\n3. pesquise em (Evento) "erro"\nOutras opções de respostas incorretas que você pode ver no exame incluem o seguinte:\n1. Evento Get-Event | onde {$_.EventTye ג"€eq "erro"},\n2. Evento | onde EventType é "erro"\n3. pesquise em (Evento) * | onde EventType é"€eq "erro"\n4. selecione * em Evento onde EventType é "erro"\nReferência:\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/log-query/search-queries https://docs.microsoft.com/en-us/azure/azure-monitor/log-\nconsulta/portal de início https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/searchoperator?pivots=azuredataexplorer\nDistribuição de votos da comunidade\nB (92%) 8%'
-    }, {
+    },
+
+
+    {
+        'question': `Questao 23. Tópico 2.
+
+        HOTSPOT -
+        Você tem uma assinatura do Azure que contém uma rede virtual chamada VNET1 na região East US 2. Uma interface de rede chamada VM1-NI está conectada à
+        VNET1.
+        Você implanta com sucesso o seguinte modelo do Azure Resource Manager.
+        
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        Hot Area:
+        
+        `,
+        'number': '23',
+        'page': 0,
+
+        'answers': [{
+            'text': 'VM1 e VM2 podem se conectar ao VNET1',
+            'correct': true
+        }, , {
+            'text': 'Se um datacenter do Azure ficar indisponível, VM1 ou VM2 estarão disponíveis.',
+            'correct': true
+        }, , {
+            'text': 'Se a região Leste dos EUA 2 ficar indisponível, VM1 ou VM2 estarão disponíveis.',
+            'correct': false
+        },
+        ],
+        'explication': `Caixa 1: Sim -
+
+                Caixa 2: Sim -
+                VM1 está na Zona 1, enquanto VM2 está na Zona 2.
+
+                Caixa 3: Não -
+                Referência:
+                https://docs.microsoft.com/en-us/azure/architecture/resiliency/recovery-loss-azure-region
+                Comentário mais votado: SIM SIM NÃO`,
+        'typeQuestion': "multiplecheckboxyesorno"
+    },
+
+
+
+    {
         'question': '24\nVocê tem uma assinatura do Azure chamada Subscription1. Subscription1 contém os grupos de recursos na tabela a seguir.\nRG1 possui um aplicativo da web chamado WebApp1. WebApp1 está localizado na Europa Ocidental.\nVocê move WebApp1 para RG2.\nQual é o efeito da mudança?\n',
         'number': '',
         'page': 44,
@@ -1250,31 +1377,43 @@ const questionsAll = [
         page: 5,
         answers: [{
             text: '"assignableScopes":[',
-            options: [{
-                text: '"/"',
-                correct: false
-            }, {
-                text: '"/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e"',
-                correct: true
-            }, {
-                text: '"/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e/resourceGroups"',
-                correct: false
-            }
+            options: [
+
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+
+                {
+                    text: '"/"',
+                    correct: false
+                }, {
+                    text: '"/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e"',
+                    correct: true
+                }, {
+                    text: '"/subscriptions/c276fc76-9cd4-44c9-99a7-4fd71546436e/resourceGroups"',
+                    correct: false
+                }
             ]
         }, {
             text: `],<br>"permissions":[{"actions":["*"], "additionalProperties":{},
                 "dataActions":[], "notActions":[
                 `,
-            options: [{
-                text: "Microsoft.Authorization/*",
-                correct: true
-            }, {
-                text: "Microsoft.Resources/*",
-                correct: false
-            }, {
-                text: "Microsoft.Security/*",
-                correct: false
-            }
+            options: [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    text: "Microsoft.Authorization/*",
+                    correct: true
+                }, {
+                    text: "Microsoft.Resources/*",
+                    correct: false
+                }, {
+                    text: "Microsoft.Security/*",
+                    correct: false
+                }
             ],
             textAfter: '],\n "notDataActions"];[]\n}\n],'
         }
