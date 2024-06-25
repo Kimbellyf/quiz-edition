@@ -22,6 +22,8 @@ let totalQuestoes = questionsAll.length;
 let $elementIntervaloQuestaoInicio = "intervaloinicio";
 let $elementIntervaloQuestaoFim = "intervalofim";
 
+let $$elementProxButton = "proxbutton"
+
 let intervaloQuestaoInicio = 0
 let intervaloQuestaoFim = 0
 
@@ -50,12 +52,15 @@ window.onload = function () {
   $titlebancoquestoes = document.getElementById("titlebancoquestoes")
 
   totalQuestoes = questionsAll.length;
+  
+  $elementProxButton = document.getElementById("proxB")
 
   $elementIntervaloQuestaoInicio = document.getElementById("intervaloinicio")
   $elementIntervaloQuestaoFim = document.getElementById("intervalofim")
 
   $startGameButton.addEventListener("click", startGame)
   $nextQuestionButton.addEventListener("click", displayNextQuestion)
+  $elementProxButton.addEventListener("click", nextQuestion)
   botoesAndOnLoad();
 
 
@@ -209,7 +214,10 @@ function addQuestionDragDrop(questao) {
   $textAnswerOrigin.textContent = questao.explication
   //trat abaixo pq n chama o selectanswer
   $nextQuestionButton.classList.remove("hide")
+
+  /*
   currentQuestionIndex++
+  */
 
 }
 
@@ -239,7 +247,9 @@ function addMultipleCheckbox(questao) {
   $buttonVerResp.classList.remove("hide")
   //trat abaixo pq n chama o selectanswer
   $nextQuestionButton.classList.remove("hide")
+  /*
   currentQuestionIndex++
+  */
 
 
 }
@@ -304,6 +314,11 @@ function selectAnswer(event) {
   })
 
   $nextQuestionButton.classList.remove("hide")
+  /*
+  currentQuestionIndex++
+  */
+}
+function nextQuestion(){
   currentQuestionIndex++
 }
 
