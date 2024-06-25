@@ -170,9 +170,11 @@ function addQuestionDragDrop(questao) {
   questao.answers.forEach(answeroptions => {
     answeroptions.forEach(caixa => {
       let divAnswerFinal = `<div id="divanswerdragdrop">`
+      let temOrdem = false;
       if (caixa.function === 'origin') {
         let divdrag = `<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">`
         let optionnumber = 1;
+        
         caixa.options.forEach(option => {
           const idh5 = "id='" + optionnumber + "'";
           const textOption = `<h5 draggable="true" ondragstart="drag(event)"` + idh5 + ` style='margin:auto'>` + option.text + `</h5>`;
@@ -181,6 +183,7 @@ function addQuestionDragDrop(questao) {
           if (option.correct) {
             if (option.index != "any") {
               divAnswerFinal += 'Ordem:' + option.index;
+              temOrdem = true;
             }
             divAnswerFinal += `<h5>` + option.text + `</h5>`
           }
@@ -189,12 +192,17 @@ function addQuestionDragDrop(questao) {
         divdragAllOptionsAnswer = `<div id="divalloptionsdragdrop"` + divdrag.slice(14) + `</div>`
         divAnswerFinal += `</div>`
         let answerDragDrop = divdragAllOptionsAnswer + divAnswerFinal;
+        
         $answersContainer.insertAdjacentHTML('beforeend', divdrag);
+        if(!temOrdem){
         $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', answerDragDrop);
+        }
       }
       else {
         let divdragrecept = `<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>`;
+        if(!temOrdem){
         $answersContainer.insertAdjacentHTML('beforeend', divdragrecept);
+        }
       }
     })
   });
