@@ -179,6 +179,9 @@ function addQuestionDragDrop(questao) {
           divdrag = divdrag + textOption;
           optionnumber++;
           if (option.correct) {
+            if (option.index != "any") {
+              divAnswerFinal += 'Ordem:' + option.index;
+            }
             divAnswerFinal += `<h5>` + option.text + `</h5>`
           }
         })
@@ -206,14 +209,14 @@ function addMultipleCheckbox(questao) {
   let newAsnwerCheckBoxHtml = '';
   questao.answers.forEach(answer => {
     let optionNumber = 1;
-    newAsnwerCheckBoxHtml += `<br><div>` + answer.text;
+    newAsnwerCheckBoxHtml += `<br><div class="selectyesornoanyanswers">` + answer.text;
     if (answer.correct) {
       //newAsnwer.dataset.correct = answer.correct
-      newAsnwerCheckBoxHtml += `<input type="radio" id="check` + optionNumber + `" value=true checked > Sim`
-      newAsnwerCheckBoxHtml += `<input type="radio" id="checkf` + optionNumber + `" value=false> Não`
+      newAsnwerCheckBoxHtml += `<input type="radio" id="check` + optionNumber + `" value=true checked > <label> Sim </label>`
+      newAsnwerCheckBoxHtml += `<input type="radio" id="checkf` + optionNumber + `" value=false> <label> Não </label>`
     } else {
-      newAsnwerCheckBoxHtml += `<input type="radio" id="check` + optionNumber + `" value=true > Sim`
-      newAsnwerCheckBoxHtml += `<input type="radio" id="checkf` + optionNumber + `" value=false checked> Não`
+      newAsnwerCheckBoxHtml += `<input type="radio" id="check` + optionNumber + `" value=true > <label> Sim </label>`
+      newAsnwerCheckBoxHtml += `<input type="radio" id="checkf` + optionNumber + `" value=false checked> <label> Não </label>`
     }
     newAsnwerCheckBoxHtml += `</div>`;
     //$answersContainer.appendChild(newAsnwer)
@@ -330,4 +333,3 @@ function finishGame() {
     </button>
   `
 }
-

@@ -57,6 +57,10 @@ div {
   gap: 13px;
 }
 
+.selectyesornoanyanswers {
+  width: max-content;
+}
+
 .answer:disabled {
   cursor: not-allowed;
 }
@@ -158,4 +162,5 @@ span.question {
 
 input[type="radio" i] {
   max-width: 20px;
+  margin-left: 20%;
 }
