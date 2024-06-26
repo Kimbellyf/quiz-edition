@@ -48,6 +48,7 @@ div {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
+  white-space: pre-line;
 }
 
 .answers-container {

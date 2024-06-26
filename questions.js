@@ -2377,59 +2377,7 @@ const questionsAll = [
     {
         'question': `Questão 1.Tópico 11. Informações introdutórias
             Estudo de caso -
-            Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que quiser para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve gerenciar seu tempo para garantir que consiga concluir todas as questões incluídas neste exame no tempo fornecido.
-            Para responder às questões incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exibições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada questão é independente das outras questões neste estudo de caso.
-            No final deste estudo de caso, uma tela de revisão será exibida. Esta tela permite que você revise suas respostas e faça alterações antes de passar para a próxima seção do exame. Depois de começar uma nova seção, você não pode retornar a esta seção.
-
-            Para iniciar o estudo de caso -
-            Para exibir a primeira questão neste estudo de caso, clique no botão Avançar. Use os botões no painel esquerdo para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para retornar à pergunta.
-
-            Visão geral -
-
-            Visão geral -
-            A Contoso, Ltd. é uma empresa de consultoria que tem um escritório principal em Montreal e filiais em Seattle e Nova York.
-
-            Ambiente -
-
-            Ambiente existente -
-            A Contoso tem uma assinatura do Azure chamada Sub1 que está vinculada a um locatário do Azure Active Directory (Azure AD). A rede contém um domínio do Active Directory local
-            que sincroniza com o locatário do Azure AD.
-            O locatário do Azure AD contém os usuários mostrados na tabela a seguir.
-
-            O Sub1 contém dois grupos de recursos chamados RG1 e RG2 e as redes virtuais mostradas na tabela a seguir.
-
-            O Usuário1 gerencia os recursos no RG1. O Usuário4 gerencia os recursos no RG2.
-            O Sub1 contém máquinas virtuais que executam o Windows Server 2019, conforme mostrado na tabela a seguir .
-
-            Nenhum grupo de segurança de rede (NSGs) está associado às interfaces de rede ou às sub-redes.
-            O Sub1 contém as contas de armazenamento mostradas na tabela a seguir.
-
-
-            Requisitos -
-
-            Alterações planejadas -
-            A Contoso planeja implementar as seguintes alterações:
-            Crie um contêiner de blob chamado container1 e um compartilhamento de arquivo chamado share1 que usará a camada de armazenamento Cool.
-            Crie uma conta de armazenamento chamada storage5 e configure a replicação de armazenamento para o serviço Blob.
-            Crie um NSG chamado NSG1 que terá as regras de segurança de entrada personalizadas mostradas na tabela a seguir.
-
-            Associe NSG1 à interface de rede da VM1.
-            Crie um NSG chamado NSG2 que terá as regras de segurança de saída personalizadas mostradas na tabela a seguir.
-
-
-            Associe NSG2 à VNET1/Subnet2.
-
-            Requisitos técnicos -
-            A Contoso deve atender aos seguintes requisitos técnicos:
-            Crie container1 e share1.
-            Use o princípio do menor privilégio.
-            Crie um grupo de segurança do Azure AD chamado Group4.
-            Faça backup dos compartilhamentos de arquivos e máquinas virtuais do Azure usando o Backup do Azure.
-            Dispare um alerta se a VM1 ou a VM2 tiver menos de 20 GB de espaço livre no volume C.
-            Habilite o User1 para criar definições de política do Azure e o User2 para atribuir políticas do Azure ao RG1.
-            Crie um Basic Azure Load Balancer interno chamado LB1 e conecte o load balancer à VNET1/Subnet1
-            Habilite o log de fluxo para tráfego IP da VM5 e retenha os logs de fluxo por um período de oito meses.
-            Sempre que possível, conceda ao Group4 permissões somente leitura de controle de acesso baseado em função do Azure (Azure RBAC) para os compartilhamentos de arquivos do Azure.
+            Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
             Pergunta
             HOTSPOT -
             Você precisa criar container1 e share1.
@@ -2510,59 +2458,8 @@ const questionsAll = [
     {
         'question': `Questão 2. Informações introdutórias
             Estudo de caso -
-            Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que quiser para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve gerenciar seu tempo para garantir que consiga concluir todas as questões incluídas neste exame no tempo fornecido.
-            Para responder às questões incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exibições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada questão é independente das outras questões neste estudo de caso.
-            No final deste estudo de caso, uma tela de revisão será exibida. Esta tela permite que você revise suas respostas e faça alterações antes de passar para a próxima seção do exame. Depois de começar uma nova seção, você não pode retornar a esta seção.
+            Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
 
-            Para iniciar o estudo de caso -
-            Para exibir a primeira questão neste estudo de caso, clique no botão Avançar. Use os botões no painel esquerdo para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para retornar à pergunta.
-
-            Visão geral -
-
-            Visão geral -
-            A Contoso, Ltd. é uma empresa de consultoria que tem um escritório principal em Montreal e filiais em Seattle e Nova York.
-
-            Ambiente -
-
-            Ambiente existente -
-            A Contoso tem uma assinatura do Azure chamada Sub1 que está vinculada a um locatário do Azure Active Directory (Azure AD). A rede contém um domínio do Active Directory local
-            que sincroniza com o locatário do Azure AD.
-            O locatário do Azure AD contém os usuários mostrados na tabela a seguir.
-
-            O Sub1 contém dois grupos de recursos chamados RG1 e RG2 e as redes virtuais mostradas na tabela a seguir.
-
-            O Usuário1 gerencia os recursos no RG1. O Usuário4 gerencia os recursos no RG2.
-            O Sub1 contém máquinas virtuais que executam o Windows Server 2019, conforme mostrado na tabela a seguir .
-
-            Nenhum grupo de segurança de rede (NSGs) está associado às interfaces de rede ou às sub-redes.
-            O Sub1 contém as contas de armazenamento mostradas na tabela a seguir.
-
-
-            Requisitos -
-
-            Alterações planejadas -
-            A Contoso planeja implementar as seguintes alterações:
-            Crie um contêiner de blob chamado container1 e um compartilhamento de arquivo chamado share1 que usará a camada de armazenamento Cool.
-            Crie uma conta de armazenamento chamada storage5 e configure a replicação de armazenamento para o serviço Blob.
-            Crie um NSG chamado NSG1 que terá as regras de segurança de entrada personalizadas mostradas na tabela a seguir.
-
-            Associe NSG1 à interface de rede da VM1.
-            Crie um NSG chamado NSG2 que terá as regras de segurança de saída personalizadas mostradas na tabela a seguir.
-
-
-            Associe NSG2 à VNET1/Subnet2.
-
-            Requisitos técnicos -
-            A Contoso deve atender aos seguintes requisitos técnicos:
-            Crie container1 e share1.
-            Use o princípio do menor privilégio.
-            Crie um grupo de segurança do Azure AD chamado Group4.
-            Faça backup dos compartilhamentos de arquivos e máquinas virtuais do Azure usando o Backup do Azure.
-            Dispare um alerta se a VM1 ou a VM2 tiver menos de 20 GB de espaço livre no volume C.
-            Habilite o User1 para criar definições de política do Azure e o User2 para atribuir políticas do Azure ao RG1.
-            Crie um Basic Azure Load Balancer interno chamado LB1 e conecte o load balancer à VNET1/Subnet1
-            Habilite o log de fluxo para tráfego IP da VM5 e retenha os logs de fluxo por um período de oito meses.
-            Sempre que possível, conceda ao Group4 permissões somente leitura de controle de acesso baseado em função do Azure (Azure RBAC) para os compartilhamentos de arquivos do Azure.
             Pergunta
             HOTSPOT -
             Você precisa criar um storage5. A solução deve suportar as alterações planejadas.
@@ -7165,7 +7062,7 @@ const questionsAll = [
         ],
         'explication': 'AC\nDistribuição de votos da comunidade\nEA (50%) AC (48%)'
     }, {
-        'question': 'Requisitos do usuário -\nA Contoso identifica os seguintes requisitos para usuários:\nCertifique-se de que apenas os utilizadores que fazem parte de um grupo chamado Piloto podem aderir dispositivos ao Azure AD.\nDesigne um novo usuário chamado Admin1 como administrador de serviço da assinatura do Azure.\nAdmin1 deve receber alertas por email sobre interrupções de serviço.\nCertifique-se de que um novo utilizador chamado User3 pode criar objetos de rede para a subscrição do Azure.\nPergunta\nVocê precisa atender aos requisitos do usuário para Admin1.\nO que você deveria fazer?\n',
+        'question': '(Estudo de caso) ... Requisitos do usuário -\nA Contoso identifica os seguintes requisitos para usuários:\nCertifique-se de que apenas os utilizadores que fazem parte de um grupo chamado Piloto podem aderir dispositivos ao Azure AD.\nDesigne um novo usuário chamado Admin1 como administrador de serviço da assinatura do Azure.\nAdmin1 deve receber alertas por email sobre interrupções de serviço.\nCertifique-se de que um novo utilizador chamado User3 pode criar objetos de rede para a subscrição do Azure.\nPergunta\nVocê precisa atender aos requisitos do usuário para Admin1.\nO que você deveria fazer?\n',
         'number': '',
         'page': 505,
         'answers': [{
@@ -7184,62 +7081,150 @@ const questionsAll = [
         ],
         'explication': 'D\nCenário:\n✑ Designe um novo usuário chamado Admin1 como administrador de serviço da assinatura do Azure.\n✑ Admin1 deve receber alertas por e-mail sobre interrupções no serviço.\nSiga estas etapas para alterar o Administrador de Serviço no portal do Azure.\n1. Certifique-se de que seu cenário seja suportado verificando as limitações para alterar o Administrador de Serviço.\n2. Entre no portal do Azure como administrador da conta.\n3. Abra Cost Management + Billing e selecione uma assinatura.\n4. Na navegação esquerda, clique em Propriedades.\n5. Clique em Administrador de serviço.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/classic-administrators\nDistribuição de votos da comunidade\nD (56%) C (44%)'
     },
+
+
+    {
+        'question': `2. Tópico 8. 
+            Informações introdutórias
+            Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
+            Pergunta
+            Você precisa configurar os alertas para VM1 e VM2 para atender aos requisitos técnicos.
+            Quais são as três ações que você deve executar em sequência? Para responder, mova todas as ações da lista de ações para a área de resposta e organize-as na ordem correta.
+            Selecione e coloque:`,
+        'number': '2',
+        'page': 11,
+
+        answers: [
+            {
+                text: 'Cofres dos Serviços de Recuperação',
+                options:
+                    [
+                        {
+                            text: 'Selecione',
+                            correct: false
+                        },
+                        {
+                            text: '1',
+                            correct: false
+                        },
+                        {
+                            text: '2',
+                            correct: false
+                        },
+                        {
+                            text: '3',
+                            correct: true
+                        },
+                        {
+                            text: '4',
+                            correct: false
+                        },
+                        {
+                            text: '7',
+                            correct: false
+                        },
+                    ]
+            },
+            {
+                text: 'Políticas de backup:',
+                options: [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        text: '1',
+                        correct: false
+                    },
+                    {
+                        text: '2',
+                        correct: false
+                    },
+                    {
+                        text: '3',
+                        correct: false
+                    },
+                    {
+                        text: '4',
+                        correct: false
+                    },
+                    {
+                        text: '5',
+                        correct: false
+                    },
+                    {
+                        text: '6',
+                        correct: true
+                    },
+
+                ]
+            }
+
+        ],
+        typeQuestion: 'select',
+        'explication': `Caixa 1: 3 –
+            Se você tiver fontes de dados em várias regiões, crie um cofre dos Serviços de Recuperação para cada região.
+            Os compartilhamentos de arquivos e VMs estão localizados em três regiões: Oeste dos EUA, Leste dos EUA, Centro dos EUA.
+
+            Caixa 2: 6 -
+            Uma política de backup tem como escopo um cofre. Para cada cofre precisamos de uma política de backup para compartilhamentos de arquivos e uma política de backup para VM.
+            Observação:
+            faça backup dos compartilhamentos de arquivos e das máquinas virtuais do Azure usando
+
+
+            a Referência de Backup do Azure:
+            https://docs.microsoft.com/en-us/azure/backup/backup-create-rs-vault https://docs.microsoft. com/en-us/azure/backup/guidance-best-practices`,
+    },
+
+
+    {
+        'question': `2. Tópico 8. ARRASTAR E SOLTAR -\n (OBS: NO MOMENTO NÃO ESTÁ CONTANDO NA CONTAGEM DE ACERTO, SE QUISER SABER SE RESPONDEU CORRETO CLIQUE EM VER RESPOSTA)
+            Informações introdutórias
+            Estudo de caso -
+            
+            Estudo de caso - Contoso link : https://kimbellyf.github.io/quiz-edition/contoso.html
+
+            Pergunta
+            DRAG DROP –
+            Você precisa configurar os alertas para VM1 e VM2 para atender aos requisitos técnicos.
+            Quais são as três ações que você deve executar em sequência? Para responder, mova todas as ações da lista de ações para a área de resposta e organize-as na ordem correta.
+            Selecione e coloque:`,
+        'number': '2',
+        'page': 11,
+        'answers': [
+
+            [
+                {
+                    'text': 'Ações \n',
+                    'options': [
+                        { 'text': 'Crie um espaço de trabalho do Log Analytics.', 'correct': true, 'index': '1' },
+                        { 'text': 'Uma conta de armazenamento do Azure', 'correct': false, 'index': '-1' },
+                        { 'text': 'Defina as configurações de diagnóstico.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Crie uma regra de alerta.', 'correct': true, 'index': '3' },
+                        { 'text': 'Colete contadores de desempenho do Windows dos agentes do Log Analytics.', 'correct': false, 'index': '2' },
+                        { 'text': 'Crie um banco de dados SQL do Azure.', 'correct': false, 'index': '-1' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': 'Answer \n',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': 'Comentário mais votado: Não tenho certeza, mas acho que a resposta deveria ser: 1. Crie um espaço de trabalho do log Analytics. 2. Colete contadores de desempenho do Windows dos agentes do Log Analytics. 3. Crie uma regra de alerta.',
+        'typeQuestion': 'dragdrop'
+    },
+
+
     {
         question: `Questão 1. Tópico 9. Informações introdutórias
-                    Estudo de caso -
-                    Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que desejar para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve administrar seu tempo para garantir que será capaz de responder a todas as questões incluídas neste exame no tempo fornecido.
-                    Para responder às perguntas incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exposições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada pergunta é independente das outras perguntas neste estudo de caso.
-                    Ao final deste estudo de caso, uma tela de revisão aparecerá. Esta tela permite que você revise suas respostas e faça alterações antes de passar para a próxima seção do exame. Depois de iniciar uma nova seção, você não poderá retornar a ela.
-
-                    Para iniciar o estudo de caso -
-                    Para exibir a primeira pergunta neste estudo de caso, clique no botão Avançar. Use os botões no painel esquerdo para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para retornar à pergunta.
-
-                    Visão geral -
-
-                    Visão geral -
-                    Contoso, Ltd. é uma empresa de consultoria com sede em Montreal e filiais em Seattle e Nova York.
-
-                    Ambiente –
-
-                    Ambiente Existente –
-                    Contoso tem uma assinatura do Azure chamada Sub1 que está vinculada a um locatário do Azure Active Directory (Azure AD). A rede contém um domínio do Active Directory local
-                    que sincroniza com o locatário do Azure AD.
-                    O locatário do Azure AD contém os usuários mostrados na tabela a seguir.
-
-                    Sub1 contém dois grupos de recursos denominados RG1 e RG2 e as redes virtuais mostradas na tabela a seguir.
-
-                    User1 gerencia os recursos em RG1. User4 gerencia os recursos em RG2.
-                    Sub1 contém máquinas virtuais que executam o Windows Server 2019, conforme mostrado na tabela a seguir.
-
-                    Nenhum grupo de segurança de rede (NSGs) está associado às interfaces de rede ou às sub-redes.
-                    Sub1 contém as contas de armazenamento mostradas na tabela a seguir.
-
-
-                    Requisitos –
-
-                    Alterações planejadas –
-                    A Contoso planeja implementar as seguintes alterações:
-                    Crie um contêiner de blob chamado container1 e um compartilhamento de arquivo chamado share1 que usará a camada de armazenamento Cool.
-                    Crie uma conta de armazenamento chamada storage5 e configure a replicação de armazenamento para o serviço Blob.
-                    Crie um NSG chamado NSG1 que terá as regras de segurança de entrada personalizadas mostradas na tabela a seguir.
-
-                    Associe NSG1 à interface de rede da VM1.
-                    Crie um NSG denominado NSG2 que terá as regras de segurança de saída personalizadas mostradas na tabela a seguir.
-
-
-                    Associe NSG2 a VNET1/Subnet2.
-
-                    Requisitos Técnicos –
-                    A Contoso deve atender aos seguintes requisitos técnicos:
-                    Criar contêiner1 e compartilhar1.
-                    Use o princípio do menor privilégio.
-                    Crie um grupo de segurança do Azure AD denominado Grupo4.
-                    Faça backup dos compartilhamentos de arquivos e das máquinas virtuais do Azure usando o Backup do Azure.
-                    Acione um alerta se VM1 ou VM2 tiver menos de 20 GB de espaço livre no volume C.
-                    Permita que o Usuário1 crie definições de política do Azure e o Usuário2 atribua políticas do Azure ao RG1.
-                    Crie um Balanceador de Carga Básico do Azure interno chamado LB1 e conecte o balanceador de carga a VNET1/Subnet1
-                    Habilite o log de fluxo para tráfego IP da VM5 e retenha os logs de fluxo por um período de oito meses.
-                    Sempre que possível, conceda permissões somente leitura do controle de acesso baseado em função do Group4 Azure (Azure RBAC) aos compartilhamentos de arquivos do Azure.
+                    Estudo de caso - Contoso link : https://kimbellyf.github.io/quiz-edition/contoso.html
                     Pergunta
                     HOTSPOT -
                     Você precisa garantir que o Usuário1 possa criar definições de iniciativa e que o Usuário4 possa atribuir iniciativas ao RG2. A solução deve atender aos requisitos técnicos.
@@ -7573,60 +7558,7 @@ const questionsAll = [
 
     {
         'question': `Questão 1. Tópico 15. Informações introdutórias
-                    Estudo de caso -
-                    Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que desejar para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve administrar seu tempo para garantir que será capaz de responder a todas as questões incluídas neste exame no tempo fornecido.
-                    Para responder às perguntas incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exposições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada pergunta é independente das outras perguntas neste estudo de caso.
-                    Ao final deste estudo de caso, uma tela de revisão aparecerá. Esta tela permite que você revise suas respostas e faça alterações antes de passar para a próxima seção do exame. Depois de iniciar uma nova seção, você não poderá retornar a ela.
-
-                    Para iniciar o estudo de caso -
-                    Para exibir a primeira pergunta neste estudo de caso, clique no botão Avançar. Use os botões no painel esquerdo para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para retornar à pergunta.
-
-                    Visão geral -
-
-                    Visão geral -
-                    Contoso, Ltd. é uma empresa de consultoria com sede em Montreal e filiais em Seattle e Nova York.
-
-                    Ambiente –
-
-                    Ambiente Existente –
-                    Contoso tem uma assinatura do Azure chamada Sub1 que está vinculada a um locatário do Azure Active Directory (Azure AD). A rede contém um domínio do Active Directory local
-                    que sincroniza com o locatário do Azure AD.
-                    O locatário do Azure AD contém os usuários mostrados na tabela a seguir.
-
-                    Sub1 contém dois grupos de recursos denominados RG1 e RG2 e as redes virtuais mostradas na tabela a seguir.
-
-                    User1 gerencia os recursos em RG1. User4 gerencia os recursos em RG2.
-                    Sub1 contém máquinas virtuais que executam o Windows Server 2019, conforme mostrado na tabela a seguir.
-
-                    Nenhum grupo de segurança de rede (NSGs) está associado às interfaces de rede ou às sub-redes.
-                    Sub1 contém as contas de armazenamento mostradas na tabela a seguir.
-
-
-                    Requisitos –
-
-                    Alterações planejadas –
-                    A Contoso planeja implementar as seguintes alterações:
-                    Crie um contêiner de blob chamado container1 e um compartilhamento de arquivo chamado share1 que usará a camada de armazenamento Cool.
-                    Crie uma conta de armazenamento chamada storage5 e configure a replicação de armazenamento para o serviço Blob.
-                    Crie um NSG chamado NSG1 que terá as regras de segurança de entrada personalizadas mostradas na tabela a seguir.
-
-                    Associe NSG1 à interface de rede da VM1.
-                    Crie um NSG denominado NSG2 que terá as regras de segurança de saída personalizadas mostradas na tabela a seguir.
-
-
-                    Associe NSG2 a VNET1/Subnet2.
-
-                    Requisitos Técnicos –
-                    A Contoso deve atender aos seguintes requisitos técnicos:
-                    Criar contêiner1 e compartilhar1.
-                    Use o princípio do menor privilégio.
-                    Crie um grupo de segurança do Azure AD denominado Grupo4.
-                    Faça backup dos compartilhamentos de arquivos e das máquinas virtuais do Azure usando o Backup do Azure.
-                    Acione um alerta se VM1 ou VM2 tiver menos de 20 GB de espaço livre no volume C.
-                    Permita que o Usuário1 crie definições de política do Azure e o Usuário2 atribua políticas do Azure ao RG1.
-                    Crie um Balanceador de Carga Básico do Azure interno chamado LB1 e conecte o balanceador de carga a VNET1/Subnet1
-                    Habilite o log de fluxo para tráfego IP da VM5 e retenha os logs de fluxo por um período de oito meses.
-                    Sempre que possível, conceda permissões somente leitura do controle de acesso baseado em função do Group4 Azure (Azure RBAC) aos compartilhamentos de arquivos do Azure.
+                    Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
                     Pergunta
                     HOTSPOT –
                     Você implementa as alterações planejadas para NSG1 e NSG2.
