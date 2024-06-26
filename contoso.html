@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estudocasostyle.css">
+
+    <title>Estudo de caso Contoso</title>
+</head>
+
+<body>
+
+    <p> Informações introdutórias
+        Estudo de caso -
+        Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de
+        exame que desejar para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste
+        exame. Você deve administrar seu tempo para garantir que será capaz de responder a todas as questões incluídas
+        neste exame no tempo fornecido.
+        Para responder às perguntas incluídas em um estudo de caso, você precisará consultar as informações
+        fornecidas no estudo de caso. Os estudos de caso podem conter exposições e outros recursos que fornecem mais
+        informações sobre o cenário descrito no estudo de caso. Cada pergunta é independente das outras perguntas neste
+        estudo de caso.
+        Ao final deste estudo de caso, uma tela de revisão aparecerá. Esta tela permite que você revise suas
+        respostas e faça alterações antes de passar para a próxima seção do exame. Depois de iniciar uma nova seção,
+        você não poderá retornar a ela.
+
+        Para iniciar o estudo de caso -
+        Para exibir a primeira pergunta neste estudo de caso, clique no botão Avançar. Use os botões no painel
+        esquerdo para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe
+        informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso
+        tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas
+        nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para
+        retornar à pergunta.
+
+        Visão geral -
+
+        Visão geral -
+        Contoso, Ltd. é uma empresa de consultoria com sede em Montreal e filiais em Seattle e Nova York.
+
+        Ambiente –
+
+        Ambiente Existente –
+        Contoso tem uma assinatura do Azure chamada Sub1 que está vinculada a um locatário do Azure Active Directory
+        (Azure AD). A rede contém um domínio do Active Directory local
+        que sincroniza com o locatário do Azure AD.
+        O locatário do Azure AD contém os usuários mostrados na tabela a seguir.
+
+        <img src="imagens/estudocasocontoso.png" alt="tabela estudo de caso contoso">
+
+        Sub1 contém dois grupos de recursos denominados RG1 e RG2 e as redes virtuais mostradas na tabela a seguir.
+
+        <img src="imagens/estudocasocontosoparte3.png" alt="tabela estudo de caso contoso">
+
+        User1 gerencia os recursos em RG1. User4 gerencia os recursos em RG2.
+        Sub1 contém máquinas virtuais que executam o Windows Server 2019, conforme mostrado na tabela a seguir.
+
+        <img src="imagens/estudocasocontosoparte4.png" alt="tabela estudo de caso contoso">
+
+        Nenhum grupo de segurança de rede (NSGs) está associado às interfaces de rede ou às sub-redes.
+        Sub1 contém as contas de armazenamento mostradas na tabela a seguir.
+
+        <img src="imagens/estudocasocontosoparte5.png" alt="tabela estudo de caso contoso">
+
+
+
+        Requisitos –
+
+        Alterações planejadas –
+        A Contoso planeja implementar as seguintes alterações:
+        Crie um contêiner de blob chamado container1 e um compartilhamento de arquivo chamado share1 que usará a
+        camada de armazenamento Cool.
+        Crie uma conta de armazenamento chamada storage5 e configure a replicação de armazenamento para o serviço
+        Blob.
+        Crie um NSG chamado NSG1 que terá as regras de segurança de entrada personalizadas mostradas na tabela a
+        seguir.
+
+        <img src="imagens/estudocasocontosoparte6.png" alt="tabela estudo de caso contoso">
+
+
+        Associe NSG1 à interface de rede da VM1.
+        Crie um NSG denominado NSG2 que terá as regras de segurança de saída personalizadas mostradas na tabela a
+        seguir.
+
+        <img src="imagens/estudocasocontosoparte7.png" alt="tabela estudo de caso contoso">
+
+
+        Associe NSG2 a VNET1/Subnet2.
+
+        Requisitos Técnicos –
+        A Contoso deve atender aos seguintes requisitos técnicos:
+        Criar contêiner1 e compartilhar1.
+        Use o princípio do menor privilégio.
+        Crie um grupo de segurança do Azure AD denominado Grupo4.
+        Faça backup dos compartilhamentos de arquivos e das máquinas virtuais do Azure usando o Backup do Azure.
+        Acione um alerta se VM1 ou VM2 tiver menos de 20 GB de espaço livre no volume C.
+        Permita que o Usuário1 crie definições de política do Azure e o Usuário2 atribua políticas do Azure ao RG1.
+        Crie um Balanceador de Carga Básico do Azure interno chamado LB1 e conecte o balanceador de carga a
+        VNET1/Subnet1
+        Habilite o log de fluxo para tráfego IP da VM5 e retenha os logs de fluxo por um período de oito meses.
+        Sempre que possível, conceda permissões somente leitura do controle de acesso baseado em função do Group4
+        Azure (Azure RBAC) aos compartilhamentos de arquivos do Azure.
+
+    </p>
+</body>
+
+</html>

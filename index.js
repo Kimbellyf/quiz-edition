@@ -52,7 +52,7 @@ window.onload = function () {
   $titlebancoquestoes = document.getElementById("titlebancoquestoes")
 
   totalQuestoes = questionsAll.length;
-  
+
   $elementProxButton = document.getElementById("proxB")
 
   $elementIntervaloQuestaoInicio = document.getElementById("intervaloinicio")
@@ -179,7 +179,7 @@ function addQuestionDragDrop(questao) {
       if (caixa.function === 'origin') {
         let divdrag = `<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">`
         let optionnumber = 1;
-        
+
         caixa.options.forEach(option => {
           const idh5 = "id='" + optionnumber + "'";
           const textOption = `<h5 draggable="true" ondragstart="drag(event)"` + idh5 + ` style='margin:auto'>` + option.text + `</h5>`;
@@ -197,16 +197,16 @@ function addQuestionDragDrop(questao) {
         divdragAllOptionsAnswer = `<div id="divalloptionsdragdrop"` + divdrag.slice(14) + `</div>`
         divAnswerFinal += `</div>`
         let answerDragDrop = divdragAllOptionsAnswer + divAnswerFinal;
-        
+
         $answersContainer.insertAdjacentHTML('beforeend', divdrag);
-        if(!temOrdem){
-        $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', answerDragDrop);
+        if (!temOrdem) {
+          $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', answerDragDrop);
         }
       }
       else {
         let divdragrecept = `<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>`;
-        if(!temOrdem){
-        $answersContainer.insertAdjacentHTML('beforeend', divdragrecept);
+        if (!temOrdem) {
+          $answersContainer.insertAdjacentHTML('beforeend', divdragrecept);
         }
       }
     })
@@ -318,7 +318,7 @@ function selectAnswer(event) {
   currentQuestionIndex++
   */
 }
-function nextQuestion(){
+function nextQuestion() {
   currentQuestionIndex++
 }
 
