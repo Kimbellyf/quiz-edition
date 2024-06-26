@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estudocasostyle.css">
+
+    <title>Estudo de caso Contoso</title>
+</head>
+
+<body>
+
+    <p>
+        Informações introdutórias
+        Estudo de caso -
+        Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de
+        exame que quiser para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste
+        exame. Você deve gerenciar seu tempo para garantir que consiga concluir todas as questões incluídas neste exame
+        no tempo fornecido.
+        Para responder às questões incluídas em um estudo de caso, você precisará consultar as informações fornecidas no
+        estudo de caso. Os estudos de caso podem conter exibições e outros recursos que fornecem mais informações sobre
+        o cenário descrito no estudo de caso. Cada questão é independente das outras questões neste estudo de caso.
+        No final deste estudo de caso, uma tela de revisão será exibida. Esta tela permite que você revise suas
+        respostas e faça alterações antes de passar para a próxima seção do exame. Depois de começar uma nova seção,
+        você não pode retornar a esta seção.
+
+        Para iniciar o estudo de caso -
+        Para exibir a primeira questão neste estudo de caso, clique no botão Avançar. Use os botões no painel esquerdo
+        para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe
+        informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso
+        tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas
+        nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para
+        retornar à pergunta.
+
+        Visão geral -
+        A Contoso, Ltd. é uma empresa de manufatura que tem escritórios em todo o mundo. A Contoso trabalha com
+        organizações parceiras para levar produtos ao mercado.
+        Os produtos da Contoso são fabricados usando arquivos de blueprint que a empresa cria e mantém.
+
+        Ambiente existente -
+        Atualmente, a Contoso usa vários tipos de servidores para operações comerciais, incluindo o seguinte:
+        Servidores de arquivos
+        Controladores de domínio
+        Servidores Microsoft SQL Server
+        Sua rede contém uma floresta do Active Directory chamada contoso.com. Todos os servidores e computadores
+        clientes são associados ao Active Directory.
+        Você tem um aplicativo público chamado App1. O App1 é composto pelas três camadas a seguir:
+        Um banco de dados SQL
+        Um front-end da Web
+
+        Uma camada intermediária de processamento -
+
+        Cada camada é composta por cinco máquinas virtuais. Os usuários acessam o front-end da Web usando apenas HTTPS.
+
+        Requisitos -
+
+        Alterações planejadas -
+        A Contoso planeja implementar as seguintes alterações na infraestrutura:
+        Mover todas as camadas do App1 para o Azure.
+        Mova os arquivos de blueprint do produto existentes para o armazenamento do Azure Blob.
+        Crie um diretório híbrido para dar suporte a um futuro projeto de migração do Microsoft 365.
+
+        Requisitos técnicos -
+        A Contoso deve atender aos seguintes requisitos técnicos:
+        Mova todas as máquinas virtuais do App1 para o Azure.
+        Minimize o número de portas abertas entre as camadas do App1.
+        Garanta que todas as máquinas virtuais do App1 estejam protegidas por backups.
+        Copie os arquivos do blueprint para o Azure pela Internet.
+        Garanta que os arquivos do blueprint estejam armazenados na camada de armazenamento de arquivo morto.
+        Garanta que o acesso do parceiro aos arquivos do blueprint seja seguro e temporário.
+        Impeça que senhas de usuário ou hashes de senhas sejam armazenados no Azure.
+        Use armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais.
+        Garanta que, quando os usuários ingressarem dispositivos no Azure Active Directory (Azure AD), eles usem um
+        telefone celular para verificar sua identidade.
+        Minimize o esforço administrativo sempre que possível.
+
+        Requisitos do usuário -
+        A Contoso identifica os seguintes requisitos para usuários:
+        Garanta que somente usuários que fazem parte de um grupo chamado Pilot possam ingressar dispositivos no Azure
+        AD.
+        Designe um novo usuário chamado Admin1 como o administrador de serviço para a assinatura do Azure.
+        O Admin1 deve receber alertas por e-mail sobre interrupções de serviço.
+        Certifique-se de que um novo usuário chamado User3 possa criar objetos de rede para a assinatura do Azure.
+
+    </p>
+</body>
+
+</html>
