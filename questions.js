@@ -2223,7 +2223,11 @@ const questionsAll = [
             'text': 'B. terminais de serviço\n',
             'correct': true
         }, {
-            'text': 'C. um grupo de segurança de rede (NSG)\nD.Firewall do Azure',
+            'text': 'C. um grupo de segurança de rede (NSG)',
+            'correct': false
+        },
+        {
+            'text': 'D.Firewall do Azure',
             'correct': false
         }
         ],
@@ -7012,8 +7016,36 @@ const questionsAll = [
         }
         ],
         'explication': 'AC\nDistribuição de votos da comunidade\nEA (50%) AC (48%)'
-    }, {
-        'question': '(Estudo de caso) ... Requisitos do usuário -\nA Contoso identifica os seguintes requisitos para usuários:\nCertifique-se de que apenas os utilizadores que fazem parte de um grupo chamado Piloto podem aderir dispositivos ao Azure AD.\nDesigne um novo usuário chamado Admin1 como administrador de serviço da assinatura do Azure.\nAdmin1 deve receber alertas por email sobre interrupções de serviço.\nCertifique-se de que um novo utilizador chamado User3 pode criar objetos de rede para a subscrição do Azure.\nPergunta\nVocê precisa atender aos requisitos do usuário para Admin1.\nO que você deveria fazer?\n',
+    },
+
+    {
+        'question': `Questão 1. Tópico 7. (Estudo de caso)
+          Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso1.html
+            Pergunta
+            HOTSPOT -
+            Você precisa definir as configurações do dispositivo para atender aos requisitos técnicos e aos requisitos do usuário.
+            Quais são as duas configurações que você deve modificar? Para responder, selecione as configurações apropriadas na área de resposta.
+            Área Quente:
+            Veja a imagem em: https://kimbellyf.github.io/quiz-edition/imagens/questo2topico7estudocaso1.png`,
+        'number': '',
+        'page': 505,
+        'answers': [{
+            'text': 'Veja a resposta em : https://kimbellyf.github.io/quiz-edition/imagens/respostacorretaquestao2topico7estudocaso1.png\n',
+            'correct': true
+        }
+        ],
+        'explication': `Caixa 1: Selecionado -
+            Somente usuários selecionados devem poder ingressar em dispositivos
+
+            Caixa 2: Sim -
+            Certifique-se de que quando os usuários ingressam em dispositivos no Azure Active Directory (Azure AD), os usuários usam um telefone celular para verificar sua identidade.`
+    },
+
+
+    {
+        'question': `Questão 2. Tópico 7. (Estudo de caso)
+          Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso1.html
+          \nPergunta\nVocê precisa atender aos requisitos do usuário para Admin1.\nO que você deveria fazer?\n`,
         'number': '',
         'page': 505,
         'answers': [{
@@ -7268,7 +7300,10 @@ const questionsAll = [
         ],
         'explication': 'A\nOs Arquivos do Azure dão suporte à autenticação baseada em identidade por meio do Bloco de Mensagens do Servidor (SMB) por meio dos Serviços de Domínio do Active Directory locais\n(AD DS) e Azure\nServiços de Domínio Active Directory (Azure AD DS).\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/les/storage-les-active-directory-overview'
     }, {
-        'question': 'Use armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais.\nCertifique-se de que quando os utilizadores ingressam em dispositivos no Azure Ative Directory (Azure AD), os utilizadores utilizam um telemóvel para verificar a sua identidade.\nMinimize o esforço administrativo sempre que possível.\nRequisitos do usuário -\nA Contoso identifica os seguintes requisitos para usuários:\nCertifique-se de que apenas os utilizadores que fazem parte de um grupo chamado Piloto podem aderir dispositivos ao Azure AD.\nDesigne um novo usuário chamado Admin1 como administrador de serviço da assinatura do Azure.\nAdmin1 deve receber alertas por email sobre interrupções de serviço.\nCertifique-se de que um novo utilizador chamado User3 pode criar objetos de rede para a subscrição do Azure.\nPergunta\nVocê precisa implementar uma solução de backup para App1 depois que o aplicativo for movido.\nO que você deve criar primeiro?\n',
+        'question': `Questão 1. Tópico 10
+            
+            Estudo de caso - Contoso link : https://kimbellyf.github.io/quiz-edition/contoso1.html
+            \nPergunta\nVocê precisa implementar uma solução de backup para App1 depois que o aplicativo for movido.\nO que você deve criar primeiro?\n`,
         'number': '',
         'page': 520,
         'answers': [{
@@ -7287,7 +7322,10 @@ const questionsAll = [
         ],
         'explication': 'D\nUm cofre dos Serviços de Recuperação é um contentor lógico que armazena os dados de backup para cada recurso protegido, como VMs do Azure. Quando o backup\ntrabalho para um recurso protegido é executado, ele cria um ponto de recuperação dentro do cofre dos Serviços de Recuperação.\nCenário:\nExistem três níveis de aplicativos, cada um com cinco máquinas virtuais.\nMova todas as máquinas virtuais do App1 para o Azure.\nCertifique-se de que todas as máquinas virtuais do App1 estejam protegidas por backups.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/backup/quick-backup-vm-portal\nDistribuição de votos da comunidade\nD (100%)'
     }, {
-        'question': 'Requisitos do usuário -\nA Contoso identifica os seguintes requisitos para usuários:\nCertifique-se de que apenas os utilizadores que fazem parte de um grupo chamado Piloto podem aderir dispositivos ao Azure AD.\nDesigne um novo usuário chamado Admin1 como administrador de serviço da assinatura do Azure.\nAdmin1 deve receber alertas por email sobre interrupções de serviço.\nCertifique-se de que um novo utilizador chamado User3 pode criar objetos de rede para a subscrição do Azure.\nPergunta\nVocê precisa mover os arquivos do blueprint para o Azure.\nO que você deveria fazer?\n',
+        'question': `Questão 2. Tópico 10
+            Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso1.html
+            \nPergunta\nVocê precisa mover os arquivos do blueprint para o Azure.\nO que você deveria fazer?\n',
+        `,
         'number': '',
         'page': 522,
         'answers': [{
@@ -7306,8 +7344,45 @@ const questionsAll = [
         ],
         'explication': 'B\nO Azure Storage Explorer é uma ferramenta gratuita da Microsoft que permite que você trabalhe com dados do Azure Storage no Windows, macOS e Linux. Você pode\nusá-lo para carregar e baixar dados do armazenamento de blobs do Azure.\nCenário:\nAs alterações planejadas incluem: mover os arquivos de blueprint do produto existente para o armazenamento de blobs do Azure.\nOs requisitos técnicos incluem: copiar os arquivos de blueprint para o Azure pela Internet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/move-data-to-azure-blob-using-azure-storage-explorer\nDistribuição de votos da comunidade\nB (100%)'
     },
+
     {
-        'question': ` 
+        'question': `Questão 3. Tópico 10. Informações introdutórias
+                    Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso1.html
+                    Pergunta
+                    HOTSPOT -
+                    Você precisa identificar os requisitos de armazenamento para a Contoso.
+                    Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+                    NOTA: Cada seleção correta vale um ponto.
+                    Hot Area:
+                    Área quente:
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': true,
+        'answers': [{
+
+            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento de Blobs.\n',
+            'correct': true
+        }, {
+            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento da Tabela do Azure..\n',
+            'correct': false
+        }, {
+            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao Armazenamento de Arquivos do Azure.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Caixa 1: Sim -
+            A Contoso está movendo os arquivos de blueprint do produto existente para o armazenamento de Blobs do Azure.
+            Use o armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais. Usamos Page Blobs para isso.
+
+            Caixa 2: Não -
+            Caixa 3: Não`
+    },
+
+
+    {
+        'question': `Questão 1. Tópico 11 
             Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
             Pergunta\nVocê precisa identificar qual conta de armazenamento usar para o registro de fluxo de tráfego IP da VM5. A solução deve atender aos requisitos de retenção.\nQual conta de armazenamento você deve identificar?\n',
 
@@ -7329,8 +7404,109 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nUsamos o armazenamento da conta BlobStorage3 para retenção.\nO gerenciamento do ciclo de vida do armazenamento oferece uma política baseada em regras que você pode usar para fazer a transição de dados de blob para as camadas de acesso apropriadas ou para expirar\ndados no final do ciclo de vida dos dados.\nNota: Habilite o registro de fluxo para tráfego IP da VM5 e retenha os registros de fluxo por um período de oito meses.'
-    }, {
-        'question': 'Migre App1 e App2 para dois aplicativos Web do Azure chamados WebApp1 e WebApp2.\nRequerimentos técnicos -\nO litware deve atender aos seguintes requisitos técnicos:\nCertifique-se de que o WebApp1 possa ajustar o número de instâncias automaticamente com base na carga e possa escalar até cinco instâncias.\nCertifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.\nCertifique-se de que as informações de roteamento sejam trocadas automaticamente entre o Azure e os roteadores no escritório de Montreal.\nHabilite a Autenticação Multifator do Azure (MFA) apenas para os usuários do departamento de finanças.\nCertifique-se de que webapp2.azurewebsites.net possa ser acessado usando o nome app2.litware.com.\nConecte o escritório de Nova York ao VNet1 pela Internet usando uma conexão criptografada.\nCrie um fluxo de trabalho para enviar uma mensagem de e-mail quando as configurações do VM4 forem modificadas.\nCrie uma função personalizada do Azure chamada Role1 que se baseia na função Leitor.\nMinimize os custos sempre que possível.\nPergunta\nVocê descobre que o VM3 NÃO atende aos requisitos técnicos.\nVocê precisa verificar se o problema está relacionado aos NSGs.\nO que você deve usar?\n',
+    },
+
+
+    {
+        question: `Questão 2. Tópico 11. 
+            Estudo de caso - Contoso link : https://kimbellyf.github.io/quiz-edition/contoso.html
+            Pergunta
+            HOTSPOT -
+            Você precisa criar um storage5. A solução deve suportar as alterações planejadas.
+            Qual tipo de conta de armazenamento você deve usar e qual conta você deve configurar como a conta de armazenamento de destino? Para responder, selecione as opções apropriadas na área de resposta.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+            Área Quente:
+            `,
+        number: 2,
+        page: 12,
+
+        answers: [
+            {
+                text: 'Tipo de conta:',
+                options: [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        text: "Armazenamento de Blobs",
+                        correct: false
+                    }, {
+                        text: "BlockBlobStorage",
+                        correct: false
+                    }, {
+                        text: "Armazenamento (uso geral v1)",
+                        correct: false
+                    }, {
+                        text: "StorageV2 (uso geral v2)",
+                        correct: true
+                    }]
+            }, {
+                text: 'Destino',
+                options: [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        text: "Armazenamento1",
+                        correct: false
+                    }, {
+                        text: "Armazenamento2",
+                        correct: true
+                    }, {
+                        text: "Armazenamento3",
+                        correct: false
+                    }, {
+                        text: "Armazenamento4",
+                        correct: false
+                    }]
+            }
+        ],
+        typeQuestion: 'select',
+        explication: `Referência:
+        https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-configure?tabs=portal`
+    },
+
+
+    {
+        'question': `Questão 3. Tópico 11 
+            Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
+            Pergunta
+            Você precisa identificar qual conta de armazenamento usar para o registro de fluxo do tráfego IP da VM5. A solução deve atender aos requisitos de retenção.
+            Qual conta de armazenamento você deve identificar?
+            \n',
+
+        `,
+        'number': '',
+        'page': 532,
+        'answers': [{
+            'text': 'A. armazenamento1\n',
+            'correct': false
+        }, {
+            'text': 'B. armazenamento2\n',
+            'correct': true
+        }, {
+            'text': 'C. armazenamento3\n',
+            'correct': false
+        }, {
+            'text': 'D. armazenamento4',
+            'correct': false
+        }
+        ],
+        'explication': `B.
+            Comentário mais votado:
+            Por pelo menos dois motivos, storage2 é o único candidato: 
+            - Localização: a conta de armazenamento usada deve estar na mesma região que o NSG. 
+            - A retenção está disponível somente se você usar contas de armazenamento de uso geral v2 (GPv2).
+             Referência: https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-nsg-flow-logging-overview
+        `
+    },
+
+
+
+    {
+        'question': 'Questão 1. Tópico 12. Estudo de caso Litware. Migre App1 e App2 para dois aplicativos Web do Azure chamados WebApp1 e WebApp2.\nRequerimentos técnicos -\nO litware deve atender aos seguintes requisitos técnicos:\nCertifique-se de que o WebApp1 possa ajustar o número de instâncias automaticamente com base na carga e possa escalar até cinco instâncias.\nCertifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.\nCertifique-se de que as informações de roteamento sejam trocadas automaticamente entre o Azure e os roteadores no escritório de Montreal.\nHabilite a Autenticação Multifator do Azure (MFA) apenas para os usuários do departamento de finanças.\nCertifique-se de que webapp2.azurewebsites.net possa ser acessado usando o nome app2.litware.com.\nConecte o escritório de Nova York ao VNet1 pela Internet usando uma conexão criptografada.\nCrie um fluxo de trabalho para enviar uma mensagem de e-mail quando as configurações do VM4 forem modificadas.\nCrie uma função personalizada do Azure chamada Role1 que se baseia na função Leitor.\nMinimize os custos sempre que possível.\nPergunta\nVocê descobre que o VM3 NÃO atende aos requisitos técnicos.\nVocê precisa verificar se o problema está relacionado aos NSGs.\nO que você deve usar?\n',
         'number': '',
         'page': 535,
         'answers': [{
@@ -7352,7 +7528,7 @@ const questionsAll = [
         ],
         'explication': 'E\nCenário: A Contoso deve atender aos requisitos técnicos, incluindo:\nCertifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.\nA verificação de fluxo de IP verifica se um pacote é permitido ou negado para ou de uma máquina virtual. As informações consistem em direção, protocolo, IP local,\nIP remoto, porta local e porta remota. Se o pacote for negado por um grupo de segurança, o nome da regra que negou o pacote será retornado. Enquanto\nqualquer IP de origem ou destino pode ser escolhido,\nA verificação de fluxo de IP ajuda os administradores a diagnosticar rapidamente problemas de conectividade de ou para a Internet e de ou para o ambiente local.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-ip-ow-verify-overview\nDistribuição de votos da comunidade\nE (100%)'
     }, {
-        'question': 'Migre App1 e App2 para dois aplicativos Web do Azure chamados WebApp1 e WebApp2.\nRequerimentos técnicos -\nO litware deve atender aos seguintes requisitos técnicos:\nCertifique-se de que o WebApp1 possa ajustar o número de instâncias automaticamente com base na carga e possa escalar até cinco instâncias.\nCertifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.\nCertifique-se de que as informações de roteamento sejam trocadas automaticamente entre o Azure e os roteadores no escritório de Montreal.\nHabilite a Autenticação Multifator do Azure (MFA) apenas para os usuários do departamento de finanças.\nCertifique-se de que webapp2.azurewebsites.net possa ser acessado usando o nome app2.litware.com.\nConecte o escritório de Nova York ao VNet1 pela Internet usando uma conexão criptografada.\nCrie um fluxo de trabalho para enviar uma mensagem de e-mail quando as configurações do VM4 forem modificadas.\nCrie uma função personalizada do Azure chamada Role1 que se baseia na função Leitor.\nMinimize os custos sempre que possível.\nPergunta\nVocê precisa garantir que a VM1 possa se comunicar com a VM4. A solução deve minimizar o esforço administrativo.\nO que você deveria fazer?\n',
+        'question': 'Questão 1. Tópico 13. Estudo de caso Litware. Migre App1 e App2 para dois aplicativos Web do Azure chamados WebApp1 e WebApp2.\nRequerimentos técnicos -\nO litware deve atender aos seguintes requisitos técnicos:\nCertifique-se de que o WebApp1 possa ajustar o número de instâncias automaticamente com base na carga e possa escalar até cinco instâncias.\nCertifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.\nCertifique-se de que as informações de roteamento sejam trocadas automaticamente entre o Azure e os roteadores no escritório de Montreal.\nHabilite a Autenticação Multifator do Azure (MFA) apenas para os usuários do departamento de finanças.\nCertifique-se de que webapp2.azurewebsites.net possa ser acessado usando o nome app2.litware.com.\nConecte o escritório de Nova York ao VNet1 pela Internet usando uma conexão criptografada.\nCrie um fluxo de trabalho para enviar uma mensagem de e-mail quando as configurações do VM4 forem modificadas.\nCrie uma função personalizada do Azure chamada Role1 que se baseia na função Leitor.\nMinimize os custos sempre que possível.\nPergunta\nVocê precisa garantir que a VM1 possa se comunicar com a VM4. A solução deve minimizar o esforço administrativo.\nO que você deveria fazer?\n',
         'number': '',
         'page': 537,
         'answers': [{
