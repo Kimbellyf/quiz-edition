@@ -2211,7 +2211,11 @@ const questionsAll = [
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
     }, {
-        'question': '90\nVocê tem um locatário do Azure AD que contém os grupos mostrados na tabela a seguir.\nVocê compra licenças Azure Active Directory Premium P2.\nA quais grupos você pode atribuir uma licença?\n',
+        'question': `90\n Tópico 2.
+            Você tem um locatário do Azure AD que contém os grupos mostrados na tabela a seguir.
+            <img src="imagesquestions/X90QTOPIC2.png" alt="imagem da questão"></img>
+            \nVocê compra licenças Azure Active Directory Premium P2.
+            \nA quais grupos você pode atribuir uma licença?\n`,
         'number': '',
         'page': 102,
         'answers': [{
@@ -2346,17 +2350,17 @@ const questionsAll = [
     {
         'question': `Questão 3 tópico 10. 
             Informações introdutórias
-            Estudo de caso - Contoso ..
+            Estudo de caso - Contoso..
 
             Estudo de caso - Contoso link : https://kimbellyf.github.io/quiz-edition/contoso1.html
 
-            Pergunta
+    Pergunta
             HOTSPOT -
-            Você precisa identificar os requisitos de armazenamento para a Contoso.
-            Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
-            NOTA: Cada seleção correta vale um ponto.
+    Você precisa identificar os requisitos de armazenamento para a Contoso.
+            Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira.Caso contrário, selecione Não.
+    NOTA: Cada seleção correta vale um ponto.
             Hot Area:
-                    \n`,
+\n`,
         'number': '',
         'page': 549,
         'studyCase': true,
@@ -2374,24 +2378,24 @@ const questionsAll = [
 
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `Caixa 1: Sim -
-            A Contoso está movendo os arquivos de blueprint do produto existente para o armazenamento de Blobs do Azure.
-            Use o armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais. Usamos Page Blobs para isso.
+    A Contoso está movendo os arquivos de blueprint do produto existente para o armazenamento de Blobs do Azure.
+            Use o armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais.Usamos Page Blobs para isso.
 
-            Caixa 2: Não -
-            Caixa 3: Não`
+    Caixa 2: Não -
+        Caixa 3: Não`
     },
 
     {
         'question': `Questão 1.Tópico 11. Informações introdutórias
             Estudo de caso -
-            Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
-            Pergunta
-            HOTSPOT -
-            Você precisa criar container1 e share1.
-            Quais contas de armazenamento você deve usar para cada recurso? Para responder, selecione as opções apropriadas na área de resposta.
-            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+    Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
+    Pergunta
+HOTSPOT -
+    Você precisa criar container1 e share1.
+            Quais contas de armazenamento você deve usar para cada recurso ? Para responder, selecione as opções apropriadas na área de resposta.
+    OBSERVAÇÃO: Cada seleção correta vale um ponto.
             Área de Hot:
-            `,
+`,
         'number': 1,
         'page': 540,
         'studyCase': true,
@@ -2457,7 +2461,7 @@ const questionsAll = [
         'typeQuestion': 'select',
         'caseStudy': true,
         'explication': `Referência:
-            https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview.
+https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview.
             Há discordância nos comentários
         `
     },
@@ -2465,15 +2469,15 @@ const questionsAll = [
     {
         'question': `Questão 2. Informações introdutórias
             Estudo de caso -
-            Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
+    Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
 
-            Pergunta
-            HOTSPOT -
-            Você precisa criar um storage5. A solução deve suportar as alterações planejadas.
-            Qual tipo de conta de armazenamento você deve usar e qual conta você deve configurar como a conta de armazenamento de destino? Para responder, selecione as opções apropriadas na área de resposta.
-            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+    Pergunta
+HOTSPOT -
+    Você precisa criar um storage5.A solução deve suportar as alterações planejadas.
+            Qual tipo de conta de armazenamento você deve usar e qual conta você deve configurar como a conta de armazenamento de destino ? Para responder, selecione as opções apropriadas na área de resposta.
+    OBSERVAÇÃO: Cada seleção correta vale um ponto.
             Hot Area:
-            `,
+`,
         'number': 1,
         'page': 540,
         'studyCase': true,
@@ -2530,7 +2534,7 @@ const questionsAll = [
         'typeQuestion': 'select',
         'caseStudy': true,
         'explication': `https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-configure?tabs=portal: 
-        `
+`
     },
 
 
@@ -6544,8 +6548,8 @@ const questionsAll = [
             Você tem uma máquina virtual Azure Linux protegida pelo Azure Backup.
             Há uma semana, dois arquivos foram excluídos da máquina virtual.
             Você precisa restaurar os arquivos excluídos em um computador Windows Server 2016 local o mais rápido possível.
-            Quais são as quatro ações que você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
-            Selecione e coloque:`,
+            Quais são as quatro ações que você deve executar em sequência ? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize - as na ordem correta.
+            Selecione e coloque: `,
         'number': '',
         'page': 0,
         'answers': [
@@ -6580,21 +6584,21 @@ const questionsAll = [
             Etapa 3: Baixe e execute o script para montar uma unidade no computador local
             Gere e baixe o script para navegue e recupere arquivos:
             Passo 4: Copie os arquivos usando o File Explorer!
-            Depois que os discos forem anexados, use o Windows File Explorer para navegar pelos novos volumes e arquivos. A funcionalidade de restauração de arquivos fornece acesso a todos os arquivos em um ponto de recuperação. Gerencie os arquivos por meio do File Explorer como faria com arquivos normais.
-            Etapas 1 a 3 abaixo:
+            Depois que os discos forem anexados, use o Windows File Explorer para navegar pelos novos volumes e arquivos.A funcionalidade de restauração de arquivos fornece acesso a todos os arquivos em um ponto de recuperação.Gerencie os arquivos por meio do File Explorer como faria com arquivos normais.
+    Etapas 1 a 3 abaixo:
             Para restaurar arquivos ou pastas do ponto de recuperação, acesse a máquina virtual e execute as seguintes etapas:
-            1. Entre no portal do Azure e, no painel esquerdo, selecione Máquinas virtuais. Na lista de máquinas virtuais, selecione a máquina virtual para abrir o painel dessa máquina virtual.
+1. Entre no portal do Azure e, no painel esquerdo, selecione Máquinas virtuais.Na lista de máquinas virtuais, selecione a máquina virtual para abrir o painel dessa máquina virtual.
             2. No menu da máquina virtual, selecione Backup para abrir o painel Backup.
             3. No menu do painel de backup, selecione Recuperação de arquivos.
 
             O menu Recuperação de arquivos é aberto.
 
-            4. No menu suspenso Selecionar ponto de recuperação, selecione o ponto de recuperação que contém os arquivos desejados. Por padrão, o ponto de recuperação mais recente já está selecionado.
-            5. Selecione Baixar Executável (para VMs do Windows Azure) ou Baixar Script (para VMs do Linux Azure, um script python é gerado) para baixar o software usado para copiar arquivos do ponto de recuperação.
+            4. No menu suspenso Selecionar ponto de recuperação, selecione o ponto de recuperação que contém os arquivos desejados.Por padrão, o ponto de recuperação mais recente já está selecionado.
+            5. Selecione Baixar Executável(para VMs do Windows Azure) ou Baixar Script(para VMs do Linux Azure, um script python é gerado) para baixar o software usado para copiar arquivos do ponto de recuperação.
             Executando o script e identificando volumes:
-            Para máquinas Linux, um script python é gerado. Baixe o script e copie-o para o servidor Linux relevante/compatível.
-            Referência:
-            https://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-files-from-vm https://docs.microsoft.com/en-us/azure/backup/backup -azure-vms-automation#restore-files-from-an-azure-vm-backup
+            Para máquinas Linux, um script python é gerado.Baixe o script e copie - o para o servidor Linux relevante / compatível.
+    Referência:
+https://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-files-from-vm https://docs.microsoft.com/en-us/azure/backup/backup -azure-vms-automation#restore-files-from-an-azure-vm-backup
             
             Comentário mais votado: Parece ter divergências se a resposta ta certa ou não
         `,
@@ -6604,14 +6608,14 @@ const questionsAll = [
 
     {
         'question': `Questão 17. Tópico 6.
-            HOTSPOT –
+HOTSPOT –
             você compra uma nova assinatura do Azure chamada Subscription1.
-            Você cria uma máquina virtual chamada VM1 em Subscription1. VM1 não está protegida pelo Backup do Azure.
-            Você precisa proteger a VM1 usando o Backup do Azure. Os backups devem ser criados à 01h00 e armazenados por 30 dias.
-            O que você deveria fazer? Para responder, selecione as opções apropriadas na área de resposta.
-            NOTA: Cada seleção correta vale um ponto.
+            Você cria uma máquina virtual chamada VM1 em Subscription1.VM1 não está protegida pelo Backup do Azure.
+            Você precisa proteger a VM1 usando o Backup do Azure.Os backups devem ser criados à 01h00 e armazenados por 30 dias.
+            O que você deveria fazer ? Para responder, selecione as opções apropriadas na área de resposta.
+    NOTA: Cada seleção correta vale um ponto.
             Área Quente:
-            `,
+`,
         'number': 17,
         'page': 11,
         'studyCase': true,
@@ -6671,14 +6675,14 @@ const questionsAll = [
             Caixa 1: Um cofre dos Serviços de Recuperação
             Você pode configurar um cofre dos Serviços de Recuperação e configurar o backup para várias VMs do Azure.
 
-            Caixa 2: Uma política de backup -
-            Em Escolher política de backup, siga um destes procedimentos:
-            ✑ Deixe a política padrão. Isso faz backup da VM uma vez por dia no horário especificado e mantém os backups no cofre por 30 dias.
+    Caixa 2: Uma política de backup -
+        Em Escolher política de backup, siga um destes procedimentos:
+            ✑ Deixe a política padrão.Isso faz backup da VM uma vez por dia no horário especificado e mantém os backups no cofre por 30 dias.
             ✑ Selecione uma política de backup existente, se você tiver uma.
             ✑ Crie uma nova política e defina as configurações da política.
-            Referência:
-            https://docs.microsoft.com/en-us/azure/backup/backup-azure-vms-first-look-arm 
-        `
+    Referência:
+https://docs.microsoft.com/en-us/azure/backup/backup-azure-vms-first-look-arm 
+`
     },
 
 
@@ -6765,14 +6769,14 @@ const questionsAll = [
 
     {
         'question': `Questão 22. Tópico 6.
-            HOTSPOT –
+HOTSPOT –
             Você tem uma assinatura do Azure que tem o log de diagnóstico habilitado e está configurado para enviar logs para um workspace do Log Analytics.
             Você está investigando uma interrupção de serviço.
             Você precisa visualizar a hora do evento, o nome do evento e os recursos afetados.
-            Como você deve preencher a consulta? Para responder, selecione as opções apropriadas na área de resposta.
-            NOTA: Cada seleção correta vale um ponto.
+            Como você deve preencher a consulta ? Para responder, selecione as opções apropriadas na área de resposta.
+    NOTA: Cada seleção correta vale um ponto.
             Área Quente:
-            `,
+`,
         'number': 22,
         'page': 11,
         'studyCase': true,
@@ -6802,9 +6806,9 @@ const questionsAll = [
         },
 
         {
-            'text': `     | 
-                Where Level == 'Critical'
-                `,
+            'text': `     |
+    Where Level == 'Critical'
+        `,
             'options': [
                 {
                     text: 'Selecione',
@@ -6828,9 +6832,9 @@ const questionsAll = [
         },
 
         {
-            'text': `  
-                TimeGenerated, OperationNameValue, ResouceId'
-                `,
+            'text': `
+TimeGenerated, OperationNameValue, ResouceId'
+    `,
             'options': [
                 {
                     text: ' ',
@@ -6844,27 +6848,27 @@ const questionsAll = [
         'caseStudy': true,
         'explication': ` 
             Caixa 1: AzureActivity -
-            A tabela AzureActivity possui entradas do log de atividades do Azure, que fornece informações sobre eventos de nível de assinatura ou de grupo de gerenciamento que ocorrem no Azure.
+    A tabela AzureActivity possui entradas do log de atividades do Azure, que fornece informações sobre eventos de nível de assinatura ou de grupo de gerenciamento que ocorrem no Azure.
             Vamos ver apenas as entradas críticas durante uma semana específica.
-            O operador where é comum na linguagem de consulta Kusto. onde filtra uma tabela para linhas que correspondem a critérios específicos. O exemplo a seguir usa vários comandos. Primeiro, a consulta recupera todos os registros da tabela. Em seguida, ele filtra os dados apenas para registros que estão no intervalo de tempo. Por fim, ele filtra esses resultados apenas para registros que possuem nível Crítico.
+            O operador where é comum na linguagem de consulta Kusto.onde filtra uma tabela para linhas que correspondem a critérios específicos.O exemplo a seguir usa vários comandos.Primeiro, a consulta recupera todos os registros da tabela.Em seguida, ele filtra os dados apenas para registros que estão no intervalo de tempo.Por fim, ele filtra esses resultados apenas para registros que possuem nível Crítico.
 
-            AzureActivity -
-            | onde TimeGenerated > datetime(10/01/2020) e TimeGenerated <datetime(10/07/2020)
-            | onde Nível == 'Crítico'
-            Incorreto:
+    AzureActivity -
+            | onde TimeGenerated > datetime(10 /01 / 2020) e TimeGenerated < datetime(10 /07 / 2020)
+    | onde Nível == 'Crítico'
+Incorreto:
             não Perf: A tabela Perf tem dados de desempenho coletados de máquinas virtuais que executam o agente Log Analytics.
 
-            Caixa 2: | projeto -
-            Selecione um subconjunto de colunas: projeto.
-            Use project para incluir apenas as colunas desejadas. Com base no exemplo anterior, vamos limitar a saída a determinadas colunas:
+    Caixa 2: | projeto -
+        Selecione um subconjunto de colunas: projeto.
+            Use project para incluir apenas as colunas desejadas.Com base no exemplo anterior, vamos limitar a saída a determinadas colunas:
 
-            AzureActivity -
-            | onde TimeGenerated > datetime(10/01/2020) e TimeGenerated <datetime(10/07/2020)
-            | onde Nível == 'Crítico'
-            | projeto TimeGenerated, Level, OperationNameValue, ResourceGroup, _ResourceId
-        Referência:
-        https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto/query/tutorial.md
-        `
+AzureActivity -
+            | onde TimeGenerated > datetime(10 /01 / 2020) e TimeGenerated < datetime(10 /07 / 2020)
+    | onde Nível == 'Crítico'
+        | projeto TimeGenerated, Level, OperationNameValue, ResourceGroup, _ResourceId
+Referência:
+https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto/query/tutorial.md
+`
     },
 
 
@@ -6933,16 +6937,16 @@ const questionsAll = [
 
 
     {
-        'question': `31. Tópico 6. ARRASTAR E SOLTAR -\n (OBS: NO MOMENTO NÃO ESTÁ CONTANDO NA CONTAGEM DE ACERTO, SE QUISER SABER SE RESPONDEU CORRETO CLIQUE EM VER RESPOSTA)
+        'question': `31. Tópico 6. ARRASTAR E SOLTAR -\n(OBS: NO MOMENTO NÃO ESTÁ CONTANDO NA CONTAGEM DE ACERTO, SE QUISER SABER SE RESPONDEU CORRETO CLIQUE EM VER RESPOSTA)
 
         DRAG DROP –
         você tem uma assinatura do Azure que contém uma máquina virtual chamada VM1.
         VM1 possui um disco de sistema operacional denominado Disk1 e um disco de dados denominado Disk2.
         Você precisa fazer backup do Disk2 usando o Backup do Azure.
-        Quais são as três ações que você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+        Quais são as três ações que você deve executar em sequência ? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize - as na ordem correta.
         Selecione e coloque:
 
-            `,
+`,
         'number': '31',
         'page': 11,
         'answers': [
@@ -6971,9 +6975,9 @@ const questionsAll = [
 
         ],
         'explication': `Comentário: Resposta correta:
-            1- Crie um cofre de backup do Azure.
-            2- Crie uma política de backup e configure o backup. 
-            3- Configure uma identidade gerenciada. Link: https://docs.microsoft.com/en-us/azure/backup/backup-managed-disks#:~:text=Review%20%2B%20create.-,Configure%20backup,-Azure%20Disk%20backup`,
+1 - Crie um cofre de backup do Azure.
+            2 - Crie uma política de backup e configure o backup. 
+            3 - Configure uma identidade gerenciada.Link: https://docs.microsoft.com/en-us/azure/backup/backup-managed-disks#:~:text=Review%20%2B%20create.-,Configure%20backup,-Azure%20Disk%20backup`,
         'typeQuestion': 'dragdrop'
     },
 
@@ -7035,7 +7039,11 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '35\nVocê tem uma assinatura do Azure que contém as contas de armazenamento mostradas na tabela a seguir.\nVocê implanta um aplicativo Web chamado App1 na região oeste do Azure dos EUA.\nVocê precisa fazer backup do App1. A solução deve minimizar custos.\nQual conta de armazenamento você deve usar como destino para o backup?\n',
+        'question': `35\nVocê tem uma assinatura do Azure que contém as contas de armazenamento mostradas na tabela a seguir.
+            <img src="imagens/xquestao35topico6.png" alt="imagem da questão"></img>
+
+            \nVocê implanta um aplicativo Web chamado App1 na região oeste do Azure dos EUA.\nVocê precisa fazer backup do App1. A solução deve minimizar custos.
+            \nQual conta de armazenamento você deve usar como destino para o backup?\n`,
         'number': '',
         'page': 480,
         'answers': [{
@@ -7224,7 +7232,49 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nUm (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 50. Tópico 6
+            HOTSPOT
+            -
+
+            Você tem uma assinatura do Azure que contém os cofres mostrados na tabela a seguir.
+            <img src="imagens/xquestao50topico6parte1.png" alt="imagem da questão"></img>
+
+            Você implanta as máquinas virtuais mostradas na tabela a seguir.
+            <img src="imagens/xquestao50topico6parte2.png" alt="imagem da questão"></img>
+
+            Você tem as políticas de backup mostradas na tabela a seguir.
+            <img src="imagens/xquestao50topico6parte3.png" alt="imagem da questão"></img>
+
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'É possível fazer backup da VM1 usando a Política1.\n',
+            'correct': true
+        }, {
+            'text': 'É possível fazer backup da VM2 usando a Política3.',
+            'correct': false
+        }, {
+            'text': 'É possível fazer backup da VM2 usando a Política2.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': ` Algumas divergências mas resposta dada aqui igual a fonte
+        `
+
+    },
+
+    {
         'question': '51\nVocê tem uma assinatura do Azure. A assinatura contém máquinas virtuais que se conectam a uma rede virtual chamada VNet1.\nVocê planeja configurar o Azure Monitor para VM Insights.\nVocê precisa garantir que todas as máquinas virtuais se comuniquem apenas com o Azure Monitor por meio do VNet1.\nO que você deve criar primeiro?\n',
         'number': '',
         'page': 493,
@@ -7243,7 +7293,85 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (85%) Outros'
-    }, {
+    },
+
+
+
+    {
+        'question': `Questão 52. Tópico 6.
+                HOTSPOT
+
+            Você tem uma assinatura do Azure que contém os cofres mostrados na tabela a seguir.
+
+            <img src="imagens/xquestao52topico6parte1.png" alt="imagem da questão"></img>
+
+            Você cria uma conta de armazenamento que contém os recursos mostrados na tabela a seguir.
+            
+            <img src="imagens/xquestao52topico6parte2.png" alt="imagem da questão"></img>
+
+            Em qual cofre você pode fazer backup de cont1 e share1? Para responder, selecione as opções apropriadas na área de resposta.
+
+            NOTA: Cada resposta correta vale um ponto.
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': true,
+        'answers': [{
+            'text': 'Cont1',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente backup1",
+                    'correct': true
+                }, {
+                    'text': "Apenas recuperação1",
+                    'correct': false
+                }, {
+                    'text': "Backup1 ou Recuperação1",
+                    'correct': false
+                },
+                {
+                    'text': "Não é possível fazer backup em Backup1 ou Recovery1",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Compartilhar1',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente backup1",
+                    'correct': false
+                }, {
+                    'text': "Apenas recuperação1",
+                    'correct': true
+                }, {
+                    'text': "Backup1 ou Recuperação1",
+                    'correct': false
+                },
+                {
+                    'text': "Não é possível fazer backup em Backup1 ou Recovery1",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': true,
+        'explication': ` 
+                `
+    },
+
+
+    {
         'question': '53\nVocê tem uma assinatura do Azure que contém um trabalho do Azure Stream Analytics chamado Job1.\nVocê precisa monitorar eventos de entrada para Job1 para identificar o número de eventos que NÃO foram processados.\nQual métrica você deve usar?\n',
         'number': '',
         'page': 495,
@@ -7354,7 +7482,50 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nA (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 59. Tópico 6
+            HOTSPOT
+            você tem uma assinatura do Azure que contém duas contas de armazenamento denominadas contoso101 e contoso102.
+            A assinatura contém as máquinas virtuais mostradas na tabela a seguir.
+
+            <img src="imagens/xquestao59topico6parte1.png" alt="imagem da questão"></img>
+
+
+            A VNet1 tem pontos finais de serviço configurados conforme mostrado na exposição Pontos finais de serviço. (Clique na guia Terminais de serviço.)
+            <img src="imagens/xquestao59topico6parte2.png" alt="imagem da questão"></img>
+
+            O terminal de serviço Microsoft.Storage tem a política de terminal de serviço mostrada na exposição Microsoft.Storage. (Clique na guia Microsoft.Storage.)
+            <img src="imagens/xquestao59topico6parte3.png" alt="imagem da questão"></img>
+
+            Para cada uma das afirmações a seguir, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+
+            NOTA: Cada seleção correta vale um ponto.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'VM1 pode acessar contoso102\n',
+            'correct': false
+        }, {
+            'text': 'VM2 pode acessar contoso101',
+            'correct': true
+        }, {
+            'text': 'VM2 usa um IP privado para acessar Azure AD',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': ` Muita divergência nos comentários. Pego o mais votado (mas n esta tão alto assim)
+        `
+    },
+
+
+    {
         'question': '60\nVocê tem uma assinatura do Azure que contém várias máquinas virtuais na região do Azure Oeste dos EUA.\nVocê precisa usar o Tra c Analytics no Azure Network Watcher para monitorar o tráfego da máquina virtual.\nQuais são os dois recursos que você deve criar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
         'number': '',
         'page': 500,
@@ -7386,7 +7557,7 @@ const questionsAll = [
             Você precisa definir as configurações do dispositivo para atender aos requisitos técnicos e aos requisitos do usuário.
             Quais são as duas configurações que você deve modificar? Para responder, selecione as configurações apropriadas na área de resposta.
             Área Quente:
-            Veja a imagem em: https://kimbellyf.github.io/quiz-edition/imagens/questo2topico7estudocaso1.png`,
+            <img src="imagens/questo2topico7estudocaso1.png" alt="imagem da questão"></img>`,
         'number': '',
         'page': 505,
         'answers': [{
@@ -7395,7 +7566,9 @@ const questionsAll = [
         }
         ],
         'explication': `
-            Veja a resposta em : https://kimbellyf.github.io/quiz-edition/imagens/respostacorretaquestao2topico7estudocaso1.png\n
+            Veja a resposta em :
+            
+            https://kimbellyf.github.io/quiz-edition/imagens/respostacorretaquestao2topico7estudocaso1.png\n
             Caixa 1: Selecionado -
             Somente usuários selecionados devem poder ingressar em dispositivos
 
@@ -7640,7 +7813,7 @@ const questionsAll = [
 
 
     {
-        'question': ` Estudo de caso -
+        'question': `2. Tópico 9. Estudo de caso -
             Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
             \nPergunta\nVocê precisa garantir que pode conceder permissões somente leitura do Group4 Azure RBAC para todos os compartilhamentos do Azure.\nO que você deveria fazer?\n',
             `,
@@ -7683,7 +7856,9 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nUm cofre dos Serviços de Recuperação é um contentor lógico que armazena os dados de backup para cada recurso protegido, como VMs do Azure. Quando o backup\ntrabalho para um recurso protegido é executado, ele cria um ponto de recuperação dentro do cofre dos Serviços de Recuperação.\nCenário:\nExistem três níveis de aplicativos, cada um com cinco máquinas virtuais.\nMova todas as máquinas virtuais do App1 para o Azure.\nCertifique-se de que todas as máquinas virtuais do App1 estejam protegidas por backups.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/backup/quick-backup-vm-portal\nDistribuição de votos da comunidade\nD (100%)'
-    }, {
+    },
+
+    {
         'question': `Questão 2. Tópico 10
             Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso1.html
             \nPergunta\nVocê precisa mover os arquivos do blueprint para o Azure.\nO que você deveria fazer?\n',
@@ -8188,16 +8363,19 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
             'correct': false
         }, {
             'text': 'B. Reimplantar VM1 e VM2 na mesma zona de disponibilidade.\n',
-            'correct': true
+            'correct': false
         }, {
             'text': 'C. Reimplantar VM1 e VM2 no mesmo conjunto de disponibilidade.\n',
-            'correct': false
+            'correct': true
         }, {
             'text': 'D. Crie um novo NSG e associe o NSG à VNET1/Subnet1.',
             'correct': false
         }
         ],
-        'explication': 'A\nVM1 já está em VNET1/Subnet1.\nVM2 está em VNET1/Subnet2 e deve ser movida para VNET1/Subnet1.\nObservação:\nCrie um Basic Azure Load Balancer interno chamado LB1 e conecte o load balancer a VNET1/Subnet1'
+        'explication': `
+                        Comentário mais votado: Você não pode usar o balanceador de carga 
+                        básico para balancear entre VMs individuais. Eles precisam estar em um conjunto de escala ou conjunto de disponibilidade
+                    `
     }, {
         'question': '4\nVocê precisa garantir que a VM1 possa se comunicar com a VM4. A solução deve minimizar o esforço administrativo.\nO que você deveria fazer?\n',
         'number': '',
