@@ -223,16 +223,32 @@ function addQuestionDragDrop(questao) {
 
 function addMultipleCheckbox(questao) {
   let newAsnwerCheckBoxHtml = '';
+  let asnwerCheckBoxRightHtml = '';
   questao.answers.forEach(answer => {
     let optionNumber = 1;
     newAsnwerCheckBoxHtml += `<br><div class="selectyesornoanyanswers">` + answer.text;
+    asnwerCheckBoxRightHtml += `<br><div class="selectyesornoanyanswers" disabled>` + answer.text;
+
     if (answer.correct) {
       //newAsnwer.dataset.correct = answer.correct
-      newAsnwerCheckBoxHtml += `<input type="radio" id="check` + optionNumber + `" value=true checked > <label> Sim </label>`
-      newAsnwerCheckBoxHtml += `<input type="radio" id="checkf` + optionNumber + `" value=false> <label> Não </label>`
+      newAsnwerCheckBoxHtml += `
+        <input type="radio" id="check` + optionNumber + `" value=true> <label> Sim </label>
+      `
+      asnwerCheckBoxRightHtml += `<input type="radio" id="check` + optionNumber + `" value=true checked > <label> Sim </label>`
+      newAsnwerCheckBoxHtml += `
+        <input type="radio" id="checkf` + optionNumber + `" value=false> <label> Não </label>
+      `
+      asnwerCheckBoxRightHtml += `<input type="radio"` + optionNumber + `" value=false> <label> Não </label>`
+
     } else {
-      newAsnwerCheckBoxHtml += `<input type="radio" id="check` + optionNumber + `" value=true > <label> Sim </label>`
-      newAsnwerCheckBoxHtml += `<input type="radio" id="checkf` + optionNumber + `" value=false checked> <label> Não </label>`
+      newAsnwerCheckBoxHtml += `
+        <input type="radio" id="check` + optionNumber + `" value=true > <label> Sim </label>
+      `
+      asnwerCheckBoxRightHtml += `<input type="radio" id="check` + optionNumber + `" value=true > <label> Sim </label>`
+      newAsnwerCheckBoxHtml += `
+        <input type="radio" id="checkf` + optionNumber + `" value=false> <label> Não </label>
+      `
+      asnwerCheckBoxRightHtml += `<input type="radio"` + optionNumber + `" value=false checked> <label> Não </label>`
     }
     newAsnwerCheckBoxHtml += `</div>`;
     //$answersContainer.appendChild(newAsnwer)
@@ -241,7 +257,7 @@ function addMultipleCheckbox(questao) {
     optionNumber++;
   })
   $answersContainer.insertAdjacentHTML('beforeend', newAsnwerCheckBoxHtml);
-  $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', newAsnwerCheckBoxHtml);
+  $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', asnwerCheckBoxRightHtml);
   $textAnswerOrigin.textContent = questao.explication
 
   $buttonVerResp.classList.remove("hide")
@@ -336,16 +352,18 @@ function finishGame() {
       message = "Muito bom :)"
       break
     case (performance >= 50):
-      message = "Bom"
+      message = "Na média"
       break
     default:
       message = "Pode melhorar :("
   }
+  message += ` ` + performance.toString() + "%";
 
   $questionsContainer.innerHTML =
     `
     <p class="final-message">
       Você acertou ${totalCorrect} de ${totalQuestions} questões!
+      
       <span>Resultado: ${message}</span>
     </p>
     <button 

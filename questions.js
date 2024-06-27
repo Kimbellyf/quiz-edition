@@ -7034,7 +7034,9 @@ const questionsAll = [
             'correct': true
         }
         ],
-        'explication': `Caixa 1: Selecionado -
+        'explication': `
+            Veja a resposta em : https://kimbellyf.github.io/quiz-edition/imagens/respostacorretaquestao2topico7estudocaso1.png\n
+            Caixa 1: Selecionado -
             Somente usuários selecionados devem poder ingressar em dispositivos
 
             Caixa 2: Sim -
@@ -7382,28 +7384,75 @@ const questionsAll = [
 
 
     {
-        'question': `Questão 1. Tópico 11 
-            Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
-            Pergunta\nVocê precisa identificar qual conta de armazenamento usar para o registro de fluxo de tráfego IP da VM5. A solução deve atender aos requisitos de retenção.\nQual conta de armazenamento você deve identificar?\n',
+        question: `Questão 1. Tópico 11. 
+            Estudo de caso - Contoso link : https://kimbellyf.github.io/quiz-edition/contoso.html
+            Pergunta
+            HOTSPOT -
+            Você precisa criar container1 e share1.
+            Quais contas de armazenamento você deve usar para cada recurso? Para responder, selecione as opções apropriadas na área de resposta.
+            NOTA: Cada seleção correta vale um ponto.
+            Área Quente:
+            `,
+        number: 2,
+        page: 12,
 
-        `,
-        'number': '',
-        'page': 532,
-        'answers': [{
-            'text': 'A. armazenamento1\n',
-            'correct': false
-        }, {
-            'text': 'B. armazenamento2\n',
-            'correct': false
-        }, {
-            'text': 'C. armazenamento3\n',
-            'correct': true
-        }, {
-            'text': 'D. armazenamento4',
-            'correct': false
-        }
+        answers: [
+            {
+                text: 'Contêiner1:',
+                options: [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        text: "somente armazenamento2",
+                        correct: false
+                    }, {
+                        text: "somente armazenamento2 e armazenamento3",
+                        correct: true
+                    }, {
+                        text: "somente armazenamento1, armazenamento2 e armazenamento3",
+                        correct: false
+                    }, {
+                        text: "somente armazenamento2, armazenamento3 e armazenamento4",
+                        correct: false
+                    },
+                    {
+                        text: "armazenamento 1, armazenamento2, armazenamento3 e armazenamento4",
+                        correct: false
+                    },
+                ]
+            }, {
+                text: 'Compartilhar1',
+                options: [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        text: "somente armazenamento2",
+                        correct: true
+                    }, {
+                        text: "armazenamento4 apenas",
+                        correct: false
+                    }, {
+                        text: "somente armazenamento2 e armazenamento4",
+                        correct: false
+                    }, {
+                        text: "somente armazenamento1, armazenamento2 e armazenamento4",
+                        correct: false
+                    },
+                    {
+                        text: "armazenamento1, armazenamento2, armazenamento3 e armazenamento4",
+                        correct: false
+                    },
+
+                ]
+            }
         ],
-        'explication': 'C\nUsamos o armazenamento da conta BlobStorage3 para retenção.\nO gerenciamento do ciclo de vida do armazenamento oferece uma política baseada em regras que você pode usar para fazer a transição de dados de blob para as camadas de acesso apropriadas ou para expirar\ndados no final do ciclo de vida dos dados.\nNota: Habilite o registro de fluxo para tráfego IP da VM5 e retenha os registros de fluxo por um período de oito meses.'
+        typeQuestion: 'select',
+        explication: `Referência:
+https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers https://docs.microsoft.com/en-us/azure/storage/ comum/visão geral da conta de armazenamento`
     },
 
 
@@ -7506,7 +7555,9 @@ const questionsAll = [
 
 
     {
-        'question': 'Questão 1. Tópico 12. Estudo de caso Litware. Migre App1 e App2 para dois aplicativos Web do Azure chamados WebApp1 e WebApp2.\nRequerimentos técnicos -\nO litware deve atender aos seguintes requisitos técnicos:\nCertifique-se de que o WebApp1 possa ajustar o número de instâncias automaticamente com base na carga e possa escalar até cinco instâncias.\nCertifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.\nCertifique-se de que as informações de roteamento sejam trocadas automaticamente entre o Azure e os roteadores no escritório de Montreal.\nHabilite a Autenticação Multifator do Azure (MFA) apenas para os usuários do departamento de finanças.\nCertifique-se de que webapp2.azurewebsites.net possa ser acessado usando o nome app2.litware.com.\nConecte o escritório de Nova York ao VNet1 pela Internet usando uma conexão criptografada.\nCrie um fluxo de trabalho para enviar uma mensagem de e-mail quando as configurações do VM4 forem modificadas.\nCrie uma função personalizada do Azure chamada Role1 que se baseia na função Leitor.\nMinimize os custos sempre que possível.\nPergunta\nVocê descobre que o VM3 NÃO atende aos requisitos técnicos.\nVocê precisa verificar se o problema está relacionado aos NSGs.\nO que você deve usar?\n',
+        'question': `Questão 1. Tópico 12. Estudo de caso Litware.
+        Estudo de caso - Litware link : https://kimbellyf.github.io/quiz-edition/litware.html
+         \nPergunta\nVocê descobre que o VM3 NÃO atende aos requisitos técnicos.\nVocê precisa verificar se o problema está relacionado aos NSGs.\nO que você deve usar?\n`,
         'number': '',
         'page': 535,
         'answers': [{
@@ -7528,7 +7579,9 @@ const questionsAll = [
         ],
         'explication': 'E\nCenário: A Contoso deve atender aos requisitos técnicos, incluindo:\nCertifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.\nA verificação de fluxo de IP verifica se um pacote é permitido ou negado para ou de uma máquina virtual. As informações consistem em direção, protocolo, IP local,\nIP remoto, porta local e porta remota. Se o pacote for negado por um grupo de segurança, o nome da regra que negou o pacote será retornado. Enquanto\nqualquer IP de origem ou destino pode ser escolhido,\nA verificação de fluxo de IP ajuda os administradores a diagnosticar rapidamente problemas de conectividade de ou para a Internet e de ou para o ambiente local.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-ip-ow-verify-overview\nDistribuição de votos da comunidade\nE (100%)'
     }, {
-        'question': 'Questão 1. Tópico 13. Estudo de caso Litware. Migre App1 e App2 para dois aplicativos Web do Azure chamados WebApp1 e WebApp2.\nRequerimentos técnicos -\nO litware deve atender aos seguintes requisitos técnicos:\nCertifique-se de que o WebApp1 possa ajustar o número de instâncias automaticamente com base na carga e possa escalar até cinco instâncias.\nCertifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.\nCertifique-se de que as informações de roteamento sejam trocadas automaticamente entre o Azure e os roteadores no escritório de Montreal.\nHabilite a Autenticação Multifator do Azure (MFA) apenas para os usuários do departamento de finanças.\nCertifique-se de que webapp2.azurewebsites.net possa ser acessado usando o nome app2.litware.com.\nConecte o escritório de Nova York ao VNet1 pela Internet usando uma conexão criptografada.\nCrie um fluxo de trabalho para enviar uma mensagem de e-mail quando as configurações do VM4 forem modificadas.\nCrie uma função personalizada do Azure chamada Role1 que se baseia na função Leitor.\nMinimize os custos sempre que possível.\nPergunta\nVocê precisa garantir que a VM1 possa se comunicar com a VM4. A solução deve minimizar o esforço administrativo.\nO que você deveria fazer?\n',
+        'question': `Questão 1. Tópico 13. Estudo de caso Litware. 
+             Estudo de caso - Litware link : https://kimbellyf.github.io/quiz-edition/litware.html
+            \nPergunta\nVocê precisa garantir que a VM1 possa se comunicar com a VM4. A solução deve minimizar o esforço administrativo.\nO que você deveria fazer?\n`,
         'number': '',
         'page': 537,
         'answers': [{
@@ -7547,6 +7600,96 @@ const questionsAll = [
         ],
         'explication': 'C\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal\nDistribuição de votos da comunidade\nB (89%) 11%'
     },
+
+
+    {
+        question: `Questão 2. Tópico 13. Informações introdutórias
+
+            Estudo de caso - Litware link : https://kimbellyf.github.io/quiz-edition/litware.html
+            
+            Pergunta
+            HOTSPOT -
+            Você precisa atender aos requisitos de conexão do escritório de Nova York.
+            O que você deveria fazer? Para responder, selecione as opções apropriadas na área de resposta.
+            NOTA: Cada seleção correta vale um ponto.
+            Área Quente:
+            `,
+        'number': 1,
+        'page': 540,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': 'No portal do Azure:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Crie apenas um circuito ExpressRoute",
+                    'correct': false
+                }, {
+                    'text': "Crie apenas um gateway de rede virtual.",
+                    'correct': false
+                }, {
+                    'text': "Crie um gateway de rede virtual e um gateway de rede local.",
+                    'correct': true
+
+                }, {
+                    'text': "Crie um circuito ExpressRoute e um gateway de dados local.",
+                    'correct': false
+                }, {
+                    'text': "Crie um gateway de rede virtual e um gateway de dados local.",
+                    'correct': false
+                },
+            ]
+        },
+
+        {
+            'text': 'No escritório de Nova York:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Implante o ExpressRoute.",
+                    'correct': false
+                }, {
+                    'text': "Implante um servidor DirectAccess.",
+                    'correct': false
+                }, {
+                    'text': "Implemente um proxy de aplicativo da Web.",
+                    'correct': false
+                },
+                {
+                    'text': "Configure uma conexão VPN site a site.",
+                    'correct': true
+                },
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'explication': `Caixa 1: Crie um gateway de rede virtual e um gateway de rede local.
+        Gateway VPN do Azure. O serviço de gateway VPN permite-lhe ligar a VNet à rede local através de um dispositivo VPN. Para obter mais informações, consulte
+        Conectar uma rede local a uma rede virtual do Microsoft Azure. O gateway VPN inclui os seguintes elementos:
+        ✑ Gateway de rede virtual. Um recurso que fornece um dispositivo VPN virtual para a VNet. É responsável por encaminhar o tráfego da rede local para a
+        VNet.
+        ✑ Gateway de rede local. Uma abstração do dispositivo VPN local. O tráfego de rede do aplicativo em nuvem para a rede local é roteado por meio desse gateway.
+        ✑ Conexão. A conexão possui propriedades que especificam o tipo de conexão (IPSec) e a chave compartilhada com o dispositivo VPN local para criptografar o tráfego.
+        ✑ Sub-rede do gateway. O gateway de rede virtual é mantido na sua própria sub-rede, que está sujeita a vários requisitos, descritos na secção Recomendações abaixo.
+        Caixa 2: Configurar uma conexão VPN site a site
+        No local, crie uma conexão site a site para o gateway de rede virtual e o gateway de rede local.
+
+        Cenário: Conecte o escritório de Nova Iorque à VNet1 pela Internet usando uma conexão criptografada.
+        Respostas incorretas:
+        Azure ExpressRoute: Estabelecido entre a sua rede e o Azure, através de um parceiro ExpressRoute. Esta conexão é privada. O tráfego não passa pela internet.
+        Referência:
+        https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/vpn
+            `
+    },
+
 
     {
         question: `Questão 1. Tópico 14. Informações introdutórias
@@ -7622,7 +7765,9 @@ const questionsAll = [
 
 
     {
-        'question': 'Requisitos do usuário -\nA Contoso identifica os seguintes requisitos para usuários:\nCertifique-se de que apenas os utilizadores que fazem parte de um grupo chamado Piloto podem aderir dispositivos ao Azure AD.\nDesigne um novo usuário chamado Admin1 como administrador de serviço da assinatura do Azure.\nAdmin1 deve receber alertas por email sobre interrupções de serviço.\nCertifique-se de que um novo utilizador chamado User3 pode criar objetos de rede para a subscrição do Azure.\nPergunta\nVocê está planejando a mudança do App1 para o Azure.\nVocê cria um grupo de segurança de rede (NSG).\nVocê precisa recomendar uma solução para fornecer aos usuários acesso ao App1.\nO que você deve recomendar?\n',
+        'question': `Questão 2. Tópico 14
+          Estudo de caso - Contoso link : https://kimbellyf.github.io/quiz-edition/contoso1.html
+          Pergunta\nVocê está planejando a mudança do App1 para o Azure.\nVocê cria um grupo de segurança de rede (NSG).\nVocê precisa recomendar uma solução para fornecer aos usuários acesso ao App1.\nO que você deve recomendar?\n`,
         'number': '',
         'page': 545,
         'answers': [{
@@ -7672,7 +7817,7 @@ const questionsAll = [
     },
 
     {
-        'question': `
+        'question': `Questão 3. Tópico 15.
             Estudo de caso -
             Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
             \nPergunta\nVocê precisa adicionar VM1 e VM2 ao pool de back-end do LB1.\nO que você deve fazer primeiro?\n`,
@@ -7715,56 +7860,12 @@ const questionsAll = [
     },
 
     {
-        'question': `Informações introdutórias
+        'question': `Questão 1. Tópico 16. Informações introdutórias
         Estudo de caso -
-        Este é um estudo de caso. Os estudos de caso não são cronometrados separadamente. Você pode usar o tempo de exame que desejar para concluir cada caso. No entanto, pode haver estudos de caso e seções adicionais neste exame. Você deve administrar seu tempo para garantir que será capaz de responder a todas as questões incluídas neste exame no tempo fornecido.
-        Para responder às perguntas incluídas em um estudo de caso, você precisará consultar as informações fornecidas no estudo de caso. Os estudos de caso podem conter exposições e outros recursos que fornecem mais informações sobre o cenário descrito no estudo de caso. Cada pergunta é independente das outras perguntas neste estudo de caso.
-        Ao final deste estudo de caso, uma tela de revisão aparecerá. Esta tela permite que você revise suas respostas e faça alterações antes de passar para a próxima seção do exame. Depois de iniciar uma nova seção, você não poderá retornar a ela.
 
-        Para iniciar o estudo de caso -
-        Para exibir a primeira pergunta neste estudo de caso, clique no botão Avançar. Use os botões no painel esquerdo para explorar o conteúdo do estudo de caso antes de responder às perguntas. Clicar nesses botões exibe informações como requisitos de negócios, ambiente existente e declarações de problemas. Se o estudo de caso tiver uma guia Todas as informações, observe que as informações exibidas são idênticas às informações exibidas nas guias subsequentes. Quando estiver pronto para responder a uma pergunta, clique no botão Pergunta para retornar à pergunta.
-
-        Visão geral -
-        Litware, Inc. é uma empresa de consultoria com sede em Montreal e duas filiais em Seattle e Nova York.
-        O escritório de Montreal tem 2.000 funcionários. O escritório de Seattle tem 1.000 funcionários. O escritório de Nova York tem 200 funcionários.
-        Todos os recursos utilizados pela Litware são hospedados localmente.
-        Litware cria uma nova assinatura do Azure. O locatário do Azure Active Directory (Azure AD) usa um domínio chamado litware.onmicrosoft.com. O locatário usa o
-        nível de preços Premium P1.
-
-        Ambiente Existente -
-        A rede contém uma floresta do Active Directory chamada litware.com. Todos os controladores de domínio são configurados como servidores DNS e hospedam a zona DNS litware.com.
-        A Litware possui departamentos de finanças, recursos humanos, vendas, pesquisa e tecnologia da informação. Cada departamento possui uma unidade organizacional (OU) que contém todas as contas do respectivo departamento. Todas as contas de usuário possuem o atributo de departamento definido para seu respectivo departamento. Novos usuários são adicionados com frequência.
-        Litware.com contém um usuário chamado User1.
-        Todos os escritórios se conectam usando conexões privadas.
-        A Litware possui data centers nos escritórios de Montreal e Seattle. Cada escritório possui um firewall que pode ser configurado como um dispositivo VPN.
-        Todos os servidores de infraestrutura são virtualizados. O ambiente de virtualização contém os servidores na tabela a seguir.
-
-        Litware usa dois aplicativos da web chamados App1 e App2. Cada instância de cada aplicativo Web requer 1 GB de memória.
-        A assinatura do Azure contém os recursos da tabela a seguir.
-
-        A equipa de segurança de rede implementa vários grupos de segurança de rede (NSGs)
-
-        Requisitos -
-
-        Alterações planeadas -
-        A Litware planeia implementar as seguintes alterações:
-        Implementar o Azure ExpressRoute no escritório de Montreal.
-        Migre as máquinas virtuais hospedadas no Server1 e Server2 para o Azure.
-        Sincronize o Active Directory local com o Azure Active Directory (Azure AD).
-        Migre App1 e App2 para dois aplicativos Web do Azure chamados WebApp1 e WebApp2.
-
-        Requisitos técnicos -
-        O Litware deve atender aos seguintes requisitos técnicos:
-        Certifique-se de que o WebApp1 possa ajustar o número de instâncias automaticamente com base na carga e possa escalar até cinco instâncias.
-
-        Certifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.
-        Certifique-se de que as informações de encaminhamento são trocadas automaticamente entre o Azure e os routers no escritório de Montreal.
-        Habilite a Autenticação Multifator do Azure (MFA) somente para os usuários do departamento financeiro.
-        Certifique-se de que webapp2.azurewebsites.net possa ser acessado usando o nome app2.litware.com.
-        Conecte o escritório de Nova York ao VNet1 pela Internet usando uma conexão criptografada.
-        Crie um fluxo de trabalho para enviar uma mensagem de email quando as configurações do VM4 forem modificadas.
-        Crie uma função personalizada do Azure chamada Role1 que se baseia na função Leitor.
-        Minimize os custos sempre que possível.
+        Estudo de caso -
+        Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/litware.html
+        
         Pergunta
         HOTSPOT -
         Você precisa implementar Role1.
@@ -7826,7 +7927,13 @@ const questionsAll = [
     },
 
     {
-        'question': 'Obtenha certificação de TI\nDesbloqueie cursos em vídeo gratuitos e de alta qualidade no ExamTopics com um simples\ncadastro. Eleve sua jornada de aprendizado com nosso conteúdo selecionado por especialistas.\nCadastre-se agora para acessar uma ampla gama de recursos educacionais projetados para\nseu sucesso. Comece a aprender hoje com ExamTopics!\nComece a aprender gratuitamente\nRequerimentos técnicos -\nO litware deve atender aos seguintes requisitos técnicos:\nCertifique-se de que o WebApp1 possa ajustar o número de instâncias automaticamente com base na carga e possa escalar até cinco instâncias.\nCertifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.\nCertifique-se de que as informações de roteamento sejam trocadas automaticamente entre o Azure e os roteadores no escritório de Montreal.\nHabilite a Autenticação Multifator do Azure (MFA) apenas para os usuários do departamento de finanças.\nCertifique-se de que webapp2.azurewebsites.net possa ser acessado usando o nome app2.litware.com.\nConecte o escritório de Nova York ao VNet1 pela Internet usando uma conexão criptografada.\nCrie um fluxo de trabalho para enviar uma mensagem de e-mail quando as configurações do VM4 forem modificadas.\nCrie uma função personalizada do Azure chamada Role1 que se baseia na função Leitor.\nMinimize os custos sempre que possível.\nPergunta\nVocê precisa recomendar uma solução para automatizar a configuração para os usuários do departamento financeiro. A solução deve atender aos requisitos técnicos\nrequisitos.\nO que você deveria incluir na recomendação?\n',
+        'question': `
+
+        Questão 2. Tópico 16. Informações introdutórias
+        Estudo de caso -
+        Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/litware.html
+        
+        \nPergunta\nVocê precisa recomendar uma solução para automatizar a configuração para os usuários do departamento financeiro. A solução deve atender aos requisitos técnicos\nrequisitos.\nO que você deveria incluir na recomendação?\n`,
         'number': '',
         'page': 555,
         'answers': [{
