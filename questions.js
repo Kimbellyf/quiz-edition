@@ -1,6 +1,6 @@
 const questionsAll = [
     {
-        'question': '1\nSua empresa possui departamentos servais. Cada departamento possui diversas máquinas virtuais (VMs).\nA empresa tem uma assinatura do Azure que contém um grupo de recursos denominado RG1.\nTodas as VMs estão localizadas em RG1.\nVocê deseja associar cada VM ao seu respectivo departamento.\nO que você deveria fazer?\n',
+        'question': ' 1\nSua empresa possui departamentos servais. Cada departamento possui diversas máquinas virtuais (VMs).\nA empresa tem uma assinatura do Azure que contém um grupo de recursos denominado RG1.\nTodas as VMs estão localizadas em RG1.\nVocê deseja associar cada VM ao seu respectivo departamento.\nO que você deveria fazer?\n',
         'number': '',
         'page': 0,
         'answers': [{
@@ -401,7 +401,7 @@ const questionsAll = [
             ],
 
         ],
-        'explication': 'C\nReferência:\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags\nDistribuição de votos da comunidade\nC (94%) 6%\nTópico 1',
+        'explication': '',
         'typeQuestion': 'dragdrop'
     },
 
@@ -787,9 +787,13 @@ const questionsAll = [
         Hotspot -
         Tem um inquilino do Azure Active Directory (Azure AD) chamado contoso.com que contém os utilizadores mostrados na tabela a seguir:
 
+        <img src="imagesquestions/X224.png" alt="imagem da questão"></img>
+
         User3 é o dono do Group1.
         O Group2 é membro do Group1.
         Você configura uma revisão de acesso chamada Review1 como mostrado na seguinte exposição:
+
+        <img src="imagesquestions/X225.jpg" alt="imagem da questão"></img>
 
         Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
         NOTA: Cada selecção correcta vale um ponto.
@@ -829,10 +833,14 @@ const questionsAll = [
         'question': `Questao 5. Tópico 2.
 
         Você tem os grupos de gerenciamento do Azure mostrados na tabela a seguir:
+        <img src="imagesquestions/X240.png" alt="imagem da questão"></img>
 
         Você adiciona assinaturas do Azure aos grupos de gerenciamento conforme mostrado na tabela a seguir:
+        <img src="imagesquestions/X241.png" alt="imagem da questão"></img>
 
         Você cria as políticas do Azure mostradas na tabela a seguir:
+        
+        <img src="imagesquestions/X242.png" alt="imagem da questão"></img>
 
         Para cada uma das instruções a seguir, selecione Sim se a afirmação é verdadeira. Caso contrário, selecione Não.
         NOTA: Cada seleção correta vale um ponto.
@@ -858,7 +866,9 @@ const questionsAll = [
 
 
     {
-        'question': '6\nVocê tem uma política do Azure conforme mostrado na seguinte exposição:\nQual é o efeito da política?\n',
+        'question': `6\nVocê tem uma política do Azure conforme mostrado na seguinte exposição: 
+                <img src="imagesquestions/X254.png" alt="imagem da questão"></img>
+            \nQual é o efeito da política?\n`,
         'number': '',
         'page': 28,
         'answers': [{
@@ -879,10 +889,12 @@ const questionsAll = [
     },
 
     {
-        question: `img. HOTSPOT -
+        question: `7. Tópico 2. img. HOTSPOT -
             Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir:
+            <img src="imagesquestions/X262.png" alt="imagem da questão"></img>
 
             Você atribui uma política ao RG6 conforme mostrado na tabela a seguir:
+            <img src="imagesquestions/X263.png" alt="imagem da questão"></img>
 
             Ao RG6, você aplica a tag: RGroup: RG6.
             Você implanta uma rede virtual chamada VNET2 em RG6.
@@ -956,7 +968,11 @@ const questionsAll = [
 
 
     {
-        'question': '8\nVocê tem uma assinatura do Azure chamada AZPT1 que contém os recursos mostrados na tabela a seguir:\nVocê cria uma nova assinatura do Azure chamada AZPT2.\nVocê precisa identificar quais recursos podem ser movidos para o AZPT2.\nQuais recursos você deve identificar?\n',
+        'question': `8\nTópico 2 .
+            Você tem uma assinatura do Azure chamada AZPT1 que contém os recursos mostrados na tabela a seguir:
+            <img src="imagesquestions/X275.png" alt="imagem da questão"></img>
+            \nVocê cria uma nova assinatura do Azure chamada AZPT2.\nVocê precisa identificar quais recursos podem ser movidos para o AZPT2.
+            \nQuais recursos você deve identificar?\n`,
         'number': '',
         'page': 30,
         'answers': [{
@@ -1071,10 +1087,12 @@ const questionsAll = [
     {
         'question': `14. Tópico 2. img. HOTSPOT -
             Você tem um locatário do Azure Active Directory chamado Contoso.com que inclui os seguintes usuários:
-
+            <img src="imagesquestions/X304.png" alt="imagem da questão"></img>
             Contoso.com inclui os seguintes dispositivos Windows 10:
+            <img src="imagesquestions/X305.png" alt="imagem da questão"></img>
 
             Você cria os seguintes grupos de segurança em Contoso.com:
+            <img src="imagesquestions/X306.png" alt="imagem da questão"></img>
 
             Para cada uma das instruções a seguir, selecione Sim se a instrução for verdadeira . Caso contrário, selecione Não.
             NOTA: Cada seleção correta vale um ponto.
@@ -1116,7 +1134,12 @@ const questionsAll = [
 
 
     {
-        'question': '15\nVocê tem uma assinatura do Azure que contém um grupo de recursos chamado RG26.\nO RG26 está definido para o local da Europa Ocidental e é usado para criar recursos temporários para um projeto. RG26 contém os recursos mostrados no\ntabela a seguir.\nSQLDB01 tem backup em RGV1.\nQuando o projeto for concluído, você tenta excluir o RG26 do portal do Azure. A exclusão falha.\nVocê precisa excluir RG26.\nO que você deve fazer primeiro?\n',
+        'question': `15 . Tópico 2. \n
+        Você tem uma assinatura do Azure que contém um grupo de recursos chamado RG26.\nO RG26 está definido para o local da Europa Ocidental e é usado para criar recursos temporários para um projeto. RG26 contém os recursos mostrados no\ntabela a seguir.
+        <img src="imagesquestions/X318.png" alt="imagem da questão"></img>
+
+        \nSQLDB01 tem backup em RGV1.\nQuando o projeto for concluído, você tenta excluir o RG26 do portal do Azure. A exclusão falha.\nVocê precisa excluir RG26.
+        \nO que você deve fazer primeiro?\n`,
         'number': '',
         'page': 35,
         'answers': [{
@@ -1311,7 +1334,8 @@ const questionsAll = [
         Você tem uma assinatura do Azure que contém uma rede virtual chamada VNET1 na região East US 2. Uma interface de rede chamada VM1-NI está conectada à
         VNET1.
         Você implanta com sucesso o seguinte modelo do Azure Resource Manager.
-        
+        <img src="imagesquestions/X359.jpg" alt="imagem da questão"></img>
+
         Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
         OBSERVAÇÃO: Cada seleção correta vale um ponto.
         Hot Area:
@@ -1346,7 +1370,10 @@ const questionsAll = [
 
 
     {
-        'question': '24\nVocê tem uma assinatura do Azure chamada Subscription1. Subscription1 contém os grupos de recursos na tabela a seguir.\nRG1 possui um aplicativo da web chamado WebApp1. WebApp1 está localizado na Europa Ocidental.\nVocê move WebApp1 para RG2.\nQual é o efeito da mudança?\n',
+        'question': `24 . Tópico 2.
+            \nVocê tem uma assinatura do Azure chamada Subscription1. Subscription1 contém os grupos de recursos na tabela a seguir.
+            <img src="imagesquestions/X372.png" alt="imagem da questão"></img>
+            \nRG1 possui um aplicativo da web chamado WebApp1. WebApp1 está localizado na Europa Ocidental.\nVocê move WebApp1 para RG2.\nQual é o efeito da mudança?\n`,
         'number': '',
         'page': 44,
         'answers': [{
@@ -1461,7 +1488,32 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nO Advisor ajuda você a otimizar e reduzir seus gastos gerais com o Azure, identificando recursos ociosos e subutilizados. Você pode obter custo\nrecomendações da guia Custo no painel do Advisor.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+
+    {
+        'question': `28 . Tópico 2.
+            PONTO DE ACESSO -
+            Você tem um locatário do Azure Active Directory (Azure AD).
+            Você precisa criar uma política de acesso condicional que exija que todos os usuários usem a autenticação multifator ao acessar o portal do Azure.
+            Quais são as três configurações que você deve definir? Para responder, selecione as configurações apropriadas na área de resposta.
+            NOTA: Cada seleção correta vale um ponto.
+            <img src="imagesquestions/X398.png" alt="imagem da questão"></img>
+            `,
+        'number': '',
+        'page': 47,
+        'answers': [{
+            'text': 'OK',
+            'correct': true
+        }
+        ],
+        'explication': `Resposta: https://kimbellyf.github.io/quiz-edition/imagesquestions/X404.png
+             Reference:
+            https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/app-based-mfa`
+    },
+
+
+
+    {
         'question': '29\nVocê tem um locatário do Azure Active Directory (Azure AD) chamado contoso.onmicrosoft.com.\nA função de administrador de usuário é atribuída a um usuário chamado Admin1.\nUm parceiro externo tem uma conta da Microsoft que usa a entrada user1@outlook.com.\nAdmin1 tenta convidar o parceiro externo para entrar no locatário do Azure AD e recebe a seguinte mensagem de erro: `Não é possível convidar o usuário\nuser1@outlook.com `"Exceção de autorização genérica.`\nVocê precisa garantir que Admin1 possa convidar o parceiro externo para entrar no locatário do Azure AD.\nO que você deveria fazer?\n',
         'number': '',
         'page': 49,

@@ -111,7 +111,9 @@ function displayNextQuestion() {
 
   let questaoDoMomento = questions[currentQuestionIndex]
 
-  $questionText.textContent = questaoDoMomento.question
+  $questionText.textContent = '';
+  $textAnswerOrigin.textContent = '';
+  $questionText.insertAdjacentHTML('beforeend', questaoDoMomento.question);
   if (questaoDoMomento.hasOwnProperty("typeQuestion")) {
     questoesSelectOuDragDrop(questaoDoMomento);
   } else {
