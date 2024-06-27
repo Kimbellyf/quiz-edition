@@ -6484,7 +6484,155 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nNetwork Performance Monitor é uma solução de monitoramento de rede híbrida baseada em nuvem que ajuda a monitorar o desempenho da rede entre\nvários pontos da sua infraestrutura de rede. Ele também ajuda a monitorar a conectividade de rede para terminais de serviços e aplicativos e monitorar\no desempenho do Azure ExpressRoute.\nVocê pode monitorar a conectividade de rede em implantações em nuvem e locais, vários data centers e filiais e\naplicativos ou microsserviços multicamadas de missão crítica. Com o Performance Monitor, você pode detectar problemas de rede antes que os usuários reclamem.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/insights/network-performance-monitor\nDistribuição de votos da comunidade\nC (100%)'
-    }, {
+    },
+
+    {
+        'question': `16 Tópico 6. DRAG DROP –
+            DRAG DROP –
+            Você tem uma máquina virtual Azure Linux protegida pelo Azure Backup.
+            Há uma semana, dois arquivos foram excluídos da máquina virtual.
+            Você precisa restaurar os arquivos excluídos em um computador Windows Server 2016 local o mais rápido possível.
+            Quais são as quatro ações que você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+            Selecione e coloque:`,
+        'number': '',
+        'page': 0,
+        'answers': [
+
+            [
+                {
+                    'text': 'Options \n',
+                    'options': [
+                        { 'text': 'Baixe e execute o script para montar uma unidade no computador local', 'correct': false, 'index': '3' },
+                        { 'text': 'Selecione um ponto de restauração que contenha os arquivos excluídos', 'correct': false, 'index': '2' },
+                        { 'text': 'No portal do Azure, clique em Restaurar VM do cofre', 'correct': false, 'index': '-1' },
+                        { 'text': 'No portal do Azure, clique em Recuperação de Arquivos do cofre Monte um VHD', 'correct': false, 'index': '1' },
+                        { 'text': 'Copie os arquivos usando AZCopy', 'correct': false, 'index': '-1' },
+                        { 'text': 'Copie os arquivos usando o File Explorer', 'correct': false, 'index': '4' },
+
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': 'Answer \n',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `Etapa 1: No portal do Azure, clique em Recuperação de arquivos no cofre
+            Etapa 2. Selecione um ponto de restauração que contenha os arquivos excluídos
+            Etapa 3: Baixe e execute o script para montar uma unidade no computador local
+            Gere e baixe o script para navegue e recupere arquivos:
+            Passo 4: Copie os arquivos usando o File Explorer!
+            Depois que os discos forem anexados, use o Windows File Explorer para navegar pelos novos volumes e arquivos. A funcionalidade de restauração de arquivos fornece acesso a todos os arquivos em um ponto de recuperação. Gerencie os arquivos por meio do File Explorer como faria com arquivos normais.
+            Etapas 1 a 3 abaixo:
+            Para restaurar arquivos ou pastas do ponto de recuperação, acesse a máquina virtual e execute as seguintes etapas:
+            1. Entre no portal do Azure e, no painel esquerdo, selecione Máquinas virtuais. Na lista de máquinas virtuais, selecione a máquina virtual para abrir o painel dessa máquina virtual.
+            2. No menu da máquina virtual, selecione Backup para abrir o painel Backup.
+            3. No menu do painel de backup, selecione Recuperação de arquivos.
+
+            O menu Recuperação de arquivos é aberto.
+
+            4. No menu suspenso Selecionar ponto de recuperação, selecione o ponto de recuperação que contém os arquivos desejados. Por padrão, o ponto de recuperação mais recente já está selecionado.
+            5. Selecione Baixar Executável (para VMs do Windows Azure) ou Baixar Script (para VMs do Linux Azure, um script python é gerado) para baixar o software usado para copiar arquivos do ponto de recuperação.
+            Executando o script e identificando volumes:
+            Para máquinas Linux, um script python é gerado. Baixe o script e copie-o para o servidor Linux relevante/compatível.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-files-from-vm https://docs.microsoft.com/en-us/azure/backup/backup -azure-vms-automation#restore-files-from-an-azure-vm-backup
+            
+            Comentário mais votado: Parece ter divergências se a resposta ta certa ou não
+        `,
+        'typeQuestion': 'dragdrop'
+    },
+
+
+    {
+        'question': `Questão 17. Tópico 6.
+            HOTSPOT –
+            você compra uma nova assinatura do Azure chamada Subscription1.
+            Você cria uma máquina virtual chamada VM1 em Subscription1. VM1 não está protegida pelo Backup do Azure.
+            Você precisa proteger a VM1 usando o Backup do Azure. Os backups devem ser criados à 01h00 e armazenados por 30 dias.
+            O que você deveria fazer? Para responder, selecione as opções apropriadas na área de resposta.
+            NOTA: Cada seleção correta vale um ponto.
+            Área Quente:
+            `,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': 'Local onde armazenar os backups:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Um contêiner de blob",
+                    'correct': false
+                }, {
+                    'text': "Um compartilhamento de arquivo",
+                    'correct': false
+                }, {
+                    'text': "Um cofre dos Serviços de Recuperação",
+                    'correct': true
+                },
+                {
+                    'text': "Uma conta de armazenamento",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Objeto a ser usado para configurar a proteção para VM1:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Uma política de backup",
+                    'correct': true
+                }, {
+                    'text': "Um trabalho em lote",
+                    'correct': false
+                }, {
+                    'text': "Uma programação em lote",
+                    'correct': false
+                },
+                {
+                    'text': "Um plano de recuperação",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': true,
+        'explication': `
+            Caixa 1: Um cofre dos Serviços de Recuperação
+            Você pode configurar um cofre dos Serviços de Recuperação e configurar o backup para várias VMs do Azure.
+
+            Caixa 2: Uma política de backup -
+            Em Escolher política de backup, siga um destes procedimentos:
+            ✑ Deixe a política padrão. Isso faz backup da VM uma vez por dia no horário especificado e mantém os backups no cofre por 30 dias.
+            ✑ Selecione uma política de backup existente, se você tiver uma.
+            ✑ Crie uma nova política e defina as configurações da política.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/backup/backup-azure-vms-first-look-arm 
+        `
+    },
+
+
+
+
+    {
         'question': '18\nVocê tem uma máquina virtual do Azure chamada VM1.\nO Azure coleta eventos da VM1.\nVocê está criando uma regra de alerta no Azure Monitor para notificar um administrador quando um erro é registrado no log de eventos do sistema da VM1.\nQual recurso de destino você deve monitorar na regra de alerta?\n',
         'number': '',
         'page': 464,
@@ -6560,7 +6708,119 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nCarregue o teste da web -\n1. No portal Application Insights, no painel Disponibilidade, selecione Adicionar teste clássico e, em seguida, selecione Várias etapas como SKU.\n2. Carregue seu teste da web em várias etapas.\n3. Defina os locais de teste, frequência e parâmetros de alerta.\n4. Selecione Criar.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/app/availability-multistep\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 22. Tópico 6.
+            HOTSPOT –
+            Você tem uma assinatura do Azure que tem o log de diagnóstico habilitado e está configurado para enviar logs para um workspace do Log Analytics.
+            Você está investigando uma interrupção de serviço.
+            Você precisa visualizar a hora do evento, o nome do evento e os recursos afetados.
+            Como você deve preencher a consulta? Para responder, selecione as opções apropriadas na área de resposta.
+            NOTA: Cada seleção correta vale um ponto.
+            Área Quente:
+            `,
+        'number': 22,
+        'page': 11,
+        'studyCase': true,
+
+        'answers': [{
+            'text': '',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "AzureActivity",
+                    'correct': true
+                }, {
+                    'text': "Heartbeat",
+                    'correct': false
+                }, {
+                    'text': "NetworkMonitoring",
+                    'correct': false
+                },
+                {
+                    'text': "Perf",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': `     | 
+                Where Level == 'Critical'
+                `,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': " | extend",
+                    'correct': false
+                }, {
+                    'text': "| join",
+                    'correct': false
+                }, {
+                    'text': "| print",
+                    'correct': false
+                },
+                {
+                    'text': "| project",
+                    'correct': true
+                }
+            ]
+        },
+
+        {
+            'text': `  
+                TimeGenerated, OperationNameValue, ResouceId'
+                `,
+            'options': [
+                {
+                    text: ' ',
+                    correct: true
+                },
+            ]
+        }
+
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': true,
+        'explication': ` 
+            Caixa 1: AzureActivity -
+            A tabela AzureActivity possui entradas do log de atividades do Azure, que fornece informações sobre eventos de nível de assinatura ou de grupo de gerenciamento que ocorrem no Azure.
+            Vamos ver apenas as entradas críticas durante uma semana específica.
+            O operador where é comum na linguagem de consulta Kusto. onde filtra uma tabela para linhas que correspondem a critérios específicos. O exemplo a seguir usa vários comandos. Primeiro, a consulta recupera todos os registros da tabela. Em seguida, ele filtra os dados apenas para registros que estão no intervalo de tempo. Por fim, ele filtra esses resultados apenas para registros que possuem nível Crítico.
+
+            AzureActivity -
+            | onde TimeGenerated > datetime(10/01/2020) e TimeGenerated <datetime(10/07/2020)
+            | onde Nível == 'Crítico'
+            Incorreto:
+            não Perf: A tabela Perf tem dados de desempenho coletados de máquinas virtuais que executam o agente Log Analytics.
+
+            Caixa 2: | projeto -
+            Selecione um subconjunto de colunas: projeto.
+            Use project para incluir apenas as colunas desejadas. Com base no exemplo anterior, vamos limitar a saída a determinadas colunas:
+
+            AzureActivity -
+            | onde TimeGenerated > datetime(10/01/2020) e TimeGenerated <datetime(10/07/2020)
+            | onde Nível == 'Crítico'
+            | projeto TimeGenerated, Level, OperationNameValue, ResourceGroup, _ResourceId
+        Referência:
+        https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto/query/tutorial.md
+        `
+    },
+
+
+
+
+
+
+    {
         'question': '23\nVocê tem um cofre dos Serviços de Recuperação denominado RSV1. O RSV1 possui uma política de backup que retém instantâneos instantâneos por cinco dias e backup diário por 14 dias.\ndias.\nRSV1 realiza backups diários da VM1. VM1 hospeda um site estático que foi atualizado há oito dias.\nVocê precisa recuperar a VM1 até um ponto há oito dias. A solução deve minimizar o tempo de inatividade.\nO que você deve fazer primeiro?\n',
         'number': '',
         'page': 468,
@@ -6617,7 +6877,55 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)\nTópico 6'
-    }, {
+    },
+
+
+    {
+        'question': `31. Tópico 6. ARRASTAR E SOLTAR -\n (OBS: NO MOMENTO NÃO ESTÁ CONTANDO NA CONTAGEM DE ACERTO, SE QUISER SABER SE RESPONDEU CORRETO CLIQUE EM VER RESPOSTA)
+
+        DRAG DROP –
+        você tem uma assinatura do Azure que contém uma máquina virtual chamada VM1.
+        VM1 possui um disco de sistema operacional denominado Disk1 e um disco de dados denominado Disk2.
+        Você precisa fazer backup do Disk2 usando o Backup do Azure.
+        Quais são as três ações que você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+        Selecione e coloque:
+
+            `,
+        'number': '31',
+        'page': 11,
+        'answers': [
+
+            [
+                {
+                    'text': 'Ações \n',
+                    'options': [
+                        { 'text': 'Configurar uma identidade gerenciada', 'correct': true, 'index': '3' },
+                        { 'text': 'Crie um cofre de backup do Azure', 'correct': false, 'index': '1' },
+                        { 'text': 'Crie um cofre dos Serviços de Recuperação.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Delegar permissões para o cofre.', 'correct': true, 'index': '3' },
+                        { 'text': 'Crie uma política de backup e configure o backup.', 'correct': false, 'index': '2' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': 'Answer \n',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `Comentário: Resposta correta:
+            1- Crie um cofre de backup do Azure.
+            2- Crie uma política de backup e configure o backup. 
+            3- Configure uma identidade gerenciada. Link: https://docs.microsoft.com/en-us/azure/backup/backup-managed-disks#:~:text=Review%20%2B%20create.-,Configure%20backup,-Azure%20Disk%20backup`,
+        'typeQuestion': 'dragdrop'
+    },
+
+    {
         'question': '32\nVocê tem uma sub-rede chamada Subnet1 que contém máquinas virtuais do Azure. Um grupo de segurança de rede (NSG) denominado NSG1 está associado à Subnet1.\nNSG1 contém apenas as regras padrão.\nVocê precisa criar uma regra no NSG1 para evitar que os hosts no formulário Subnet1 se conectem ao portal do Azure. Os hosts devem ser capazes de se conectar\noutros hosts da Internet.\nPara que você deve definir Destino na regra?\n',
         'number': '',
         'page': 479,
