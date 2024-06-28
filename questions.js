@@ -2539,7 +2539,12 @@ HOTSPOT -
 
 
     {
-        'question': '1\nVocê tem uma assinatura do Azure chamada Subscription1 que contém as contas de armazenamento mostradas na tabela a seguir:\nVocê planeja usar o serviço Azure Import/Export para exportar dados da Assinatura1.\nVocê precisa identificar qual conta de armazenamento pode ser usada para exportar os dados.\nO que você deve identificar?\n',
+        'question': `1 Tópico 3 \nVocê tem uma assinatura do Azure chamada Subscription1 que contém as
+         contas de armazenamento mostradas na tabela a seguir:
+        <img src="imagens/yquestao1topico3.png" alt="imagem da questão"></img>
+         \nVocê planeja usar o serviço Azure Import/Export para exportar dados da Assinatura1.
+        \nVocê precisa identificar qual conta de armazenamento pode ser usada para exportar os dados.
+        \nO que você deve identificar?\n`,
         'number': '',
         'page': 114,
         'answers': [{
@@ -2599,7 +2604,13 @@ HOTSPOT -
         ],
         'explication': 'AC\nPasso 1 (C): Instalar o agente Azure File Sync no Server1\nO agente Azure File Sync é um pacote para download que permite que o Windows Server seja sincronizado com um compartilhamento do Azure\nEtapa 2 (B): Registre o Servidor1.\nRegistre o Windows Server com o Serviço de Sincronização de Armazenamento\nRegistrar seu Windows Server com um serviço de sincronização de armazenamento estabelece uma relação de confiança entre seu servidor (ou cluster) e o armazenamento\nServiço de sincronização.\nPasso 3 (E): Crie um grupo de sincronização e um ponto final na nuvem.\nUm grupo de sincronização de ne a topologia de sincronização para um conjunto de arquivos. Os pontos finais dentro de um grupo de sincronização são mantidos sincronizados entre si. Um grupo de sincronização deve\ncontêm um ponto final de nuvem, que representa um compartilhamento de arquivos do Azure e um ou mais pontos finais de servidor. Um endpoint do servidor representa um caminho no\nservidor cadastrado.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/les/storage-sync-les-deployment-guide\nDistribuição de votos da comunidade\nAC (100%)'
     }, {
-        'question': '15\nVocê tem uma assinatura do Azure que contém as contas de armazenamento mostradas na tabela a seguir.\nVocê precisa identificar qual conta de armazenamento pode ser convertida em replicação de armazenamento com redundância de zona (ZRS) solicitando uma migração ao vivo de\nSuporte Azure.\nO que você deve identificar?\n',
+        'question': `15\nVocê tem uma assinatura do Azure
+         que contém as contas de armazenamento mostradas na
+        tabela a seguir.
+        <img src="imagens/yquestao15topico3.png" alt="imagem da questão"></img>
+
+        \nVocê precisa identificar qual conta de armazenamento pode ser convertida em replicação de armazenamento com redundância de zona (ZRS) solicitando uma migração ao vivo de\nSuporte Azure.
+        \nO que você deve identificar?\n`,
         'number': '',
         'page': 130,
         'answers': [{
@@ -2817,7 +2828,11 @@ HOTSPOT -
         ],
         'explication': 'C\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy\nDistribuição de votos da comunidade\nC (97%)\nTópico 3'
     }, {
-        'question': '36\nVocê tem uma assinatura do Azure que contém as contas de armazenamento mostradas na tabela a seguir.\nVocê planeja gerenciar os dados armazenados nas contas usando regras de gerenciamento do ciclo de vida.\nA quais contas de armazenamento você pode aplicar regras de gerenciamento do ciclo de vida?\n',
+        'question': `36\nVocê tem uma assinatura do Azure que contém as contas de armazenamento mostradas na tabela a seguir.
+        <img src="imagens/yquestao36topico3.png" alt="imagem da questão"></img>
+        \nVocê planeja gerenciar os dados armazenados nas contas
+         usando regras de gerenciamento do ciclo de vida.
+        \nA quais contas de armazenamento você pode aplicar regras de gerenciamento do ciclo de vida?\n`,
         'number': '',
         'page': 150,
         'answers': [{
@@ -2877,7 +2892,12 @@ HOTSPOT -
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/import-export/storage-import-export-service\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '40\nVocê tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1.\nVocê tem os dispositivos mostrados na tabela a seguir.\nDe quais dispositivos você pode usar o AzCopy para copiar dados para o armazenamento1?\n',
+        'question': `40\nVocê tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1.
+            \nVocê tem os dispositivos mostrados na tabela a seguir.
+            
+            <img src="imagens/yquestao40topico3.png" alt="imagem da questão"></img>
+
+            \nDe quais dispositivos você pode usar o AzCopy para copiar dados para o armazenamento1?\n`,
         'number': '',
         'page': 153,
         'answers': [{
@@ -3032,7 +3052,15 @@ HOTSPOT -
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)\nTópico 3'
     }, {
-        'question': '55\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa executar as tarefas mostradas na tabela a seguir.\nQuais tarefas você pode executar usando o Azure Storage Explorer?\n',
+        'question': `55\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+        
+            <img src="imagens/yquestao55topico3parte1.png" alt="imagem da questão"></img>
+
+            \nVocê precisa executar as tarefas mostradas na tabela a seguir.
+                
+            <img src="imagens/yquestao55topico3parte2.png" alt="imagem da questão"></img>
+
+            \nQuais tarefas você pode executar usando o Azure Storage Explorer?\n`,
         'number': '',
         'page': 166,
         'answers': [{
@@ -3362,10 +3390,10 @@ HOTSPOT -
         'page': 193,
         'answers': [{
             'text': 'A. Armazenamento com redundância de zona (ZRS)\n',
-            'correct': true
-        }, {
-            'text': 'B. o pneu de acesso legal\n',
             'correct': false
+        }, {
+            'text': 'B. acesso frio\n',
+            'correct': true
         }, {
             'text': 'C. Armazenamento com redundância geográfica (GRS)\n',
             'correct': true
@@ -3374,12 +3402,20 @@ HOTSPOT -
             'correct': false
         }, {
             'text': 'E. namespace hierárquico',
-            'correct': false
+            'correct': true
         }
         ],
-        'explication': 'AC\nDistribuição de votos da comunidade\nAC (88%) 13%'
+        'explication': `Bugado na fonte, na visão das alternativas é BCE mas na resposta da fonte esta AC e sem consenso na discussão.
+            escolhido a visão BCE 🗳️
+            Community vote distribution
+            BCE (88%)
+            13%`
     }, {
-        'question': '84\nVocê tem uma assinatura do Azure que contém as contas de armazenamento mostradas na tabela a seguir.\nQual conta de armazenamento pode ser convertida em replicação de armazenamento com redundância de zona (ZRS)?\n',
+        'question': `84\nVocê tem uma assinatura do Azure que contém as contas de armazenamento mostradas na tabela a seguir.
+            
+            <img src="imagens/yquestao84topico3.png" alt="imagem da questão"></img>
+
+           \nQual conta de armazenamento pode ser convertida em replicação de armazenamento com redundância de zona (ZRS)?\n`,
         'number': '',
         'page': 195,
         'answers': [{
@@ -3398,7 +3434,11 @@ HOTSPOT -
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '85\nVocê tem uma assinatura do Azure que contém os dispositivos mostrados na tabela a seguir.\nEm quais dispositivos você pode instalar o Azure Storage Explorer?\n',
+        'question': `85\nVocê tem uma assinatura do Azure que contém os dispositivos mostrados na tabela a seguir.
+            
+            <img src="imagens/yquestao85topico3.png" alt="imagem da questão"></img>
+
+            \nEm quais dispositivos você pode instalar o Azure Storage Explorer?\n`,
         'number': '',
         'page': 196,
         'answers': [{
@@ -4405,7 +4445,12 @@ HOTSPOT -
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '90\nVocê tem uma assinatura do Azure que possui os endereços IP públicos mostrados na tabela a seguir.\nVocê planeja implantar uma instância do Azure Firewall Premium chamada FW1.\nQuais endereços IP você pode usar?\n',
+        'question': `90\nVocê tem uma assinatura do Azure que possui os endereços IP públicos
+            mostrados na tabela a seguir.
+            <img src="imagens/yquestao90topico4.png" alt="imagem da questão"></img>
+
+            \nVocê planeja implantar uma instância do Azure Firewall Premium chamada FW1.
+            \nQuais endereços IP você pode usar?\n`,
         'number': '',
         'page': 287,
         'answers': [{
@@ -8372,7 +8417,11 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
             'correct': false
         }
         ],
-        'explication': `
+        'explication': `Reference:
+                        https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-internal-portal
+                        Community vote distribution
+                        C (80%)
+                        A (18%)
                         Comentário mais votado: Você não pode usar o balanceador de carga 
                         básico para balancear entre VMs individuais. Eles precisam estar em um conjunto de escala ou conjunto de disponibilidade
                     `
