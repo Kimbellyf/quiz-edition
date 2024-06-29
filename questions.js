@@ -617,7 +617,7 @@ const questionsAll = [
             'text': 'C. Log de atividades do Azure\n',
             'correct': false
         }, {
-            'text': 'D. Conselheiro(Advisor) do Azure',
+            'text': 'D. Assistente(Advisor) do Azure',
             'correct': false
         }
         ],
@@ -645,7 +645,9 @@ const questionsAll = [
         ],
         'explication': 'ABCDE\nO Backup do Azure dá suporte ao backup do sistema operacional de servidor Windows de 64 bits do Windows Server 2008.\nO Backup do Azure dá suporte ao backup do sistema operacional Windows 10 de 64 bits.\nO Backup do Azure dá suporte ao backup do sistema operacional Debian de 64 bits do Debian 7.9+.\nO Backup do Azure dá suporte ao backup de VMs desligadas ou inativas.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/backup/backup-support-matrix-iaas https://docs.microsoft.com/en-us/azure/virtual-\nmáquinas/linux/distros endossadas\nDistribuição de votos da comunidade\nABCDE (90%) 7%'
     }, {
-        'question': '38\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um locatário do Azure Active Directory (Azure AD) chamado contoso.com.\nVocê tem um arquivo CSV que contém os nomes e endereços de e-mail de 500 usuários externos.\nVocê precisa criar uma conta de usuário convidado em contoso.com para cada um dos 500 usuários externos.\nSolução: você cria um script do PowerShell que executa o cmdlet New-AzureADUser para cada usuário.\nIsso atende ao objetivo?\n',
+        'question': `38\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.
+            \nVocê tem um locatário do Azure Active Directory (Azure AD) chamado contoso.com.\nVocê tem um arquivo CSV que contém os nomes e endereços de e-mail de 500 usuários externos.\nVocê precisa criar uma conta de usuário convidado em contoso.com para cada um dos 500 usuários externos.\nSolução: você cria um script do PowerShell que executa o cmdlet New-AzureADUser para cada usuário.
+            \nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 21,
         'answers': [{
@@ -785,7 +787,7 @@ const questionsAll = [
         'question': `Questao 4. Tópico 2.
 
         Hotspot -
-        Tem um inquilino do Azure Active Directory (Azure AD) chamado contoso.com que contém os utilizadores mostrados na tabela a seguir:
+        Tem um locatário do Azure Active Directory (Azure AD) chamado contoso.com que contém os utilizadores mostrados na tabela a seguir:
 
         <img src="imagesquestions/X224.png" alt="imagem da questão"></img>
 
@@ -1135,8 +1137,9 @@ const questionsAll = [
 
     {
         'question': `15 . Tópico 2. \n
-        Você tem uma assinatura do Azure que contém um grupo de recursos chamado RG26.\nO RG26 está definido para o local da Europa Ocidental e é usado para criar recursos temporários para um projeto. RG26 contém os recursos mostrados no\ntabela a seguir.
-        <img src="imagesquestions/X318.png" alt="imagem da questão"></img>
+        Você tem uma assinatura do Azure que contém um grupo de recursos chamado RG26.\nO RG26 está definido para o local da Europa Ocidental e é usado para criar recursos temporários para um projeto. RG26 contém os recursos mostrados no
+        \ntabela a seguir.
+        <img src="imagesquestions/X318.jpg" alt="imagem da questão"></img>
 
         \nSQLDB01 tem backup em RGV1.\nQuando o projeto for concluído, você tenta excluir o RG26 do portal do Azure. A exclusão falha.\nVocê precisa excluir RG26.
         \nO que você deve fazer primeiro?\n`,
@@ -1477,7 +1480,7 @@ const questionsAll = [
             'text': 'A. Monitorar\n',
             'correct': false
         }, {
-            'text': 'B. Conselheiro(Advisor)\n',
+            'text': 'B. Assistente(Advisor)\n',
             'correct': true
         }, {
             'text': 'C. Métricas\n',
@@ -1551,7 +1554,210 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nO gráfico a seguir mostra a lista de funções e as ações suportadas em grupos de gestão.\nObservação:\nCada diretório recebe um único grupo de gerenciamento de nível superior denominado grupo de gerenciamento "Raiz". Este grupo de gerenciamento raiz está integrado ao\nhierarquia para que todos os grupos de gerenciamento e assinaturas sejam agrupados nela. Este grupo de gerenciamento raiz permite políticas globais e função do Azure\natribuições a serem aplicadas no nível do diretório. O Administrador Global do Azure AD precisa se elevar ao Acesso do Usuário\nFunção de administrador deste grupo raiz inicialmente. Após elevar o acesso, o administrador pode atribuir qualquer função do Azure a outros usuários do diretório ou\ngrupos para gerenciar a hierarquia. Como administrador, você pode atribuir sua própria conta como proprietário do grupo de gerenciamento raiz.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/governance/management-groups/overview\nDistribuição de votos da comunidade\nC (85%) Outros'
-    }, {
+    },
+
+
+    {
+        question: `31. Tópico 2. HOTSPOT –
+            Você tem um locatário do Azure Active Directory (Azure AD) chamado adatum.com. Adatum.com contém os grupos na tabela a seguir.
+            <img src="imagens/zquestao31topico2parte1.jpg" alt="imagem da questão"></img>
+
+            Você cria duas contas de usuário configuradas conforme mostrado na tabela a seguir.
+            <img src="imagens/zquestao31topico2parte2.png" alt="imagem da questão"></img>
+
+            De quais grupos são membros do Usuário1 e do Usuário2? Para responder, selecione as opções apropriadas na área de resposta.
+            NOTA: Cada seleção correta vale um ponto.
+            Área Quente:
+            `,
+        number: 31,
+        page: 2,
+
+
+        answers: [
+            {
+                text: 'User1:',
+                options:
+                    [
+                        {
+                            text: 'Selecione',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo1 somente',
+                            correct: true
+                        },
+                        {
+                            text: 'Grupo2 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo3 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo1 e Grupo 2 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo1 e Grupo 3 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo2 e Grupo 3 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo 1, Grupo2 e Grupo 3',
+                            correct: false
+                        },
+                    ]
+            },
+            {
+                text: 'User2:',
+                'options':
+                    [
+                        {
+                            text: 'Selecione',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo1 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo2 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo3 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo1 e Grupo 2 somente',
+                            correct: true
+                        },
+                        {
+                            text: 'Grupo1 e Grupo 3 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo2 e Grupo 3 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'Grupo 1, Grupo2 e Grupo 3',
+                            correct: false
+                        },
+                    ]
+            }
+
+        ],
+        'typeQuestion': 'select',
+        'explication': ` Caixa 1: Grupo 1 somente -
+            A primeira regra se aplica -
+
+            Caixa 2: Grupo1 e Grupo2 somente -
+            Ambas as regras de associação se aplicam.
+            Referência:
+            https://docs.microsoft.com/en-us/sccm/core/clients/manage/collections/create-collections
+        `
+    },
+
+
+
+
+    {
+        question: `32. Tópico 2. 
+
+        HOTSPOT -
+        Você tem uma implantação híbrida do Azure Active Directory (Azure AD) que contém os usuários mostrados na tabela a seguir.
+        <img src="imagens/zquestao32topico2.png" alt="imagem da questão"></img>
+        Você precisa modificar os atributos JobTitle e UsageLocation para os usuários.
+        Para quais usuários você pode modificar os atributos do Azure AD? Para responder, selecione as opções apropriadas na área de resposta.
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        Área de Hot:
+        
+            `,
+        number: 32,
+        page: 2,
+
+
+        answers: [
+            {
+                text: 'JobTitle:',
+                options:
+                    [
+                        {
+                            text: 'Selecione',
+                            correct: false
+                        },
+                        {
+                            text: 'User1 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'User1 e User 2 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'User1 e User 3 somente',
+                            correct: true
+                        },
+                        {
+                            text: 'User1 e User 3 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'User1, User2 e User 3',
+                            correct: false
+                        },
+                    ]
+            },
+            {
+                text: 'User2:',
+                'options':
+                    [
+                        {
+                            text: 'Selecione',
+                            correct: false
+                        },
+                        {
+                            text: 'User1 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'User1 e User 2 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'User1 e User 3 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'User1 e User 3 somente',
+                            correct: false
+                        },
+                        {
+                            text: 'User1, User2 e User 3',
+                            correct: true
+                        },
+                    ]
+            }
+
+        ],
+        'typeQuestion': 'select',
+        'explication': `Caixa 1: User1 e User3 somente -
+            Você deve usar o Windows Server Active Directory para atualizar a identidade, informações de contato ou informações de trabalho para usuários cuja fonte de autoridade é o Windows Server Active
+            Directory.
+
+            Caixa 2: User1, User2 e User3 -
+            Referência:
+            https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal
+        `
+    },
+
+
+    {
         'question': '33\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê precisa garantir que um usuário do Azure Active Directory (Azure AD) chamado Admin1 receba a função necessária para habilitar o Tra c Analytics para um\nAssinatura do Azure.\nSolução: você atribui a função Network Contributor no nível de assinatura a Admin1.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 53,
@@ -1609,7 +1815,61 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nColaborador: Concede acesso total para gerenciar todos os recursos, mas não permite atribuir funções no Azure RBAC\nRespostas incorretas:\nR: Proprietário: Concede acesso total para gerenciar todos os recursos, incluindo a capacidade de atribuir funções no Azure RBAC.\nB: Contribuidor de Máquina Virtual: Permite gerenciar máquinas virtuais, mas não acessá-las, e não a rede virtual ou conta de armazenamento\neles estão conectados.\nD: Login de administrador de máquina virtual: visualize máquinas virtuais no portal e faça login como administrador.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles\nDistribuição de votos da comunidade\nC (93%) 7%'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 37 tópico 2. 
+            HOTSPOT –
+            Você tem um locatário do Azure Active Directory (Azure AD) que contém três administradores globais chamados Admin1, Admin2 e Admin3.
+            O inquilino está associado a uma subscrição do Azure. O controle de acesso para a assinatura é configurado conforme mostrado na exposição Controle de acesso. (Clique na
+            guia Controle de Acesso.)
+
+            <img src="imagens/zquestao37topico2parte1.jpg" alt="imagem da questão"></img>
+
+            Você entra no portal do Azure como Admin1 e configura o locatário conforme mostrado na exposição do locatário. (Clique na guia Locatário.)
+
+            <img src="imagens/zquestao37topico2parte2.jpg" alt="imagem da questão"></img>
+
+            Para cada uma das afirmações a seguir, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+            NOTA: Cada seleção correta vale um ponto.
+            Área Quente:
+
+        \n`,
+        'number': '',
+        'page': 2,
+        'studyCase': true,
+        'answers': [{
+
+            'text': 'Admin1 pode adicionar Admin 2 como proprietário da assinatura..\n',
+            'correct': true
+        }, {
+            'text': 'Admin3 pode adicionar Admin 2 como proprietário da assinatura.\n',
+            'correct': true
+        }, {
+            'text': 'Admin2 pode criar um grupo de recursos na assinatura.\n',
+            'correct': false
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Comentário mais votado:
+            Resposta correta: As funções do Azure (RBAC) e do Azure AD são independentes.
+            As funções do AD não concedem acesso a recursos e as funções do Azure não concedem acesso
+            ao Azure AD. No entanto, um Administrador Global no AD pode elevar o acesso a todas as 
+            assinaturas e será o Administrador de Acesso do Usuário no escopo raiz do Azure. 
+            Todos os 3 usuários são GA (AD) e Admin3 é o proprietário da assinatura (RBAC). 
+            Admin1 tem acesso elevado, então ele também é Administrador de Acesso do Usuário (RBAC).
+            Para atribuir a um usuário a função de proprietário no escopo da Assinatura,
+            você precisa de permissões, como Administrador de Acesso do Usuário ou 
+            Proprietário.
+            Caixa 1: Sim Admin1 tem acesso elevado,
+               então ele é Administrador de Acesso do Usuário. Isso é válido.
+            Caixa 2: Sim Admi3 é Proprietário da Assinatura. Isso é válido. 
+            Caixa 3: Não Admin2 é apenas um GA no escopo do Azure AD. Ele não tem permissão na Assinatura. Referência: https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal-subscription-admin
+        `
+    },
+
+    {
         'question': '38\nVocê tem uma assinatura do Azure chamada Subscription1 que contém uma máquina virtual do Azure chamada VM1. VM1 está em um grupo de recursos denominado RG1.\nVM1 executa serviços que serão usados \u200b\u200bpara implantar recursos em RG1.\nVocê precisa garantir que um serviço em execução na VM1 possa gerenciar os recursos em RG1 usando a identidade da VM1.\nO que você deve fazer primeiro?\n',
         'number': '',
         'page': 56,
@@ -1629,7 +1889,13 @@ const questionsAll = [
         ],
         'explication': 'A\nAs identidades geridas para recursos do Azure fornecem aos serviços do Azure uma identidade gerida automaticamente no Azure Ative Directory. Você pode usar\nesta identidade para autenticar qualquer serviço que suporte a autenticação do Azure AD, sem ter credenciais no seu código.\nVocê pode habilitar e desabilitar a identidade gerenciada atribuída pelo sistema para VM usando o portal do Azure.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/active-directory/owned-identities-azure-resources/qs-con gure-portal-windows-vm\nDistribuição de votos da comunidade\nA (84%) B (16%)'
     }, {
-        'question': '39\nVocê tem uma assinatura do Azure que contém um grupo de recursos chamado TestRG.\nVocê usa TestRG para validar uma implantação do Azure.\nTestRG contém os seguintes recursos:\nVocê precisa excluir TestRG.\nO que você deve fazer primeiro?\n',
+        'question': `39 Tópico 2
+            \nVocê tem uma assinatura do Azure que contém um grupo de recursos chamado TestRG.
+            \nVocê usa TestRG para validar uma implantação do Azure.
+            \nTestRG contém os seguintes recursos:
+            <img src="imagens/zquestao39topico2.png" alt="imagem da questão"></img>
+            \nVocê precisa excluir TestRG.
+            \nO que você deve fazer primeiro?\n`,
         'number': '',
         'page': 57,
         'answers': [{
@@ -1666,7 +1932,77 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nVocê precisa criar um registro de servidor de nomes (NS) para a zona.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/dns/delegate-subdomain\nDistribuição de votos da comunidade\nUm (100%)'
-    }, {
+    },
+
+
+
+
+    {
+        'question': `41 Tópico 2. DRAG DROP –
+            ARRASTAR E SOLTAR -
+            Você tem um locatário do Azure Active Directory (Azure AD) que tem o nome de domínio contoso.onmicrosoft.com.
+            Você tem um nome de domínio contoso.com registrado em um registrador terceirizado.
+            Você precisa garantir que pode criar usuários do Azure AD que tenham nomes contendo um sufixo @contoso.com.
+            Quais três ações você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+            Selecionar e posicionar:`,
+        'number': '41',
+        'page': 2,
+        'answers': [
+
+            [
+                {
+                    'text': 'Options \n',
+                    'options': [
+                        {
+                            'text': 'Adicionar um registro à zona DNS pública contoso.com',
+                            'correct': true, 'index': '2'
+                        },
+                        {
+                            'text': 'Adicione um locatário do Azure AD.',
+                            'correct': false, 'index': '-1'
+                        },
+                        {
+                            'text': 'Configurar a marca da empresa.',
+                            'correct': false, 'index': '-1'
+                        },
+                        {
+                            'text': 'Crie uma zona DNS do Azure.',
+                            'correct': false, 'index': '-1'
+                        },
+                        {
+                            'text': 'Adicione um nome personalizado.',
+                            'correct': true, 'index': '1'
+                        },
+                        {
+                            'text': 'Verifique o domínio.',
+                            'correct': true, 'index': '3'
+                        },
+                    ],
+                    'function': 'origin'
+
+                },
+
+                {
+                    'text': 'Answer \n',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `
+            1. Adicione o nome de domínio personalizado ao seu diretório
+            2. Adicione uma entrada DNS para o nome de domínio no registrador de nomes de domínio
+            3. Verifique o nome de domínio personalizado no Azure AD
+            Referência:
+            https://docs.microsoft.com/ en-us/azure/dns/dns-web-sites-custom-domain
+        `,
+        'typeQuestion': 'dragdrop'
+    },
+
+    {
         'question': '42\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém um espaço de trabalho do Azure Log Analytics chamado Workspace1.\nVocê precisa visualizar os eventos de erro de uma tabela chamada Event.\nQual consulta você deve executar no Workspace1?\n',
         'number': '',
         'page': 59,
@@ -1704,7 +2040,231 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nReferência:\nhttps://docs.microsoft.com/en-us/azure/dns/dns-delegate-domain-azure-dns\nDistribuição de votos da comunidade\nD (100%)'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 45 tópico 2. 
+            HOTSPOT –
+            você tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1. A assinatura está vinculada a um locatário do Azure Active Directory (Azure AD) chamado contoso.com que sincroniza com um domínio do Active Directory local.
+            O domínio contém as entidades de segurança mostradas na tabela a seguir.
+
+            <img src="imagens/zquestao44topico2parte1.png" alt="imagem da questão"></img>
+
+            No Azure AD, você cria um usuário chamado User2.
+            A conta storage1 contém um compartilhamento de arquivos chamado share1 e tem as configurações a seguir.
+            
+            <img src="imagens/zquestao44topico2parte2.png" alt="imagem da questão"></img>
+
+            Para cada uma das afirmações a seguir, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+            NOTA: Cada seleção correta vale um ponto.
+            Área Quente:
+           
+        `,
+        'number': '',
+        'page': 549,
+        'studyCase': true,
+        'answers': [{
+
+            'text': 'Você pode atribuir a função Colaborador de Compartilhamento SMB de Dados de Arquivo de Armazenamento ao Usuário1 para share1.\n',
+            'correct': true
+        }, {
+            'text': 'Você pode atribuir a função Leitor de compartilhamento SMB de dados de arquivo de armazenamento ao Computador1 para compartilhamento1.',
+            'correct': false
+        }, {
+            'text': 'Você pode atribuir a função de Colaborador Elevado de Compartilhamento SMB de Dados de Arquivo de Armazenamento ao Usuário2 para share1.',
+            'correct': true
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `
+            Referência:
+            https://docs.microsoft.com/en-us/azure/storage/files/storage-files-identity-ad-ds-assign-permissions?tabs=azure-portal
+         `
+    },
+
+
+    {
+        'question': `Questão 45  Tópico 2 
+            HOTSPOT -
+            Você tem uma assinatura do Azure chamada Subscription1 que contém uma rede virtual VNet1.
+            Você adiciona os usuários na tabela a seguir.
+
+            <img src="imagens/zquestao45topico2.png" alt="imagem da questão"></img>
+
+            Qual usuário pode executar cada configuração? Para responder, selecione as opções apropriadas na área de resposta.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        `,
+        'number': 45,
+        'page': 2,
+        'studyCase': true,
+
+        'answers': [{
+            'text': `Adicione uma sub-rede à VNet1:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente usuário1",
+                    'correct': false
+                }, {
+                    'text': "Somente usuário3",
+                    'correct': false
+                }, {
+                    'text': "Somente Usuário1 e Usuário3",
+                    'correct': true
+                },
+                {
+                    'text': "Somente Usuário2 e Usuário3",
+                    'correct': false
+                },
+                {
+                    'text': "Usuário1, Usuário2 e Usuário3",
+                    'correct': false
+                }
+            ]
+        },
+
+
+        {
+            'text': 'Atribua a um usuário a função de Leitor à VNet1:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente usuário1",
+                    'correct': true
+                },
+                {
+                    'text': "Somente usuário2",
+                    'correct': false
+                },
+
+                {
+                    'text': "Somente usuário3",
+                    'correct': false
+                }, {
+                    'text': "Somente Usuário1 e Usuário2",
+                    'correct': false
+                },
+                {
+                    'text': "Somente Usuário2 e Usuário3",
+                    'correct': false
+                },
+                {
+                    'text': "Usuário1, Usuário2 e Usuário3",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            Caixa 1: Somente Usuário1 e Usuário3.
+            Usuário1: A função Proprietário permite que você gerencie tudo, incluindo acesso a recursos.
+            Usuário3: A função Colaborador de rede permite que você gerencie redes, incluindo a criação de sub-redes.
+            Caixa 2: Somente Usuário1.
+            A função Administrador de segurança: Somente no Security Center: Pode exibir políticas de segurança, exibir estados de segurança, editar políticas de segurança, exibir alertas e recomendações, dispensar alertas e recomendações.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles https://docs.microsoft.com/en-us/azure/role-based-access-control/resource-provider-operations#microsoftnetwork
+        `
+    },
+
+
+    {
+        'question': `Questão 46  Tópico 2
+            HOTSPOT -
+            Você tem os recursos do Azure mostrados na exposição a seguir.
+
+            <img src="imagens/zquestao46topico2.png" alt="imagem da questão"></img>
+
+            Você planeja rastrear o uso de recursos e impedir a exclusão de recursos.
+            A quais recursos você pode aplicar bloqueios e tags? Para responder, selecione as opções apropriadas na área de resposta.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+            Área de Hot:
+        `,
+        'number': 46,
+        'page': 2,
+        'studyCase': true,
+
+        'answers': [{
+            'text': `Locks(Fechaduras)`,
+            'options': [
+
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente RG1 e VM1",
+                    'correct': false
+                }, {
+                    'text': "Somente Sub1 e RG1",
+                    'correct': false
+                }, {
+                    'text': "Somente Sub1, RG1 e VM1",
+                    'correct': true
+                },
+                {
+                    'text': "Somente MG1, Sub1, RG1 e VM1",
+                    'correct': false
+                },
+                {
+                    'text': "Grupo raiz de locatário, MG1, Sub1, RG1 e VM1",
+                    'correct': false
+                }
+            ]
+        },
+
+
+        {
+            'text': 'Tags(marcas)',
+            'options': [
+
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente RG1 e VM1",
+                    'correct': false
+                }, {
+                    'text': "Somente Sub1 e RG1",
+                    'correct': false
+                }, {
+                    'text': "Somente Sub1, RG1 e VM1",
+                    'correct': true
+                },
+                {
+                    'text': "Somente MG1, Sub1, RG1 e VM1",
+                    'correct': false
+                },
+                {
+                    'text': "Grupo raiz de locatário, MG1, Sub1, RG1 e VM1",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            Caixa 1: Somente Sub1, RG1 e VM1 -
+            Você pode bloquear uma assinatura, grupo de recursos ou recurso para impedir que outros usuários em sua organização excluam ou modifiquem acidentalmente recursos críticos.
+
+            Caixa 2: Somente Sub1, RG1 e VM1 -
+            Você aplica tags aos seus recursos, grupos de recursos e assinaturas do Azure.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json
+        `
+    },
+
+    {
         'question': '47\nVocê tem um locatário do Azure Active Directory (Azure AD).\nVocê planeja excluir vários usuários usando a exclusão em massa no centro de administração do Azure Active Directory.\nVocê precisa criar e fazer upload de um arquivo para exclusão em massa.\nQuais atributos de usuário você deve incluir no arquivo?\n',
         'number': '',
         'page': 63,
@@ -1726,7 +2286,62 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nReferência:\nhttps://docs.microsoft.com/en-us/azure/active-directory/enterprise-users/users-bulk-delete\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 48 Tópico 2
+            HOTSPOT –
+            Você tem uma assinatura do Azure chamada Sub1 que contém os recursos do Azure mostrados na tabela a seguir.
+
+            <img src="imagens/zquestao48topico2parte1.png" alt="imagem da questão"></img>
+
+            Você atribui uma política do Azure que tem as seguintes configurações:
+            ✑ Escopo: Sub1
+            ✑ Exclusões: Sub1/RG1/VNET1
+            ✑ Definição de política: anexar uma tag e seu valor aos recursos
+            ✑ Aplicação de política: Habilitada
+            ✑ Nome da tag: Tag4
+            ✑ Valor da tag: valor4
+            Você atribui tags aos recursos conforme mostrado na tabela a seguir.
+
+            <img src="imagens/zquestao48topico2parte2.png" alt="imagem da questão"></img>
+
+            Para cada uma das afirmações a seguir, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+            NOTA: Cada seleção correta vale um ponto.`,
+        'number': '',
+        'page': 549,
+        'studyCase': true,
+        'answers': [{
+
+            'text': 'RG1 possui a Tag2: tag IT atribuída apenas',
+            'correct': false
+        }, {
+            'text': 'Storage1 tem as tags Tag1: assinatura, Tag2: IT, Tag3:valuel e Tag4: valor 4 atribuídas.',
+            'correct': false
+        }, {
+            'text': 'VNET1 tem as tags Tag2: IT e Tag3: value2 atribuídas apenas',
+            'correct': false
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': ` Algumas discordâncias nos comentários mas o mais votado escolhido foi Não, não e não.
+            Caixa 1: Não -
+            A Política do Azure adicionará Tag4 ao RG1.
+
+            Caixa 2: Não -
+            As tags aplicadas ao grupo de recursos ou assinatura não são herdadas pelos recursos, embora você possa habilitar a herança com a Política do Azure. Storage1 tem Tag3:
+            Value1 e a Política do Azure adicionará Tag4.
+
+            Caixa 3: Não -
+            As tags aplicadas ao grupo de recursos ou assinatura não são herdadas pelos recursos, portanto, a VNET1 não tem Tag2.
+            A VNET1 tem Tag3:value2. A VNET1 é excluída da Política do Azure, portanto, a Tag4 não será adicionada à VNET1.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json
+	`
+    },
+
+
+    {
         'question': '49\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê precisa garantir que um usuário do Azure Active Directory (Azure AD) chamado Admin1 receba a função necessária para habilitar o Tra c Analytics para um\nAssinatura do Azure.\nSolução: você atribui a função Tra c Manager Contributor no nível de assinatura a Admin1.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 65,
@@ -1771,7 +2386,76 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles\nDistribuição de votos da comunidade\nA (50%) B (49%)'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 52 Tópico 2 
+
+            Você tem um Azure Load Balancer chamado LB1.
+            Você atribui a um usuário chamado User1 as funções mostradas na exposição a seguir.
+            
+            <img src="imagens/zquestao52topico2.png" alt="imagem da questão"></img>
+
+            Use os menus suspensos para selecionar a opção de resposta que completa cada afirmação com base nas informações apresentadas no gráfico.
+            NOTA: Cada seleção correta vale um ponto.
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': true,
+
+        'answers': [{
+            'text': `O usuário1 pode [responder opção] LB1.`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "excluir/deletar",
+                    'correct': false
+                }, {
+                    'text': "crie uma regra NAT para",
+                    'correct': false
+                }, {
+                    'text': "atribuir acesso a outros usuários para",
+                    'correct': true
+                },
+            ]
+        },
+
+
+        {
+            'text': 'O usuário1 pode [responder à escolha] o grupo de recursos.',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "excluir uma máquina virtual de modificar as regras de",
+                    'correct': true
+                }, {
+                    'text': "modificar as regras de",
+                    'correct': false
+                }, {
+                    'text': "balanceamento de carga na implantação de um cluster do Azure Kubernetes Service (AKS) para",
+                    'correct': false
+                },
+
+
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            Referência:
+                https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#virtual-machine-contributor https://docs.microsoft.com/ en-us/azure/controle de acesso baseado em função/rbac-and-directory-admin-roles
+        `
+    },
+
+    {
         'question': '53\nVocê tem uma assinatura do Azure chamada Subscription1 que contém uma rede virtual chamada VNet1. A VNet1 está num grupo de recursos denominado RG1.\nA assinatura1 tem um usuário chamado User1. O usuário1 tem as seguintes funções:\n✑ Leitor\n✑ Administrador de segurança\n✑ Leitor de Segurança\nVocê precisa garantir que o Usuário1 possa atribuir a função de Leitor da VNet1 a outros usuários.\nO que você deveria fazer?\n',
         'number': '',
         'page': 68,
@@ -1790,7 +2474,109 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nTem acesso total a todos os recursos, incluindo o direito de delegar acesso a outros.\nObservação:\nExistem várias versões desta questão no exame. A pergunta tem duas possíveis respostas corretas:\n✑ Atribua ao Usuário1 a função de Administrador de Acesso de Usuário para VNet1.\n✑ Atribua ao Usuário1 a função de Proprietário para VNet1.\nOutras opções de respostas incorretas que você pode ver no exame incluem o seguinte:\n✑ Remova o Usuário1 das funções Leitor de Segurança e Leitor da Assinatura1. Atribua ao Usuário1 a função de Colaborador para Assinatura1.\n✑ Remova o Usuário1 das funções Leitor de Segurança e Leitor da Assinatura1.\n✑ Atribua ao Usuário1 a função de Contribuidor de Rede para RG1.\nReferências:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/rbac-and-directory-admin-roles https://docs.microsoft.com/en-\nus/azure/controle de acesso baseado em função/visão geral\nDistribuição de votos da comunidade\nB (97%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 54  Tópico 2 
+
+            HOTSPOT -
+            Você configura a função personalizada mostrada na exposição a seguir.
+
+            <img src="imagens/zquestao54topico2.png" alt="imagem da questão"></img>
+
+            Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no gráfico.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+            Hot Area:
+        `,
+        'number': 54,
+        'page': 2,
+        'studyCase': true,
+
+        'answers': [{
+            'text': `Para garantir que os usuários possam entrar em máquinas virtuais às quais
+             foram atribuídas a função 1, modifique a seção [opção de resposta]`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Actions/ações",
+                    'correct': false
+                },
+                {
+                    'text': "roleType/tipo de função",
+                    'correct': false
+                }, {
+                    'text': "NotActions/não ações",
+                    'correct': false
+                }, {
+                    'text': "dataActions/ações de dados",
+                    'correct': true
+                },
+                {
+                    'text': "notDataActions/",
+                    'correct': false
+                },
+                {
+                    'text': "assignableScopes/escopos atribuíveis",
+                    'correct': false
+                },
+
+            ]
+        },
+
+
+        {
+            'text': `
+                Para garantir que a função1 possa ser atribuída apenas a um grupo 
+                de recursos denominado RG1, modifique a seção [opção de resposta]
+            `,
+
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Actions/ações",
+                    'correct': false
+                },
+                {
+                    'text': "roleType/tipo de função",
+                    'correct': false
+                }, {
+                    'text': "NotActions/não ações",
+                    'correct': false
+                }, {
+                    'text': "dataActions/ações de dados",
+                    'correct': false
+                },
+                {
+                    'text': "notDataActions/",
+                    'correct': false
+                },
+                {
+                    'text': "assignableScopes/escopos atribuíveis",
+                    'correct': true
+                },
+
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Comentário mais votado:
+            você não está definindo uma política, mas uma função personalizada.
+            Você precisa fornecer um dos seguintes itens em DataActions: Microsoft.Compute/virtualMachines/login/action
+            Microsoft.Compute/virtualMachines/loginAsAdmin/action 
+            https://docs.microsoft.com/en-us/azure/role-based-access -control/built-in-roles?source=recommendations#virtual-machine-administrator-login
+             a resposta correta é dataActions e atribuíveisScopes
+        `
+    },
+
+
+    {
         'question': '55\nVocê tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1. A conta storage1 contém um compartilhamento de arquivo chamado share1.\nA assinatura está vinculada a um locatário híbrido do Azure Active Directory (Azure AD) que contém um grupo de segurança denominado Grupo1.\nVocê precisa conceder ao Grupo1 a função de Colaborador Elevado de Compartilhamento SMB de Dados de Arquivo de Armazenamento para share1.\nO que você deve fazer primeiro?\n',
         'number': '',
         'page': 71,
@@ -1828,8 +2614,104 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nA função de Administrador de Acesso ao Utilizador permite ao utilizador conceder a outros utilizadores acesso aos recursos do Azure. Essa opção pode ser útil para recuperar\nacesso a uma assinatura.\nOs grupos de gerenciamento oferecem gerenciamento de nível empresarial em escala, independentemente do tipo de assinatura que você tenha.\nCada diretório recebe um único grupo de gerenciamento de nível superior denominado grupo de gerenciamento "Raiz". Este grupo de gerenciamento raiz está integrado ao\nhierarquia para que todos os grupos de gerenciamento e assinaturas sejam agrupados nela. Este grupo de gerenciamento raiz permite políticas globais e função do Azure\natribuições a serem aplicadas no nível do diretório.\nIncorreta:\nNão C: alguns diretórios que começaram a usar grupos de gerenciamento no início da versão prévia, antes de 25 de junho de 2018, puderam ver um problema em que nem todos os\nas assinaturas estavam dentro da hierarquia. O processo para ter todas as assinaturas na hierarquia foi implementado após uma atribuição de função ou política\nfoi feito no grupo de gerenciamento raiz no diretório.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/rbac-and-directory-admin-roles https://docs.microsoft.com/en-\nnós/azure/governança/grupos de gerenciamento/visão geral\nDistribuição de votos da comunidade\nB (82%) Outros'
-    }, {
-        'question': '58\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os seguintes usuários em um locatário do Azure Active Directory chamado contoso.onmicrosoft.com:\nUser1 cria um novo locatário do Azure Active Directory chamado external.contoso.onmicrosoft.com.\nVocê precisa criar novas contas de usuário em external.contoso.onmicrosoft.com.\nSolução: você instrui o Usuário2 a criar as contas de usuário.\nIsso atende ao objetivo?\n',
+    },
+
+    {
+        'question': `Questão 57 Tópico 2
+            Você tem uma assinatura do Azure que contém a hierarquia mostrada na exposição a seguir.
+
+            <img src="imagens/zquestao57topico2.png" alt="imagem da questão"></img>
+
+            Você cria uma definição do Azure Policy chamada Policy1.
+            A quais recursos do Azure você pode atribuir a Política1 e quais recursos do Azure você pode especificar como exclusões da Política1? Para responder, selecione as opções apropriadas na área de resposta.
+            NOTA: Cada seleção correta vale um ponto.
+        `,
+        'number': 57,
+        'page': 2,
+        'studyCase': true,
+        'answers': [{
+            'text': `Você pode atribuir a Política1 a:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente assinatura1 e RG1",
+                    'correct': false
+                }, {
+                    'text': "Somente ManagementGroup1 e Subscription1",
+                    'correct': false
+                }, {
+                    'text': "Somente grupo raiz de locatário, ManagementGroup1 e Subscription1",
+                    'correct': false
+                },
+                {
+                    'text': "Somente grupo raiz de locatário, ManagementGroup1, Subscription1 e RG1",
+                    'correct': true
+                },
+                {
+                    'text': `Grupo raiz de locatário, ManagementGroup1, Subscription1, RG1 e VM1`,
+                    'correct': false
+                },
+            ]
+        },
+
+        {
+            'text': `Você pode excluir a Política1 de:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente VM1",
+                    'correct': false
+                }, {
+                    'text': "Somente RG1 e VM1",
+                    'correct': false
+                }, {
+                    'text': "Somente assinatura1, RG1 e VM1",
+                    'correct': false
+                },
+                {
+                    'text': "Somente ManagementGroup1, Subscription1, RG1 e VM1",
+                    'correct': true
+                },
+                {
+                    'text': "Grupo raiz de locatário, ManagementGroup1, Subscription1, RG1 e VM1",
+                    'correct': false
+                },
+
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Comentário mais votado:
+            Como a discussão adicionou muita confusão, fez com que muitas pessoas aqui simplesmente deixassem fatos aleatórios sem qualquer prova, enganando as pessoas, eu testei em um laboratório do Azure. No campo de escopo da guia "Básico", consegui selecionar "Grupo Raiz de Inquilino" ou "Grupo de Gerenciamento1" com as entradas opcionais de Assinatura e Grupo de Recursos. Assim, ""você pode atribuir política ao Grupo Raiz de Inquilino,Grupo de Gerenciamento1,Assinatura1 e RG1"" Quanto à segunda resposta sobre as exclusões, consegui selecionar todos os itens do escopo,
+            EXCETO o grupo raiz do locatário. Portanto, 
+            a resposta correta seria ""ManagementGroup1,Subscription1,RG1 e VM1"" Espero que ajude
+        `
+    },
+
+
+
+
+    {
+        'question': `58\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que
+            \npode atingir os objetivos declarados. 
+            Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros
+            podem não ter uma solução correta.
+            \nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. 
+            Como resultado, estas perguntas não aparecerão na tela de revisão.
+            \nVocê tem uma assinatura do Azure que contém os seguintes usuários em um locatário do Azure Active Directory chamado contoso.onmicrosoft.com:
+            
+            <img src="imagens/zquestao58topico2.png" alt="imagem da questão"></img>
+            \nUser1 cria um novo locatário do Azure Active Directory chamado external.contoso.onmicrosoft.com.
+            \nVocê precisa criar novas contas de usuário em external.contoso.onmicrosoft.com.
+            \nSolução: você instrui o Usuário2 a criar as contas de usuário.
+            \nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 75,
         'answers': [{
@@ -1842,7 +2724,12 @@ const questionsAll = [
         ],
         'explication': 'A\nApenas um administrador global pode adicionar utilizadores a este inquilino.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/devops/organizations/accounts/add-users-to-azure-ad\nDistribuição de votos da comunidade\nB (92%) 8%'
     }, {
-        'question': '59\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os seguintes usuários em um locatário do Azure Active Directory chamado contoso.onmicrosoft.com:\nUser1 cria um novo locatário do Azure Active Directory chamado external.contoso.onmicrosoft.com.\nVocê precisa criar novas contas de usuário em external.contoso.onmicrosoft.com.\nSolução: você instrui o User4 a criar as contas de usuário.\nIsso atende ao objetivo?\n',
+        'question': `59\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os seguintes usuários em um locatário do Azure Active Directory chamado contoso.onmicrosoft.com:
+            <img src="imagens/zquestao58topico2.png" alt="mesma imagem do 58 questão"></img>
+            \nUser1 cria um novo locatário do Azure Active Directory chamado external.contoso.onmicrosoft.com.
+            \nVocê precisa criar novas contas de usuário em external.contoso.onmicrosoft.com.
+            \nSolução: você instrui o User4 a criar as contas de usuário.
+            \nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 76,
         'answers': [{
@@ -1855,7 +2742,7 @@ const questionsAll = [
         ],
         'explication': 'B\nApenas um administrador global pode adicionar utilizadores a este inquilino.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/devops/organizations/accounts/add-users-to-azure-ad\nDistribuição de votos da comunidade\nB (93%) 7%'
     }, {
-        'question': '60\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os seguintes usuários em um locatário do Azure Active Directory chamado contoso.onmicrosoft.com:\nUser1 cria um novo locatário do Azure Active Directory chamado external.contoso.onmicrosoft.com.\nVocê precisa criar novas contas de usuário em external.contoso.onmicrosoft.com.\nSolução: você instrui o User3 a criar as contas de usuário.\nIsso atende ao objetivo?\n',
+        'question': '60\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os seguintes usuários em um locatário do Azure Active Directory chamado contoso.onmicrosoft.com:  <img src="imagens/zquestao58topico2.png" alt="mesma imagem do 58 questão"></img> \nUser1 cria um novo locatário do Azure Active Directory chamado external.contoso.onmicrosoft.com.\nVocê precisa criar novas contas de usuário em external.contoso.onmicrosoft.com.\nSolução: você instrui o User3 a criar as contas de usuário.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 77,
         'answers': [{
@@ -1976,7 +2863,9 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)\nTópico 2'
     }, {
-        'question': '69\nVocê tem um locatário do Azure AD chamado adatum.com que contém os grupos mostrados na tabela a seguir.\nAdatum.com contém os usuários mostrados na tabela a seguir.\nVocê atribui a licença do Azure Active Directory Premium Plano 2 ao Grupo1 e ao Usuário4.\nA quais usuários é atribuída a licença do Azure Active Directory Premium Plano 2?\n',
+        'question': `69\nVocê tem um locatário do Azure AD chamado adatum.com que contém os grupos mostrados na tabela a seguir.
+           \nAdatum.com contém os usuários mostrados na tabela a seguir.
+           \nVocê atribui a licença do Azure Active Directory Premium Plano 2 ao Grupo1 e ao Usuário4.\nA quais usuários é atribuída a licença do Azure Active Directory Premium Plano 2?\n`,
         'number': '',
         'page': 83,
         'answers': [{
@@ -3678,7 +4567,9 @@ HOTSPOT -
         ],
         'explication': 'A\nVocê pode usar um registro CNAME ou um registro A para mapear um nome DNS personalizado para o Serviço de Aplicativo.\nReferência:\nhttps://docs.microsoft.com/en-us/Azure/app-service/app-service-web-tutorial-custom-domain\nDistribuição de votos da comunidade\nUm (100%)\nTópico 4'
     }, {
-        'question': '20\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.\nSolução: você move VM1 para RG2 e, em seguida, adiciona uma nova interface de rede à VM1.\nIsso atende ao objetivo?\n',
+        'question': `20\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            \nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.
+            \nSolução: você move VM1 para RG2 e, em seguida, adiciona uma nova interface de rede à VM1.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 218,
         'answers': [{
@@ -6770,7 +7661,7 @@ https://docs.microsoft.com/en-us/azure/backup/backup-azure-vms-first-look-arm
             'correct': true
         }
         ],
-        'explication': 'D\nEm Home ג >"€Gerenciamento de Custos + Faturamento ג >"€Gerenciamento de Custos, role para baixo nas opções e selecione Exibir Recomendações:\nGerenciamento/Conselheiro(Advisor) de Custos do Azure -\nA partir daqui você verá as recomendações para sua assinatura. Se você tiver discos órfãos, eles serão listados.\nReferência:\nhttps://codeserendipity.com/2020/07/08/microsoft-azure-nd-unattached-disks-that-can-be-deleted-and-other-recommendations/\nDistribuição de votos da comunidade\nD (82%) C (18%)'
+        'explication': 'D\nEm Home ג >"€Gerenciamento de Custos + Faturamento ג >"€Gerenciamento de Custos, role para baixo nas opções e selecione Exibir Recomendações:\nGerenciamento/Assistente(Advisor) de Custos do Azure -\nA partir daqui você verá as recomendações para sua assinatura. Se você tiver discos órfãos, eles serão listados.\nReferência:\nhttps://codeserendipity.com/2020/07/08/microsoft-azure-nd-unattached-disks-that-can-be-deleted-and-other-recommendations/\nDistribuição de votos da comunidade\nD (82%) C (18%)'
     }, {
         'question': '20\nVocê tem um aplicativo Web do Azure chamado webapp1.\nOs usuários relatam que frequentemente enfrentam erros HTTP 500 quando se conectam ao webapp1.\nVocê precisa fornecer aos desenvolvedores do webapp1 acesso em tempo real aos erros de conexão. A solução deve fornecer todos os erros de conexão\ndetalhes.\nO que você deve fazer primeiro?\n',
         'number': '',
@@ -6964,7 +7855,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         'number': '',
         'page': 478,
         'answers': [{
-            'text': 'A. Azure Application Insights Pro ler\n',
+            'text': 'A. Perfil Azure Application Insights\n',
             'correct': false
         }, {
             'text': 'B. acessar avaliações\n',
@@ -7004,7 +7895,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
                         { 'text': 'Crie um cofre de backup do Azure', 'correct': false, 'index': '1' },
                         { 'text': 'Crie um cofre dos Serviços de Recuperação.', 'correct': false, 'index': '-1' },
                         { 'text': 'Delegar permissões para o cofre.', 'correct': true, 'index': '3' },
-                        { 'text': 'Crie uma política de backup e configure o backup.', 'correct': false, 'index': '2' },
+                        { 'text': 'Crie uma política de backup e configure o backup.', 'correct': true, 'index': '2' },
                     ],
                     'function': 'origin'
 
@@ -7069,7 +7960,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         'number': '',
         'page': 479,
         'answers': [{
-            'text': 'A. Azure Application Insights Pro ler\n',
+            'text': 'A. Perfil do Azure Application Insights\n',
             'correct': true
         }, {
             'text': 'B. o registro de atividades\n',
@@ -7106,7 +7997,89 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nB (85%) A (15%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 36. Tópico 6.
+               HOTSPOT
+
+            Você tem uma assinatura do Azure vinculada a um locatário do Azure AD. O locatário contém dois usuários chamados Usuário1 e Usuário2.
+
+            A assinatura contém os recursos mostrados na tabela a seguir.
+
+            <img src="imagens/zquestao36topico6parte1.png" alt="imagem da questão"></img>
+
+            A assinatura contém as regras de alerta mostradas na tabela a seguir.
+            <img src="imagens/zquestao36topico6parte2.png" alt="imagem da questão"></img>
+
+
+            Os usuários executam a seguinte ação:
+
+            • O usuário1 cria um novo disco virtual e anexa o disco à VM1
+            • O usuário2 cria uma nova tag de recurso e atribui a tag a RG1 e VM1
+
+            Quais regras de alerta são acionadas por cada usuário? Para responder, selecione as opções apropriadas na área de resposta.
+
+            NOTA: Cada seleção correta vale um ponto.
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': true,
+        'answers': [{
+            'text': 'Usuário1',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Nenhum alerta é acionado",
+                    'correct': false
+                }, {
+                    'text': "Somente Alert1 é acionado",
+                    'correct': false
+                }, {
+                    'text': "Somente Alert2 é acionado",
+                    'correct': true
+                },
+                {
+                    'text': "Alerta1 e Alerta2 são acionados",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Usuário2',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Nenhum alerta é acionado",
+                    'correct': false
+                }, {
+                    'text': "Somente Alert1 é acionado",
+                    'correct': false
+                }, {
+                    'text': "Somente Alert2 é acionado",
+                    'correct': false
+                },
+                {
+                    'text': "Alerta1 e Alerta2 são acionados",
+                    'correct': true
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': true,
+        'explication': ` 
+                `
+    },
+
+    {
         'question': '37\nVocê planeja implantar várias máquinas virtuais do Azure que executarão o Windows Server 2019 em um conjunto de escala de máquina virtual usando um recurso do Azure\nModelo de gerente.\nVocê precisa garantir que o NGINX esteja disponível em todas as máquinas virtuais após sua implantação.\nO que você deve usar?\n',
         'number': '',
         'page': 482,
@@ -7126,7 +8099,13 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '38\nVocê tem uma assinatura do Azure que contém oito máquinas virtuais e os recursos mostrados na tabela a seguir.\nVocê precisa configurar o acesso para VNET1. A solução deve atender aos seguintes requisitos:\n• As máquinas virtuais conectadas à VNET1 devem ser capazes de se comunicar com as máquinas virtuais conectadas à VNET2 usando o backbone da Microsoft.\n• As máquinas virtuais conectadas à VNET1 devem ser capazes de acessar storage1, storage2 e Azure AD usando o backbone da Microsoft.\nQual é o número mínimo de pontos de extremidade de serviço que você deve adicionar à VNET1?\n',
+        'question': `38\nVocê tem uma assinatura do Azure que contém oito máquinas virtuais e os recursos mostrados na tabela a seguir.\nVocê precisa configurar o acesso para VNET1. A solução deve atender aos seguintes requisitos:
+            
+            <img src="imagens/zquestao38topico6.png" alt="imagem da questão"></img>
+
+            \n• As máquinas virtuais conectadas à VNET1 devem ser capazes de se comunicar com as máquinas virtuais conectadas à VNET2 usando o backbone da Microsoft.
+            \n• As máquinas virtuais conectadas à VNET1 devem ser capazes de acessar storage1, storage2 e Azure AD usando o backbone da Microsoft.
+            \nQual é o número mínimo de pontos de extremidade de serviço que você deve adicionar à VNET1?\n`,
         'number': '',
         'page': 483,
         'answers': [{
@@ -7182,7 +8161,97 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (90%) 10%'
-    }, {
+    },
+
+    {
+        'question': `Questão 51. Tópico 6
+
+            HOTSPOT
+
+            Você tem uma assinatura do Azure chamada Sub1 que contém os recursos mostrados na tabela a seguir.
+
+            <img src="imagens/zquestao51topico6.png" alt="imagem da questão"></img>
+
+            Sub1 contém a seguinte regra de alerta:
+
+            • Nome: Alerta1
+            • Escopo: Todos os grupos de recursos em Sub1
+            o Inclui todos os recursos futuros
+            • Condição: Todas as operações administrativas
+            • Ações: Ação1
+
+            Sub1 contém a seguinte regra de processamento de alerta:
+
+            • Nome: Regra1
+            • Escopo: Sub1
+            • Tipo de regra: Suprimir notificações
+            • Aplicar a regra: Em um horário específico
+            o Início: 10 de agosto de 2022
+            o Fim: 13 de agosto de 2022
+
+            Para cada uma das afirmações a seguir, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+
+            NOTA: Cada seleção correta vale um ponto.
+
+            HOTSPOT
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Se criar um grupo de recursos em Sub1 em 11 de agosto de 2022, o Alert1 será listado no portal do Azure.\n',
+            'correct': true
+        }, {
+            'text': 'Se você criar um grupo de recursos em Sub1 em 12 de agosto de 2022, uma mensagem de email será enviada para admin1@contoso.com.',
+            'correct': false
+        }, {
+            'text': 'Se você adicionar uma tag ao RG1 em 15 de agosto de 2022, uma mensagem de email será enviada para admin1@contoso.com.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `
+        `
+
+    },
+
+
+    {
+        'question': ` 42 Tópico 6
+            Você tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1 na região Norte da Europa do Azure.
+            Você precisa garantir que, quando os dados do blob forem adicionados ao storage1,
+            uma cópia secundária seja criada na região leste dos EUA. A solução deve minimizar o esforço administrativo.
+
+            O que você deve configurar?
+        `,
+
+        'number': '',
+        'page': 484,
+        'answers': [{
+            'text': 'A. backup operacional.\n',
+            'correct': false
+        }, {
+            'text': 'B. replicação de objeto.\n',
+            'correct': true
+        }, {
+            'text': 'C. Armazenamento com redundância geográfica (GRS).\n',
+            'correct': false
+        }, {
+            'text': 'D.  uma regra de gerenciamento do ciclo de vida.',
+            'correct': false
+        }
+        ],
+        'explication': `
+            Distribuição de votos da comunidade
+            B (92%)
+            8%
+        `
+    },
+
+
+    {
         'question': '43\nVocê tem uma assinatura do Azure que contém dois espaços de trabalho do Log Analytics chamados Workspace1 e Workspace2 e 100 máquinas virtuais que\nexecute o Windows Server.\nVocê precisa coletar dados e eventos de desempenho das máquinas virtuais. A solução deve atender aos seguintes requisitos:\n• Os logs devem ser enviados para Workspace1 e Workspace 2.\n• Todos os eventos do Windows devem ser capturados.\n• Todos os eventos de segurança devem ser capturados.\nO que você deve instalar e configurar em cada máquina virtual?\n',
         'number': '',
         'page': 486,

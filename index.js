@@ -224,40 +224,64 @@ function addQuestionDragDrop(questao) {
 }
 
 function addMultipleCheckbox(questao) {
-  let newAsnwerCheckBoxHtml = '';
-  let asnwerCheckBoxRightHtml = '';
+  let newAsnwerCheckBoxHtml = `<div class="grid-container-yes-or-no">
+    <div class="grid-item-yes-or-no">
+      </div>
+      <div class="grid-item-yes-or-no">Sim</div>
+      <div class="grid-item-yes-or-no">Não</div>
+  `;
+  let asnwerCheckBoxRightHtml = `<div class="grid-container-yes-or-no" disabled>
+      <div class="grid-item-yes-or-no">
+      </div>
+      <div class="grid-item-yes-or-no">Sim</div>
+      <div class="grid-item-yes-or-no">Não</div> 
+  `;
   questao.answers.forEach(answer => {
     let optionNumber = 1;
-    newAsnwerCheckBoxHtml += `<br><div class="selectyesornoanyanswers">` + answer.text;
-    asnwerCheckBoxRightHtml += `<br><div class="selectyesornoanyanswers" disabled>` + answer.text;
+    newAsnwerCheckBoxHtml += `<div class="grid-item-yes-or-no">` + answer.text + `</div>`;
+    asnwerCheckBoxRightHtml += `<div class="grid-item-yes-or-no" disabled>` + answer.text + `</div>`;
 
     if (answer.correct) {
       //newAsnwer.dataset.correct = answer.correct
-      newAsnwerCheckBoxHtml += `
-        <input type="radio" id="check` + optionNumber + `" value=true> <label> Sim </label>
+      newAsnwerCheckBoxHtml += `<div class="grid-item-yes-or-no">
+        <input type="radio" id="check` + optionNumber + `" value=true>
+       </div>
       `
-      asnwerCheckBoxRightHtml += `<input type="radio" id="check` + optionNumber + `" value=true checked > <label> Sim </label>`
-      newAsnwerCheckBoxHtml += `
-        <input type="radio" id="checkf` + optionNumber + `" value=false> <label> Não </label>
+      asnwerCheckBoxRightHtml += `<div class="grid-item-yes-or-no">
+          <input type="radio" id="check` + optionNumber + `" value=true checked >
+        </div>`
+      newAsnwerCheckBoxHtml += `<div class="grid-item-yes-or-no">
+        <input type="radio" id="checkf` + optionNumber + `" value=false>
+       </div>
       `
-      asnwerCheckBoxRightHtml += `<input type="radio"` + optionNumber + `" value=false> <label> Não </label>`
+      asnwerCheckBoxRightHtml += `<div class="grid-item-yes-or-no">
+        <input type="radio"` + optionNumber + `" value=false>
+      </div>`
 
     } else {
-      newAsnwerCheckBoxHtml += `
-        <input type="radio" id="check` + optionNumber + `" value=true > <label> Sim </label>
+      newAsnwerCheckBoxHtml += `<div class="grid-item-yes-or-no">
+        <input type="radio" id="check` + optionNumber + `" value=true >
+        </div>
       `
-      asnwerCheckBoxRightHtml += `<input type="radio" id="check` + optionNumber + `" value=true > <label> Sim </label>`
-      newAsnwerCheckBoxHtml += `
-        <input type="radio" id="checkf` + optionNumber + `" value=false> <label> Não </label>
+      asnwerCheckBoxRightHtml += `<div class="grid-item-yes-or-no">
+      <input type="radio" id="check` + optionNumber + `" value=true >
+      </div>`
+      newAsnwerCheckBoxHtml += ` <div class="grid-item-yes-or-no">
+        <input type="radio" id="checkf` + optionNumber + `" value=false>
+        </div>
       `
-      asnwerCheckBoxRightHtml += `<input type="radio"` + optionNumber + `" value=false checked> <label> Não </label>`
+      asnwerCheckBoxRightHtml += ` <div class="grid-item-yes-or-no">
+      <input type="radio"` + optionNumber + `" value=false checked>
+      </div>`
     }
-    newAsnwerCheckBoxHtml += `</div>`;
     //$answersContainer.appendChild(newAsnwer)
 
     //newAsnwer.addEventListener("click", selectAnswer)
     optionNumber++;
   })
+  newAsnwerCheckBoxHtml += `</div>`;
+  asnwerCheckBoxRightHtml += `</div>`;
+
   $answersContainer.insertAdjacentHTML('beforeend', newAsnwerCheckBoxHtml);
   $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', asnwerCheckBoxRightHtml);
   $textAnswerOrigin.textContent = questao.explication
