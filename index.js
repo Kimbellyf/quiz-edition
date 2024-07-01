@@ -178,6 +178,7 @@ function addQuestionDragDrop(questao) {
     answeroptions.forEach(caixa => {
       let divAnswerFinal = `<div id="divanswerdragdrop">`
       let temOrdem = false;
+      let listaOpt = new Array(caixa.options.length)
       if (caixa.function === 'origin') {
         let divdrag = `<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">`
         let optionnumber = 1;
@@ -189,27 +190,25 @@ function addQuestionDragDrop(questao) {
           optionnumber++;
           if (option.correct) {
             if (option.index != "any") {
-              divAnswerFinal += 'Ordem:' + option.index;
+              listaOpt[option.index - 1] = `<h5>` + option.text + `</h5>`
               temOrdem = true;
+            } else {
+              listaOpt.push(`<h5>` + option.text + `</h5>`);
             }
-            divAnswerFinal += `<h5>` + option.text + `</h5>`
           }
         })
+        divAnswerFinal += listaOpt.concat();
         divdrag = divdrag + `</div>`
         divdragAllOptionsAnswer = `<div id="divalloptionsdragdrop"` + divdrag.slice(14) + `</div>`
         divAnswerFinal += `</div>`
         let answerDragDrop = divdragAllOptionsAnswer + divAnswerFinal;
 
         $answersContainer.insertAdjacentHTML('beforeend', divdrag);
-        if (!temOrdem) {
-          $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', answerDragDrop);
-        }
+        $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', answerDragDrop);
       }
       else {
         let divdragrecept = `<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>`;
-        if (!temOrdem) {
-          $answersContainer.insertAdjacentHTML('beforeend', divdragrecept);
-        }
+        $answersContainer.insertAdjacentHTML('beforeend', divdragrecept);
       }
     })
   });

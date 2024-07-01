@@ -2395,7 +2395,7 @@ const questionsAll = [
             Você tem um Azure Load Balancer chamado LB1.
             Você atribui a um usuário chamado User1 as funções mostradas na exposição a seguir.
             
-            <img src="imagens/zquestao52topico2.png" alt="imagem da questão"></img>
+            <img src="imagens/zquestao52topico2.jpg" alt="imagem da questão"></img>
 
             Use os menus suspensos para selecionar a opção de resposta que completa cada afirmação com base nas informações apresentadas no gráfico.
             NOTA: Cada seleção correta vale um ponto.
@@ -2774,7 +2774,13 @@ const questionsAll = [
         ],
         'explication': 'A\nPode ser usado como:\n"AssignableScopes": [\n"/subscriptions/{Sub1},",\n"/subscriptions/{Sub2},",\nObservação: Exemplo de função personalizada:\nO seguinte mostra a aparência de uma função personalizada conforme exibida usando o Azure PowerShell no formato JSON. Esta função personalizada pode ser usada para\nmonitorar e reiniciar máquinas virtuais.\n{\n"Name": "Operador de máquina virtual",\n"Id": "88888888-8888-8888-8888-88888888888",\n"IsCustom": true,\n"Description": "Pode monitorar e reiniciar máquinas virtuais.",\n"Actions": [\n"Microsoft.Storage/*/read",\n"Microsoft.Network/*/read",\n"Microsoft.Compute/*/read",\n"Microsoft.Compute/virtualMachines/start/action",\n"Microsoft.Compute/virtualMachines/restart/action",\n"Microsoft.Authorization/*/read",\n"Microsoft.ResourceHealth/availabilityStatuses/read",\n"Microsoft.Resources/subscriptions/resourceGroups/read",\n"Microsoft.Insights/alertRules/*",\n"Microsoft.Insights/diagnosticSettings/*",\n"Microsoft.Support/*"\n],\n"NotActions": [],\n"DataActions": [],\n"NotDataActions": [],\n"AssignableScopes": [\n"/subscriptions/{subscriptionId1},",\n"/subscriptions/{subscriptionId2},",\n"/providers/Microsoft.Management/managementGroups/{groupId1},"\n]\n},\nReferência:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles\nDistribuição de votos da comunidade\nA (100%)'
     }, {
-        'question': '62\nVocê tem uma assinatura do Azure que contém uma conta de armazenamento chamada storageacct1234 e dois usuários chamados Usuário1 e Usuário2.\nVocê atribui ao Usuário1 as funções mostradas na exposição a seguir.\nQuais são as duas ações que o Usuário1 pode realizar? Cada resposta correta apresenta uma solução completa.\nNOTA: Cada seleção correta vale um ponto.\n',
+        'question': `62 Tópico 2
+            \nVocê tem uma assinatura do Azure que contém uma conta de armazenamento chamada storageacct1234 e dois usuários chamados Usuário1 e Usuário2.
+            \nVocê atribui ao Usuário1 as funções mostradas na exposição a seguir.
+            <img src="imagens/wquestao62topico2.png" alt="imagem da questão"></img>
+            \nQuais são as duas ações que o Usuário1 pode realizar? 
+            Cada resposta correta apresenta uma solução completa.
+            \nNOTA: Cada seleção correta vale um ponto.\n`,
         'number': '',
         'page': 79,
         'answers': [{
@@ -2846,7 +2852,149 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (79%) A (21%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 66 Tópico 2
+            HOTSPOT
+
+            Você tem uma assinatura do Azure vinculada a um locatário do Azure AD. O locatário contém as funções personalizadas de controle de acesso baseado em função (RBAC) mostradas na tabela a seguir.
+
+            <img src="imagens/wquestao66topico2.png" alt="imagem da questão"></img>
+
+            No portal do Azure, você precisa criar duas funções personalizadas chamadas Role3 e Role4. Role3 será uma função de assinatura do Azure. Role4 será uma função do Azure AD.
+
+            Quais funções você pode clonar para criar as novas funções? Para responder, selecione as opções apropriadas na área de resposta.
+
+            OBSERVAÇÃO: cada seleção correta vale um ponto.
+        `,
+        'number': 66,
+        'page': 3,
+        'studyCase': false,
+
+        'answers': [{
+            'text': `Role3/Função3`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente Role1/função1",
+                    'correct': false
+                }, {
+                    'text': "Somente roles/funções de assinatura integradas do Azure",
+                    'correct': false
+                }, {
+                    'text': "Somente funções de assinatura Role1 e internas do Azure",
+                    'correct': true
+                },
+                {
+                    'text': "Somente roles/funções de assinatura do Azure integradas e roles/funções do Azure AD integradas",
+                    'correct': false
+                },
+                {
+                    'text': "Roles1/Função1, Roles2/Função2, funções de assinatura internas do Azure e funções internas do Azure AD",
+                    'correct': false
+                }
+            ]
+        },
+
+
+        {
+            'text': 'Role4/Função4',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente role2/função2",
+                    'correct': true
+                }, {
+                    'text': "Somente funções internas do Azure AD",
+                    'correct': false
+                }, {
+                    'text': "Somente funções Role2 e internas do Azure AD",
+                    'correct': false
+                },
+                {
+                    'text': "Somente funções integradas do Azure AD e funções de assinatura integradas do Azure",
+                    'correct': false
+                },
+                {
+                    'text': "Role1, Role2, Azure AD integrado e funções de assinatura do Azure integradas",
+                    'correct': false
+                },
+
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Comentário mais votado: 
+             A resposta deve ser Role3: Role1 e somente funções de assinatura do Azure integradas
+             Role4: 
+             somente Role2 Explicação: Você não pode clonar a função do Azure AD integrada
+        `
+    },
+
+
+    {
+        'question': `Questão 67 Tópico 2
+            ARRASTAR E SOLTAR
+
+            Você tem uma assinatura do Azure chamada Sub1 que contém dois usuários chamados Usuário1 e Usuário2.
+
+            Você precisa atribuir funções de controle de acesso baseado em função (RBAC) ao Usuário1 e Usuário2. Os usuários devem ser capazes de executar as seguintes tarefas no Sub1:
+
+            • O Usuário1 deve visualizar os dados em qualquer conta de armazenamento.
+            • O Usuário2 deve atribuir aos usuários a função de Colaborador para contas de armazenamento.
+
+            A solução deve usar o princípio do menor privilégio.
+
+            Qual função RBAC você deve atribuir a cada usuário? Para responder, arraste as funções apropriadas para os usuários corretos. Cada função pode ser usada uma vez, mais de uma vez ou nunca. Pode ser necessário arrastar a barra de divisão entre os painéis ou rolar para visualizar o conteúdo.
+
+            OBSERVAÇÃO: cada seleção correta vale um ponto.
+            <img src="imagens/wquestao67topico2.png" alt="imagem da questão" style="max-width:320px"></img>
+            `,
+        'number': '67',
+        'page': 3,
+        'studyCase': false,
+
+        'answers': [
+            [
+                {
+                    'text': 'RBAC roles/funções \n',
+                    'options': [
+                        { 'text': 'Owner/Proprietário', 'correct': true, 'index': '2' },
+                        { 'text': 'Contributor/Colaborador', 'correct': false, 'index': '-1' },
+                        { 'text': 'Reader/Leitor e Data Acess/acesso a dados', 'correct': true, 'index': '1' },
+                        { 'text': 'Storage Account Contributor/Colaborador da conta de armazenamento', 'correct': false, 'index': '-1' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': 'Answer area \n',
+                    'options': [
+                        { 'text': 'User1', 'correct': true, 'index': '1' },
+                        { 'text': 'User2', 'correct': true, 'index': '2' }
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `
+            User1: Reader and Data Access
+            User2: Owner
+        `,
+        'typeQuestion': 'dragdrop'
+    },
+
+    {
         'question': '68\nVocê tem uma assinatura do Azure que contém 10 máquinas virtuais, um cofre de chaves denominado Vault1 e um NSG (grupo de segurança de rede) denominado NSG1. Todos\nos recursos são implantados na região do Leste dos EUA Azure.\nAs máquinas virtuais são protegidas usando NSG1. O NSG1 está configurado para bloquear todo o tráfego de saída para a Internet.\nVocê precisa garantir que as máquinas virtuais possam acessar o Vault1. A solução deve usar o princípio do menor privilégio e minimizar\nesforço\nO que você deve configurar como destino da regra de segurança de saída para NSG1?\n',
         'number': '',
         'page': 83,
@@ -2864,7 +3012,12 @@ const questionsAll = [
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)\nTópico 2'
     }, {
         'question': `69\nVocê tem um locatário do Azure AD chamado adatum.com que contém os grupos mostrados na tabela a seguir.
-           \nAdatum.com contém os usuários mostrados na tabela a seguir.
+            <img src="imagens/wquestao69topico2parte1.png" alt="imagem da questão"></img>
+           
+            \nAdatum.com contém os usuários mostrados na tabela a seguir.
+            
+           <img src="imagens/wquestao69topico2parte2.png" alt="imagem da questão"></img>
+
            \nVocê atribui a licença do Azure Active Directory Premium Plano 2 ao Grupo1 e ao Usuário4.\nA quais usuários é atribuída a licença do Azure Active Directory Premium Plano 2?\n`,
         'number': '',
         'page': 83,
@@ -2883,7 +3036,56 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (92%) 4%'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 70 Tópico 2
+            Você tem um locatário do Azure AD chamado contoso.com.
+
+            Você tem duas organizações parceiras externas chamadas fabrikam.com e litwareinc.com. Fabrikam.com está configurada como uma organização conectada.
+
+            Você cria um pacote de acesso conforme mostrado na exposição Pacote de acesso. (Clique na guia Pacote do Access.)
+
+            <img src="imagens/wquestao70topico2parte1.png" alt="imagem da questão"></img>
+
+
+            Você define as configurações do ciclo de vida do usuário externo conforme mostrado na exposição Ciclo de Vida. (Clique na guia Ciclo de Vida.)
+
+            <img src="imagens/wquestao70topico2parte2.png" alt="imagem da questão"></img>
+
+            Para cada uma das afirmações a seguir, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+
+            NOTA: Cada seleção correta vale um ponto.
+
+        
+        `,
+        'number': '70',
+        'page': 3,
+        'studyCase': true,
+        'answers': [{
+
+            'text': 'Os usuários do Litwareinc.com podem ser atribuídos ao pacote1.',
+            'correct': false
+        }, {
+            'text': 'Após 365 dias, os usuários do fabrikam.com serão removidos do Grupo1.',
+            'correct': true
+        }, {
+            'text': 'Após 395 dias, os usuários do fabrikam.com serão removidos do locatário contoso.com.',
+            'correct': true
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Obs: ainda há uma divergência razoável para a segunda afirmação se é sim ou não mas o Comentário mais votado:
+            N - Porque não está conectado.
+            Y - Porque quando expira é removido do grupo. Prova a seguir 
+            Y - Porque..math https://learn.microsoft.com/en-us/azure/active-directory/governance/entitlement-management-access-package-resources Quando a atribuição do pacote de acesso de um usuário expira, eles são removidos do grupo ou equipe, a menos
+            que tenham atualmente uma atribuição a outro pacote de acesso que inclua esse mesmo grupo ou equipe.
+	    `
+    },
+
+
+    {
         'question': '71\nVocê tem uma assinatura do Azure chamada Subscription1 que contém uma rede virtual chamada VNet1. A VNet1 está num grupo de recursos denominado RG1.\nA assinatura1 tem um usuário chamado User1. O usuário1 tem as seguintes funções:\n• Leitor\n• Administrador de segurança\n• Leitor de segurança\nVocê precisa garantir que o Usuário1 possa atribuir a função de Leitor da VNet1 a outros usuários.\nO que você deveria fazer?\n',
         'number': '',
         'page': 86,
@@ -2902,7 +3104,58 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 72 Tópico 2
+            Você tem uma assinatura do Azure que contém os usuários mostrados na tabela a seguir.
+
+            <img src="imagens/wquestao72topico2parte1.png" alt="imagem da questão"></img>
+
+            Os grupos são configurados conforme mostrado na tabela a seguir.
+
+            <img src="imagens/wquestao72topico2parte2.png" alt="imagem da questão"></img>
+
+            Você tem um grupo de recursos chamado RG1, conforme mostrado na exposição a seguir.
+
+            <img src="imagens/wquestao72topico2parte3.png" alt="imagem da questão"></img>
+
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        
+        `,
+        'number': '72',
+        'page': 3,
+        'studyCase': false,
+        'answers': [{
+
+            'text': `Você pode atribuir ao Usuário2 a
+                função de Proprietário para RG1 adicionando o Grupo2 como membro do Grupo1.`,
+            'correct': false
+        }, {
+            'text': `
+                Você pode atribuir ao Usuário3 a função de Proprietário 
+                para RG1 adicionando o Grupo3 como membro do Grupo1.
+            `,
+            'correct': false
+        }, {
+            'text': `
+                Você pode atribuir ao Usuário3 a função de Proprietário
+                para RG1 atribuindo a função de Proprietário ao Grupo3 para
+            `,
+            'correct': true
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Comentário mais votado: Acabei de testar em meu ambiente de teste do Azure. A resposta é:
+             1. Não 2. Não 3. Sim Não sei de onde rpalanivel83 obteve suas respostas
+	    `
+    },
+
+
+    {
         'question': '73\nVocê tem uma assinatura do Azure chamada Subscription1 que contém uma rede virtual chamada VNet1. A VNet1 está num grupo de recursos denominado RG1.\nA assinatura1 tem um usuário chamado User1. O usuário1 tem as seguintes funções:\n• Leitor\n• Administrador de segurança\n• Leitor de segurança\nVocê precisa garantir que o Usuário1 possa atribuir a função de Leitor da VNet1 a outros usuários.\nO que você deveria fazer?\n',
         'number': '',
         'page': 88,
