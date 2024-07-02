@@ -3174,8 +3174,14 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
-        'question': '74\nSua rede local contém um gateway VPN.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa garantir que todo o tráfego da VM1 para o armazenamento1 viaje pela rede backbone da Microsoft.\nO que você deve configurar?\n',
+    },
+    {
+        'question': `Questão 74 Tópico 2
+            \nSua rede local contém um gateway VPN.
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/kquestao74topico2.png" alt="imagem da questão"></img>
+            \nVocê precisa garantir que todo o tráfego da VM1 para o armazenamento1 viaje pela rede backbone da Microsoft.
+            \nO que você deve configurar?\n`,
         'number': '',
         'page': 89,
         'answers': [{
@@ -3193,7 +3199,43 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (98%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 75 Tópico 2
+            você tem uma assinatura do Azure que contém um usuário chamado User1 e os recursos mostrados na tabela a seguir.
+            <img src="imagens/kquestao75topico2parte1.png" alt="imagem da questão"></img>
+
+            NSG1 está associado à interface de rede1.
+
+            User1 tem atribuições de funções para NSG1 conforme mostrado na tabela a seguir.
+            <img src="imagens/kquestao75topico2parte2.png" alt="imagem da questão"></img>
+
+            Para cada uma das afirmações a seguir, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+
+            NOTA: Cada seleção correta vale um ponto.
+        `,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'User1 pode criar uma conta de armazenamento em RG1.',
+            'correct': true
+        }, {
+            'text': 'O usuário1 pode modificar as configurações de DNS da interface de rede1.',
+            'correct': false
+        }, {
+            'text': 'O usuário1 pode criar uma regra de segurança de entrada para filtrar o tráfego de entrada para networkinterface1.',
+            'correct': true
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `
+	`
+    },
+
+    {
         'question': '76\nVocê tem uma assinatura do Azure chamada Subscription1 que contém uma rede virtual chamada VNet1. A VNet1 está num grupo de recursos denominado RG1.\nA assinatura1 tem um usuário chamado User1. O usuário1 tem as seguintes funções:\n• Leitor\n• Administrador de segurança\n• Leitor de segurança\nVocê precisa garantir que o Usuário1 possa atribuir a função de Leitor da VNet1 a outros usuários.\nO que você deveria fazer?\n',
         'number': '',
         'page': 91,
@@ -3212,8 +3254,47 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
-        'question': '78\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa atribuir ao Usuário1 a função de Colaborador de compartilhamento SMB de dados de arquivo de armazenamento para share1.\nO que você deve fazer primeiro?\n',
+    },
+
+    {
+        'question': `Questão 77 Tópico 2
+            Você tem três assinaturas do Azure chamadas Sub1, Sub2 e Sub3 que estão vinculadas a um locatário do Azure AD.
+
+            O locatário contém um usuário chamado User1, um grupo de segurança chamado Group1 e um grupo de gerenciamento chamado MG1. User é um membro do Group1.
+
+            Sub1 e Sub2 são membros do MG1. Sub1 contém um grupo de recursos chamado RG1. RG1 contém cinco funções do Azure.
+
+            Você cria as seguintes atribuições de função para MG1:
+
+            • Group1: Reader
+            • User1: User Access Administrator
+
+            Você atribui a User a função Virtual Machine Contributor para Sub1 e Sub2.
+
+	`,
+        'number': '77',
+        'page': 3,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Os membros do Grupo1 podem visualizar as configurações das funções do Azure.',
+            'correct': true
+        }, {
+            'text': 'O Usuário1 pode atribuir a função de Proprietário para RG1.',
+            'correct': true
+        }, {
+            'text': 'O usuário1 pode criar um novo grupo de recursos e implementar uma máquina virtual no novo grupo.',
+            'correct': false
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `
+	`
+    },
+
+
+    {
+        'question': '78\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir. <img src="imagens/kquestao78topico2.png" alt="imagem da questão"></img> \nVocê precisa atribuir ao Usuário1 a função de Colaborador de compartilhamento SMB de dados de arquivo de armazenamento para share1.\nO que você deve fazer primeiro?\n',
         'number': '',
         'page': 93,
         'answers': [{
@@ -3250,7 +3331,138 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (95%) 5%'
-    }, {
+    },
+
+    {
+        'question': `Questão 80  Tópico 2
+            
+            Você tem um locatário do Azure AD chamado adatum.com que contém os grupos mostrados na tabela a seguir.
+            
+            <img src="imagens/kquestao80topico2.png" alt="imagem da questão"></img>
+
+            Adatum.com contém os usuários mostrados na tabela a seguir.
+
+            <img src="imagens/kquestao80topico2parte2.png" alt="imagem da questão"></img>
+
+
+            Você atribui uma licença Azure Active Directory Premium P2 ao Grupo1, conforme mostrado na exposição a seguir.
+
+            <img src="imagens/kquestao80topico2parte3.png" alt="imagem da questão"></img>
+
+
+            O Grupo2 NÃO recebe uma licença diretamente.
+
+            Para cada uma das afirmações a seguir, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+
+            NOTA: Cada seleção correta vale um ponto.
+	`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Você pode atribuir ao Usuário1 a licença do Microsoft Defender para Cloud Apps Discovery.',
+            'correct': false
+        }, {
+            'text': 'Você pode remover a licença Azure Active Directory Premium P2 do Usuário1.',
+            'correct': false
+        }, {
+            'text': 'O usuário2 recebe o Azure Active Directory Premium P2.',
+            'correct': false
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Muita discussão sobre a primeira alternativa ser sim ou não, no comentário mais votado está primeira alternativa é sim, 
+        mas não tem uma quantidade tão expressiva de diferença para os outros comentários que dizem ter provado que a primeira alternativa seria N. 
+        Com base em muitas pessoas discordando que a primeira alternativa é Falsa, foi colocada essa resposta.
+        
+        Veja isso... incrível. https://www.youtube.com/watch?v=np-6s3N-1iQ&t=201s Ele mostra como é. NNN
+        A razão pela qual há tanta discussão, acho que estamos pensando em muitos cenários "se". 
+        Sim, você pode remover a licença premium do Usuário1, mas SOMENTE removendo-os do Grupo1, que não é mencionado. Isso significa que, COMO ESTÁ com esta configuração AGORA, você PODE fazer isso sem etapas adicionais? Então, #2; Não. #1: SIM, você pode atribuir ao usuário 1 a licença do MS defender, mas SOMENTE se você alterar a configuração da licença no Grupo1. Então, como está, não, NÃO. https://youtu.be/np-6s3N-1iQ?t=201 #3: NÃO. "Se você aplicar uma licença a um grupo aninhado, somente os membros usuários de primeiro nível imediatos do grupo terão as licenças aplicadas" https://learn.microsoft.com/en-us/entra/identity/users/licensing-group-advanced
+	`
+    },
+
+    {
+        'question': `Questão 81 Tópico 2
+            
+            Você tem uma implantação híbrida do Azure Active Directory (Azure AD) que contém os usuários mostrados na tabela a seguir.
+            
+            <img src="imagens/kquestao81topico2.png" alt="imagem da questão"></img>
+
+            Você precisa modificar os atributos JobTitle e UsageLocation para os usuários.
+
+            Para quais usuários você pode modificar os atributos do Azure AD? Para responder, selecione as opções apropriadas na área de resposta.
+
+            NOTA: Cada seleção correta vale um ponto. 
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': false,
+
+        'answers': [{
+            'text': `JobTitle`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente User1",
+                    'correct': false
+                }, {
+                    'text': "Somente User1 e User2",
+                    'correct': false
+                }, {
+                    'text': "Somente User1 e User3",
+                    'correct': true
+                },
+                {
+                    'text': "User1, User2 e User3",
+                    'correct': false
+                },
+                {
+                    'text': "",
+                    'correct': false
+                }
+            ]
+        },
+
+
+        {
+            'text': 'UsageLocation',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente User1",
+                    'correct': false
+                }, {
+                    'text': "Somente User1 e User2",
+                    'correct': false
+                }, {
+                    'text': "Somente User1 e User3",
+                    'correct': false
+                },
+                {
+                    'text': "User1, User2 e User3",
+                    'correct': true
+                },
+                {
+                    'text': "",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+        `
+    },
+
+    {
         'question': '82\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um locatário do Azure Active Directory (Azure AD) chamado contoso.com.\nVocê tem um arquivo CSV que contém os nomes e endereços de e-mail de 500 usuários externos.\nVocê precisa criar uma conta de usuário convidado em contoso.com para cada um dos 500 usuários externos.\nSolução: você cria um script do PowerShell que executa o cmdlet New-MgUser para cada usuário externo.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 97,
@@ -3314,8 +3526,108 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)'
-    }, {
-        'question': '88\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa atribuir ao Workspace1 uma função para permitir operações de leitura, gravação e exclusão para os dados armazenados nos contêineres do storage1.\nQual função você deve atribuir?\n',
+    },
+
+    {
+        'question': `Questão 86  Tópico 2
+            Você tem uma conta do Azure Storage chamada storage1 que usa o Azure Blob storage e o Azure File storage.
+
+            Você precisa usar o AzCopy para copiar dados para o blob storage e o file storage no storage1.
+
+            Qual método de autenticação você deve usar para cada tipo de armazenamento? Para responder, selecione as opções apropriadas na área de resposta.
+
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': false,
+
+
+        'answers': [{
+            'text': `Armazenamento de blobs/Blob storage:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente Azure AD",
+                    'correct': false
+                }, {
+                    'text': "Somente assinaturas de acesso compartilhado (SAS)",
+                    'correct': false
+                },
+                {
+                    'text': "Azure AD e assinaturas de acesso compartilhado (SAS)",
+                    'correct': true
+                },
+            ]
+        },
+
+
+        {
+            'text': 'Armazenamento de arquivo/File Storage:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente Azure AD",
+                    'correct': false
+                }, {
+                    'text': "Somente assinaturas de acesso compartilhado (SAS)",
+                    'correct': true
+                },
+                {
+                    'text': "Azure AD e assinaturas de acesso compartilhado (SAS)",
+                    'correct': false
+                },
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Muita divergência nos comentários de forma que é confuso escolher. Portanto escolhido a que a fonte forneceu
+           
+        `
+    },
+
+    {
+        'question': `Questão 87 Tópico 2
+            Você tem um locatário do Azure AD que contém um usuário chamado Usuário Externo.
+
+            O usuário externo se autentica no locatário usando external195@gmail.com .
+
+            Você precisa garantir que o Usuário Externo seja autenticado no locatário usando Contract@gmail.com .
+
+            Quais são as duas configurações que você deve definir na folha Visão geral? Para responder, selecione as configurações apropriadas na área de resposta.
+
+            <img src="imagens/kquestao87topico2.png" alt="imagem da questão"></img>
+
+            NOTA: Cada resposta correta vale um ponto.
+        `,
+        'number': '87',
+        'page': 3,
+        'answers': [{
+            'text': 'OK. Clique em ver resposta',
+            'correct': false
+        }
+        ],
+        'explication': 'Editar prop e B2B são as respostas'
+    },
+
+
+
+
+
+    {
+        'question': `Questão 88 Tópico 2
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/kquestao88topico2.png" alt="imagem da questão"></img>
+            \nVocê precisa atribuir ao Workspace1 uma função para permitir operações de leitura, gravação e exclusão para os dados armazenados
+             nos contêineres do storage1.
+             \nQual função você deve atribuir?\n`,
         'number': '',
         'page': 101,
         'answers': [{
@@ -3378,7 +3690,185 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (49%) D (47%) 3%'
-    }, {
+    },
+
+    {
+        'question': `Questão 91 Tópico 2
+            
+            Você tem um locatário do Azure AD.
+
+            Você precisa criar um grupo do Microsoft 365 que contenha apenas membros de um departamento de marketing na França.
+
+            Como você deve preencher a regra de associação dinâmica? Para responder, selecione as opções apropriadas na área de resposta.
+
+            NOTA: Cada resposta correta vale um ponto.
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': false,
+
+        'answers': [{
+            'text': `(`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "device.managementType",
+                    'correct': false
+                }, {
+                    'text': "device.organizationalUnit",
+                    'correct': false
+                }, {
+                    'text': "user.department",
+                    'correct': true
+                },
+                {
+                    'text': "user.usageLocation",
+                    'correct': false
+                },
+            ]
+        },
+
+
+        {
+            'text': '-eq "Marketing")',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "and",
+                    'correct': true
+                }, {
+                    'text': "or",
+                    'correct': false
+                }, {
+                    'text': "typeof",
+                    'correct': false
+                },
+
+            ]
+        },
+        {
+            'text': '(user.country ',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "-and",
+                    'correct': false
+                }, {
+                    'text': "-eq",
+                    'correct': true
+                }, {
+                    'text': "-in",
+                    'correct': false
+                },
+                {
+                    'text': "-match",
+                    'correct': false
+                },
+
+            ]
+        },
+        {
+            'text': '"France")',
+            'options': [
+                {
+                    text: '',
+                    correct: true
+                },
+
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+        `
+    },
+
+    {
+        'question': `Questão 92 Tópico 2
+            Você tem um locatário do Azure AD.
+
+            Você precisa modificar as configurações de permissões de função de usuário padrão para o locatário. A solução deve atender aos seguintes requisitos:
+
+            • Usuários padrão devem ser impedidos de criar novas entidades de serviço.
+            • Usuários padrão devem ser capazes de usar somente o PowerShell ou o Microsoft Graph para gerenciar seus próprios recursos do Azure.
+
+            Quais duas configurações você deve modificar? Para responder, selecione as configurações apropriadas na área de resposta.
+
+            <img src="imagens/kquestao92topico2.png" alt="imagem da questão"></img>
+
+            OBSERVAÇÃO: Cada resposta correta vale um ponto.
+        `,
+        'number': '',
+        'page': 3,
+        'answers': [{
+            'text': 'Clique em ver resposta',
+            'correct': true
+        }
+        ],
+        'explication': '<img src="imagens/kquestao92topico2resposta.png" alt="imagem da questão"></img>'
+    },
+
+    {
+        'question': `Questão 93  Tópico 2
+            Você tem uma assinatura do Azure chamada Sub1 que contém os contêineres de blob mostrados na tabela a seguir.
+
+            <img src="imagens/kquestao93topico2parte1.png" alt="imagem da questão"></img>
+
+            Sub1 contém dois usuários chamados User1 e User2. Ambos os usuários recebem a função Reader no escopo Sub1.
+
+            Você tem uma condição chamada Condition1, conforme mostrado na exposição a seguir.
+
+            <img src="imagens/kquestao93topico2parte2.png" alt="imagem da questão"></img>
+
+            Você tem uma condição chamada Condition2, conforme mostrado na exposição a seguir.
+
+            <img src="imagens/kquestao93topico2parte3.png" alt="imagem da questão"></img>
+
+            Você atribui funções a User1 e User2, conforme mostrado na tabela a seguir.
+
+            <img src="imagens/kquestao93topico2parte4.png" alt="imagem da questão"></img>
+
+
+            Para cada uma das seguintes declarações, selecione Yes se a declaração for verdadeira. Caso contrário, selecione No.
+            
+            OBSERVAÇÃO: cada seleção correta vale um ponto.
+	`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'User1 pode ler blob2',
+            'correct': false
+        }, {
+            'text': 'User1 pode ler blob3',
+            'correct': false
+        }, {
+            'text': 'User1 pode ler blob1',
+            'correct': true
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': ` Comentário mais votado:
+                A resposta é NNY As condições são difíceis de ler, mas significam (de acordo com a referência 1): a. Se o usuário executar uma operação de leitura, ele poderá ler somente de “cont1” b. Se o usuário executar uma operação de escrita, ele poderá escrever somente em blobs como “*2*” Dado que, então: 1- O usuário 1 pode ler Blob2 - Não, porque ele está lendo, então a condição a. se aplica, e ele não está lendo cont1 2- O usuário 1 pode ler Blob3 - Não, porque ele está lendo, então a condição a. se aplica, e ele não está lendo cont1 3- O usuário 2 pode ler o blob 1 - Sim. Ele não está escrevendo, então a condição b. não se aplica. Ele tem permissões concedidas pela função no escopo que está lendo - Proprietário de dados do blob de armazenamento no storage1, que contém o blob1 
+                Referências: 1. https://learn.microsoft.com/en-us/azure/role-based-access-control/conditions-format 
+                2. https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
+	    `
+    },
+
+
+
+    {
         'question': '94\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um locatário do Azure Active Directory (Azure AD) chamado contoso.com.\nVocê tem um arquivo CSV que contém os nomes e endereços de e-mail de 500 usuários externos.\nVocê precisa criar uma conta de usuário convidado em contoso.com para cada um dos 500 usuários externos.\nSolução: você cria um script do PowerShell que executa o cmdlet New-MgUser para cada usuário.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 107,
@@ -3391,10 +3881,60 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
-        'question': '96\nSua rede local contém um gateway VPN.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa garantir que todo o tráfego da VM1 para o armazenamento1 viaje pela rede backbone da Microsoft.\nO que você deve configurar?\n',
+    },
+
+    {
+        'question': `Questão 95  Tópico 2 
+            Você compra uma nova assinatura do Azure.
+
+            Você cria um modelo do Azure Resource Manager (ARM) chamado deploy.json, conforme mostrado na exposição a seguir.
+            
+            <img src="imagens/kquestao95topico2.png" alt="imagem da questão"></img>
+
+            Você se conecta à assinatura e executa o seguinte comando.
+
+            New-AzDeployment –Location westus –TemplateFile “deploy.json”
+
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+	`,
         'number': '',
-        'page': 109,
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Três grupos de recursos são criados quando você executa o script.',
+            'correct': false
+        }, {
+            'text': 'Um grupo de recursos denominado RGroup5 é criado.',
+            'correct': false
+        }, {
+            'text': 'Todos os grupos de recursos são criados na região Leste do Azure dos EUA.',
+            'correct': false
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Comentário mais votado:
+            NNY - Eu executo o template ARM em um ambiente de laboratório. Antes de ir para a explicação, é válido dizer que há alguns erros no formato do script e eu tenho que consertá-lo para executar com sucesso.
+             1- É N, porque ele cria 4 Resource Groups e não 3 Resource Groups (RGS0, RGS1, RGroup4 e ResGrp8); 
+                1.1: O Resource Group nomeado com "[concat('RGS', copyIndex())]", cria RGS0 e RGS1; 
+                1.2: O Resource Group nomeado com "[concat('ResGrp', '8')]", cria ResGrp8; 
+                1.3: O Resource Group nomeado com "[concat('RGroup', length(parameters('obj1')))]", cria RGroup4 (Como podemos ver, o parâmetro obj1 tem um comprimento de 4 'propA', 'propB', 'propC' e 'propD'); 
+             2 - É N, porque não cria um grupo de recursos chamado RGroup5;
+             3 - É Y, porque todos os grupos de recursos foram criados na região do Azure do Leste dos EUA.
+	`
+    },
+
+    {
+        'question': `Questão 96 Tópico 2
+            \nSua rede local contém um gateway VPN.
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/kquestao96topico2.png" alt="imagem da questão"></img>
+            \nVocê precisa garantir que todo o tráfego da VM1 para o armazenamento1 viaje pela rede backbone da Microsoft.
+            \nO que você deve configurar?\n`,
+        'number': '96',
+        'page': 3,
         'answers': [{
             'text': 'A. Proxy de aplicativo do Azure AD\n',
             'correct': false
@@ -3411,7 +3951,12 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '97\nSua rede local contém um gateway VPN.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa garantir que todo o tráfego da VM1 para o armazenamento1 viaje pela rede backbone da Microsoft.\nO que você deve configurar?\n',
+        'question': `Questão 97 Tópico 2
+            \nSua rede local contém um gateway VPN.
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/kquestao96topico2.png" alt="imagem da questão"></img>
+            \nVocê precisa garantir que todo o tráfego da VM1 para o armazenamento1 viaje pela rede backbone da Microsoft.
+            \nO que você deve configurar?\n`,
         'number': '',
         'page': 110,
         'answers': [{
@@ -3431,7 +3976,12 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)\nTópico 2'
     }, {
-        'question': '98\nSua rede local contém um gateway VPN.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa garantir que todo o tráfego da VM1 para o armazenamento1 viaje pela rede backbone da Microsoft.\nO que você deve configurar?\n',
+        'question': `Questão 98 Tópico 2
+            \nSua rede local contém um gateway VPN.
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/kquestao96topico2.png" alt="imagem da questão"></img>
+            \nVocê precisa garantir que todo o tráfego da VM1 para o armazenamento1 viaje pela rede backbone da Microsoft.
+            \nO que você deve configurar?\n`,
         'number': '',
         'page': 110,
         'answers': [{
@@ -3450,7 +4000,11 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '99\nVocê tem uma assinatura do Azure chamada Sub1 que contém os recursos mostrados na tabela a seguir.\nVocê cria um usuário chamado Admin1.\nA que você pode adicionar Admin1 como um coadministrador?\n',
+        'question': `Questão 99 Tópico 2\n
+            Você tem uma assinatura do Azure chamada Sub1 que contém os recursos mostrados na tabela a seguir.
+           <img src="imagens/kquestao99topico2.png" alt="imagem da questão"></img>
+            \nVocê cria um usuário chamado Admin1.
+            \nA que você pode adicionar Admin1 como um coadministrador?\n`,
         'number': '',
         'page': 111,
         'answers': [{
@@ -3468,8 +4022,90 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
-    }, {
-        'question': '101\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa garantir que as transferências de dados entre o armazenamento1 e a VM1 NÃO atravessem a Internet\nO que você deve configurar para armazenamento1?\n',
+    },
+
+    {
+        'question': `Questão 100 Tópico 2
+            Você tem um locatário do Microsoft Entra que contém os grupos mostrados na tabela a seguir.
+
+            <img src="imagens/kquestao100topico2parte1.png" alt="imagem da questão"></img>
+
+            O locatário contém os usuários mostrados na tabela a seguir.
+            
+            <img src="imagens/kquestao100topico2parte2.png" alt="imagem da questão"></img>
+            
+            Quais usuários e grupos você pode excluir? Para responder, selecione as opções apropriadas na área de resposta.
+                
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': false,
+
+        'answers': [
+            {
+                'text': `Users:`,
+
+                'options': [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        'text': "Somente User4",
+                        'correct': false
+                    }, {
+                        'text': " User1 e User4 somente",
+                        'correct': false
+                    }, {
+                        'text': " User2 e User4 somente",
+                        'correct': false
+                    },
+                    {
+                        'text': "User1, User2, User3 e User4",
+                        'correct': true
+                    },
+
+                ]
+            },
+            {
+                'text': `Groups:`,
+
+                'options': [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        'text': "Somente Group2",
+                        'correct': false
+                    }, {
+                        'text': "Somente Grupo2 e Grupo3",
+                        'correct': false
+                    }, {
+                        'text': "Somente Grupo2 e Grupo4",
+                        'correct': true
+                    },
+                    {
+                        'text': "Grupo1, Grupo2, Grupo3 e Grupo4",
+                        'correct': false
+                    },
+
+                ]
+            },
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Comentário mais votado:
+            As respostas testadas e verificadas são Usuários = Usuário1, Usuário2, Usuário3, Usuário4 (pode excluir todos os usuários, independentemente de uma licença ser atribuída diretamente ou por herança de uma associação de grupo) Grupos = Grupo 2 e Grupo 4 (Grupos com atribuições de licença ativas não podem ser excluídos. Você obtém um erro)
+        `
+    },
+
+    {
+        'question': `Questão 101 Tópic 2.
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/kquestao101topico2.png" alt="imagem da questão"></img>
+            \nVocê precisa garantir que as transferências de dados entre o armazenamento1 e a VM1 NÃO atravessem a Internet
+            \nO que você deve configurar para armazenamento1?\n`,
         'number': '',
         'page': 113,
         'answers': [{
@@ -3487,196 +4123,6 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
-    },
-
-    {
-        'question': `Questão 3 tópico 10. 
-            Informações introdutórias
-            Estudo de caso - Contoso..
-
-            Estudo de caso - Contoso link : https://kimbellyf.github.io/quiz-edition/contoso1.html
-
-    Pergunta
-            HOTSPOT -
-    Você precisa identificar os requisitos de armazenamento para a Contoso.
-            Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira.Caso contrário, selecione Não.
-    NOTA: Cada seleção correta vale um ponto.
-            Hot Area:
-\n`,
-        'number': '',
-        'page': 549,
-        'studyCase': true,
-        'answers': [{
-
-            'text': ' A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento de Blobs.\n',
-            'correct': true
-        }, {
-            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento da Tabela do Azure..\n',
-            'correct': false
-        }, {
-            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao Armazenamento de Arquivos do Azure.\n',
-            'correct': false
-        }],
-
-        'typeQuestion': 'multiplecheckboxyesorno',
-        'explication': `Caixa 1: Sim -
-    A Contoso está movendo os arquivos de blueprint do produto existente para o armazenamento de Blobs do Azure.
-            Use o armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais.Usamos Page Blobs para isso.
-
-    Caixa 2: Não -
-        Caixa 3: Não`
-    },
-
-    {
-        'question': `Questão 1.Tópico 11. Informações introdutórias
-            Estudo de caso -
-    Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
-    Pergunta
-HOTSPOT -
-    Você precisa criar container1 e share1.
-            Quais contas de armazenamento você deve usar para cada recurso ? Para responder, selecione as opções apropriadas na área de resposta.
-    OBSERVAÇÃO: Cada seleção correta vale um ponto.
-            Área de Hot:
-`,
-        'number': 1,
-        'page': 540,
-        'studyCase': true,
-
-        'answers': [{
-            'text': 'contêiner1:',
-            'options': [
-                {
-                    text: 'Selecione',
-                    correct: false
-                },
-                {
-                    'text': "Somente armazenamento2",
-                    'correct': false
-                }, {
-                    'text': "somente armazenamento2 e armazenamento3",
-                    'correct': true
-                }, {
-                    'text': "somente armazenamento1, armazenamento2 e armazenamento3",
-                    'correct': false
-                },
-                {
-                    'text': "somente armazenamento2, armazenamento3 e armazenamento4",
-                    'correct': false
-                },
-                {
-                    'text': "armazenamento 1, armazenamento2, armazenamento3 e armazenamento4",
-                    'correct': false
-                }
-            ]
-        },
-
-
-        {
-            'text': 'Compartilhar1(File1)',
-            'options': [
-                {
-                    text: 'Selecione',
-                    correct: false
-                },
-                {
-                    'text': "somente armazenamento2",
-                    'correct': true
-                }, {
-                    'text': "armazenamento4 apenas",
-                    'correct': false
-                }, {
-                    'text': "somente armazenamento2 e armazenamento4",
-                    'correct': false
-                },
-                {
-                    'text': "somente armazenamento1, armazenamento2 e armazenamento4",
-                    'correct': false
-                },
-                {
-                    'text': "armazenamento1, armazenamento2, armazenamento3 e armazenamento4",
-                    'correct': false
-                },
-
-            ]
-        }
-        ],
-        'typeQuestion': 'select',
-        'caseStudy': true,
-        'explication': `Referência:
-https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview.
-            Há discordância nos comentários
-        `
-    },
-
-    {
-        'question': `Questão 2. Informações introdutórias
-            Estudo de caso -
-    Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
-
-    Pergunta
-HOTSPOT -
-    Você precisa criar um storage5.A solução deve suportar as alterações planejadas.
-            Qual tipo de conta de armazenamento você deve usar e qual conta você deve configurar como a conta de armazenamento de destino ? Para responder, selecione as opções apropriadas na área de resposta.
-    OBSERVAÇÃO: Cada seleção correta vale um ponto.
-            Hot Area:
-`,
-        'number': 1,
-        'page': 540,
-        'studyCase': true,
-
-
-        'answers': [{
-            'text': 'Tipo de conta:',
-            'options': [
-                {
-                    text: 'Selecione',
-                    correct: false
-                },
-                {
-                    'text': "Armazenamento de Blobs",
-                    'correct': false
-                }, {
-                    'text': "BlockBlobStorage",
-                    'correct': false
-                }, {
-                    'text': "Armazenamento (uso geral v1)",
-                    'correct': false
-                },
-                {
-                    'text': "StorageV2 (uso geral v2)",
-                    'correct': true
-                }
-            ]
-        },
-
-        {
-            'text': 'Destino',
-            'options': [
-                {
-                    text: 'Selecione',
-                    correct: false
-                },
-                {
-                    'text': "Armazenamento1",
-                    'correct': false
-                }, {
-                    'text': "Armazenamento2",
-                    'correct': true
-                }, {
-                    'text': "Armazenamento3",
-                    'correct': false
-                },
-                {
-                    'text': "Armazenamento4",
-                    'correct': false
-                }
-            ]
-        }
-        ],
-        'typeQuestion': 'select',
-        'caseStudy': true,
-        'explication': `https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-configure?tabs=portal: 
-`
     },
 
 
@@ -3704,7 +4150,10 @@ HOTSPOT -
         }
         ],
         'explication': 'D\nO serviço Azure Import/Export suporta o seguinte de contas de armazenamento:\n✑ Contas de armazenamento padrão de uso geral v2 (recomendadas para a maioria dos cenários)\n✑ Contas de armazenamento de Blobs\n✑ Contas de armazenamento de uso geral v1 (implantações clássicas ou do Azure Resource Manager),\nO serviço Azure Import/Export suporta os seguintes tipos de armazenamento:\n✑ A importação oferece suporte ao armazenamento de Blobs do Azure e ao armazenamento de arquivos do Azure\n✑ A exportação oferece suporte ao armazenamento de Blobs do Azure\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-import-export-requirements\nDistribuição de votos da comunidade\nD (100%)'
-    }, {
+    },
+
+
+    {
         'question': '3\nVocê tem uma assinatura do Azure que inclui dados nos seguintes locais:\nVocê planeja exportar dados usando o trabalho de importação/exportação do Azure chamado Export1.\nVocê precisa identificar os dados que podem ser exportados usando Export1.\nQuais dados você deve identificar?\n',
         'number': '',
         'page': 116,
@@ -9284,6 +9733,196 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             Caixa 3: Não`
     },
 
+    {
+        'question': `Questão 3 tópico 10. 
+            Informações introdutórias
+            Estudo de caso - Contoso..
+
+            Estudo de caso - Contoso link : https://kimbellyf.github.io/quiz-edition/contoso1.html
+
+    Pergunta
+            HOTSPOT -
+    Você precisa identificar os requisitos de armazenamento para a Contoso.
+            Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira.Caso contrário, selecione Não.
+    NOTA: Cada seleção correta vale um ponto.
+            Hot Area:
+\n`,
+        'number': '',
+        'page': 549,
+        'studyCase': true,
+        'answers': [{
+
+            'text': ' A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento de Blobs.\n',
+            'correct': true
+        }, {
+            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento da Tabela do Azure..\n',
+            'correct': false
+        }, {
+            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao Armazenamento de Arquivos do Azure.\n',
+            'correct': false
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Caixa 1: Sim -
+    A Contoso está movendo os arquivos de blueprint do produto existente para o armazenamento de Blobs do Azure.
+            Use o armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais.Usamos Page Blobs para isso.
+
+    Caixa 2: Não -
+        Caixa 3: Não`
+    },
+
+    {
+        'question': `Questão 1.Tópico 11. Informações introdutórias
+            Estudo de caso -
+    Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
+    Pergunta
+HOTSPOT -
+    Você precisa criar container1 e share1.
+            Quais contas de armazenamento você deve usar para cada recurso ? Para responder, selecione as opções apropriadas na área de resposta.
+    OBSERVAÇÃO: Cada seleção correta vale um ponto.
+            Área de Hot:
+`,
+        'number': 1,
+        'page': 540,
+        'studyCase': true,
+
+        'answers': [{
+            'text': 'contêiner1:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente armazenamento2",
+                    'correct': false
+                }, {
+                    'text': "somente armazenamento2 e armazenamento3",
+                    'correct': true
+                }, {
+                    'text': "somente armazenamento1, armazenamento2 e armazenamento3",
+                    'correct': false
+                },
+                {
+                    'text': "somente armazenamento2, armazenamento3 e armazenamento4",
+                    'correct': false
+                },
+                {
+                    'text': "armazenamento 1, armazenamento2, armazenamento3 e armazenamento4",
+                    'correct': false
+                }
+            ]
+        },
+
+
+        {
+            'text': 'Compartilhar1(File1)',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "somente armazenamento2",
+                    'correct': true
+                }, {
+                    'text': "armazenamento4 apenas",
+                    'correct': false
+                }, {
+                    'text': "somente armazenamento2 e armazenamento4",
+                    'correct': false
+                },
+                {
+                    'text': "somente armazenamento1, armazenamento2 e armazenamento4",
+                    'correct': false
+                },
+                {
+                    'text': "armazenamento1, armazenamento2, armazenamento3 e armazenamento4",
+                    'correct': false
+                },
+
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': true,
+        'explication': `Referência:
+https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview.
+            Há discordância nos comentários
+        `
+    },
+
+    {
+        'question': `Questão 2. Informações introdutórias
+            Estudo de caso -
+    Link do estudo de caso: https://kimbellyf.github.io/quiz-edition/contoso.html
+
+    Pergunta
+HOTSPOT -
+    Você precisa criar um storage5.A solução deve suportar as alterações planejadas.
+            Qual tipo de conta de armazenamento você deve usar e qual conta você deve configurar como a conta de armazenamento de destino ? Para responder, selecione as opções apropriadas na área de resposta.
+    OBSERVAÇÃO: Cada seleção correta vale um ponto.
+            Hot Area:
+`,
+        'number': 1,
+        'page': 540,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': 'Tipo de conta:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Armazenamento de Blobs",
+                    'correct': false
+                }, {
+                    'text': "BlockBlobStorage",
+                    'correct': false
+                }, {
+                    'text': "Armazenamento (uso geral v1)",
+                    'correct': false
+                },
+                {
+                    'text': "StorageV2 (uso geral v2)",
+                    'correct': true
+                }
+            ]
+        },
+
+        {
+            'text': 'Destino',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Armazenamento1",
+                    'correct': false
+                }, {
+                    'text': "Armazenamento2",
+                    'correct': true
+                }, {
+                    'text': "Armazenamento3",
+                    'correct': false
+                },
+                {
+                    'text': "Armazenamento4",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': true,
+        'explication': `https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-configure?tabs=portal: 
+`
+    },
+
 
     {
         question: `Questão 1. Tópico 11. 
@@ -9453,6 +10092,8 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
              Referência: https://learn.microsoft.com/en-us/azure/network-watcher/network-watcher-nsg-flow-logging-overview
         `
     },
+
+
 
 
 

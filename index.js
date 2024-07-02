@@ -177,7 +177,6 @@ function addQuestionDragDrop(questao) {
   questao.answers.forEach(answeroptions => {
     answeroptions.forEach(caixa => {
       let divAnswerFinal = `<div id="divanswerdragdrop">`
-      let temOrdem = false;
       let listaOpt = new Array(caixa.options.length)
       if (caixa.function === 'origin') {
         let divdrag = `<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">`
@@ -191,7 +190,6 @@ function addQuestionDragDrop(questao) {
           if (option.correct) {
             if (option.index != "any") {
               listaOpt[option.index - 1] = `<h5>` + option.text + `</h5>`
-              temOrdem = true;
             } else {
               listaOpt.push(`<h5>` + option.text + `</h5>`);
             }
@@ -199,7 +197,7 @@ function addQuestionDragDrop(questao) {
         })
         divAnswerFinal += listaOpt.concat();
         divdrag = divdrag + `</div>`
-        divdragAllOptionsAnswer = `<div id="divalloptionsdragdrop"` + divdrag.slice(14) + `</div>`
+        divdragAllOptionsAnswer = `<div class="divalloptionsdragdrop" disabled` + divdrag.slice(14) + `</div>`
         divAnswerFinal += `</div>`
         let answerDragDrop = divdragAllOptionsAnswer + divAnswerFinal;
 
