@@ -1286,8 +1286,8 @@ const questionsAll = [
                         { 'text': ' Atribua uma tag a cada grupo de recursos.', 'correct': false, 'index': '-1' },
                         { 'text': 'Atribua uma tag a cada recurso.', 'correct': true, 'index': '1' },
                         { 'text': 'Baixe o relatório de uso.', 'correct': true, 'index': '3' },
-                        { 'text': 'Na folha Análise de custos, filtre a exibição por tag.', 'correct': true, 'index': '-1' },
-                        { 'text': 'Abra a folha Custos de recursos de cada grupo de recursos.', 'correct': false, 'index': '2' },
+                        { 'text': 'Na folha Análise de custos, filtre a exibição por tag.', 'correct': true, 'index': '2' },
+                        { 'text': 'Abra a folha Custos de recursos de cada grupo de recursos.', 'correct': false, 'index': '-1' },
                     ],
                     'function': 'origin'
 
