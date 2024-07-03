@@ -1283,10 +1283,10 @@ const questionsAll = [
                 {
                     'text': 'Options \n',
                     'options': [
-                        { 'text': ' Atribua uma tag a cada grupo de recursos.', 'correct': true, 'index': '0' },
-                        { 'text': 'Atribua uma tag a cada recurso.', 'correct': false, 'index': 'any' },
+                        { 'text': ' Atribua uma tag a cada grupo de recursos.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Atribua uma tag a cada recurso.', 'correct': true, 'index': '1' },
                         { 'text': 'Baixe o relatório de uso.', 'correct': true, 'index': '3' },
-                        { 'text': 'Na folha Análise de custos, filtre a exibição por tag.', 'correct': true, 'index': 'any' },
+                        { 'text': 'Na folha Análise de custos, filtre a exibição por tag.', 'correct': true, 'index': '-1' },
                         { 'text': 'Abra a folha Custos de recursos de cada grupo de recursos.', 'correct': false, 'index': '2' },
                     ],
                     'function': 'origin'
@@ -4152,9 +4152,91 @@ const questionsAll = [
         'explication': 'D\nO serviço Azure Import/Export suporta o seguinte de contas de armazenamento:\n✑ Contas de armazenamento padrão de uso geral v2 (recomendadas para a maioria dos cenários)\n✑ Contas de armazenamento de Blobs\n✑ Contas de armazenamento de uso geral v1 (implantações clássicas ou do Azure Resource Manager),\nO serviço Azure Import/Export suporta os seguintes tipos de armazenamento:\n✑ A importação oferece suporte ao armazenamento de Blobs do Azure e ao armazenamento de arquivos do Azure\n✑ A exportação oferece suporte ao armazenamento de Blobs do Azure\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-import-export-requirements\nDistribuição de votos da comunidade\nD (100%)'
     },
 
+    {
+        'question': `Questão 2 Tópico 3
+            Você tem contas do Azure Storage, conforme mostrado na exposição a seguir.
+            <img src="imagens/lquestao2topico3.jpg" alt="imagem da questão"></img>
+            
+            Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no gráfico.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto. 
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': false,
+
+        'answers': [{
+            'text': `Você pode usar [opção de resposta] para o Armazenamento de Tabelas do Azure.`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "somente storageaccount1",
+                    'correct': false
+                }, {
+                    'text': "somente storageaccount2",
+                    'correct': false
+                }, {
+                    'text': "somente storageaccount3",
+                    'correct': false
+                },
+                {
+                    'text': "apenas storageaccount1 e storageaccount2",
+                    'correct': true
+                },
+                {
+                    'text': "somente storageaccount2 e storageaccount3",
+                    'correct': false
+                }
+            ]
+        },
+
+
+        {
+            'text': 'Você pode usar [opção de resposta] para armazenamento de Blobs do Azure.',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Apenas storageaccount3",
+                    'correct': false
+                },
+                {
+                    'text': "somente storageaccount2 e storageaccount3",
+                    'correct': false
+                },
+                {
+                    'text': "apenas storageaccount1 e storageaccount3",
+                    'correct': false
+                }, {
+                    'text': "todas as contas de armazenamento",
+                    'correct': true
+                },
+
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            Caixa 1: storageaccount1 e storageaccount2 somente
+
+            Caixa 2: Todas as contas de armazenamento -
+            Observação: as três opções diferentes de conta de armazenamento são: contas de uso geral v2 (GPv2), contas de uso geral v1 (GPv1) e contas de armazenamento de blobs.
+            ✑ As contas de uso geral v2 (GPv2) são contas de armazenamento que oferecem suporte a todos os recursos mais recentes para blobs, arquivos, filas e tabelas.
+            ✑ As contas de armazenamento de blobs oferecem suporte a todos os mesmos recursos de blobs de bloco que o GPv2, mas são limitadas a oferecer suporte apenas a blobs de bloco.
+            ✑ As contas de uso geral v1 (GPv1) fornecem acesso a todos os serviços de armazenamento do Azure, mas podem não ter os recursos mais recentes ou o menor preço por gigabyte.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/storage/common/storage-account-options
+        `
+    },
+
 
     {
-        'question': '3\nVocê tem uma assinatura do Azure que inclui dados nos seguintes locais:\nVocê planeja exportar dados usando o trabalho de importação/exportação do Azure chamado Export1.\nVocê precisa identificar os dados que podem ser exportados usando Export1.\nQuais dados você deve identificar?\n',
+        'question': '3\nVocê tem uma assinatura do Azure que inclui dados nos seguintes locais: <img src="imagens/lquestao3topico3.png" alt="imagem da questão"></img> \nVocê planeja exportar dados usando o trabalho de importação/exportação do Azure chamado Export1.\nVocê precisa identificar os dados que podem ser exportados usando Export1.\nQuais dados você deve identificar?\n',
         'number': '',
         'page': 116,
         'answers': [{
@@ -4172,8 +4254,165 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
-        'question': '6\nVocê tem uma assinatura do Azure que contém os recursos da tabela a seguir.\nStore1 contém um compartilhamento de arquivo chamado data. Os dados contêm 5.000 arquivos.\nVocê precisa sincronizar os arquivos no compartilhamento de arquivos denominado data com um servidor local denominado Servidor1.\nQuais são as três ações que você deve realizar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
+    },
+
+    {
+        'question': `Questão 4 Tópico 3
+            Você tem uma conta do Azure Storage chamada storage1.
+            Você tem um aplicativo do Azure App Service chamado App1 e um aplicativo chamado App2 que é executado em uma instância de contêiner do Azure. Cada aplicativo usa uma identidade gerenciada.
+            Você precisa garantir que o App1 e o App2 possam ler blobs do storage1. A solução deve atender aos seguintes requisitos:
+            ✑ Minimize o número de segredos usados.
+            ✑ Garanta que o App2 só possa ler do storage1 pelos próximos 30 dias.
+            O que você deve configurar no storage1 para cada aplicativo? Para responder, selecione as opções apropriadas na área de resposta.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto. 
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': false,
+
+        'answers': [{
+            'text': `App1:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Chaves de acesso",
+                    'correct': false
+                }, {
+                    'text': "Segurança avançada",
+                    'correct': false
+                }, {
+                    'text': "Controle de acesso (IAM)",
+                    'correct': true
+                },
+                {
+                    'text': "Assinaturas de acesso compartilhado (SAS)",
+                    'correct': false
+                },
+            ]
+        },
+
+
+        {
+            'text': '',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Chaves de acesso",
+                    'correct': false
+                }, {
+                    'text': "Segurança avançada",
+                    'correct': false
+                }, {
+                    'text': "Controle de acesso (IAM)",
+                    'correct': false
+                },
+                {
+                    'text': "Assinaturas de acesso compartilhado (SAS)",
+                    'correct': true
+                },
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Comentário mais votado:
+            Resposta correta:
+            Caixa 1: Controle de acesso (IAM) Como o App1 usa Identidade gerenciada, o App1 pode acessar a conta de armazenamento via IAM. Conforme o requisito, precisamos minimizar o número de segredos usados, então as chaves de acesso não são ideais.
+            Caixa 2: Assinaturas de acesso compartilhado (SAS) 
+            Precisamos de acesso temporário para o App2, então precisamos usar SAS. Referência: https://docs.microsoft.com/en-us/azure/storage/common/storage-auth
+        `
+    },
+
+    {
+        'question': `Questão 5 Tópico 3
+            Você precisa criar uma conta do Azure Storage que atenda aos seguintes requisitos:
+            ✑ Minimize custos
+            ✑ Suporte a camadas de blob hot, cool e archive
+            ✑ Forneça tolerância a falhas se um desastre afetar a região do Azure onde a conta reside
+            Como você deve concluir o comando? Para responder, selecione as opções apropriadas na área de resposta.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': false,
+
+        'answers': [{
+            'text': `az storage account create -g RG1 -n storageaccount1
+                --kind`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "File Storage",
+                    'correct': false
+                }, {
+                    'text': "Storage",
+                    'correct': false
+                }, {
+                    'text': "StorageV2",
+                    'correct': true
+                },
+            ]
+        },
+
+
+        {
+            'text': '-sku',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+
+                {
+                    'text': "Standard_GRS",
+                    'correct': true
+                }, {
+                    'text': "Standard LRS",
+                    'correct': false
+                }, {
+                    'text': "Standard_RAGRS",
+                    'correct': false
+                },
+                {
+                    'text': "Premium LRS",
+                    'correct': false
+                },
+
+
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            Caixa 1: StorageV2 -
+                Você só pode hierarquizar seus dados de armazenamento de objetos para quente, frio ou arquivado em contas de armazenamento de Blob e General Purpose v2 (GPv2). As contas General Purpose v1 (GPv1) não oferecem suporte a hierarquização. As
+                contas de uso geral v2 oferecem os menores preços de capacidade por gigabyte para o Azure Storage, bem como preços de transação competitivos no setor.
+
+                Caixa 2: Standard_GRS -
+                Armazenamento georredundante (GRS): replicação entre regiões para proteger contra indisponibilidade em toda a região.
+                Respostas incorretas:
+                Armazenamento localmente redundante (LRS): uma estratégia de replicação simples e de baixo custo. Os dados são replicados em uma única unidade de escala de armazenamento.
+                Armazenamento georredundante de acesso de leitura (RA-GRS): replicação entre regiões com acesso de leitura à réplica. O RA-GRS fornece acesso somente leitura aos dados no local secundário, além da georreplicação em duas regiões, mas é mais caro em comparação ao GRS.
+                Referência:
+                https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-grs https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers
+            `
+    },
+
+
+
+
+    {
+        'question': '6\nVocê tem uma assinatura do Azure que contém os recursos da tabela a seguir.  <img src="imagens/lquestao6topico3.png" alt="imagem da questão"></img> \nStore1 contém um compartilhamento de arquivo chamado data. Os dados contêm 5.000 arquivos.\nVocê precisa sincronizar os arquivos no compartilhamento de arquivos denominado data com um servidor local denominado Servidor1.\nQuais são as três ações que você deve realizar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
         'number': '',
         'page': 119,
         'answers': [{
@@ -4194,7 +4433,10 @@ const questionsAll = [
         }
         ],
         'explication': 'AC\nPasso 1 (C): Instalar o agente Azure File Sync no Server1\nO agente Azure File Sync é um pacote para download que permite que o Windows Server seja sincronizado com um compartilhamento do Azure\nEtapa 2 (B): Registre o Servidor1.\nRegistre o Windows Server com o Serviço de Sincronização de Armazenamento\nRegistrar seu Windows Server com um serviço de sincronização de armazenamento estabelece uma relação de confiança entre seu servidor (ou cluster) e o armazenamento\nServiço de sincronização.\nPasso 3 (E): Crie um grupo de sincronização e um ponto final na nuvem.\nUm grupo de sincronização de ne a topologia de sincronização para um conjunto de arquivos. Os pontos finais dentro de um grupo de sincronização são mantidos sincronizados entre si. Um grupo de sincronização deve\ncontêm um ponto final de nuvem, que representa um compartilhamento de arquivos do Azure e um ou mais pontos finais de servidor. Um endpoint do servidor representa um caminho no\nservidor cadastrado.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/les/storage-sync-les-deployment-guide\nDistribuição de votos da comunidade\nAC (100%)'
-    }, {
+    },
+
+
+    {
         'question': `15\nVocê tem uma assinatura do Azure
          que contém as contas de armazenamento mostradas na
         tabela a seguir.
