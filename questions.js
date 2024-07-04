@@ -4236,8 +4236,9 @@ const questionsAll = [
 
 
     {
-        'question': `Questão 3 Tópico 2
-                \nVocê tem uma assinatura do Azure que inclui dados nos seguintes locais: <img src="imagens/lquestao3topico3.png" alt="imagem da questão"></img> 
+        'question': `Questão 3 Tópico 3
+                \nVocê tem uma assinatura do Azure que inclui dados nos seguintes locais:
+                 <img src="imagens/lquestao3topico3.png" alt="imagem da questão"></img> 
                 \nVocê planeja exportar dados usando o trabalho de importação/exportação do Azure chamado Export1.
                 \nVocê precisa identificar os dados que podem ser exportados usando Export1.
                 \nQuais dados você deve identificar?\n`,
@@ -4412,11 +4413,8 @@ const questionsAll = [
             `
     },
 
-
-
-
     {
-        'question': `Questão 6 Tópico 2
+        'question': `Questão 6 Tópico 3
             \nVocê tem uma assinatura do Azure que contém os recursos da tabela a seguir.
               <img src="imagens/lquestao6topico3.png" alt="imagem da questão"></img> \nStore1 contém um compartilhamento de arquivo chamado data. Os dados contêm 5.000 arquivos.\nVocê precisa sincronizar os arquivos no compartilhamento de arquivos denominado data com um servidor local denominado Servidor1.\nQuais são as três ações que você deve realizar? Cada resposta correta apresenta parte da solução.
             \nNOTA: Cada seleção correta vale um ponto.\n`,
@@ -4424,10 +4422,10 @@ const questionsAll = [
         'page': 119,
         'answers': [{
             'text': 'A. Crie uma instância de contêiner\n',
-            'correct': true
+            'correct': false
         }, {
             'text': 'B. Registrar Servidor1\n',
-            'correct': false
+            'correct': true
         }, {
             'text': 'C. Instale o agente Azure File Sync no Server1\n',
             'correct': true
@@ -4436,10 +4434,21 @@ const questionsAll = [
             'correct': false
         }, {
             'text': 'E. Crie um grupo de sincronização',
-            'correct': false
+            'correct': true
         }
         ],
-        'explication': 'AC\nPasso 1 (C): Instalar o agente Azure File Sync no Server1\nO agente Azure File Sync é um pacote para download que permite que o Windows Server seja sincronizado com um compartilhamento do Azure\nEtapa 2 (B): Registre o Servidor1.\nRegistre o Windows Server com o Serviço de Sincronização de Armazenamento\nRegistrar seu Windows Server com um serviço de sincronização de armazenamento estabelece uma relação de confiança entre seu servidor (ou cluster) e o armazenamento\nServiço de sincronização.\nPasso 3 (E): Crie um grupo de sincronização e um ponto final na nuvem.\nUm grupo de sincronização de ne a topologia de sincronização para um conjunto de arquivos. Os pontos finais dentro de um grupo de sincronização são mantidos sincronizados entre si. Um grupo de sincronização deve\ncontêm um ponto final de nuvem, que representa um compartilhamento de arquivos do Azure e um ou mais pontos finais de servidor. Um endpoint do servidor representa um caminho no\nservidor cadastrado.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/les/storage-sync-les-deployment-guide\nDistribuição de votos da comunidade\nAC (100%)'
+        'explication': `
+            Resposta correta: BCE 🗳️
+                Etapa 1 (C): Instale o agente do Azure File Sync no Server1
+                O agente do Azure File Sync é um pacote para download que permite que o Windows Server seja sincronizado com um compartilhamento de arquivos do Azure
+                Etapa 2 (B): Registre o Server1.
+                Registre o Windows Server com o Storage Sync Service
+                O registro do Windows Server com um Storage Sync Service estabelece uma relação de confiança entre seu servidor (ou cluster) e o Storage Sync Service.
+                Etapa 3 (E): Crie um grupo de sincronização e um ponto de extremidade de nuvem.
+                Um grupo de sincronização define a topologia de sincronização para um conjunto de arquivos. Os pontos de extremidade dentro de um grupo de sincronização são mantidos sincronizados entre si. Um grupo de sincronização deve conter um ponto de extremidade de nuvem, que representa um compartilhamento de arquivos do Azure e um ou mais pontos de extremidade de servidor. Um ponto de extremidade de servidor representa um caminho no servidor registrado.
+                Referência:
+                https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide
+        `
     },
 
     {
@@ -4450,7 +4459,7 @@ const questionsAll = [
             O status da VM1 é Em execução.
             Você atribui uma política do Azure conforme mostrado na exposição. (Clique na guia Exposição.)
             
-            <img src="imagens/mquestao7topico3parte2.png" alt="imagem da questão"></img>
+            <img src="imagens/mquestao7topico3parte2.jpg" alt="imagem da questão"></img>
 
             Você atribui a política usando os seguintes parâmetros:
             Microsoft.ClassicNetwork/virtualNetworks
@@ -4534,11 +4543,11 @@ const questionsAll = [
         'question': `Questão 9 Tópico 3
             Você tem uma assinatura do Azure que inclui os seguintes compartilhamentos de arquivos do Azure:
 
-            <img src="imagens/mquestao9topico3arte1.png" alt="imagem da questão"></img>
+            <img src="imagens/mquestao9topico3parte1.png" alt="imagem da questão"></img>
 
             Você tem os seguintes servidores locais:
 
-            <img src="imagens/mquestao9topico3arte2.png" alt="imagem da questão"></img>
+            <img src="imagens/mquestao9topico3parte2.png" alt="imagem da questão"></img>
 
             Você cria um Serviço de Sincronização de Armazenamento chamado Sync1 e um grupo de Sincronização de Arquivos do Azure chamado Group1. O Group1 usa o share1 como um ponto de extremidade da nuvem.
             Você registra o Server1 e o Server2 no Sync1. Você adiciona D:\Folder1 no Server1 como um ponto de extremidade do servidor do Group1.
@@ -4571,9 +4580,187 @@ const questionsAll = [
 	`
     },
 
+    {
+        'question': `Questão 12 Tópico 3
+            Você tem um grupo de sincronização de arquivos do Azure que tem os pontos de extremidade mostrados na tabela a seguir.
+            <img src="imagens/pquestao12topico3.png" alt="imagem da questão"></img>
+            A hierarquização da nuvem está habilitada para o Endpoint3.
+            Você adiciona um arquivo chamado File1 ao Endpoint1 e um arquivo chamado File2 ao Endpoint2.
+            Em quais pontos de extremidade File1 e File2 estarão disponíveis dentro de 24 horas após a adição dos arquivos? Para responder, selecione as opções apropriadas na área de resposta.
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': false,
+
+        'answers': [
+            {
+                'text': `File1:`,
+                'options': [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        'text': "Endpoint1 somente",
+                        'correct': true
+                    }, {
+                        'text': "Endpoint3 somente",
+                        'correct': false
+                    }, {
+                        'text': "Endpoint2 e Endpoint3 somente",
+                        'correct': false
+                    },
+                    {
+                        'text': "Endpoint1, Endpoint2 e Endpoint3",
+                        'correct': false
+                    },
+
+                ]
+            },
+            {
+                'text': `File2:`,
+                'options': [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        'text': "Endpoint1 somente",
+                        'correct': false
+                    }, {
+                        'text': "Endpoint3 somente",
+                        'correct': false
+                    }, {
+                        'text': "Endpoint2 e Endpoint3 somente",
+                        'correct': false
+                    },
+                    {
+                        'text': "Endpoint1, Endpoint2 e Endpoint3",
+                        'correct': true
+                    },
+
+                ]
+            },
+
+
+
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Comentário mais votado:
+            Resposta correta: File1: Endpoint1 apenas É um endpoint de nuvem e é escaneado
+            pelo trabalho de detecção a cada 24 horas.
+             File2: Endpoint1, Endpoint2 e Endpoint3 Com os servidores locais, o arquivo é escaneado e sincronizado automaticamente após ser adicionado. Observação: eles mudaram a pergunta no Exame de "dentro de 24 horas" para "após 24 horas". Portanto, a resposta é: File1: Endpoint1, Endpoint2 e Endpoint3 File2: Endpoint1, Endpoint2 e Endpoint3 Referência: https://docs.microsoft.com/en-us/learn/modules/extend-share-capacity-with-azure-file-sync/2-what-azure-file-sync
+        `
+    },
 
     {
-        'question': `15\nVocê tem uma assinatura do Azure
+        'question': `Questão 13 Tópico 3
+            Você tem várias máquinas virtuais do Azure em uma rede virtual chamada VNet1.
+            Você configura uma conta do Azure Storage conforme mostrado na exposição a seguir.
+            
+            <img src="imagens/pquestao13topico3.jpg" alt="imagem da questão"></img>
+
+            Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no gráfico.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto. 
+        `,
+        'number': 1,
+        'page': 540,
+        'studyCase': false,
+
+        'answers': [{
+            'text': `As máquinas virtuais na sub-rede 10.2.9.0/24 terão conectividade de rede com os compartilhamentos de arquivos na conta de armazenamento [opção de resposta].`,
+            'options':
+                [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        'text': "sempre",
+                        'correct': false
+                    }, {
+                        'text': "durante um backup",
+                        'correct': false
+                    }, {
+                        'text': "nunca",
+                        'correct': true
+                    },
+
+                ]
+        },
+        {
+            'text': `O Backup do Azure poderá fazer backup dos discos rígidos não gerenciados das máquinas virtuais na conta de armazenamento [opção de resposta].`,
+            'options':
+                [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        'text': "sempre",
+                        'correct': false
+                    }, {
+                        'text': "durante um backup",
+                        'correct': false
+                    }, {
+                        'text': "nunca",
+                        'correct': true
+                    },
+
+                ]
+        },
+
+
+
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Caixa 1: nunca -
+            A sub-rede 10.2.9.0/24 não está na lista de permissões.
+
+            Caixa 2: nunca -
+            Depois de configurar o firewall e as configurações de rede virtual para sua conta de armazenamento, selecione Permitir que serviços confiáveis ​​da Microsoft acessem esta conta de armazenamento como uma exceção para habilitar o serviço de Backup do Azure para acessar a conta de armazenamento restrita da rede.
+            Referência:
+
+            https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows https://azure.microsoft.com/en-us/blog/azure-backup-now-supports-storage-accounts-secured-with-azure-storage-firewalls-and-virtual-networks/
+        `
+    },
+
+    {
+        'question': `Questão 14  Tópico 3
+            Você tem um grupo de sincronização chamado Sync1 que tem um ponto de extremidade na nuvem. O ponto de extremidade na nuvem inclui um arquivo chamado File1.txt.
+            Sua rede local contém servidores que executam o Windows Server 2016. Os servidores são configurados conforme mostrado na tabela a seguir.
+            <img src="imagens/pquestao14topico3.png" alt="imagem da questão"></img>
+
+            Você adiciona Share1 como um ponto de extremidade para Sync1. Uma hora depois, você adiciona Share2 como um ponto de extremidade para Sync1.
+            Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+	`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'No endpoint da nuvem, o File1.txt é substituído pelo File1.txt do Share1.',
+            'correct': false
+        }, {
+            'text': 'No Servidor1, o Arquivo1.txt é substituído pelo Arquivo1.txt do endpoint da nuvem.',
+            'correct': false
+        }, {
+            'text': 'File1.txt do Share1 é replicado para o Share2.',
+            'correct': true
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Comentário mais votado:
+            NÃO NÃO SIM
+	`
+    },
+
+
+    {
+        'question': `Questão 15 Tópico 3 \nVocê tem uma assinatura do Azure
          que contém as contas de armazenamento mostradas na
         tabela a seguir.
         <img src="imagens/yquestao15topico3.png" alt="imagem da questão"></img>
@@ -4598,7 +4785,7 @@ const questionsAll = [
         ],
         'explication': 'B\nAtualmente, o ZRS oferece suporte aos tipos de contas de armazenamento v2, FileStorage e BlockBlobStorage de uso geral padrão.\nRespostas incorretas:\nA, não C: a migração ao vivo é suportada apenas para contas de armazenamento que utilizam replicação LRS. Se sua conta usa GRS ou RA-GRS, você precisa\nprimeiro altere o tipo de replicação da sua conta para LRS antes de continuar. Esta etapa intermediária remove o endpoint secundário fornecido por\nGRS/RA-GRS.\nAlém disso, apenas os tipos de conta de armazenamento padrão suportam a migração ao vivo. As contas de armazenamento premium devem ser migradas manualmente.\nD: ZRS atualmente oferece suporte aos tipos de conta de armazenamento v2 de uso geral padrão, FileStorage e BlockBlobStorage.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-zrs\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '16\nVocê tem uma assinatura do Azure que contém uma conta de armazenamento chamada account1.\nVocê planeja fazer upload dos arquivos de disco de uma máquina virtual para a conta1 da sua rede local. A rede local usa um IP público\nespaço de endereço de\n131.107.1.0/24.\nVocê planeja usar os arquivos de disco para provisionar uma máquina virtual do Azure chamada VM1. A VM1 será anexada a uma rede virtual chamada VNet1. Rede virtual1\nusa um espaço de endereço IP de 192.168.0.0/24.\nVocê precisa configurar a conta1 para atender aos seguintes requisitos:\n✑ Certifique-se de poder fazer upload dos arquivos de disco para a conta1.\n✑ Certifique-se de poder anexar os discos à VM1.\n✑ Impeça todos os outros acessos à conta1.\nQuais são as duas ações que você deve realizar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
+        'question': 'Questão 16 Tópico 3 \nVocê tem uma assinatura do Azure que contém uma conta de armazenamento chamada account1.\nVocê planeja fazer upload dos arquivos de disco de uma máquina virtual para a conta1 da sua rede local. A rede local usa um IP público\nespaço de endereço de\n131.107.1.0/24.\nVocê planeja usar os arquivos de disco para provisionar uma máquina virtual do Azure chamada VM1. A VM1 será anexada a uma rede virtual chamada VNet1. Rede virtual1\nusa um espaço de endereço IP de 192.168.0.0/24.\nVocê precisa configurar a conta1 para atender aos seguintes requisitos:\n✑ Certifique-se de poder fazer upload dos arquivos de disco para a conta1.\n✑ Certifique-se de poder anexar os discos à VM1.\n✑ Impeça todos os outros acessos à conta1.\nQuais são as duas ações que você deve realizar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
         'number': '',
         'page': 131,
         'answers': [{
@@ -4619,7 +4806,143 @@ const questionsAll = [
         }
         ],
         'explication': "EA\nR: Por padrão, as contas de armazenamento aceitam conexões de clientes em qualquer rede. Para limitar o acesso a redes selecionadas, você deve primeiro alterar\na ação padrão.\nPortal do Azure -\n1. Navegue até a conta de armazenamento que deseja proteger.\n2. Clique no menu de configurações denominado Firewalls e redes virtuais.\n3. Para negar o acesso por padrão, opte por permitir o acesso de ‘Redes selecionadas’. Para permitir o tráfego de todas as redes, opte por permitir o acesso de\n'Todas as redes'.\n4. Clique em Salvar para aplicar suas alterações.\nE: Conceder acesso de uma rede virtual\nAs contas de armazenamento podem ser configuradas para permitir acesso apenas de redes virtuais do Azure específicas.\nAo ativar um ponto final de serviço para o armazenamento do Azure na rede virtual, o tráfego é garantido como uma rota ideal para o serviço de armazenamento do Azure.\nAs identidades da rede virtual e da sub-rede também são transmitidas com cada solicitação.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-network-security\nDistribuição de votos da comunidade\nAC (61%) CD (26%) 5%"
-    }, {
+    },
+
+
+    {
+        'question': `Questão 17 Tópico 3
+            ARRASTAR E SOLTAR -
+            Você tem um servidor de arquivos local chamado Server1 que executa o Windows Server 2016.
+            Você tem uma assinatura do Azure que contém um compartilhamento de arquivos do Azure.
+            Você implanta um Azure File Sync Storage Sync Service e cria um grupo de sincronização.
+            Você precisa sincronizar arquivos do Server1 para o Azure.
+            Quais três ações você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+            Selecione e coloque:
+            
+            `,
+        'number': '17',
+        'page': 4,
+        'studyCase': false,
+
+        'answers': [
+            [
+                {
+                    'text': '',
+                    'options': [
+                        { 'text': 'Instale o agente Azure File Sync no Server1', 'correct': true, 'index': '1' },
+                        { 'text': 'Crie um gateway de dados local do Azure', 'correct': false, 'index': '-1' },
+                        { 'text': 'Crie um cofre dos Serviços de Recuperação', 'correct': false, 'index': '-1' },
+                        { 'text': 'Registrar Servidor1', 'correct': true, 'index': '2' },
+                        { 'text': 'Adicionar um endpoint de servidor', 'correct': true, 'index': '3' },
+                        { 'text': 'Instale a função de servidor Replicação DFS no Servidor1', 'correct': false, 'index': '-1' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': 'Answer area \n',
+                    'options': [
+
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `
+            Etapa 1: instalar o agente do Azure File Sync no Server1
+            O agente do Azure File Sync é um pacote para download que permite que o Windows Server seja sincronizado com um compartilhamento de arquivos do Azure
+            Etapa 2: registrar o Server1.
+            Registrar o Windows Server com o Storage Sync Service
+            Registrar seu Windows Server com um Storage Sync Service estabelece uma relação de confiança entre seu servidor (ou cluster) e o Storage Sync Service.
+
+            Etapa 3: adicionar um ponto de extremidade do servidor -
+            crie um grupo de sincronização e um ponto de extremidade da nuvem.
+            Um grupo de sincronização define a topologia de sincronização para um conjunto de arquivos. Os pontos de extremidade dentro de um grupo de sincronização são mantidos sincronizados entre si. Um grupo de sincronização deve conter um ponto de extremidade da nuvem, que representa um compartilhamento de arquivos do Azure e um ou mais pontos de extremidade do servidor. Um ponto de extremidade do servidor representa um caminho no servidor registrado.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide
+            
+        `,
+        'typeQuestion': 'dragdrop'
+    },
+    {
+        'question': `Questão 18 Tópico 3
+                Você planeja criar uma conta de Armazenamento do Azure na região do Azure do Leste dos EUA 2.
+                Você precisa criar uma conta de armazenamento que atenda aos seguintes requisitos:
+                ✑ Replica de forma síncrona.
+                ✑ Permanece disponível se um único data center na região falhar.
+                Como você deve configurar a conta de armazenamento? Para responder, selecione as opções apropriadas na área de resposta.
+                OBSERVAÇÃO: Cada seleção correta vale um ponto.
+                Área de Hot:
+        `,
+        'number': 18,
+        'page': 4,
+        'studyCase': false,
+
+        'answers': [
+            {
+                'text': `Replicação:`,
+                'options': [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        'text': "Armazenamento com redundância geográfica (GRS)",
+                        'correct': false
+                    }, {
+                        'text': "Armazenamento com redundância local (LRS)",
+                        'correct': false
+                    }, {
+                        'text': "Armazenamento com redundância geográfica com acesso de leitura (RA GRS)",
+                        'correct': false
+                    },
+                    {
+                        'text': "Armazenamento redundante de zona (ZRS)",
+                        'correct': true
+                    },
+
+                ]
+            },
+            {
+                'text': `Tipo de conta:`,
+                'options': [
+                    {
+                        text: 'Selecione',
+                        correct: false
+                    },
+                    {
+                        'text': "Armazenamento de blobs",
+                        'correct': false
+                    }, {
+                        'text': "Armazenamento (uso geral v1)",
+                        'correct': false
+                    }, {
+                        'text': "StorageV2 (uso geral v2)",
+                        'correct': true
+                    }
+                ]
+            },
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            Caixa 1: Armazenamento redundante de zona (ZRS)
+                O armazenamento redundante de zona (ZRS) replica seus dados de forma síncrona em três clusters de armazenamento em uma única região.
+                O LRS não permaneceria disponível se um data center na região falhasse.
+                GRS e RA GRS usam replicação assíncrona.
+                Caixa 2: StorageV2 (uso geral V2)
+                O ZRS oferece suporte apenas ao GPv2.
+                Referência:
+                https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-zrs
+        `
+    },
+
+
+
+
+    {
         'question': '19\nVocê planeja usar o serviço Azure Import/Export para copiar arquivos para uma conta de armazenamento.\nQuais são os dois arquivos que você deve criar antes de preparar as unidades para o trabalho de importação? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
         'number': '',
         'page': 134,
