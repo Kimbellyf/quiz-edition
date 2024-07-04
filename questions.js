@@ -4236,7 +4236,11 @@ const questionsAll = [
 
 
     {
-        'question': '3\nVocê tem uma assinatura do Azure que inclui dados nos seguintes locais: <img src="imagens/lquestao3topico3.png" alt="imagem da questão"></img> \nVocê planeja exportar dados usando o trabalho de importação/exportação do Azure chamado Export1.\nVocê precisa identificar os dados que podem ser exportados usando Export1.\nQuais dados você deve identificar?\n',
+        'question': `Questão 3 Tópico 2
+                \nVocê tem uma assinatura do Azure que inclui dados nos seguintes locais: <img src="imagens/lquestao3topico3.png" alt="imagem da questão"></img> 
+                \nVocê planeja exportar dados usando o trabalho de importação/exportação do Azure chamado Export1.
+                \nVocê precisa identificar os dados que podem ser exportados usando Export1.
+                \nQuais dados você deve identificar?\n`,
         'number': '',
         'page': 116,
         'answers': [{
@@ -4412,7 +4416,10 @@ const questionsAll = [
 
 
     {
-        'question': '6\nVocê tem uma assinatura do Azure que contém os recursos da tabela a seguir.  <img src="imagens/lquestao6topico3.png" alt="imagem da questão"></img> \nStore1 contém um compartilhamento de arquivo chamado data. Os dados contêm 5.000 arquivos.\nVocê precisa sincronizar os arquivos no compartilhamento de arquivos denominado data com um servidor local denominado Servidor1.\nQuais são as três ações que você deve realizar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
+        'question': `Questão 6 Tópico 2
+            \nVocê tem uma assinatura do Azure que contém os recursos da tabela a seguir.
+              <img src="imagens/lquestao6topico3.png" alt="imagem da questão"></img> \nStore1 contém um compartilhamento de arquivo chamado data. Os dados contêm 5.000 arquivos.\nVocê precisa sincronizar os arquivos no compartilhamento de arquivos denominado data com um servidor local denominado Servidor1.\nQuais são as três ações que você deve realizar? Cada resposta correta apresenta parte da solução.
+            \nNOTA: Cada seleção correta vale um ponto.\n`,
         'number': '',
         'page': 119,
         'answers': [{
@@ -4433,6 +4440,135 @@ const questionsAll = [
         }
         ],
         'explication': 'AC\nPasso 1 (C): Instalar o agente Azure File Sync no Server1\nO agente Azure File Sync é um pacote para download que permite que o Windows Server seja sincronizado com um compartilhamento do Azure\nEtapa 2 (B): Registre o Servidor1.\nRegistre o Windows Server com o Serviço de Sincronização de Armazenamento\nRegistrar seu Windows Server com um serviço de sincronização de armazenamento estabelece uma relação de confiança entre seu servidor (ou cluster) e o armazenamento\nServiço de sincronização.\nPasso 3 (E): Crie um grupo de sincronização e um ponto final na nuvem.\nUm grupo de sincronização de ne a topologia de sincronização para um conjunto de arquivos. Os pontos finais dentro de um grupo de sincronização são mantidos sincronizados entre si. Um grupo de sincronização deve\ncontêm um ponto final de nuvem, que representa um compartilhamento de arquivos do Azure e um ou mais pontos finais de servidor. Um endpoint do servidor representa um caminho no\nservidor cadastrado.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/les/storage-sync-les-deployment-guide\nDistribuição de votos da comunidade\nAC (100%)'
+    },
+
+    {
+        'question': `Questão 7 Tópico 3
+            Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/mquestao7topico3.png" alt="imagem da questão"></img>
+
+            O status da VM1 é Em execução.
+            Você atribui uma política do Azure conforme mostrado na exposição. (Clique na guia Exposição.)
+            
+            <img src="imagens/mquestao7topico3parte2.png" alt="imagem da questão"></img>
+
+            Você atribui a política usando os seguintes parâmetros:
+            Microsoft.ClassicNetwork/virtualNetworks
+            Microsoft.Network/virtualNetworks
+            Microsoft.Compute/virtualMachines
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+	`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Um administrador pode mover VNET1 para RG2',
+            'correct': false
+        }, {
+            'text': 'O estado da VM1 mudou para desalocado',
+            'correct': false
+        }, {
+            'text': 'Um administrador pode modificar o espaço de endereço do VNET2',
+            'correct': false
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `O comentário mais votado deu que a primeira alternativa seria sim, mas o comentário é de 3 anos atrás 
+        e existem vários comentários mais novos (MUITOS) relatando que na verdade a primeira é falsa. 
+	`
+    },
+
+    {
+        'question': `Questão 8 Tópico 3
+            ARRASTAR E SOLTAR -
+            Você tem uma assinatura do Azure que contém uma conta de armazenamento.
+            Você tem um servidor local chamado Server1 que executa o Windows Server 2016. O Server1 tem 2 TB de dados.
+            Você precisa transferir os dados para a conta de armazenamento usando o serviço de Importação/Exportação do Azure.
+            Em que ordem você deve executar as ações? Para responder, mova todas as ações da lista de ações para a área de resposta e organize-as na ordem correta.
+            OBSERVAÇÃO: Mais de uma ordem de opções de resposta está correta. Você receberá crédito por qualquer uma das ordens corretas que selecionar.
+            Selecionar e colocar:
+
+            `,
+        'number': '8',
+        'page': 3,
+        'studyCase': false,
+
+        'answers': [
+            [
+                {
+                    'text': ' \n',
+                    'options': [
+                        { 'text': 'No portal do Azure, atualize o trabalho de importação', 'correct': true, 'index': '4' },
+                        { 'text': 'No portal do Azure, crie um trabalho de importação', 'correct': true, 'index': '2' },
+                        { 'text': 'Anexe um disco externo ao Server1 e execute waimportexport.exe', 'correct': true, 'index': '1' },
+                        { 'text': 'Desconecte os discos externos do Server1 e envie-os para um data center do Azure', 'correct': true, 'index': '3' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': 'Answer area \n',
+                    'options': [
+
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': ` Comentário mais votado concorda com a fonte:
+            Resposta correta: 
+            Etapa 1: preparar as unidades (anexar um disco externo ao Server1 e executar waimportexport.exe) 
+            Etapa 2: criar um trabalho de importação (no portal do Azure, criar um trabalho de importação)
+            Etapa 3: enviar as unidades para o datacenter do Azure (desanexar os discos externos do Server1 e enviar os discos para um datacenter do Azure) 
+            Etapa 4: atualizar o trabalho com informações de rastreamento (no portal do Azure, atualizar o trabalho de importação) 
+            Referência: https://docs.microsoft.com/en-us/azure/import-export/storage-import-export-data-to-files?tabs=azure-portal https://docs.microsoft.com/en-us/azure/storage/common/storage-import-export-service
+        `,
+        'typeQuestion': 'dragdrop'
+    },
+
+    {
+        'question': `Questão 9 Tópico 3
+            Você tem uma assinatura do Azure que inclui os seguintes compartilhamentos de arquivos do Azure:
+
+            <img src="imagens/mquestao9topico3arte1.png" alt="imagem da questão"></img>
+
+            Você tem os seguintes servidores locais:
+
+            <img src="imagens/mquestao9topico3arte2.png" alt="imagem da questão"></img>
+
+            Você cria um Serviço de Sincronização de Armazenamento chamado Sync1 e um grupo de Sincronização de Arquivos do Azure chamado Group1. O Group1 usa o share1 como um ponto de extremidade da nuvem.
+            Você registra o Server1 e o Server2 no Sync1. Você adiciona D:\Folder1 no Server1 como um ponto de extremidade do servidor do Group1.
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+	`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'share2 pode ser adicionado como um endpoint de nuvem para o Grupo 1',
+            'correct': false
+        }, {
+            'text': 'E:\Folder2 no Server1 pode ser adicionado como um endpoint do servidor para o Grupo1',
+            'correct': false
+        }, {
+            'text': 'D:\Data no Server2 pode ser adicionado como um endpoint do servidor para o Grupo 1',
+            'correct': true
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `
+            Comentário mais votado:
+            Resposta correta: Caixa 1: Não Um grupo de sincronização contém um ponto de extremidade de nuvem ou compartilhamento de arquivo do Azure e 
+            pelo menos um ponto de extremidade de servidor. 
+            Caixa 2: Não O Azure File Sync não oferece suporte a mais de um ponto de extremidade de servidor do mesmo servidor no mesmo Grupo de Sincronização. 
+            Caixa 3: Sim Vários pontos de extremidade de servidor podem existir no mesmo volume se seus namespaces não estiverem sobrepostos (por exemplo, F:\sync1 e F:\sync2) e 
+            cada ponto de extremidade estiver sincronizando com um grupo de sincronização exclusivo. Referência: https://docs.microsoft.com/en-us/answers/questions/110822/azure-file-sync-multiple-sync-directories-for-same.html https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide
+	`
     },
 
 
@@ -5243,7 +5379,46 @@ const questionsAll = [
             Community vote distribution
             BCE (88%)
             13%`
-    }, {
+    },
+
+    {
+        'question': `Questão 83 Tópico 3
+            
+            Você tem uma conta do Azure Storage chamada storage1 que contém dois contêineres chamados container1 e container2. O controle de versão de blob está habilitado para ambos os contêineres.
+
+            Você tira periodicamente instantâneos de blobs de blobs críticos.
+
+            Você cria a seguinte política de gerenciamento de ciclo de vida.
+
+            <img src="imagens/mquestao83topico3.png" alt="imagem da questão"></img>
+
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+	`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Um instantâneo de blob passa automaticamente para o nível de acesso Cool após 15 dias.',
+            'correct': true
+        }, {
+            'text': 'Uma versão blob no container2 passa automaticamente para o nível de acesso Archive após 30 dias.',
+            'correct': false
+        }, {
+            'text': 'Uma versão reidratada passa automaticamente para o nível de acesso Archive após 30 dias.',
+            'correct': false
+        }],
+
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Há algumas divergencias quanto a primeira alternativa ser verdadeira ou falsa, mas por não ter uma votação expressiva, foi escolhido 
+        a resposta da fonte e algumas pesssoas concordaram.
+	`
+    },
+
+
+    {
         'question': `84\nVocê tem uma assinatura do Azure que contém as contas de armazenamento mostradas na tabela a seguir.
             
             <img src="imagens/yquestao84topico3.png" alt="imagem da questão"></img>
@@ -5512,6 +5687,7 @@ const questionsAll = [
         'explication': 'A\nVocê pode usar um registro CNAME ou um registro A para mapear um nome DNS personalizado para o Serviço de Aplicativo.\nReferência:\nhttps://docs.microsoft.com/en-us/Azure/app-service/app-service-web-tutorial-custom-domain\nDistribuição de votos da comunidade\nUm (100%)\nTópico 4'
     }, {
         'question': `20\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/mquestao20topico4.png" alt="imagem da questão"></img>
             \nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.
             \nSolução: você move VM1 para RG2 e, em seguida, adiciona uma nova interface de rede à VM1.\nIsso atende ao objetivo?\n`,
         'number': '',
@@ -5526,7 +5702,10 @@ const questionsAll = [
         ],
         'explication': 'B\nEm vez disso, você deve excluir a VM1. Você recria a VM1 e, em seguida, adiciona a interface de rede para a VM1.\nObservação: ao criar uma máquina virtual (VM) do Azure, você deve criar uma rede virtual (VNet) ou usar uma VNet existente. Você pode alterar a\nsub-rede à qual uma VM está conectada após ela ser criada, mas não pode alterar a VNet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '21\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.\nSolução: você exclui VM1. Você recria a VM1 e, em seguida, cria uma nova interface de rede para VM1 e conecta-a \u200b\u200bà VNET2.\nIsso atende ao objetivo?\n',
+        'question': `Questão 21 Tópico 4 \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/mquestao21topico4.png" alt="imagem da questão"></img>
+            \nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.
+            \nSolução: você exclui VM1. Você recria a VM1 e, em seguida, cria uma nova interface de rede para VM1 e conecta-a \u200b\u200bà VNET2.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 219,
         'answers': [{
@@ -5539,7 +5718,7 @@ const questionsAll = [
         ],
         'explication': 'A\nVocê deve excluir VM1. Você recria a VM1 e depois adiciona a interface de rede para VM1.\nNota: Ao criar uma máquina virtual (VM) do Azure, você deve criar uma rede virtual (VNet) ou usar uma VNet existente. Você pode alterar o\nsub-rede à qual uma VM está conectada depois de criada, mas não é possível alterar a VNet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '22\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.\nSolução: você desativa a VM1 e adiciona uma nova interface de rede à VM1.\nIsso atende ao objetivo?\n',
+        'question': 'Questão 22 Tópico 4 \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir. <img src="imagens/mquestao21topico4.png" alt="imagem da questão"></img> \nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.\nSolução: você desativa a VM1 e adiciona uma nova interface de rede à VM1.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 220,
         'answers': [{
