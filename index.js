@@ -92,10 +92,26 @@ function startGame() {
   randomQuestions()
   displayNextQuestion()
 }
+function startWithJustTypeQuestion(type) {
+  questions = questionsAll.filter((question) => {
+    return question.typeQuestion && question.typeQuestion === type;
+  });
+  console.log(questions);
+  displayNextQuestion()
+
+}
 
 function randomQuestions() {
   getIntervaloQuestoes()
-  questions = questionsAll.slice(intervaloQuestaoInicio, intervaloQuestaoFim)
+  if (intervaloQuestaoInicio === -1) {
+    startWithJustTypeQuestion('multiplecheckboxyesorno');
+  } else if (intervaloQuestaoInicio === -2) {
+    startWithJustTypeQuestion('select');
+  } else if (intervaloQuestaoInicio === -3) {
+    startWithJustTypeQuestion('dragdrop');
+  } else {
+    questions = questionsAll.slice(intervaloQuestaoInicio, intervaloQuestaoFim)
+  }
 }
 function getIntervaloQuestoes() {
   intervaloQuestaoInicio = parseInt(document.getElementById('intervaloinicio').value)
@@ -178,6 +194,7 @@ function addQuestionDragDrop(questao) {
     answeroptions.forEach(caixa => {
       let divAnswerFinal = `<div id="divanswerdragdrop">`
       let listaOpt = new Array(caixa.options.length)
+      console.log(listaOpt)
       if (caixa.function === 'origin') {
         let divdrag = `<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">`
         let optionnumber = 1;

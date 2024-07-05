@@ -1714,7 +1714,7 @@ const questionsAll = [
                     ]
             },
             {
-                text: 'User2:',
+                text: 'UsageLocation:',
                 'options':
                     [
                         {
@@ -2181,7 +2181,7 @@ const questionsAll = [
             HOTSPOT -
             Você tem os recursos do Azure mostrados na exposição a seguir.
 
-            <img src="imagens/zquestao46topico2.png" alt="imagem da questão"></img>
+            <img src="imagens/zquestao46topico2.jpg" alt="imagem da questão"></img>
 
             Você planeja rastrear o uso de recursos e impedir a exclusão de recursos.
             A quais recursos você pode aplicar bloqueios e tags? Para responder, selecione as opções apropriadas na área de resposta.
@@ -3667,7 +3667,7 @@ const questionsAll = [
     }, {
         'question': `90\n Tópico 2.
             Você tem um locatário do Azure AD que contém os grupos mostrados na tabela a seguir.
-            <img src="imagesquestions/X90QTOPIC2.png" alt="imagem da questão"></img>
+            <img src="imagesquestions/X90QTOPIC2.PNG" alt="imagem da questão"></img>
             \nVocê compra licenças Azure Active Directory Premium P2.
             \nA quais grupos você pode atribuir uma licença?\n`,
         'number': '',
@@ -3911,7 +3911,7 @@ const questionsAll = [
             'correct': false
         }, {
             'text': 'Todos os grupos de recursos são criados na região Leste do Azure dos EUA.',
-            'correct': false
+            'correct': true
         }],
 
         'typeQuestion': 'multiplecheckboxyesorno',
@@ -5883,7 +5883,52 @@ const questionsAll = [
         }
         ],
         'explication': 'DE\nOs conjuntos de dimensionamento de máquinas virtuais podem ser usados \u200b\u200bcom o manipulador de extensão Azure Desired State Configuration (DSC). Os conjuntos de dimensionamento de máquinas virtuais fornecem\numa maneira de implantar e gerenciar um grande número de máquinas virtuais e pode aumentar e diminuir de forma elástica em resposta à carga. DSC é usado para\nconfigure as VMs quando elas ficarem on-line para que executem o software de produção.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-dsc\nDistribuição de votos da comunidade\nAD (84%) DE (16%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 11 Tópico 4 
+            Você integra 10 máquinas virtuais do Azure ao Azure Automation State Configuration.
+            Você precisa usar o Azure Automation State Configuration para gerenciar a consistência contínua das configurações da máquina virtual.
+            Quais três ações você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+            OBSERVAÇÃO: Mais de uma ordem de opções de resposta está correta. Você receberá crédito por qualquer uma das ordens corretas que selecionar.
+        `,
+        'number': '',
+        'page': 0,
+        'answers': [
+            [
+                {
+                    'text': 'Options \n',
+                    'options': [
+                        { 'text': 'Atribuir tags às máquinas virtuais', 'correct': false, 'index': '-1' },
+                        { 'text': 'Verifique o status de conformidade do nó', 'correct': true, 'index': '3' },
+                        { 'text': 'Compilar uma configuração em uma configuração de nó', 'correct': true, 'index': '2' },
+                        { 'text': 'Carregar uma configuração para a Configuração do Estado da Automação do Azure', 'correct': true, 'index': '1' },
+                        { 'text': 'Crie um grupo de gerenciamento', 'correct': false, 'index': '-1' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': 'Answer \n',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `Comentário mais votado:
+             A ordem correta é: 1. Carregar uma configuração para o Azure Automation State Configuration 
+             2. Compilar uma configuração em uma configuração de nó 
+             3. Verificar o status de conformidade do nó.
+        `,
+        'typeQuestion': 'dragdrop'
+    },
+    
+    
+    
+    {
         'question': '12\nVocê tem um modelo do Azure Resource Manager chamado Template1 que é usado para implantar uma máquina virtual do Azure.\nTemplate1 contém o seguinte texto:\nA seção de variáveis \u200b\u200bem Template1 contém o seguinte texto:\n"local": "Europa Ocidental"\nA seção de recursos no Template1 contém o seguinte texto:\nVocê precisa implantar a máquina virtual no local oeste dos EUA usando o Modelo1.\nO que você deveria fazer?\n',
         'number': '',
         'page': 214,
