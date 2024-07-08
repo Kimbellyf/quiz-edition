@@ -5436,7 +5436,90 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (88%) 12%'
-    }, {
+    },
+
+    {
+        'question': `Questão 62 Tópico 3
+            Você tem uma assinatura do Azure que contém as contas de armazenamento mostradas na tabela a seguir.
+
+             <img src="imagens/squestao62topico3.png" alt="imagem da questão"></img>
+
+            Você precisa identificar quais contas de armazenamento oferecem suporte ao gerenciamento do ciclo de vida e quais contas de armazenamento oferecem suporte à movimentação de dados para a camada de acesso Archive.
+
+            Quais contas de armazenamento você deve usar? Para responder, selecione as opções apropriadas na área de resposta.
+
+            OBSERVAÇÃO: cada seleção correta vale um ponto.
+        `,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': 'Gerenciamento do ciclo de vida:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "storage1 somente",
+                    'correct': false
+                }, {
+                    'text': "storage2 somente",
+                    'correct': false
+                }, {
+                    'text': "storage1 e storage3 somente",
+                    'correct': false
+                },
+                {
+                    'text': "storage2 e storage3 somente",
+                    'correct': false
+                },
+                {
+                    'text': "storage1, storage2 e storage3",
+                    'correct': true
+                }
+            ]
+        },
+
+        {
+            'text': 'O nível de acesso ao arquivo:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "storage1 somente",
+                    'correct': false
+                }, {
+                    'text': "storage2 somente",
+                    'correct': true
+                }, {
+                    'text': "storage1 e storage3 somente",
+                    'correct': false
+                },
+                {
+                    'text': "storage2 e storage3 somente",
+                    'correct': false
+                },
+                {
+                    'text': "storage1, storage2 e storage3",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            
+`
+    },
+    
+    
+    {
         'question': '63\nVocê tem uma assinatura do Azure chamada Subscription1.\nVocê tem 5 TB de dados que precisa transferir para a Assinatura1.\nVocê planeja usar um trabalho de importação/exportação do Azure.\nO que você pode usar como destino dos dados importados?\n',
         'number': '',
         'page': 176,
@@ -6089,7 +6172,8 @@ const questionsAll = [
         ],
         'explication': 'A\nVocê deve excluir VM1. Você recria a VM1 e depois adiciona a interface de rede para VM1.\nNota: Ao criar uma máquina virtual (VM) do Azure, você deve criar uma rede virtual (VNet) ou usar uma VNet existente. Você pode alterar o\nsub-rede à qual uma VM está conectada depois de criada, mas não é possível alterar a VNet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': 'Questão 22 Tópico 4 \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir. <img src="imagens/mquestao21topico4.png" alt="imagem da questão"></img> \nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.\nSolução: você desativa a VM1 e adiciona uma nova interface de rede à VM1.\nIsso atende ao objetivo?\n',
+        'question': `Questão 22 Tópico 4 \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir. <img src="imagens/mquestao21topico4.png" alt="imagem da questão"></img> \nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.\nSolução: você desativa a VM1 e adiciona uma nova interface de rede à VM1.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 220,
         'answers': [{
@@ -6143,7 +6227,15 @@ const questionsAll = [
         ],
         'explication': 'C\nAo redimensionar a VM, ela deve estar parada.\nReferência:\nhttps://azure.microsoft.com/en-us/blog/resize-virtual-machines/\nDistribuição de votos da comunidade\nC (100%)'
     }, {
-        'question': '29\nVocê tem um aplicativo chamado App1 que é executado em um aplicativo Web do Azure chamado webapp1.\nOs desenvolvedores da sua empresa carregam uma atualização do App1 em um repositório Git chamado Git1.\nWebapp1 possui os slots de implantação mostrados na tabela a seguir.\nVocê precisa garantir que a atualização do App1 seja testada antes de ser disponibilizada aos usuários.\nQuais são as duas ações que você deve realizar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
+        'question': `Questão 29 Tópico 4 
+            \nVocê tem um aplicativo chamado App1 que é executado em um aplicativo Web do Azure chamado webapp1.
+            \nOs desenvolvedores da sua empresa carregam uma atualização do App1 em um repositório Git chamado Git1.
+            \nWebapp1 possui os slots de implantação mostrados na tabela a seguir.
+
+            <img src="imagens/squestao29topico4.png" alt="imagem da questão"></img>
+            
+            \nVocê precisa garantir que a atualização do App1 seja testada antes de ser disponibilizada aos usuários.\nQuais são as duas ações que você deve realizar? Cada resposta correta apresenta parte da solução.
+            \nNOTA: Cada seleção correta vale um ponto.\n`,
         'number': '',
         'page': 227,
         'answers': [{
@@ -6209,7 +6301,12 @@ const questionsAll = [
         ],
         'explication': 'D\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/orchestration-modes\nDistribuição de votos da comunidade\nD (96%) 4%\nTópico 4'
     }, {
-        'question': '32\nVocê planeja criar os aplicativos Web do Azure mostrados na tabela a seguir.\nQual é o número mínimo de planos de Serviço de Aplicativo que você deve criar para os aplicativos Web?\n',
+        'question': `Questão 32 Tópico 4
+                \nVocê planeja criar os aplicativos Web do Azure mostrados na tabela a seguir.
+                
+                <img src="imagens/squestao32topico4.jpg" alt="imagem da questão"></img>
+
+                \nQual é o número mínimo de planos de Serviço de Aplicativo que você deve criar para os aplicativos Web?\n`,
         'number': '',
         'page': 229,
         'answers': [{
@@ -6241,7 +6338,17 @@ const questionsAll = [
         ],
         'explication': 'B\nNa lâmina RG1, clique em Implantações. Você verá um histórico de implantação para o grupo de recursos.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create- rst-template?tabs=azure-powershell\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '35\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.\nSolução: você cria uma nova interface de rede e depois adiciona a interface de rede à VM1.\nIsso atende ao objetivo?\n',
+        'question': `Questão 35 Tópico 4 
+            \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário.
+             Cada questão da série contém uma solução única que\npode atingir os objetivos declarados.
+              Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.
+              \nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela.
+               Como resultado, estas perguntas não aparecerão na tela de revisão.
+               \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+               <img src="imagens/squestao35topico4.png" alt="imagem da questão"></img>
+
+               \nVM1 se conecta ao VNET1.\nVocê precisa conectar VM1 ao VNET2.\nSolução: você cria uma nova interface de rede e depois adiciona a interface de rede à VM1.
+               \nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 232,
         'answers': [{
@@ -6254,29 +6361,82 @@ const questionsAll = [
         ],
         'explication': 'B\nVocê deve excluir VM1. Você recria a VM1 e depois adiciona a interface de rede para VM1.\nNota: Ao criar uma máquina virtual (VM) do Azure, você deve criar uma rede virtual (VNet) ou usar uma VNet existente. Você pode alterar o\nsub-rede à qual uma VM está conectada depois de criada, mas não é possível alterar a VNet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '36\nVocê tem um locatário do Azure Active Directory (Azure AD) chamado adatum.com que contém os usuários mostrados na tabela a seguir.\nAdatum.com tem as seguintes configurações:\n✑ Os usuários podem ingressar em dispositivos no Azure AD se estiverem definidos como Usuário1.\n✑ Administradores locais adicionais em dispositivos ingressados \u200b\u200bno Azure AD estão definidos como Nenhum.\nVocê implanta o Windows 10 em um computador chamado Computer1. O Usuário1 ingressa no Computador1 em adatum.com.\nVocê precisa identificar a associação do grupo Administrador local no Computador1.\nQuais usuários são membros do grupo Administradores local?\n',
+        'question': `Questão 36 Tópico 4
+            \nVocê tem um locatário do Azure Active Directory (Azure AD) chamado adatum.com que contém os usuários mostrados na tabela a seguir.
+            <img src="imagens/squestao36topico4.png" alt="imagem da questão"></img>
+            \nAdatum.com tem as seguintes configurações:\n✑ Os usuários podem ingressar em dispositivos no Azure AD se estiverem definidos como Usuário1.\n✑ Administradores locais adicionais em dispositivos ingressados \u200b\u200bno Azure AD estão definidos como Nenhum.\nVocê implanta o Windows 10 em um computador chamado Computer1. O Usuário1 ingressa no Computador1 em adatum.com.
+            \nVocê precisa identificar a associação do grupo Administrador local no Computador1.\nQuais usuários são membros do grupo Administradores local?\n`,
         'number': '',
         'page': 233,
         'answers': [{
-            'text': 'A. Somente usuário1\n',
+            'text': 'A. Somente User1\n',
             'correct': false
         }, {
-            'text': 'B. Apenas usuário2\n',
+            'text': 'B. Apenas User2\n',
             'correct': false
         }, {
-            'text': 'C. Somente Usuário1 e Usuário2\n',
+            'text': 'C. Somente User1 e User2\n',
             'correct': true
         }, {
-            'text': 'D. Somente Usuário1, Usuário2 e Usuário3\n',
+            'text': 'D. Somente User1, User2 e User3\n',
             'correct': false
         }, {
-            'text': 'E. Usuário1, Usuário2, Usuário3 e Usuário4',
+            'text': 'E. User1, User2, User3 e User4',
             'correct': false
         }
         ],
         'explication': 'C\nOs usuários podem ingressar dispositivos no Azure AD – essa configuração permite selecionar os usuários que podem registrar seus dispositivos como dispositivos ingressados \u200b\u200bno Azure AD.\nO padrão é Todos.\nAdministradores locais adicionais em dispositivos ingressados \u200b\u200bno Azure AD – você pode selecionar os usuários que recebem direitos de administrador local em um dispositivo.\nOs utilizadores adicionados aqui são adicionados à função de Administradores de Dispositivos no Azure AD. Administradores globais, aqui User2, no Azure AD e proprietários de dispositivos\nrecebem direitos de administrador local por padrão.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal\nDistribuição de votos da comunidade\nC (100%)'
-    }, {
-        'question': '40\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.\nVocê cria máquinas virtuais em Subscription1 conforme mostrado na tabela a seguir.\nVocê planeja usar o Vault1 para fazer backup do maior número possível de máquinas virtuais.\nQuais máquinas virtuais podem ter backup no Vault1?\n',
+    }, 
+
+    {
+        'question': `Questão 37 Tópico 4
+
+            Você tem assinaturas do Azure chamadas Subscription1 e Subscription2.
+            Subscription1 tem os seguintes grupos de recursos:
+
+            <img src="imagens/squestao37topico4.png" alt="imagem da questão"></img>
+
+            RG1 inclui um aplicativo da web chamado App1 no local da Europa Ocidental.
+            Subscription2 contém os seguintes grupos de recursos:
+
+            <img src="imagens/squestao37topico4parte2.png" alt="imagem da questão"></img>
+
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'App1 pode ser movido para RG2',
+            'correct': false
+        }, {
+            'text': 'App1 pode ser movido para RG3',
+            'correct': false
+        }, {
+            'text': 'App1 pode ser movido para RG4',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `
+        `
+
+    },
+    
+    
+    {
+        'question': `Questão 40 Tópico 4
+            \nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.
+            
+            <img src="imagens/squestao40topico4parte1.png" alt="imagem da questão"></img>
+
+            \nVocê cria máquinas virtuais em Subscription1 conforme mostrado na tabela a seguir.
+            
+            <img src="imagens/squestao40topico4parte2.png" alt="imagem da questão"></img>
+
+            \nVocê planeja usar o Vault1 para fazer backup do maior número possível de máquinas virtuais.\nQuais máquinas virtuais podem ter backup no Vault1?\n`,
         'number': '',
         'page': 238,
         'answers': [{
@@ -6339,7 +6499,10 @@ const questionsAll = [
         ],
         'explication': 'C\nVocê deve fazer login e enviar uma imagem de contêiner para o Container Registry.\nExecute o comando az acr build para criar e enviar por push a imagem do contêiner. compilação az acr \\\n--image contoso-site \\\n--registry $ACR_NAME\\\n-- o Docker o .\nReferência:\nhttps://docs.microsoft.com/en-us/learn/modules/aks-deploy-container-app/5-exercise-deploy-app\nDistribuição de votos da comunidade\nA (77%) C (23%)'
     }, {
-        'question': '43\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa configurar um grupo de posicionamento de proximidade para VMSS1.\nQuais grupos de posicionamento de proximidade você deve usar?\n',
+        'question': `Questão 43 Tópico 4
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/squestao43topico4.jpg" alt="imagem da questão"></img>
+            \nVocê precisa configurar um grupo de posicionamento de proximidade para VMSS1.\nQuais grupos de posicionamento de proximidade você deve usar?\n`,
         'number': '',
         'page': 240,
         'answers': [{
@@ -6536,7 +6699,11 @@ const questionsAll = [
         ],
         'explication': 'C\nNa exposição vemos que o disco está no formato VHDX.\nAntes de carregar uma máquina virtual (VM) do Windows local para o Microsoft Azure, você deve preparar o disco rígido virtual (VHD ou\nVHDX). O Azure suporta apenas VMs de geração 1 que estejam no formato de arquivo VHD e tenham um disco de tamanho fixo. O tamanho máximo permitido para o\nVHD tem 1.023 GB. Você pode converter uma VM de geração 1 do sistema de arquivos VHDX para VHD e de um disco de expansão dinâmica para tamanho xed.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image\nDistribuição de votos da comunidade\nC (100%)'
     }, {
-        'question': '59\nVocê tem um aplicativo Web do Azure chamado App1. App1 possui os slots de implantação mostrados na tabela a seguir:\nNo webapp1-test, você testa várias alterações no App1.\nVocê faz backup do App1.\nVocê troca webapp1-test por webapp1-prod e descobre que App1 está enfrentando problemas de desempenho.\nVocê precisa reverter para a versão anterior do App1 o mais rápido possível.\nO que você deveria fazer?\n',
+        'question': `Questão 59 Tópico 4
+            \nVocê tem um aplicativo Web do Azure chamado App1. App1 possui os slots de implantação mostrados na tabela a seguir:
+            <img src="imagens/squestao59topico4.png" alt="imagem da questão"></img>
+            \nNo webapp1-test, você testa várias alterações no App1.\nVocê faz backup do App1.\nVocê troca webapp1-test por webapp1-prod e descobre que App1 está enfrentando problemas de desempenho.
+            \nVocê precisa reverter para a versão anterior do App1 o mais rápido possível.\nO que você deveria fazer?\n`,
         'number': '',
         'page': 255,
         'answers': [{
@@ -6600,7 +6767,10 @@ const questionsAll = [
         ],
         'explication': 'A\nOs alertas no Azure Monitor podem identificar informações importantes no seu repositório Log Analytics. Eles são criados por regras de alerta que automaticamente\nexecutar pesquisas de log em intervalos regulares e, se os resultados da pesquisa de log corresponderem a critérios específicos, um registro de alerta será criado e poderá ser\nconfigurado para executar uma resposta automatizada.\nO agente Log Analytics coleta dados de monitoramento do sistema operacional convidado e cargas de trabalho de máquinas virtuais no Azure, outras nuvens\nfornecedores e no local. Recolhe dados num espaço de trabalho Log Analytics.\nReferências:\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-response https://docs.microsoft.com/en-us/azure/azure-\nvisão geral do monitor/plataforma/agentes\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '66\nVocê tem aplicativos Web nas regiões do Azure Oeste dos EUA, Centro dos EUA e Leste dos EUA.\nVocê tem os planos do Serviço de Aplicativo mostrados na tabela a seguir.\nPlaneia criar um plano adicional de Serviço de Aplicações denominado ASP5 que utilizará o sistema operativo Linux.\nVocê precisa identificar em qual dos locais usados \u200b\u200batualmente você pode implantar o ASP5.\nO que você deve recomendar?\n',
+        'question': `Questão 66 Tópico 4
+            \nVocê tem aplicativos Web nas regiões do Azure Oeste dos EUA, Centro dos EUA e Leste dos EUA.\nVocê tem os planos do Serviço de Aplicativo mostrados na tabela a seguir.
+            <img src="imagens/squestao66topico4.png" alt="imagem da questão"></img>
+            \nPlaneia criar um plano adicional de Serviço de Aplicações denominado ASP5 que utilizará o sistema operativo Linux.\nVocê precisa identificar em qual dos locais usados \u200b\u200batualmente você pode implantar o ASP5.\nO que você deve recomendar?\n`,
         'number': '',
         'page': 262,
         'answers': [{
@@ -6677,7 +6847,12 @@ const questionsAll = [
         ],
         'explication': 'A\nOs alertas no Azure Monitor podem identificar informações importantes no seu repositório Log Analytics. Eles são criados por regras de alerta que automaticamente\nexecutar pesquisas de log em intervalos regulares e, se os resultados da pesquisa de log corresponderem a critérios específicos, um registro de alerta será criado e poderá ser\nconfigurado para executar uma resposta automatizada.\nO agente Log Analytics coleta dados de monitoramento do sistema operacional convidado e cargas de trabalho de máquinas virtuais no Azure, outras nuvens\nfornecedores e no local. Recolhe dados num espaço de trabalho Log Analytics.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/azure-monitor/learn/tutorial-response https://docs.microsoft.com/en-us/azure/azure-\nvisão geral do monitor/plataforma/agentes\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '72\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nTodas as máquinas virtuais executam o Windows Server 2016.\nNa VM1, você faz backup de uma pasta chamada Folder1 conforme mostrado na exposição a seguir.\nVocê planeja restaurar o backup em uma máquina virtual diferente.\nVocê precisa restaurar o backup para VM2.\nO que você deve fazer primeiro?\n',
+        'question': `Quesão 72 Tópico 4
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/squestao72topico4parte1.png" alt="imagem da questão"></img>
+            \nTodas as máquinas virtuais executam o Windows Server 2016.\nNa VM1, você faz backup de uma pasta chamada Folder1 conforme mostrado na exposição a seguir.
+            <img src="imagens/squestao72topico4parte2.png" alt="imagem da questão"></img>
+            \nVocê planeja restaurar o backup em uma máquina virtual diferente.\nVocê precisa restaurar o backup para VM2.\nO que você deve fazer primeiro?\n`,
         'number': '',
         'page': 265,
         'answers': [{
@@ -6696,7 +6871,10 @@ const questionsAll = [
         ],
         'explication': 'B\nReferência:\nhttps://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-windows-server\nDistribuição de votos da comunidade\nB (92%) 8%'
     }, {
-        'question': '74\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.\nA assinatura1 também inclui uma rede virtual chamada VNET2. VM1 se conecta a uma rede virtual chamada VNET2 usando uma interface de rede\ndenominado NIC1.\nVocê precisa criar uma nova interface de rede chamada NIC2 para VM1.\nSolução: você cria NIC2 em RG1 e no oeste dos EUA.\nIsso atende ao objetivo?\n',
+        'question': `Questão 74 Tópico 4
+            \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/squestao74topico4.png" alt="imagem da questão"></img>
+            \nA assinatura1 também inclui uma rede virtual chamada VNET2. VM1 se conecta a uma rede virtual chamada VNET2 usando uma interface de rede\ndenominado NIC1.\nVocê precisa criar uma nova interface de rede chamada NIC2 para VM1.\nSolução: você cria NIC2 em RG1 e no oeste dos EUA.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 268,
         'answers': [{
@@ -6709,7 +6887,9 @@ const questionsAll = [
         ],
         'explication': 'A\nA máquina virtual à qual você conecta uma interface de rede e a rede virtual à qual você a conecta devem existir no mesmo local, aqui no oeste dos EUA,\ntambém chamada de região.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface\nDistribuição de votos da comunidade\nA (75%) B (25%)'
     }, {
-        'question': '75\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.\nA assinatura1 também inclui uma rede virtual chamada VNET2. VM1 se conecta a uma rede virtual chamada VNET2 usando uma interface de rede\ndenominado NIC1.\nVocê precisa criar uma nova interface de rede chamada NIC2 para VM1.\nSolução: você cria NIC2 em RG2 e na região central dos EUA.\nIsso atende ao objetivo?\n',
+        'question': `Questão 75 Tópico 4 \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.
+        <img src="imagens/squestao74topico4.png" alt="imagem da questão"></img>
+        \nA assinatura1 também inclui uma rede virtual chamada VNET2. VM1 se conecta a uma rede virtual chamada VNET2 usando uma interface de rede\ndenominado NIC1.\nVocê precisa criar uma nova interface de rede chamada NIC2 para VM1.\nSolução: você cria NIC2 em RG2 e na região central dos EUA.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 269,
         'answers': [{
@@ -6722,7 +6902,10 @@ const questionsAll = [
         ],
         'explication': 'B\nA máquina virtual à qual você conecta uma interface de rede e a rede virtual à qual você a conecta devem existir no mesmo local, aqui no oeste dos EUA,\ntambém chamada de região.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '76\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.\nA assinatura1 também inclui uma rede virtual chamada VNET2. VM1 se conecta a uma rede virtual chamada VNET2 usando uma interface de rede\ndenominado NIC1.\nVocê precisa criar uma nova interface de rede chamada NIC2 para VM1.\nSolução: você cria NIC2 em RG2 e no oeste dos EUA.\nIsso atende ao objetivo?\n',
+        'question': `Questão 76 Tópico 4
+            \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/squestao74topico4.png" alt="imagem da questão"></img>
+            \nA assinatura1 também inclui uma rede virtual chamada VNET2. VM1 se conecta a uma rede virtual chamada VNET2 usando uma interface de rede\ndenominado NIC1.\nVocê precisa criar uma nova interface de rede chamada NIC2 para VM1.\nSolução: você cria NIC2 em RG2 e no oeste dos EUA.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 270,
         'answers': [{
@@ -6792,7 +6975,10 @@ const questionsAll = [
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '88\nVocê tem uma assinatura do Azure.\nVocê planeja implantar as instâncias de contêiner do Azure mostradas na tabela a seguir.\nQuais instâncias você pode implantar em um grupo de contêineres?\n',
+        'question': `Questão 88 Tópico 4 
+            \nVocê tem uma assinatura do Azure.\nVocê planeja implantar as instâncias de contêiner do Azure mostradas na tabela a seguir.
+            <img src="imagens/squestao88topico4.png" alt="imagem da questão"></img>
+            \nQuais instâncias você pode implantar em um grupo de contêineres?\n`,
         'number': '',
         'page': 286,
         'answers': [{
@@ -6833,7 +7019,7 @@ const questionsAll = [
         'question': `90\nVocê tem uma assinatura do Azure que possui os endereços IP públicos
             mostrados na tabela a seguir.
             <img src="imagens/yquestao90topico4.png" alt="imagem da questão"></img>
-
+            
             \nVocê planeja implantar uma instância do Azure Firewall Premium chamada FW1.
             \nQuais endereços IP você pode usar?\n`,
         'number': '',
@@ -6854,7 +7040,9 @@ const questionsAll = [
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nB (91%) 7%'
     }, {
-        'question': '94\nVocê planeja criar os aplicativos Web do Azure mostrados na tabela a seguir.\nQual é o número mínimo de planos de Serviço de Aplicativo que você deve criar para os aplicativos Web?\n',
+        'question': `Questão 94 Tópico 4 \nVocê planeja criar os aplicativos Web do Azure mostrados na tabela a seguir.
+            <img src="imagens/squestao94topico4.png" alt="imagem da questão"></img>
+            \nQual é o número mínimo de planos de Serviço de Aplicativo que você deve criar para os aplicativos Web?\n`,
         'number': '',
         'page': 291,
         'answers': [{
@@ -6911,7 +7099,10 @@ const questionsAll = [
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nB (56%) A (44%)\nTópico 4'
     }, {
-        'question': '99\nVocê tem uma assinatura do Azure.\nVocê planeja implantar os recursos mostrados na tabela a seguir.\nVocê precisa criar um único modelo do Azure Resource Manager (ARM) que será usado para implantar os recursos.\nQual recurso deve ser adicionado à seção depende da VM1?\nA.VNET1\nB. NIC1\nC. IP1\nD.NSG1',
+        'question': `Questão 99 Tópico 4 
+            \nVocê tem uma assinatura do Azure.\nVocê planeja implantar os recursos mostrados na tabela a seguir.
+            <img src="imagens/squestao99topico4.png" alt="imagem da questão"></img>
+            \nVocê precisa criar um único modelo do Azure Resource Manager (ARM) que será usado para implantar os recursos.\nQual recurso deve ser adicionado à seção depende da VM1?`,
         'number': '',
         'page': 295,
         'answers': [{
@@ -6929,7 +7120,10 @@ const questionsAll = [
         }],
         'explication': 'B\nDistribuição de votos da comunidade\nB (93%) 7%'
     }, {
-        'question': '100\nVocê tem uma assinatura do Azure.\nVocê cria o seguinte modelo do Azure Resource Manager (ARM) chamado Template.json.\nVocê precisa implantar Template.json.\nQual cmdlet do PowerShell você deve executar do Azure Cloud Shell?\n',
+        'question': `Questão 100 Tópico 4 
+            \nVocê tem uma assinatura do Azure.\nVocê cria o seguinte modelo do Azure Resource Manager (ARM) chamado Template.json.
+            <img src="imagens/squestao100topico4.png" alt="imagem da questão"></img>
+            \nVocê precisa implantar Template.json.\nQual cmdlet do PowerShell você deve executar do Azure Cloud Shell?\n`,
         'number': '',
         'page': 296,
         'answers': [{
@@ -6966,7 +7160,10 @@ const questionsAll = [
         }],
         'explication': 'A\nDistribuição de votos da comunidade\nB (68%) D (20%) 12%'
     }, {
-        'question': '103\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa configurar um grupo de posicionamento de proximidade para VMSS1.\nQuais grupos de posicionamento de proximidade você deve usar?\n',
+        'question': `Questão 103 Tópico 4
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/squestao103topico4.png" alt="imagem da questão"></img>
+            \nVocê precisa configurar um grupo de posicionamento de proximidade para VMSS1.\nQuais grupos de posicionamento de proximidade você deve usar?\n`,
         'number': '',
         'page': 301,
         'answers': [{
@@ -6985,7 +7182,12 @@ const questionsAll = [
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
     }, {
-        'question': '105\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.\nVocê cria máquinas virtuais em Subscription1 conforme mostrado na tabela a seguir.\nVocê planeja usar o Vault1 para fazer backup do maior número possível de máquinas virtuais.\nQuais máquinas virtuais podem ter backup no Vault1?\n',
+        'question': `Questão 105 Tópico 4 
+            \nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/squestao105topico4parte1.png" alt="imagem da questão"></img>
+            \nVocê cria máquinas virtuais em Subscription1 conforme mostrado na tabela a seguir.
+            <img src="imagens/squestao105topico4parte2.png" alt="imagem da questão"></img>
+            \nVocê planeja usar o Vault1 para fazer backup do maior número possível de máquinas virtuais.\nQuais máquinas virtuais podem ter backup no Vault1?\n`,
         'number': '',
         'page': 303,
         'answers': [{
@@ -7026,7 +7228,15 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nD (84%) B (16%)'
     }, {
-        'question': '4\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nLB1 é configurado conforme mostrado na tabela a seguir.\nVocê planeja criar novas regras NAT de entrada que atendam aos seguintes requisitos:\n✑ Forneça acesso à Área de Trabalho Remota para VM1 pela Internet usando a porta 3389.\n✑ Forneça acesso à Área de Trabalho Remota para VM2 pela Internet usando a porta 3389.\nO que você deve criar no LB1 antes de criar as novas regras NAT de entrada?\n',
+        'question': `Questão 4 Tópico 5
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/squestao4topico5parte1.png" alt="imagem da questão"></img>
+
+            \nLB1 é configurado conforme mostrado na tabela a seguir.
+            <img src="imagens/squestao4topico5parte2.png" alt="imagem da questão"></img>
+
+            \nVocê planeja criar novas regras NAT de entrada que atendam aos seguintes requisitos:\n✑ Forneça acesso à Área de Trabalho Remota para VM1 pela Internet usando a porta 3389.
+            \n✑ Forneça acesso à Área de Trabalho Remota para VM2 pela Internet usando a porta 3389.\nO que você deve criar no LB1 antes de criar as novas regras NAT de entrada?\n`,
         'number': '',
         'page': 307,
         'answers': [{
@@ -7045,7 +7255,10 @@ const questionsAll = [
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nA (70%) B (29%)'
     }, {
-        'question': '7\nVocê tem as redes virtuais do Azure mostradas na tabela a seguir.\nPara quais redes virtuais você pode estabelecer uma conexão de peering da VNet1?\n',
+        'question': `Questão 7 Tópico 5
+            \nVocê tem as redes virtuais do Azure mostradas na tabela a seguir.
+            <img src="imagens/squestao7topico5.png" alt="imagem da questão"></img>
+            \nPara quais redes virtuais você pode estabelecer uma conexão de peering da VNet1?\n`,
         'number': '',
         'page': 310,
         'answers': [{
@@ -7108,7 +7321,10 @@ const questionsAll = [
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-point-to-site-routing\nDistribuição de votos da comunidade\nA (89%) 11%'
     }, {
-        'question': '11\nVocê tem uma assinatura do Azure que contém os recursos da tabela a seguir.\nA quais sub-redes você pode aplicar o NSG1?\n',
+        'question': `Questão 11 Tópico 5
+            \nVocê tem uma assinatura do Azure que contém os recursos da tabela a seguir.
+            <img src="imagens/squestao11topico5.png" alt="imagem da questão"></img>
+            \nA quais sub-redes você pode aplicar o NSG1?\n`,
         'number': '',
         'page': 314,
         'answers': [{
@@ -8988,12 +9204,12 @@ const questionsAll = [
                 {
                     'text': 'Options \n',
                     'options': [
-                        { 'text': 'Baixe e execute o script para montar uma unidade no computador local', 'correct': false, 'index': '3' },
-                        { 'text': 'Selecione um ponto de restauração que contenha os arquivos excluídos', 'correct': false, 'index': '2' },
+                        { 'text': 'Baixe e execute o script para montar uma unidade no computador local', 'correct': true, 'index': '3' },
+                        { 'text': 'Selecione um ponto de restauração que contenha os arquivos excluídos', 'correct': true, 'index': '2' },
                         { 'text': 'No portal do Azure, clique em Restaurar VM do cofre', 'correct': false, 'index': '-1' },
-                        { 'text': 'No portal do Azure, clique em Recuperação de Arquivos do cofre Monte um VHD', 'correct': false, 'index': '1' },
+                        { 'text': 'No portal do Azure, clique em Recuperação de Arquivos do cofre Monte um VHD', 'correct': true, 'index': '1' },
                         { 'text': 'Copie os arquivos usando AZCopy', 'correct': false, 'index': '-1' },
-                        { 'text': 'Copie os arquivos usando o File Explorer', 'correct': false, 'index': '4' },
+                        { 'text': 'Copie os arquivos usando o File Explorer', 'correct': true, 'index': '4' },
 
                     ],
                     'function': 'origin'
@@ -9388,7 +9604,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
                         { 'text': 'Configurar uma identidade gerenciada', 'correct': true, 'index': '3' },
                         { 'text': 'Crie um cofre de backup do Azure', 'correct': false, 'index': '1' },
                         { 'text': 'Crie um cofre dos Serviços de Recuperação.', 'correct': false, 'index': '-1' },
-                        { 'text': 'Delegar permissões para o cofre.', 'correct': true, 'index': '3' },
+                        { 'text': 'Delegar permissões para o cofre.', 'correct': false, 'index': '-1' },
                         { 'text': 'Crie uma política de backup e configure o backup.', 'correct': true, 'index': '2' },
                     ],
                     'function': 'origin'
@@ -10329,7 +10545,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
                         { 'text': 'Uma conta de armazenamento do Azure', 'correct': false, 'index': '-1' },
                         { 'text': 'Defina as configurações de diagnóstico.', 'correct': false, 'index': '-1' },
                         { 'text': 'Crie uma regra de alerta.', 'correct': true, 'index': '3' },
-                        { 'text': 'Colete contadores de desempenho do Windows dos agentes do Log Analytics.', 'correct': false, 'index': '2' },
+                        { 'text': 'Colete contadores de desempenho do Windows dos agentes do Log Analytics.', 'correct': true, 'index': '2' },
                         { 'text': 'Crie um banco de dados SQL do Azure.', 'correct': false, 'index': '-1' },
                     ],
                     'function': 'origin'
