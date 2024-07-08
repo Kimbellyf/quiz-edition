@@ -6413,14 +6413,15 @@ const questionsAll = [
             'correct': false
         }, {
             'text': 'App1 pode ser movido para RG3',
-            'correct': false
+            'correct': true
         }, {
             'text': 'App1 pode ser movido para RG4',
-            'correct': false
+            'correct': true
         }
         ],
         'typeQuestion': 'multiplecheckboxyesorno',
-        'explication': `
+        'explication': `Muitas controvérsias se esta certo ou não. Não dá para dar 100% 
+            de precisão que está certo ou não a resposta escolhida. Resposta colocada com base nos comentários
         `
 
     },
@@ -9602,7 +9603,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
                     'text': 'Ações \n',
                     'options': [
                         { 'text': 'Configurar uma identidade gerenciada', 'correct': true, 'index': '3' },
-                        { 'text': 'Crie um cofre de backup do Azure', 'correct': false, 'index': '1' },
+                        { 'text': 'Crie um cofre de backup do Azure', 'correct': true, 'index': '1' },
                         { 'text': 'Crie um cofre dos Serviços de Recuperação.', 'correct': false, 'index': '-1' },
                         { 'text': 'Delegar permissões para o cofre.', 'correct': false, 'index': '-1' },
                         { 'text': 'Crie uma política de backup e configure o backup.', 'correct': true, 'index': '2' },
