@@ -5415,7 +5415,10 @@ const questionsAll = [
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nUm (100%)\nTópico 3'
     }, {
-        'question': '61\nVocê tem uma assinatura do Azure. A assinatura contém uma conta de armazenamento chamada storage1 que possui as regras de gerenciamento do ciclo de vida mostradas em\na tabela a seguir.\nEm 1º de junho, você armazena um blob chamado File1 na camada de acesso Hot do storage1.\nQual é o estado do Arquivo1 em 7 de junho?\n',
+        'question': `61\nVocê tem uma assinatura do Azure. A assinatura contém uma conta de armazenamento chamada storage1 que possui as regras de gerenciamento do ciclo de vida mostradas em\na tabela a seguir.
+            <img src="imagens/squestao61topico3.png" alt="imagem da questão"></img>
+            \nEm 1º de junho, você armazena um blob chamado File1 na camada de acesso Hot do storage1.
+            \nQual é o estado do Arquivo1 em 7 de junho?\n`,
         'number': '',
         'page': 174,
         'answers': [{
