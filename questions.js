@@ -5081,7 +5081,11 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nO serviço de Importação/Exportação do Azure é usado para importar com segurança grandes quantidades de dados para o armazenamento de Blobs do Azure e Arquivos do Azure, enviando unidades de disco para\num datacenter do Azure.\nObservação:\nExistem várias versões desta questão no exame. A pergunta tem duas respostas corretas:\n1. Armazenamento de arquivos do Azure\n2. Armazenamento de Blobs do Azure\nA pergunta pode ter outras opções de resposta incorretas, incluindo as seguintes:\n✑ uma máquina virtual\n✑ Banco de Dados SQL do Azure\n✑ Azure Data Factory\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-import-export-service\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+    
+    
+    
+    {
         'question': '34\nVocê tem duas máquinas virtuais do Azure denominadas VM1 e VM2. Você tem dois cofres dos Serviços de Recuperação chamados RSV1 e RSV2.\nVM2 tem backup em RSV1.\nVocê precisa fazer backup da VM2 para RSV2.\nO que você deve fazer primeiro?\n',
         'number': '',
         'page': 149,
@@ -7906,7 +7910,9 @@ const questionsAll = [
         ],
         'explication': 'B\nCom o Azure CNI, cada cápsula obtém um endereço IP da sub-rede e pode ser acedido diretamente. Esses endereços IP devem ser exclusivos em todo o seu\nespaço de rede.\nRespostas incorretas:\nR: A opção de rede kubenet é a configuração padrão para a criação de cluster AKS. Com o kubenet, os nós obtêm um endereço IP do Azure\nsub-rede de rede virtual. Os pods recebem um endereço IP de um espaço de endereço logicamente diferente da sub-rede da rede virtual do Azure dos nós.\nA tradução de endereços de rede (NAT) é então configurada para que os pods possam alcançar recursos na rede virtual do Azure.\nC, D: AKS suporta apenas redes Kubenet e redes Azure Container Networking Interface (CNI)\nReferência:\nhttps://docs.microsoft.com/en-us/azure/aks/concepts-network\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '62\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir.\nVocê implanta um balanceador de carga que possui as seguintes configurações:\n✑ Nome: LB1\n✑ Tipo: Interno\n✑ SKU: Padrão\n✑ Rede virtual: VNET1\nVocê precisa garantir que pode adicionar VM1 e VM2 ao pool de back-end do LB1.\nSolução: você desassocia o endereço IP público da interface de rede da VM2.\nIsso atende ao objetivo?\n',
+        'question': `questão 62 tópico 5 \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir.
+            <img src="imagens/fquestao62topico5.png" alt="imagem da questão"></img>
+            \nVocê implanta um balanceador de carga que possui as seguintes configurações:\n✑ Nome: LB1\n✑ Tipo: Interno\n✑ SKU: Padrão\n✑ Rede virtual: VNET1\nVocê precisa garantir que pode adicionar VM1 e VM2 ao pool de back-end do LB1.\nSolução: você desassocia o endereço IP público da interface de rede da VM2.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 367,
         'answers': [{
@@ -7950,8 +7956,42 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nO recurso de monitor de conexão monitora a comunicação em intervalos regulares e informa sobre acessibilidade, latência e topologia de rede\nmudanças entre a VM e o endpoint\nRespostas incorretas:\nR: O recurso de verificação de fluxo de IP permite especificar um endereço IPv4 de origem e destino, porta, protocolo (TCP ou UDP) e direção de tráfego.\n(entrada ou saída). A verificação de fluxo de IP testa a comunicação e informa se a conexão foi bem-sucedida ou falhou. Se a conexão falhar,\nA verificação de fluxo de IP informa qual regra de segurança permitiu ou negou a comunicação, para que você possa resolver o problema.\nB: O recurso de solução de problemas de conexão permite testar uma conexão entre uma VM e outra VM, um FQDN, um URI ou um endereço IPv4.\nO teste retorna informações semelhantes retornadas ao usar o recurso de monitor de conexão, mas testa a conexão em um determinado momento, em vez de\ndo que monitorá-lo ao longo do tempo, como faz o monitor de conexão.\nD: O recurso de log de fluxo NSG permite registrar o endereço IP de origem e destino, porta, protocolo e se o tráfego foi permitido ou negado\npor um NSG.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview\nDistribuição de votos da comunidade\nC (100%)'
-    }, {
-        'question': '68\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um aplicativo chamado App1 instalado em duas máquinas virtuais do Azure chamadas VM1 e VM2. As conexões com App1 são gerenciadas usando\numa carga do Azure\nBalanceador.\nAs configurações efetivas de segurança de rede para VM2 são mostradas na exposição a seguir.\nVocê descobre que as conexões com App1 de 131.107.100.50 pela porta TCP 443 falham.\nVocê verifica se as regras do Load Balancer estão configuradas corretamente.\nVocê precisa garantir que as conexões com o App1 possam ser estabelecidas com êxito a partir de 131.107.100.50 pela porta TCP 443.\nSolução: você cria uma regra de segurança de entrada que permite qualquer tráfego da origem do AzureLoadBalancer e tem um custo de 150.\nIsso atende ao objetivo?\n',
+    },
+
+    {
+        'question': `questão 67 tópico 5 
+            Você tem uma assinatura do Azure que contém duas máquinas virtuais, conforme mostrado na tabela a seguir.
+            <img src="imagens/fquestao67topico5.png" alt="imagem da questão"></img>
+            Você executa uma pesquisa de DNS reversa para 10.0.0.4 da VM2.
+            Qual FQDN será retornado?
+        `,
+        'number': '',
+        'page': 372,
+        'answers': [{
+            'text': 'A. vm1.core.windows.net',
+            'correct': false
+        }, {
+            'text': 'B. vm1.azure.com',
+            'correct': false
+        }, {
+            'text': 'C. vm1.westeurope.cloudapp.azure.com',
+            'correct': false
+        }, {
+            'text': 'D. vm1.internal.cloudapp.net',
+            'correct': true
+        }
+        ],
+        'explication': `Resposta da fonte: B 🗳️
+                Distribuição de votos na comunidade
+                d (100%)`
+    },
+    
+    
+    
+    {
+        'question': `questão 68 tópico 5 \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um aplicativo chamado App1 instalado em duas máquinas virtuais do Azure chamadas VM1 e VM2. As conexões com App1 são gerenciadas usando\numa carga do Azure\nBalanceador.\nAs configurações efetivas de segurança de rede para VM2 são mostradas na exposição a seguir.
+            <img src="imagens/fquestao68topico5.png" alt="imagem da questão"></img>
+            \nVocê descobre que as conexões com App1 de 131.107.100.50 pela porta TCP 443 falham.\nVocê verifica se as regras do Load Balancer estão configuradas corretamente.\nVocê precisa garantir que as conexões com o App1 possam ser estabelecidas com êxito a partir de 131.107.100.50 pela porta TCP 443.\nSolução: você cria uma regra de segurança de entrada que permite qualquer tráfego da origem do AzureLoadBalancer e tem um custo de 150.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 372,
         'answers': [{
@@ -8041,7 +8081,10 @@ const questionsAll = [
         ],
         'explication': 'B\nReferência:\nhttps://azure.microsoft.com/en-us/updates/general-availability-azure-network-watcher-connection-monitor-in-all-public-regions/\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '78\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um aplicativo chamado App1 instalado em duas máquinas virtuais do Azure chamadas VM1 e VM2. As conexões com App1 são gerenciadas usando\numa carga do Azure\nBalanceador.\nAs configurações efetivas de segurança de rede para VM2 são mostradas na exposição a seguir.\nVocê descobre que as conexões com App1 de 131.107.100.50 pela porta TCP 443 falham.\nVocê verifica se as regras do Load Balancer estão configuradas corretamente.\nVocê precisa garantir que as conexões com o App1 possam ser estabelecidas com êxito a partir de 131.107.100.50 pela porta TCP 443.\nSolução: você cria uma regra de segurança de entrada que nega todo o tráfego da origem 131.107.100.50 e tem uma prioridade de 64999.\nIsso atende ao objetivo?\n',
+        'question': `questão 78 tópico 5 
+            \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um aplicativo chamado App1 instalado em duas máquinas virtuais do Azure chamadas VM1 e VM2. As conexões com App1 são gerenciadas usando\numa carga do Azure\nBalanceador.\nAs configurações efetivas de segurança de rede para VM2 são mostradas na exposição a seguir.
+            <img src="imagens/fquestao78topico5.png" alt="imagem da questão"></img>
+            \nVocê descobre que as conexões com App1 de 131.107.100.50 pela porta TCP 443 falham.\nVocê verifica se as regras do Load Balancer estão configuradas corretamente.\nVocê precisa garantir que as conexões com o App1 possam ser estabelecidas com êxito a partir de 131.107.100.50 pela porta TCP 443.\nSolução: você cria uma regra de segurança de entrada que nega todo o tráfego da origem 131.107.100.50 e tem uma prioridade de 64999.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 383,
         'answers': [{
@@ -8054,7 +8097,9 @@ const questionsAll = [
         ],
         'explication': 'B\nReferência:\nhttps://fastreroute.com/azure-network-security-groups-explained/\nDistribuição de votos da comunidade\nB (96%) 4%'
     }, {
-        'question': '81\nVocê tem uma rede virtual chamada VNet1 conforme mostrado na exposição. (Clique na guia Exposição.)\nNenhum dispositivo está conectado ao VNet1.\nVocê planeja emparelhar a VNet1 com outra rede virtual chamada VNet2. VNet2 tem um espaço de endereço de 10.2.0.0/16.\nVocê precisa criar o peering.\nO que você deve fazer primeiro?\n',
+        'question': `questão 81 tópico 5 \nVocê tem uma rede virtual chamada VNet1 conforme mostrado na exposição. (Clique na guia Exposição.)
+            <img src="imagens/fquestao81topico5.png" alt="imagem da questão"></img>
+            \nNenhum dispositivo está conectado ao VNet1.\nVocê planeja emparelhar a VNet1 com outra rede virtual chamada VNet2. VNet2 tem um espaço de endereço de 10.2.0.0/16.\nVocê precisa criar o peering.\nO que você deve fazer primeiro?\n`,
         'number': '',
         'page': 386,
         'answers': [{
@@ -8073,7 +8118,12 @@ const questionsAll = [
         ],
         'explication': 'A\nAs redes virtuais que você peer devem ter espaços de endereço IP não sobrepostos. A exposição indica que VNet1 tem um espaço de endereço de\n10.2.0.0/16, que é igual ao VNet2 e, portanto, se sobrepõe. Precisamos alterar o espaço de endereço do VNet1.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering#requirements-and-constraints\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '82\nVocê tem as máquinas virtuais do Azure mostradas na tabela a seguir.\nA VNET1 está vinculada a uma zona DNS privada chamada contoso.com que contém os registros mostrados na tabela a seguir.\nVocê precisa executar ping na VM2 da VM1.\nQuais nomes DNS você pode usar para executar ping na VM2?\n',
+        'question': `questão 82 tópico 5 
+            \nVocê tem as máquinas virtuais do Azure mostradas na tabela a seguir.
+            <img src="imagens/fquestao82topico5.png" alt="imagem da questão"></img>
+            \nA VNET1 está vinculada a uma zona DNS privada chamada contoso.com que contém os registros mostrados na tabela a seguir.
+            <img src="imagens/fquestao82topico5parte2.png" alt="imagem da questão"></img>
+            \nVocê precisa executar ping na VM2 da VM1.\nQuais nomes DNS você pode usar para executar ping na VM2?\n`,
         'number': '',
         'page': 387,
         'answers': [{
@@ -8127,7 +8177,10 @@ const questionsAll = [
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-distribution-mode?tabs=azure-portal\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '86\nVocê tem uma assinatura do Azure que usa os endereços IP públicos mostrados na tabela a seguir.\nVocê precisa criar um Azure Standard Load Balancer público.\nQuais endereços IP públicos você pode usar?\n',
+        'question': `questao 86 tópico 5 
+            \nVocê tem uma assinatura do Azure que usa os endereços IP públicos mostrados na tabela a seguir.
+            <img src="imagens/fquestao86topico5.png" alt="imagem da questão"></img>
+            \nVocê precisa criar um Azure Standard Load Balancer público.\nQuais endereços IP públicos você pode usar?\n`,
         'number': '',
         'page': 391,
         'answers': [{
@@ -8257,7 +8310,10 @@ const questionsAll = [
         ],
         'explication': 'C\nObservação:\nExistem várias versões desta questão no exame. A pergunta tem duas respostas corretas:\n1. uma extensão Desired State Configuration (DSC)\n2. Extensão de script personalizado do Azure\nA pergunta pode ter outras opções de resposta incorretas, incluindo as seguintes:\n✑ Centro de Implantação no Serviço de Aplicativo do Azure\n✑ um perfil de configuração de dispositivo do Microsoft Intune\nReferência:\nhttps://docs.microsoft.com/en-us/azure/architecture/framework/devops/automation-con guração\nDistribuição de votos da comunidade\nC (92%) 8%\nTópico 5'
     }, {
-        'question': '100\nSua rede local contém um gateway VPN.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa garantir que todo o tráfego da VM1 para o storage1 viaje pela rede de backbone da Microsoft.\nO que você deve configurar?\n',
+        'question': `questão 100 tópico 5 
+            \nSua rede local contém um gateway VPN.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/fquestao100topico5.png" alt="imagem da questão"></img>
+            \nVocê precisa garantir que todo o tráfego da VM1 para o storage1 viaje pela rede de backbone da Microsoft.\nO que você deve configurar?\n`,
         'number': '',
         'page': 404,
         'answers': [{
@@ -8276,7 +8332,10 @@ const questionsAll = [
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '102\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê configura o Azure Site Recovery para replicar a VM1 entre as regiões Leste e Oeste dos EUA.\nExecute um failover de teste da VM1 e especifique VNET2 como a rede virtual de destino.\nQuando a versão de teste da VM1 for criada, a qual sub-rede a máquina virtual estará conectada?\n',
+        'question': `questão 102 tópico 5
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/fquestao102topico5.png" alt="imagem da questão"></img>
+            \nVocê configura o Azure Site Recovery para replicar a VM1 entre as regiões Leste e Oeste dos EUA.\nExecute um failover de teste da VM1 e especifique VNET2 como a rede virtual de destino.\nQuando a versão de teste da VM1 for criada, a qual sub-rede a máquina virtual estará conectada?\n`,
         'number': '',
         'page': 405,
         'answers': [{
@@ -8390,7 +8449,10 @@ const questionsAll = [
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
     }, {
-        'question': '109\nVocê tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.\nVocê precisa implantar um firewall do Azure chamado AF1 para RG1 na região oeste do Azure dos EUA.\nEm quais redes virtuais você pode implantar o AF1?\n',
+        'question': `questão 109 tópico 5
+            \nVocê tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
+            <img src="imagens/fquestao109topico5.png" alt="imagem da questão"></img>
+            \nVocê precisa implantar um firewall do Azure chamado AF1 para RG1 na região oeste do Azure dos EUA.\nEm quais redes virtuais você pode implantar o AF1?\n`,
         'number': '',
         'page': 410,
         'answers': [{
@@ -8412,7 +8474,10 @@ const questionsAll = [
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (70%) E (29%)\nTópico 5'
     }, {
-        'question': '110\nVocê tem uma rede local.\nVocê tem uma assinatura do Azure que contém três redes virtuais denominadas VNET1. VNET2. e VNET3. As redes virtuais são peered e\nconectado à rede local. A assinatura contém as máquinas virtuais mostradas na tabela a seguir.\nVocê precisa monitorar a conectividade entre as máquinas virtuais e a rede local usando o Connection Monitor.\nQual é o número mínimo de monitores de conexão que você deve implantar?\n',
+        'question': `questão 110 tópico 5
+            \nVocê tem uma rede local.\nVocê tem uma assinatura do Azure que contém três redes virtuais denominadas VNET1. VNET2. e VNET3. As redes virtuais são peered e\nconectado à rede local. A assinatura contém as máquinas virtuais mostradas na tabela a seguir.
+            <img src="imagens/fquestao110topico5.png" alt="imagem da questão"></img>
+            \nVocê precisa monitorar a conectividade entre as máquinas virtuais e a rede local usando o Connection Monitor.\nQual é o número mínimo de monitores de conexão que você deve implantar?\n`,
         'number': '',
         'page': 410,
         'answers': [{
@@ -8469,7 +8534,10 @@ const questionsAll = [
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nA (89%) 11%\nTópico 5'
     }, {
-        'question': '114\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa gerenciar o tráfego de saída da VNET1 usando o Firewall1.\nO que você deve fazer primeiro?\n',
+        'question': `questão 114 tópico 5 
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/fquestao115topico5.png" alt="imagem da questão"></img>
+            \nVocê precisa gerenciar o tráfego de saída da VNET1 usando o Firewall1.\nO que você deve fazer primeiro?\n`,
         'number': '',
         'page': 414,
         'answers': [{
@@ -8488,7 +8556,10 @@ const questionsAll = [
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
     }, {
-        'question': '115\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nTodos os recursos ligam-se a uma rede virtual chamada VNet1.\nVocê planeja implantar um host do Azure Bastion chamado Bastion1 na VNet1.\nQuais recursos podem ser protegidos usando Bastion1?\n',
+        'question': `questão 115 tópico 5 
+            \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/fquestao115topico5.png" alt="imagem da questão"></img>
+            \nTodos os recursos ligam-se a uma rede virtual chamada VNet1.\nVocê planeja implantar um host do Azure Bastion chamado Bastion1 na VNet1.\nQuais recursos podem ser protegidos usando Bastion1?\n`,
         'number': '',
         'page': 415,
         'answers': [{
@@ -8548,7 +8619,10 @@ const questionsAll = [
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)\nTópico 5'
     }, {
-        'question': '118\nVocê tem uma assinatura do Azure que contém 10 máquinas virtuais e os recursos mostrados na tabela a seguir.\nVocê precisa garantir que o Bastion1 possa suportar 100 usuários SSH simultâneos. A solução deve minimizar o esforço administrativo.\nO que você deve fazer primeiro?\n',
+        'question': `questão 118 tópico 5
+            \nVocê tem uma assinatura do Azure que contém 10 máquinas virtuais e os recursos mostrados na tabela a seguir.
+            <img src="imagens/fquestao118topico5.png" alt="imagem da questão"></img>
+            \nVocê precisa garantir que o Bastion1 possa suportar 100 usuários SSH simultâneos. A solução deve minimizar o esforço administrativo.\nO que você deve fazer primeiro?\n`,
         'number': '',
         'page': 416,
         'answers': [{
@@ -8605,7 +8679,10 @@ const questionsAll = [
         ],
         'explication': 'B\nTópico 5'
     }, {
-        'question': '122\nVocê tem uma assinatura do Azure que tem os endereços IP públicos mostrados na tabela a seguir.\nVocê planeja implantar um host SKU do Azure Bastion Basic chamado Bastion1.\nQuais endereços IP você pode usar?\n',
+        'question': `questão 122 tópico 5 
+            \nVocê tem uma assinatura do Azure que tem os endereços IP públicos mostrados na tabela a seguir.
+            <img src="imagens/fquestao122topico5.png" alt="imagem da questão"></img>
+            \nVocê planeja implantar um host SKU do Azure Bastion Basic chamado Bastion1.\nQuais endereços IP você pode usar?\n`,
         'number': '',
         'page': 419,
         'answers': [{
@@ -8665,7 +8742,11 @@ const questionsAll = [
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)'
     }, {
-        'question': '125\nVocê tem duas assinaturas do Azure denominadas Sub1 e Sub2.\nSub1 contém uma máquina virtual chamada VM1 e uma conta de armazenamento chamada storage1.\nVM1 está associada aos recursos mostrados na tabela a seguir.\nVocê precisa mover VM1 para Sub2.\nQuais recursos você deve mover para Sub2?\n',
+        'question': `questao 125 tópico 5 
+        \nVocê tem duas assinaturas do Azure denominadas Sub1 e Sub2.\nSub1 contém uma máquina virtual chamada VM1 e uma conta de armazenamento chamada storage1.
+        \nVM1 está associada aos recursos mostrados na tabela a seguir.\nVocê precisa mover VM1 para Sub2.
+        <img src="imagens/fquestao125topico5.png" alt="imagem da questão"></img>
+        \nQuais recursos você deve mover para Sub2?\n`,
         'number': '',
         'page': 421,
         'answers': [{
@@ -8798,7 +8879,10 @@ const questionsAll = [
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
     }, {
-        'question': '132\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um aplicativo chamado App1 instalado em duas máquinas virtuais do Azure chamadas VM1 e VM2. As conexões com App1 são gerenciadas usando\num balanceador de carga do Azure.\nAs configurações efetivas de segurança de rede para VM2 são mostradas na exposição a seguir.\nVocê descobre que as conexões com App1 de 131.107.100.50 pela porta TCP 443 falham.\nVocê verifica se as regras do Load Balancer estão configuradas corretamente.\nVocê precisa garantir que as conexões com o App1 possam ser estabelecidas com êxito a partir de 131.107.100.50 pela porta TCP 443.\nSolução: você cria uma regra de segurança de entrada que permite qualquer tráfego da origem do AzureLoadBalancer e tem uma prioridade de 150.\nIsso atende ao objetivo?\n',
+        'question': `questão 132 tópico 5
+            \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um aplicativo chamado App1 instalado em duas máquinas virtuais do Azure chamadas VM1 e VM2. As conexões com App1 são gerenciadas usando\num balanceador de carga do Azure.\nAs configurações efetivas de segurança de rede para VM2 são mostradas na exposição a seguir.
+            <img src="imagens/fquestao132topico5.png" alt="imagem da questão"></img>
+            \nVocê descobre que as conexões com App1 de 131.107.100.50 pela porta TCP 443 falham.\nVocê verifica se as regras do Load Balancer estão configuradas corretamente.\nVocê precisa garantir que as conexões com o App1 possam ser estabelecidas com êxito a partir de 131.107.100.50 pela porta TCP 443.\nSolução: você cria uma regra de segurança de entrada que permite qualquer tráfego da origem do AzureLoadBalancer e tem uma prioridade de 150.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 425,
         'answers': [{
@@ -8811,7 +8895,10 @@ const questionsAll = [
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nA (76%) B (24%)'
     }, {
-        'question': '133\nSua rede local contém um gateway VPN.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa garantir que todo o tráfego da VM1 para o armazenamento1 viaje pela rede backbone da Microsoft.\nO que você deve configurar?\n',
+        'question': `questao 133 tópico 5
+        <img src="imagens/fquestao133topico5.png" alt="imagem da questão"></img>
+            \nSua rede local contém um gateway VPN.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            \nVocê precisa garantir que todo o tráfego da VM1 para o armazenamento1 viaje pela rede backbone da Microsoft.\nO que você deve configurar?\n`,
         'number': '',
         'page': 426,
         'answers': [{
@@ -8830,7 +8917,11 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '134\nVocê cria uma VM do Azure chamada VM1 que executa o Windows Server 2019.\nVM1 está configurado conforme mostrado na exposição. (Clique na guia Exposição.)\nVocê precisa ativar a configuração de estado desejado para VM1.\nO que você deve fazer primeiro?\n',
+        'question': `questao 134 tópico 5
+            \nVocê cria uma VM do Azure chamada VM1 que executa o Windows Server 2019.
+            \nVM1 está configurado conforme mostrado na exposição. (Clique na guia Exposição.)
+            <img src="imagens/fquestao134topico5.png" alt="imagem da questão"></img>
+            \nVocê precisa ativar a configuração de estado desejado para VM1.\nO que você deve fazer primeiro?\n`,
         'number': '',
         'page': 427,
         'answers': [{
@@ -8849,7 +8940,10 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '136\nVocê tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.\nTodas as redes virtuais são peered. Cada rede virtual contém nove máquinas virtuais.\nVocê precisa configurar conexões RDP seguras com as máquinas virtuais usando o Azure Bastion.\nQual é o número mínimo de hosts Bastion necessários?\n',
+        'question': `questaao 136 tópico 5
+            \nVocê tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
+            <img src="imagens/fquestao136topico5.png" alt="imagem da questão"></img>
+            \nTodas as redes virtuais são peered. Cada rede virtual contém nove máquinas virtuais.\nVocê precisa configurar conexões RDP seguras com as máquinas virtuais usando o Azure Bastion.\nQual é o número mínimo de hosts Bastion necessários?\n`,
         'number': '',
         'page': 430,
         'answers': [{
@@ -8925,7 +9019,12 @@ const questionsAll = [
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '144\nVocê tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.\nA assinatura contém as máquinas virtuais mostradas na tabela a seguir.\nTodas as máquinas virtuais possuem apenas endereços IP privados.\nImplante um host do Azure Bastion chamado Bastion1 na VNet1.\nA quais máquinas virtuais você pode se conectar por meio do Bastion1?\n',
+        'question': `questao 144 tópico 5
+            \nVocê tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
+            <img src="imagens/fquestao144topico5parte1.png" alt="imagem da questão"></img>
+            \nA assinatura contém as máquinas virtuais mostradas na tabela a seguir.
+            <img src="imagens/fquestao144topico5parte2.png" alt="imagem da questão"></img>
+            \nTodas as máquinas virtuais possuem apenas endereços IP privados.\nImplante um host do Azure Bastion chamado Bastion1 na VNet1.\nA quais máquinas virtuais você pode se conectar por meio do Bastion1?\n`,
         'number': '',
         'page': 439,
         'answers': [{
@@ -8982,7 +9081,10 @@ const questionsAll = [
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)'
     }, {
-        'question': '148\nVocê tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.\nVocê precisa garantir que todo o tráfego entre VNet1 e VNet2 atravesse a rede backbone da Microsoft.\nO que você deve configurar?\n',
+        'question': `questao 148 tópico 6 
+            \nVocê tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
+            <img src="imagens/fquestao148topico6.png" alt="imagem da questão"></img>
+            \nVocê precisa garantir que todo o tráfego entre VNet1 e VNet2 atravesse a rede backbone da Microsoft.\nO que você deve configurar?\n`,
         'number': '',
         'page': 442,
         'answers': [{
@@ -9001,7 +9103,11 @@ const questionsAll = [
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nB (91%) 9%\nTópico 5'
     }, {
-        'question': '149\nVocê tem as redes virtuais do Azure mostradas na tabela a seguir.\nQuais redes virtuais você pode fazer peering com VNet1?\n',
+        'question': `questao 149 tópico 6
+            \nVocê tem as redes virtuais do Azure mostradas na tabela a seguir.
+            <img src="imagens/fquestao149topico5.png" alt="imagem da questão"></img>
+
+            \nQuais redes virtuais você pode fazer peering com VNet1?\n`,
         'number': '',
         'page': 442,
         'answers': [{
@@ -9042,7 +9148,10 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nD (56%) B (44%)'
     }, {
-        'question': '1\nVocê tem uma assinatura do Azure que possui um cofre dos Serviços de Recuperação chamado Vault1. A assinatura contém as máquinas virtuais mostradas no\nseguinte tabela:\nVocê planeja agendar backups para ocorrerem todas as noites às 23h.\nDe quais máquinas virtuais você pode fazer backup usando o Backup do Azure?\n',
+        'question': `questao 1 tópico 6 
+            Você tem uma assinatura do Azure que possui um cofre dos Serviços de Recuperação chamado Vault1. A assinatura contém as máquinas virtuais mostradas no\nseguinte tabela:
+            <img src="imagens/fquestao1topico6.png" alt="imagem da questão"></img>
+            \nVocê planeja agendar backups para ocorrerem todas as noites às 23h.\nDe quais máquinas virtuais você pode fazer backup usando o Backup do Azure?\n`,
         'number': '',
         'page': 444,
         'answers': [{
@@ -9080,7 +9189,11 @@ const questionsAll = [
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '3\nVocê tem as máquinas virtuais do Azure mostradas na tabela a seguir:\nVocê tem um cofre dos Serviços de Recuperação que protege VM1 e VM2.\nVocê precisa proteger VM3 e VM4 usando os Serviços de Recuperação.\nO que você deve fazer primeiro?\n',
+        'question': `questao 3 tópico 6 
+            \nVocê tem as máquinas virtuais do Azure mostradas na tabela a seguir:
+            <img src="imagens/fquestao3topico6.png" alt="imagem da questão"></img>
+            \nVocê tem um cofre dos Serviços de Recuperação que protege VM1 e VM2.
+            \nVocê precisa proteger VM3 e VM4 usando os Serviços de Recuperação.\nO que você deve fazer primeiro?\n`,
         'number': '',
         'page': 445,
         'answers': [{
@@ -9099,7 +9212,13 @@ const questionsAll = [
         ],
         'explication': 'A\nUm cofre dos Serviços de Recuperação é uma entidade de armazenamento no Azure que aloja dados. Os dados normalmente são cópias de dados ou informações de configuração para\nmáquinas virtuais\n(VMs), cargas de trabalho, servidores ou estações de trabalho. Você pode usar cofres dos Serviços de Recuperação para armazenar dados de backup para vários serviços do Azure\nReferência:\nhttps://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replicatio\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '5\nVocê tem uma assinatura do Azure que contém as identidades mostradas na tabela a seguir.\nUser1, Principal1 e Group1 recebem a função de Leitor de Monitoramento.\nUm grupo de ação denominado AG1 tem o tipo de notificação Email Azure Resource Manager Role e está configurado para enviar email com a função Monitoring Reader.\nVocê cria uma regra de alerta chamada Alert1 que usa AG1.\nVocê precisa identificar quem receberá uma notificação por e-mail quando o Alerta1 for acionado.\nQuem você deve identificar?\n',
+        'question': `questao 5 tópico 6\n
+            Você tem uma assinatura do Azure que contém as identidades mostradas na tabela a seguir.
+                <img src="imagens/fquestao5topico6.png" alt="imagem da questão"></img>
+                \nUser1, Principal1 e Group1 recebem a função de Leitor de Monitoramento.\nUm grupo de ação denominado AG1 tem o tipo de notificação Email Azure Resource Manager Role e está configurado para enviar email com a função Monitoring Reader.
+                \nVocê cria uma regra de alerta chamada Alert1 que usa AG1.\nVocê precisa identificar quem receberá uma notificação por e-mail quando o Alerta1 for acionado.
+                \nQuem você deve identificar?\n
+              `,
         'number': '',
         'page': 447,
         'answers': [{
