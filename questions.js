@@ -7370,8 +7370,14 @@ const questionsAll = [
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nC (100%)'
     }, {
-        'question': '15\nVocê cria uma VM do Azure chamada VM1 que executa o Windows Server 2019.\nVM1 está configurado conforme mostrado na exposição. (Clique na guia Exposição.)\nVocê precisa ativar a configuração de estado desejado para VM1.\nO que você deve fazer primeiro?\n',
-        'number': '',
+        'question': `Questão 15 tópico 5 
+            Você cria uma VM do Azure chamada VM1 que executa o Windows Server 2019.
+            VM1 está configurado conforme mostrado na exposição. (Clique na guia Exposição.)
+            <img src="imagens/jquestao15topico5.png" alt="imagem da questão"></img>
+            Você precisa ativar a configuração de estado desejado para VM1.
+            O que você deve fazer primeiro?
+            ` ,
+         'number': '',
         'page': 319,
         'answers': [{
             'text': 'A. Conecte-se à VM1.\n',
@@ -7447,7 +7453,17 @@ const questionsAll = [
         ],
         'explication': 'A\nA porta padrão para RDP é a porta TCP 3389. Uma regra para permitir o tráfego RDP deve ser criada automaticamente quando você cria sua VM.\nNota sobre NSG-Subnet1: O Azure encaminha o tráfego de rede entre todas as sub-redes numa rede virtual, por padrão.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/troubleshoot-rdp-connection\nDistribuição de votos da comunidade\nA (55%) B (45%)'
     }, {
-        'question': '21\nVocê tem uma assinatura do Azure que contém uma rede virtual chamada VNET1. VNET1 contém as sub-redes mostradas na tabela a seguir.\nCada máquina virtual usa um endereço IP estático.\nVocê precisa criar grupos de segurança de rede (NSGs) para atender aos seguintes requisitos:\n✑ Permita solicitações da Web da Internet para VM3, VM4, VM5 e VM6.\n✑ Permita todas as conexões entre VM1 e VM2.\n✑ Permitir conexões de Área de Trabalho Remota para VM1.\n✑ Evite todo o outro tráfego de rede para VNET1.\nQual é o número mínimo de NSGs que você deve criar?\n',
+        'question': `Questão 21 tópico 5
+            Você tem uma assinatura do Azure que contém uma rede virtual chamada VNET1. VNET1 contém as sub-redes mostradas na tabela a seguir.
+            <img src="imagens/jquestao21topico5.png" alt="imagem da questão"></img>
+            Cada máquina virtual usa um endereço IP estático.
+            Você precisa criar grupos de segurança de rede (NSGs) para atender aos seguintes requisitos:
+            ✑ Permita solicitações da Web da Internet para VM3, VM4, VM5 e VM6.
+            ✑ Permita todas as conexões entre VM1 e VM2.
+            ✑ Permitir conexões de Área de Trabalho Remota para VM1.
+            ✑ Evite todo o outro tráfego de rede para VNET1.
+            Qual é o número mínimo de NSGs que você deve criar?
+            `,
         'number': '',
         'page': 325,
         'answers': [{
@@ -7466,7 +7482,15 @@ const questionsAll = [
         ],
         'explication': 'C\nCada grupo de segurança de rede também contém regras de segurança padrão.\nNota: Um grupo de segurança de rede (NSG) contém uma lista de regras de segurança que permitem ou negam o tráfego de rede a recursos ligados ao Azure Virtual\nRedes (VNet).\nOs NSGs podem ser associados a sub-redes, VMs individuais (clássico) ou interfaces de rede individuais (NIC) anexadas a VMs (Gerenciador de Recursos).\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/security-overview#default-security-rules\nDistribuição de votos da comunidade\nA (69%) B (31%)'
     }, {
-        'question': '22\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nA política do Azure de tipos de recursos não permitidos que tem a aplicação de políticas habilitada é atribuída ao RG1 e usa os seguintes parâmetros:\nMicrosoft.Network/redes virtuais\nMicrosoft.Compute/virtualMachines\nNo RG1, é necessário criar uma nova máquina virtual chamada VM2 e, em seguida, conectar a VM2 à VNET1.\nO que você deve fazer primeiro?\n',
+        'question': `Questão 22 tópico 5
+            Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/jquestao22topico5.png" alt="imagem da questão"></img>
+            A política do Azure de tipos de recursos não permitidos que tem a aplicação de políticas habilitada é atribuída ao RG1 e usa os seguintes parâmetros:
+            Microsoft.Network/redes virtuais
+            Microsoft.Compute/virtualMachines
+            No RG1, é necessário criar uma nova máquina virtual chamada VM2 e, em seguida, conectar a VM2 à VNET1.
+            O que você deve fazer primeiro?
+            `,
         'number': '',
         'page': 326,
         'answers': [{
@@ -7522,8 +7546,61 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-port-forwarding-portal https://pixelrobots.co.uk/2017/08/azure-\nbalanceador de carga para rds/\nDistribuição de votos da comunidade\nUm (100%)'
-    }, {
-        'question': '28\nVocê tem uma assinatura do Azure que contém os recursos da tabela a seguir.\nVM1 e VM2 são implementadas a partir do mesmo modelo e hospedam aplicativos de linha de negócios.\nVocê configura o grupo de segurança de rede (NSG) mostrado na exposição. (Clique na guia Exposição.)\nVocê precisa impedir que usuários de VM1 e VM2 acessem sites na Internet pela porta TCP 80.\nO que você deveria fazer?\n',
+    },
+
+    {
+        'question': `Questão 27 Tópico 5
+            ARRASTAR E SOLTAR - POR ENQUANTO NAO CONTA NA CONTAGEM DE PONTOS DESSE SIMULADO EM ESPECIFO MAS VOCE PODE CLICAR EM VER RESPOSTA
+            Você tem uma rede local que planeja conectar ao Azure usando uma VPN site-so-site.
+            No Azure, você tem uma rede virtual do Azure chamada VNet1 que usa um espaço de endereço de 10.0.0.0/16. A VNet1 contém uma sub-rede chamada Subnet1 que usa um espaço de endereço de 10.0.0.0/24.
+            Você precisa criar uma VPN site-to-site para o Azure.
+            Quais quatro ações você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+            OBSERVAÇÃO: Mais de uma ordem de escolha de resposta está correta. Você receberá crédito por qualquer uma das ordens corretas que selecionar.
+            Selecionar e colocar:
+
+        `,
+        'number': '31',
+        'page': 11,
+        'answers': [
+
+            [
+                {
+                    'text': '',
+                    'options': [
+                        { 'text': 'Crie um gateway local.', 'correct': true, 'index': '3' },
+                        { 'text': 'Crie um gateway VPN.', 'correct': true, 'index': '2' },
+                        { 'text': 'Crie uma sub-rede de gateway.', 'correct': true, 'index': '1' },
+                        { 'text': 'Crie um servidor DNS personalizado.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Crie uma conexão VPN.', 'correct': true, 'index': '4' },
+                        { 'text': 'Crie um perfil da CDN (rede de distribuição de conteúdo) do Azure.', 'correct': false, 'index': '-1' },
+
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': '',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `A maioria concordou com a fonte original`,
+        'typeQuestion': 'dragdrop'
+    },
+    
+    
+    {
+        'question': `Questão 28 Tópico 5
+            Você tem uma assinatura do Azure que contém os recursos da tabela a seguir.
+            <img src="imagens/jquestao28topico5parte1.png" alt="imagem da questão"></img>
+            VM1 e VM2 são implementadas a partir do mesmo modelo e hospedam aplicativos de linha de negócios.
+            Você configura o grupo de segurança de rede (NSG) mostrado na exposição. (Clique na guia Exposição.)
+            <img src="imagens/jquestao28topico5parte2.png" alt="imagem da questão"></img>
+            Você precisa impedir que usuários de VM1 e VM2 acessem sites na Internet pela porta TCP 80.\nO que você deveria fazer?\n`,
         'number': '',
         'page': 331,
         'answers': [{
@@ -7561,7 +7638,15 @@ const questionsAll = [
         ],
         'explication': 'D\nAs redes virtuais podem estar na mesma região ou em regiões diferentes e de assinaturas iguais ou diferentes. Ao conectar VNets de\nassinaturas diferentes, as assinaturas não precisam estar associadas ao mesmo locatário do Active Directory.\nConfigurar uma conexão VNet a VNet é uma boa maneira de conectar VNets facilmente. Conectando uma rede virtual a outra rede virtual usando o\nO tipo de conexão VNet a VNet (VNet2VNet) é semelhante à criação de uma conexão IPsec site a site para um local local. Tanto a conectividade\ntipos usam um gateway VPN para fornecer um túnel seguro usando IPsec/IKE, e ambos funcionam da mesma maneira durante a comunicação.\nO gateway de rede local para cada VNet trata a outra VNet como um site local. Isso permite especificar espaço de endereço adicional para o local\ngateway de rede para rotear o tráfego.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-vnet-vnet-resource-manager-portal\nDistribuição de votos da comunidade\nD (80%) C (20%)'
     }, {
-        'question': 'Você precisa garantir que a VM1 possa ser criada em uma zona de disponibilidade.\nQuais são as duas configurações que você deve modificar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
+        'question': `Questão 30 tópico 5
+            Você planeja criar uma máquina virtual do Azure chamada VM1 que será configurada conforme mostrado na exposição a seguir.
+            <img src="imagens/jquestao30topico5parte1.png" alt="imagem da questão"></img>
+            As configurações de disco planejadas para VM1 são mostradas na exposição a seguir.
+            <img src="imagens/jquestao30topico5parte2.png" alt="imagem da questão"></img>
+             Você precisa garantir que a VM1 possa ser criada em uma zona de disponibilidade.
+             Quais são as duas configurações que você deve modificar? Cada resposta correta apresenta parte da solução.
+             NOTA: Cada seleção correta vale um ponto.
+             `,
         'number': '',
         'page': 334,
         'answers': [{
@@ -7622,7 +7707,14 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (83%) A (17%)'
     }, {
-        'question': '36\nVocê tem uma assinatura do Azure chamada Subscription1. Subscription1 contém uma máquina virtual chamada VM1.\nVocê tem um computador chamado Computador1 que executa o Windows 10. O Computador1 está conectado à Internet.\nVocê adiciona uma interface de rede chamada vm1173 à VM1, conforme mostrado na exposição. (Clique na guia Exposição.)\nNo Computador1, você tenta se conectar à VM1 usando a Área de Trabalho Remota, mas a conexão falha.\nVocê precisa estabelecer uma conexão de Área de Trabalho Remota com VM1.\nO que você deve fazer primeiro?\n',
+        'question': `Questão 36 tópico 5
+            Você tem uma assinatura do Azure chamada Subscription1. Subscription1 contém uma máquina virtual chamada VM1.
+            Você tem um computador chamado Computador1 que executa o Windows 10. O Computador1 está conectado à Internet.
+            Você adiciona uma interface de rede chamada vm1173 à VM1, conforme mostrado na exposição. (Clique na guia Exposição.)
+            <img src="imagens/jquestao36topico5.png" alt="imagem da questão"></img>
+            No Computador1, você tenta se conectar à VM1 usando a Área de Trabalho Remota, mas a conexão falha.
+            Você precisa estabelecer uma conexão de Área de Trabalho Remota com VM1.
+            O que você deve fazer primeiro?\n`,
         'number': '',
         'page': 340,
         'answers': [{
@@ -7641,7 +7733,16 @@ const questionsAll = [
         ],
         'explication': 'D\nRespostas incorretas:\nR: As regras são processadas em ordem de prioridade, com os números mais baixos processados \u200b\u200bantes dos números mais altos, porque os números mais baixos têm prioridade mais alta.\nQuando o tráfego corresponde a uma regra, o processamento é interrompido. O RDP já tem o número mais baixo e, portanto, a prioridade mais alta.\nB: A interface de rede já foi adicionada à VM.\nC: As regras de saída são boas.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/security-overview\nDistribuição de votos da comunidade\nD (100%)'
     }, {
-        'question': '37\nVocê tem as máquinas virtuais do Azure mostradas na tabela a seguir.\nUm serviço DNS está instalado na VM1.\nVocê define as configurações dos servidores DNS para cada rede virtual, conforme mostrado na exposição a seguir.\nVocê precisa garantir que todas as máquinas virtuais possam resolver nomes DNS usando o serviço DNS na VM1.\nO que você deveria fazer?\n',
+        'question': `Questão 37 Tópico 5 
+            
+            Você tem as máquinas virtuais do Azure mostradas na tabela a seguir.
+            <img src="imagens/jquestao37topico5parte1.png" alt="imagem da questão"></img>
+            Um serviço DNS está instalado na VM1.
+            Você define as configurações dos servidores DNS para cada rede virtual, conforme mostrado na exposição a seguir.
+            <img src="imagens/jquestao37topico5parte2.png" alt="imagem da questão"></img>
+            Você precisa garantir que todas as máquinas virtuais possam resolver nomes DNS usando o serviço DNS na VM1.
+            O que você deveria fazer?
+            `,
         'number': '',
         'page': 341,
         'answers': [{
@@ -7679,7 +7780,13 @@ const questionsAll = [
         ],
         'explication': 'B\nVocê pode usar uma VPN site a site para conectar sua rede local a uma rede virtual do Azure. Os usuários da sua rede local se conectam por\nusando o RDP ou\nProtocolo SSH na conexão VPN site a site. Você não precisa permitir acesso direto RDP ou SSH pela Internet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/security/fundamentals/network-best-practices\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '40\nVocê tem uma assinatura do Azure que contém os recursos da tabela a seguir.\nA Subnet1 está associada à VNet1. NIC1 anexa VM1 à Subnet1.\nVocê precisa aplicar ASG1 ao VM1.\nO que você deveria fazer?\n',
+        'question': `Questão 40 Tópico 5
+            Você tem uma assinatura do Azure que contém os recursos da tabela a seguir.
+            <img src="imagens/jquestao40topico5.png" alt="imagem da questão"></img>
+            A Subnet1 está associada à VNet1. NIC1 anexa VM1 à Subnet1.
+            Você precisa aplicar ASG1 ao VM1.
+            O que você deveria fazer?
+            `,
         'number': '',
         'page': 345,
         'answers': [{
@@ -7717,7 +7824,12 @@ const questionsAll = [
         ],
         'explication': 'ADE\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal\nDistribuição de votos da comunidade\nABC (80%) 11%6%'
     }, {
-        'question': '45\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.\nVocê precisa criar uma interface de rede chamada NIC1.\nEm qual local você pode criar NIC1?\n',
+        'question': `Questão 45 Tópico 5 
+            Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/jquestao45topico5.png" alt="imagem da questão"></img>
+            Você precisa criar uma interface de rede chamada NIC1.
+            Em qual local você pode criar NIC1?
+            `,
         'number': '',
         'page': 350,
         'answers': [{
@@ -7736,7 +7848,15 @@ const questionsAll = [
         ],
         'explication': 'B\nAntes de criar uma interface de rede, você deve ter uma rede virtual existente no mesmo local e assinatura em que você cria uma rede\ninterface em.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '46\nVocê tem máquinas virtuais do Azure que executam o Windows Server 2019 e estão configuradas conforme mostrado na tabela a seguir.\nVocê cria uma zona DNS pública do Azure chamada adatum.com e uma zona DNS privada do Azure chamada contoso.com.\nPara controso.com, você cria um link de rede virtual denominado link1 conforme mostrado na exposição. (Clique na guia Exposição.)\nVocê descobre que a VM1 pode resolver nomes em contoso.com, mas não pode resolver nomes em adatum.com. VM1 pode resolver outros hosts na Internet.\nVocê precisa garantir que a VM1 possa resolver nomes de host em adatum.com.\nO que você deveria fazer?\n',
+        'question': `Questão 46 Tópico 5
+            Você tem máquinas virtuais do Azure que executam o Windows Server 2019 e estão configuradas conforme mostrado na tabela a seguir.
+            <img src="imagens/jquestao46topico5parte1.png" alt="imagem da questão"></img>
+            Você cria uma zona DNS pública do Azure chamada adatum.com e uma zona DNS privada do Azure chamada contoso.com.
+            Para controso.com, você cria um link de rede virtual denominado link1 conforme mostrado na exposição. (Clique na guia Exposição.)
+            <img src="imagens/jquestao46topico5parte2.png" alt="imagem da questão"></img>
+            Você descobre que a VM1 pode resolver nomes em contoso.com, mas não pode resolver nomes em adatum.com. VM1 pode resolver outros hosts na Internet.
+            Você precisa garantir que a VM1 possa resolver nomes de host em adatum.com.
+            O que você deveria fazer?\n`,
         'number': '',
         'page': 351,
         'answers': [{
@@ -7754,8 +7874,95 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nSe você usar o DNS fornecido pelo Azure, o DNS su x apropriado será aplicado automaticamente às suas máquinas virtuais. Para todas as outras opções você deve\nuse totalmente\nNomes de domínio qualificados (FQDN) ou aplique manualmente o suf x DNS apropriado às suas máquinas virtuais.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
-        'question': '50\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir.\nVocê implanta um balanceador de carga que possui as seguintes configurações:\n✑ Nome: LB1\n✑ Tipo: Interno\n✑ SKU: Padrão\n✑ Rede virtual: VNET1\nVocê precisa garantir que pode adicionar VM1 e VM2 ao pool de back-end do LB1.\nSolução: você cria um endereço IP público de SKU básico, associa o endereço à interface de rede da VM1 e, em seguida, inicia a VM1.\nIsso atende ao objetivo?\n',
+    },
+    {
+        'question': `Questão 49 Tópico 5
+            Você tem uma assinatura do Azure que contém os grupos de recursos mostrados na tabela a seguir.
+            <img src="imagens/jquestao49topico5.png" alt="imagem da questão"></img>
+            RG1 contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/jquestao49topico5parte2.png" alt="imagem da questão"></img>
+            Você precisa identificar quais recursos você pode mover de RG1 para RG2 e quais recursos você pode mover de RG2 para RG1.
+            Quais recursos você deve identificar? Para responder, selecione as opções apropriadas na área de resposta.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        `,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Recursos que você pode mover do RG1 para o RG2:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Nenhum",
+                    'correct': false
+                }, {
+                    'text': "Somente IP1",
+                    'correct': false
+                }, {
+                    'text': "Somente IP1 e storage1",
+                    'correct': false
+                },
+                {
+                    'text': "Somente IP1 e VNET1",
+                    'correct': false
+                },
+                {
+                    'text': "IP1, VNET2 e storage1",
+                    'correct': true
+                }
+            ]
+        },
+
+        {
+            'text': 'Recursos que você pode mover do RG2 para o RG1:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Nenhum",
+                    'correct': false
+                }, {
+                    'text': "Somente IP2",
+                    'correct': false
+                }, {
+                    'text': "Somente IP2 e storage2",
+                    'correct': false
+                },
+                {
+                    'text': "Somente IP2 e VNET2",
+                    'correct': false
+                },
+                {
+                    'text': "IP2, VNET2 e storage2",
+                    'correct': true
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Comentário mais votado:
+            Resposta correta: Caixa 1: IP1, VNET2 e storage1 
+            Caixa 2: IP2, VNET2 e storage2 Os bloqueios são projetados para qualquer atualização ou remoção. Neste caso, queremos apenas mover, não estamos excluindo e não estamos alterando nada no recurso.
+            
+`
+    },
+    {
+        'question': `questao 50 tópico 5 
+            Nota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que
+            pode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.
+            Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.
+            Você tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir.
+            <img src="imagens/jquestao50topico5.png" alt="imagem da questão"></img>
+            Você implanta um balanceador de carga que possui as seguintes configurações:
+            ✑ Nome: LB1\n✑ Tipo: Interno\n✑ SKU: Padrão\n✑ Rede virtual: VNET1\nVocê precisa garantir que pode adicionar VM1 e VM2 ao pool de back-end do LB1.\nSolução: você cria um endereço IP público de SKU básico, associa o endereço à interface de rede da VM1 e, em seguida, inicia a VM1.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 356,
         'answers': [{
@@ -7768,7 +7975,14 @@ const questionsAll = [
         ],
         'explication': 'B\nUm pool de back-end configurado por endereço IP tem as seguintes limitações:\n✑ Somente balanceador de carga padrão\nReferência:\nhttps://docs.microsoft.com/en-us/azure/load-balancer/backend-pool-management\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '51\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir.\nVocê implanta um balanceador de carga que possui as seguintes configurações:\n✑ Nome: LB1\n✑ Tipo: Interno\n✑ SKU: Padrão\n✑ Rede virtual: VNET1\nVocê precisa garantir que pode adicionar VM1 e VM2 ao pool de back-end do LB1.\nSolução: você cria um endereço IP público de SKU padrão, associa o endereço à interface de rede da VM1 e, em seguida, interrompe a VM2.\nIsso atende ao objetivo?\n',
+        'question': `questao 51 tópico 5
+            Nota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que
+            pode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.
+            Depois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.
+            Você tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir.
+            <img src="imagens/jquestao51topico5.png" alt="imagem da questão"></img>
+            Você implanta um balanceador de carga que possui as seguintes configurações:
+            ✑ Nome: LB1\n✑ Tipo: Interno\n✑ SKU: Padrão\n✑ Rede virtual: VNET1\nVocê precisa garantir que pode adicionar VM1 e VM2 ao pool de back-end do LB1.\nSolução: você cria um endereço IP público de SKU padrão, associa o endereço à interface de rede da VM1 e, em seguida, interrompe a VM2.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 357,
         'answers': [{
@@ -7781,7 +7995,12 @@ const questionsAll = [
         ],
         'explication': 'B\nUm pool de back-end configurado por endereço IP tem as seguintes limitações:\n✑ Somente balanceador de carga padrão\nReferência:\nhttps://docs.microsoft.com/en-us/azure/load-balancer/backend-pool-management\nDistribuição de votos da comunidade\nB (100%)'
     }, {
-        'question': '52\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir.\nVocê implanta um balanceador de carga que possui as seguintes configurações:\n✑ Nome: LB1\n✑ Tipo: Interno\n✑ SKU: Padrão\n✑ Rede virtual: VNET1\nVocê precisa garantir que pode adicionar VM1 e VM2 ao pool de back-end do LB1.\nSolução: você cria dois endereços IP públicos de SKU padrão e associa um endereço IP público de SKU padrão à interface de rede de cada um.\nmáquina virtual.\nIsso atende ao objetivo?\n',
+        'question': `52\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela.
+             Como resultado, estas perguntas não aparecerão na tela de revisão.
+             \nVocê tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir.
+             <img src="imagens/jquestao52topico5.png" alt="imagem da questão"></img>
+             \nVocê implanta um balanceador de carga que possui as seguintes configurações:
+            \n✑ Nome: LB1\n✑ Tipo: Interno\n✑ SKU: Padrão\n✑ Rede virtual: VNET1\nVocê precisa garantir que pode adicionar VM1 e VM2 ao pool de back-end do LB1.\nSolução: você cria dois endereços IP públicos de SKU padrão e associa um endereço IP público de SKU padrão à interface de rede de cada um.\nmáquina virtual.\nIsso atende ao objetivo?\n`,
         'number': '',
         'page': 358,
         'answers': [{
