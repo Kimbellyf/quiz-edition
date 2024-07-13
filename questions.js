@@ -5082,6 +5082,51 @@ const questionsAll = [
         ],
         'explication': 'B\nO serviço de Importação/Exportação do Azure é usado para importar com segurança grandes quantidades de dados para o armazenamento de Blobs do Azure e Arquivos do Azure, enviando unidades de disco para\num datacenter do Azure.\nObservação:\nExistem várias versões desta questão no exame. A pergunta tem duas respostas corretas:\n1. Armazenamento de arquivos do Azure\n2. Armazenamento de Blobs do Azure\nA pergunta pode ter outras opções de resposta incorretas, incluindo as seguintes:\n✑ uma máquina virtual\n✑ Banco de Dados SQL do Azure\n✑ Azure Data Factory\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-import-export-service\nDistribuição de votos da comunidade\nB (100%)'
     },
+
+    {
+        'question': `Questão 30 Tópico 3
+            Você tem uma assinatura do Azure que contém os compartilhamentos de arquivos mostrados na tabela a seguir.
+            <img src="imagens/rquestao30topico3parte1.png" alt="imagem da questão"></img>
+            Você tem os compartilhamentos de arquivos locais mostrados na tabela a seguir.
+            <img src="imagens/rquestao30topico3parte2.png" alt="imagem da questão"></img>
+            Você cria um grupo de sincronização de arquivos do Azure chamado Sync1 e executa as seguintes ações:
+            ✑ Adicione share1 como o ponto de extremidade da nuvem para Sync1.
+            ✑ Adicione data1 como um ponto de extremidade do servidor para Sync1.
+            ✑ Registre Server1 e Server2 no Sync1.
+            Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Você pode adicionar share3 como um endpoint de nuvem adicional para Sync1.',
+            'correct': false
+        }, {
+            'text': 'Você pode adicionar data2 como um endpoint de servidor adicional para Sync1.',
+            'correct': true
+        }, {
+            'text': 'Você pode adicionar data3 como um endpoint de servidor adicional para Sync1.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `
+            Caixa 1: Não -
+            Um grupo de sincronização deve conter um ponto de extremidade de nuvem, que representa um compartilhamento de arquivo do Azure e um ou mais pontos de extremidade de servidor.
+
+            Caixa 2: Sim -
+            Data2 está localizado no Server2 que está registrado no Sync1.
+
+            Caixa 3: Não -
+            Data3 está localizado no Server3 que não está registrado no Sync1.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide?tabs=azure-portal%2Cproactive-portal#create-a-sync-group-and-a- cloud-endpoint
+        `
+
+    },
     
     
     
@@ -5187,7 +5232,41 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/import-export/storage-import-export-service\nDistribuição de votos da comunidade\nUm (100%)'
-    }, {
+    },
+    {
+        'question': `Questão 39 Tópico 3
+            Você tem uma assinatura do Azure que contém uma conta do Azure Storage chamada storageaccount1.
+            Você exporta storageaccount1 como um modelo do Azure Resource Manager. O modelo contém as seguintes seções.
+            <img src="imagens/rquestao39topico3.png" alt="imagem da questão"></img>
+
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Um servidor que tenha um endereço IP público 131.107.103.10 pode acessar storageaccount1',
+            'correct': true
+        }, {
+            'text': 'Blobs individuais em storageaccount1 podem ser configurados para usar a camada de arquivo',
+            'correct': true
+        }, {
+            'text': `As administrações globais no Azure Active Directory (Azure AD) 
+                podem acessar um compartilhamento de arquivos hospedado em storageaccount1 
+                usando suas credenciais do Azure AD`,
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Referência:
+                https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?tabs=json
+        `
+
+    },
+    {
         'question': `40\nVocê tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1.
             \nVocê tem os dispositivos mostrados na tabela a seguir.
             
@@ -5230,7 +5309,44 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview?tabs=azure-portal\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+    
+    {
+        'question': `Questão 42 Tópico 3
+            Você tem uma conta do Azure Storage chamada storage1 que contém um contêiner de blob. O contêiner de blob tem uma camada de acesso padrão de Hot. Storage1 contém um contêiner chamado conainer1.
+            Você cria regras de gerenciamento de ciclo de vida em storage1, conforme mostrado na tabela a seguir.
+            <img src="imagens/rquestao42topico3parte1.png" alt="imagem da questão"></img>
+            Você executa as ações mostradas na tabela a seguir.
+            <img src="imagens/rquestao42topico3parte2.png" alt="imagem da questão"></img>
+
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Em 10 de outubro, você poderá ler Dep1File1.docx.',
+            'correct': false
+        }, {
+            'text': 'Em 10 de outubro, você poderá ler o Arquivo2.docx.',
+            'correct': true
+        }, {
+            'text': 'Em 10 de outubro, você poderá ler o Arquivo3.docx.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Comentário bem votado: 
+            Resposta correta NYY Dep1File1 é atingido pela regra 1, que arquivará o arquivo até o 10º, tornando-o ilegível. O arquivo 2 e o arquivo 3 não são atingidos pela primeira regra e são atingidos pela segunda regra, o que os tornará ainda legíveis até o 10º https://docs.microsoft.com/en-us/azure/storage/blobs/archive-rehydrate-overview#:~:text=While%20a%20blob%20is%20in,the%20hot%20or%20cool%20tier.
+        `
+
+    },
+    
+    {
         'question': '43\nVocê está configurando a autenticação do Azure Active Directory (Azure AD) para uma conta de armazenamento do Azure chamada storage1.\nVocê precisa garantir que os membros de um grupo chamado Grupo1 possam carregar arquivos usando o portal do Azure. A solução deve usar o princípio de\nUltimo privilégio.\nQuais são as duas funções que você deve configurar para armazenamento1? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
         'number': '',
         'page': 156,
@@ -5309,7 +5425,78 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nOs escopos de criptografia permitem que você gerencie a criptografia com uma chave com escopo para um contêiner ou um blob individual. Você pode usar criptografia\nescopos para criar limites seguros entre dados que residem na mesma conta de armazenamento, mas pertencem a clientes diferentes.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/blobs/encryption-scope-overview\nDistribuição de votos da comunidade\nD (96%) 4%'
-    }, {
+    },
+
+    {
+        'question': `Questão 49 Tópico 3
+            Você tem uma assinatura do Azure. A assinatura contém uma conta de armazenamento chamada storage1 que tem as regras de gerenciamento de ciclo de vida mostradas na tabela a seguir.
+
+            <img src="imagens/rquestao49topico3parte1.png" alt="imagem da questão"></img>
+
+            Em 1º de junho, você armazena dois blobs em storage1, conforme mostrado na tabela a seguir.
+
+            <img src="imagens/rquestao49topico3parte2.png" alt="imagem da questão"></img>
+
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Em 6 de junho, o Arquivo1 será armazenado no nível de acesso Cool.',
+            'correct': false
+        }, {
+            'text': 'Em 1º de junho, o Arquivo2 será armazenado na camada de acesso Cool.',
+            'correct': false
+        }, {
+            'text': 'Em 16 de junho, o Arquivo2 será armazenado na camada de acesso Archive.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `concordado com a origem
+        `
+
+    },
+
+    {
+        'question': `Questão 50 Tópico 3
+            Você tem uma assinatura do Azure.
+            Você planeja implantar uma conta de armazenamento chamada storage1 usando o seguinte modelo do Azure Resource Manager (ARM).
+            <img src="imagens/rquestao50topico3.png" alt="imagem da questão"></img>
+            Para cada uma das seguintes instruções, selecione Sim se a instrução for hue. Caso contrário, selecione Não.
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'As alterações feitas nos dados no armazenamento1 podem ser revertidas após sete dias.',
+            'correct': false
+        }, {
+            'text': 'Apenas os utilizadores localizados na região leste do Azure dos EUA podem ligar-se ao armazenamento1.',
+            'correct': false
+        }, {
+            'text': 'Três cópias de armazenamento serão mantidas na região do Leste dos EUA Azure.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `resposta da fonte
+        `
+
+    },
+
+
+    
+    
+    {
         'question': '51\nVocê tem um servidor local que contém uma pasta chamada D:\\Folder1.\nVocê precisa copiar o conteúdo de D:\\Folder1 para o contêiner público em uma conta do Armazenamento do Azure chamada contosodata.\nQual comando você deve executar?\n',
         'number': '',
         'page': 163,
@@ -5880,7 +6067,143 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 86 Tópico 3
+            Você tem uma assinatura do Azure.
+            Você planeja criar a conta do Azure Storage conforme mostrado na exposição a seguir.
+            <img src="imagens/rquestao86topico3.png" alt="imagem da questão"></img>
+            Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no gráfico.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `O número mínimo de cópias da conta de armazenamento será [opção de resposta].`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "1",
+                    'correct': false
+                }, {
+                    'text': "2",
+                    'correct': false
+                }, {
+                    'text': "3",
+                    'correct': true
+                },
+                {
+                    'text': "4",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Para reduzir o custo de dados acessados ​​com pouca frequência na conta de armazenamento, você deve modificar a configuração [opção de resposta].',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Camada de acesso (padrão)",
+                    'correct': true
+                }, {
+                    'text': "Desempenho",
+                    'correct': false
+                }, {
+                    'text': "Tipo de conta",
+                    'correct': false
+                },
+                {
+                    'text': "Replicação",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            
+`
+    },
+
+    {
+        'question': `Questão 89 Tópico 3
+            Você tem uma assinatura do Azure. A assinatura contém uma conta de armazenamento chamada storage1 que tem as regras de gerenciamento de ciclo de vida mostradas na tabela a seguir.
+            <img src="imagens/rquestao89topico3parte1.png" alt="imagem da questão"></img>
+            Em 1º de junho, você armazena dois blobs em storage1, conforme mostrado na tabela a seguir.
+            <img src="imagens/rquestao89topico3parte2.png" alt="imagem da questão"></img>
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Em 6 de junho, o Arquivo1 será armazenado no nível de acesso Cool.',
+            'correct': false
+        }, {
+            'text': 'Em 7 de junho, o Arquivo2 será armazenado no nível de acesso Cool.',
+            'correct': true
+        }, {
+            'text': 'Em 16 de junho, o Arquivo2 será armazenado na camada de acesso Archive.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `resposta da fonte
+        `
+
+    },
+
+    {
+        'question': `Questão 90 Tópico 3
+            Você tem uma conta do Azure Storage chamada contoso2024 que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/rquestao90topico3parte1.png" alt="imagem da questão"></img>
+            Você tem usuários que têm permissões para contoso2024, conforme mostrado na tabela a seguir.
+            <img src="imagens/rquestao90topico3parte2.png" alt="imagem da questão"></img>
+            A conta contoso2024 é configurada conforme mostrado na exposição a seguir.
+            <img src="imagens/rquestao90topico3parte3.png" alt="imagem da questão"></img>
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'O usuário1 pode ler o arquivo1.',
+            'correct': false
+        }, {
+            'text': 'O usuário2 pode ler o arquivo2.',
+            'correct': false
+        }, {
+            'text': 'User3 pode ler Arquivo1 e Arquivo2.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Bem votado:
+            O usuário NNN 1 não tem a função Storage Blob Data Reader ou Storage Blob Data Contributor para ler o File1. https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=portal
+        `
+
+    },
+
+
+    
+    
+    
+    {
         'question': '1\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nImplante um cluster do Azure Kubernetes Service (AKS) denominado AKS1.\nVocê precisa implantar um arquivo YAML no AKS1.\nSolução: Na CLI do Azure, você executa az aks.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 204,
@@ -6189,7 +6512,43 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nEm vez disso, você deve excluir VM1. Você recria a VM1 e depois adiciona a interface de rede para VM1.\nNota: Ao criar uma máquina virtual (VM) do Azure, você deve criar uma rede virtual (VNet) ou usar uma VNet existente. Você pode alterar o\nsub-rede à qual uma VM está conectada depois de criada, mas não é possível alterar a VNet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 23 Tópico 4
+            Você tem uma assinatura do Azure chamada Subscription1 que contém as cotas mostradas na tabela a seguir.
+            <img src="imagens/rquestao23topico5parte1.png" alt="imagem da questão"></img>
+            Você implanta máquinas virtuais na Subscription1 conforme mostrado na tabela a seguir.
+            <img src="imagens/rquestao23topico5parte2.png" alt="imagem da questão"></img>
+            Você planeja implantar as máquinas virtuais mostradas na tabela a seguir.
+            <img src="imagens/rquestao23topico5parte3.png" alt="imagem da questão"></img>
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Você pode implantar o VM3 no oeste dos EUA.',
+            'correct': true
+        }, {
+            'text': 'Você pode implantar o VM4 no oeste dos EUA.',
+            'correct': false
+        }, {
+            'text': 'Você pode implantar o VM5 no oeste dos EUA.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `maioria concordou com a fonte
+        `
+
+    },
+
+
+    
+    
+    {
         'question': '26\nVocê tem um modelo de implantação chamado Template1 que é usado para implantar 10 aplicativos Web do Azure.\nVocê precisa identificar o que implantar antes de implantar o Modelo1. A solução deve minimizar os custos do Azure.\nO que você deve identificar?\n',
         'number': '',
         'page': 224,
