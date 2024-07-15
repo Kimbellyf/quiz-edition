@@ -7282,20 +7282,23 @@ const questionsAll = [
         ],
         'explication': 'A\nA máquina virtual à qual você conecta uma interface de rede e a rede virtual à qual você a conecta devem existir no mesmo local, aqui no oeste dos EUA,\ntambém chamada de região.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface\nDistribuição de votos da comunidade\nUm (100%)'
     }, {
-        'question': '77\nVocê desenvolve o seguinte modelo do Azure Resource Manager (ARM) para criar um grupo de recursos e implantar uma conta do Armazenamento do Azure no\ngrupo de recursos.\nQual cmdlet você deve executar para implantar o modelo?\n',
+        'question': `Questão 77 Tópico 4 
+            \nVocê desenvolve o seguinte modelo do Azure Resource Manager (ARM) para criar um grupo de recursos e implantar uma conta do Armazenamento do Azure no\ngrupo de recursos.
+            <img src="imagens/gquestao77topico4.png" alt="imagem da questão"></img>
+            \nQual cmdlet você deve executar para implantar o modelo?\n`,
         'number': '',
         'page': 271,
         'answers': [{
-            'text': 'A. Novo-AzResource\n',
+            'text': 'A. New-AzResource\n',
             'correct': false
         }, {
-            'text': 'B. Novo AzResourceGroupDeployment\n',
+            'text': 'B. New-AzResourceGroupDeployment\n',
             'correct': false
         }, {
-            'text': 'C. Novo AzTenantDeployment\n',
+            'text': 'C. New-AzTenantDeployment\n',
             'correct': false
         }, {
-            'text': 'D. Novo AzDeployment',
+            'text': 'D. New-AzDeployment',
             'correct': true
         }
         ],
@@ -7580,7 +7583,7 @@ const questionsAll = [
             'text': 'A. Uma raíz\n',
             'correct': false
         }, {
-            'text': 'B. administrador\n',
+            'text': 'B. admin\n',
             'correct': false
         }, {
             'text': 'C. administrador',
@@ -9073,7 +9076,36 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (76%) A (22%)'
-    }, {
+    },
+    {
+        'question': `Questão 111 Tópico 5
+            Você planeja implantar o seguinte modelo do Azure Resource Manager (ARM).
+            <img src="imagens/gquestao111topico5.png" alt="imagem da questão"></img>
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'LB1 será conectado a uma sub-rede chamada VNET1/netname',
+            'correct': false
+        }, {
+            'text': 'LB1 só pode ser implantado no grupo de recursos que contém VNET1',
+            'correct': true
+        }, {
+            'text': 'O valor da variável sku pode ser fornecido como parâmetro quando o modelo é implantado a partir de um prompt de comando',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Maioria concordou com a fonte original
+        `
+
+    },
+
+    
+    {
         'question': '112\nVocê tem uma assinatura do Azure que contém uma conta de armazenamento. A conta armazena dados do site.\nVocê precisa garantir que o tráfego de entrada do usuário use o ponto de presença (POP) da Microsoft mais próximo da localização do usuário.\nO que você deve configurar?\n',
         'number': '',
         'page': 413,
@@ -9237,7 +9269,50 @@ const questionsAll = [
         }
         ],
         'explication': 'A'
-    }, {
+    },
+
+    {
+        'question': `Questão 120 Tópico 5
+            Você tem um dispositivo Windows 11 chamado Dispositivo e uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/gquestao120topico5.png" alt="imagem da questão"></img>
+            O Dispositivo1 tem o Azure PowerShell e a Interface de Linha de Comando (CLI) do Azure instalados.
+            Do Dispositivo1, você precisa estabelecer uma conexão de Área de Trabalho Remota com a VM1.
+            Quais três ações você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+
+`,
+        'number': '31',
+        'page': 11,
+        'answers': [
+
+            [
+                {
+                    'text': '',
+                    'options': [
+                        { 'text': 'Na CLI do Azure no Dispositivo1, execute az network bastion rdp.', 'correct': true, 'index': '3' },
+                        { 'text': 'No Bastion1, habilite a autenticação Kerberos.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Na VM1, habilite o acesso à VM just-in-time (JIT).', 'correct': false, 'index': '-1' },
+                        { 'text': 'No Bastion1, selecione Suporte ao cliente nativo.', 'correct': true, 'index': '2' },
+                        { 'text': 'No Dispositivo1, execute mstsc.exe.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Atualize o Bastion1 para o SKU padrão.', 'correct': true, 'index': '1' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': '',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `A maioria concordou com a fonte`,
+        'typeQuestion': 'dragdrop'
+    },
+    
+    {
         'question': '121\nVocê tem cinco máquinas virtuais do Azure que executam o Windows Server 2016. As máquinas virtuais são configuradas como servidores web.\nVocê tem um balanceador de carga do Azure chamado LB1 que fornece serviços de balanceamento de carga para as máquinas virtuais.\nVocê precisa garantir que os visitantes sejam atendidos pelo mesmo servidor web para cada solicitação.\nO que você deve configurar?\n',
         'number': '',
         'page': 419,
@@ -9483,7 +9558,7 @@ const questionsAll = [
             'text': 'A. Gateway de Aplicativo do Azure\n',
             'correct': false
         }, {
-            'text': 'B. terminais de serviço\n',
+            'text': 'B. terminais/pontos de serviço\n',
             'correct': true
         }, {
             'text': 'C. Proxy de aplicativo do Azure AD\n',
@@ -9577,7 +9652,47 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+    {
+        'question': `Questão 141 Tópico 5
+            Você tem as máquinas virtuais do Azure mostradas na tabela a seguir.
+            <img src="imagens/gquestao141topico5parte1.png" alt="imagem da questão"></img>
+            VNET1, VNET2 e VNET3 são pareadas.
+            <img src="imagens/gquestao141topico5parte2.png" alt="imagem da questão"></img>
+            VM4 tem um servidor DNS que é autoritativo para uma zona chamada contoso.com e contém os registros mostrados na tabela a seguir.
+            <img src="imagens/gquestao141topico5parte3.png" alt="imagem da questão"></img>
+            As redes virtuais são configuradas para usar os servidores DNS mostrados na tabela a seguir.
+
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Da VM1, server1.contoso.com é resolvido para 131.107.3.3.',
+            'correct': true
+        }, {
+            'text': 'Na VM2, server1.contoso.com é resolvido para 131.107.3.3.',
+            'correct': false
+        }, {
+            'text': 'Na VM3, server2.contoso.com é resolvido para 131.107.2.4.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Muita divergência sobre a resposta correta, mas alguns relatando YNY,
+         que também é a resposta da fonte original
+        `
+
+    },
+    
+    
+    
+    {
         'question': '143\nVocê planeja implantar várias máquinas virtuais do Azure que executarão o Windows Server 2019 em um conjunto de escala de máquina virtual usando um recurso do Azure\nModelo de gerente.\nVocê precisa garantir que o NGINX esteja disponível em todas as máquinas virtuais após sua implantação.\nO que você deve usar?\n',
         'number': '',
         'page': 438,
@@ -10097,7 +10212,7 @@ https://docs.microsoft.com/en-us/azure/backup/backup-azure-vms-first-look-arm
             'text': 'A. Integridade do Serviço Azure\n',
             'correct': false
         }, {
-            'text': 'B. Informações sobre aplicativos do Azure\n',
+            'text': 'B. Informações/insights sobre aplicativos do Azure\n',
             'correct': true
         }, {
             'text': 'C. as configurações de diagnóstico\n',
@@ -10239,7 +10354,231 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         }
         ],
         'explication': 'B\nSubstitua o existente:\nVocê pode restaurar um disco e usá-lo para substituir um disco na VM existente.\nA VM atual deve existir. Se tiver sido excluído, esta opção não poderá ser usada.\nO Backup do Azure tira um instantâneo da VM existente antes de substituir o disco e o armazena no local de preparo especificado. Discos existentes\nconectados à VM são substituídos pelo ponto de restauração selecionado.\nO instantâneo é copiado para o cofre e retido de acordo com a política de retenção.\nApós a operação de substituição do disco, o disco original é retido no grupo de recursos. Você pode optar por excluir manualmente os discos originais se eles\nnão são necessários.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms\nDistribuição de votos da comunidade\nB (53%) D (47%)'
-    }, {
+    },
+    {
+        'question': `Questão 24 Tópico 6
+            Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/gquestao24topico6.png" alt="imagem da questão"></img>
+            Você planeja criar uma regra de coleta de dados chamada DCR1 no Azure Monitor.
+            Quais recursos você pode definir como fontes de dados no DCR1 e quais recursos você pode definir como destinos no DCR1? Para responder,
+            selecione as opções apropriadas na área de resposta.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Fontes de dados:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Apenas VM1",
+                    'correct': true
+                }, {
+                    'text': "Somente VM1 e armazenamento1",
+                    'correct': false
+                }, {
+                    'text': "Somente VM1, armazenamento1 e DB1",
+                    'correct': false
+                },
+                {
+                    'text': "VM1, armazenamento1, espaço de trabalho1 e DB1",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Destinos:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "armazenamento1 apenas",
+                    'correct': false
+                }, {
+                    'text': "Somente espaço de trabalho1",
+                    'correct': true
+                }, {
+                    'text': "Somente espaço de trabalho1 e armazenamento1",
+                    'correct': false
+                },
+                {
+                    'text': "Somente espaço de trabalho1, armazenamento1 e DB11",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Caixa 1: Somente VM1 -
+            Uma máquina virtual pode ter uma associação a vários DCRs, e um DCR pode ter várias máquinas virtuais associadas a ela.
+            Na guia Recursos, adicione os recursos (máquinas virtuais, conjuntos de dimensionamento de máquinas virtuais, Arc para servidores) que devem ter a Regra de coleta de dados aplicada.
+
+            Caixa 2: Somente Workspace1 -
+            Na guia Destino, adicione um ou mais destinos para a fonte de dados. Você pode selecionar vários destinos do mesmo tipo, por exemplo, vários
+            workspaces do Log Analytics (ou seja, "multi-homing").
+            Observação: as Regras de coleta de dados (ou DCR) melhoram algumas áreas-chave da coleta de dados de VMs, incluindo melhor controle e escopo da coleta de dados (por exemplo, coleta de um subconjunto de VMs para um único workspace), coleta uma vez e envio para o Log Analytics e o Azure Monitor Metrics, envio para vários workspaces (multi-homing para Linux), filtragem de eventos do Windows aprimorada e gerenciamento de extensão aprimorado.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/azure-monitor/agents/data-collection-rule-azure-monitor-agent
+            
+`
+    },
+    {
+        'question': `Questão 25 Tópico 6
+            Você tem o arquivo de atribuição de função mostrado na exposição a seguir.
+            <img src="imagens/gquestao25topico6.png" alt="imagem da questão"></img>
+            Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no gráfico.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        `,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `[Escolha de resposta] atribuiu a função de Proprietário para VM1`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Usuário3 é",
+                    'correct': false
+                },
+                {
+                    'text': " Usuário3 e Usuário4 são",
+                    'correct': false
+                },
+                {
+                    'text': "Usuário1 e Usuário3 são ",
+                    'correct': true
+                }, {
+                    'text': "Usuário1, Usuário3 e Usuário4 ",
+                    'correct': false
+                },
+                {
+                    'text': " Usuário1, Usuário2, Usuário3 e Usuário4",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': '[Escolha de resposta] pode criar uma máquina virtual em RG1',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Usuário1 e Usuário4",
+                    'correct': true
+                }, {
+                    'text': "Usuário1, Usuário2 e Usuário3",
+                    'correct': false
+                }, {
+                    'text': "Usuário1, Usuário2 e Usuário4",
+                    'correct': false
+                },
+                {
+                    'text': " Usuário1, Usuário3 e Usuário4",
+                    'correct': false
+                },
+                {
+                    'text': " Usuário1, Usuário2, Usuário3 e Usuário4",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `A maioria concordou com a fonte
+            
+`
+    },
+
+    {
+        'question': `Questão 26 Tópico 6
+            Você tem a seguinte função de controle de acesso baseado em função (RBAC) personalizada.
+            <img src="imagens/gquestao26topico6.png" alt="imagem da questão"></img>
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+            NOTA: Cada seleção correta vale um ponto.
+            Área de acesso:
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Os usuários atribuídos à Função1 podem atribuir a Função1 aos usuários.',
+            'correct': false
+        }, {
+            'text': 'Os usuários atribuídos à Função1 podem implantar novas máquinas virtuais.',
+            'correct': true
+        }, {
+            'text': 'Os usuários atribuídos à Função1 podem definir um endereço IP estático em uma máquina virtual.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Comentário mais votado:
+            Para mim N,Y,Y. Microsoft.Compute/virtualMachines/* Executa todas as ações de máquina virtual, incluindo criar, atualizar, excluir, iniciar, 
+            reiniciar e desligar máquinas virtuais. Executa scripts em máquinas virtuais.
+        `
+
+    },
+
+    {
+        'question': `Questão 27 Tópico 6
+            Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/gquestao27topico6parte1.png" alt="imagem da questão"></img>
+            O NSG1 é configurado conforme mostrado na exposição a seguir.
+            <img src="imagens/gquestao27topico6parte2.png" alt="imagem da questão"></img>
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+            Hot Area:
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'VM1 pode acessar o armazenamento1.',
+            'correct': true
+        }, {
+            'text': 'VM2 pode acessar VM1 usando o protocolo HTTPS.',
+            'correct': true
+        }, {
+            'text': 'As regras de segurança do NSG1 aplicam-se a qualquer máquina virtual na VNET1.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Um dos comentários mais votados:
+            Estou assumindo que o NSG é aplicado à Subnet1. Y. 
+            As regras de saída têm prioridade 145 para permitir acesso ao storage1 Y.
+            As regras de entrada têm permissão padrão de Vnet para Vnet para que a VM2 possa acessar a VM1. A regra de negação 110 é para tráfego de Internet chegando. N.
+            Podemos ver que o NSG está associado a 1 sub-rede da imagem.
+        `
+
+    },
+    
+    
+    {
         'question': '28\nVocê tem uma assinatura do Azure chamada Subscription1 que contém duas redes virtuais do Azure chamadas VNet1 e VNet2. A VNet1 contém um gateway VPN\nchamado\nVPNGW1 que usa roteamento estático. Há uma conexão VPN site a site entre sua rede local e a VNet1.\nEm um computador chamado Client1 que executa o Windows 10, você configura uma conexão VPN ponto a site para a VNet1.\nVocê configura o peering de rede virtual entre a VNet1 e a VNet2. Você verifica se consegue se conectar à VNet2 a partir da rede local. O Client1\nnão consegue se conectar à VNet2.\nVocê precisa garantir que consegue conectar o Client1 à VNet2.\nO que você deve fazer?\n',
         'number': '',
         'page': 476,
@@ -10258,7 +10597,44 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (94%) 6%'
-    }, {
+    },
+
+    {
+        'question': `Questão 29 Tópico 6
+            Você tem duas assinaturas do Azure chamadas Sub1 e Sub2. Sub1 está em um grupo de gerenciamento chamado MG1. Sub2 está em um grupo de gerenciamento chamado MG2.
+            Você tem os grupos de recursos mostrados na tabela a seguir.
+            <img src="imagens/gquestao29topico6parte1.png" alt="imagem da questão"></img>
+            Você tem as máquinas virtuais mostradas na tabela a seguir.
+            <img src="imagens/gquestao29topico6parte2.png" alt="imagem da questão"></img>
+            Você atribui funções aos usuários conforme mostrado na tabela a seguir.
+            <img src="imagens/gquestao29topico6parte3.png" alt="imagem da questão"></img>
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'O usuário1 pode entrar na VM1.',
+            'correct': false
+        }, {
+            'text': 'O usuário2 pode gerenciar discos e instantâneos de disco da VM1.',
+            'correct': false
+        }, {
+            'text': 'O usuário2 pode gerenciar discos e instantâneos de disco da VM3.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `Comentário mais votado:
+            Acho que as respostas devem ser: NNN 1. O Usuário1 pode fazer login na VM1 Não O Usuário1 é atribuído como Contribuidor de Máquina Virtual no MG1. E o Contribuidor de Máquina Virtual não pode fazer login na VM como um usuário regular. 2. O Usuário2 pode gerenciar discos e snapshots de disco da VM1 Não Como o Usuário2 só tem Usuário de Máquina Virtual em Sub1, ele pode fazer login na VM1, mas não pode gerenciar discos ou snapshots 3. O Usuário2 pode gerenciar discos e snapshots de disco da VM3 Não O Contribuidor de Máquina Virtual só tem permissão para gerenciar discos, 
+            mas não snapshots de disco (permissão de Contribuidor de Snapshot de Disco)
+        `
+
+    },
+    
+    {
         'question': '30\nVocê tem um locatário do Azure Active Directory (Azure AD) vinculado a 10 assinaturas do Azure.\nVocê precisa monitorar centralmente a atividade do usuário em todas as assinaturas.\nO que você deve usar?\n',
         'number': '',
         'page': 478,
@@ -10570,9 +10946,10 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (90%) 10%'
     },
+    
 
     {
-        'question': `Questão 51. Tópico 6
+        'question': `Questão 41. Tópico 6
 
             HOTSPOT
 
