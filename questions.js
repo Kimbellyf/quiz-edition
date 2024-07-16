@@ -7341,7 +7341,82 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nUm (100%)'
-    }, {
+    },
+    {
+        'question': `Questão 87 Tópico 4
+            Você tem um aplicativo Web do Azure App Service chamado app1.
+            Você configura o dimensionamento automático conforme mostrado na exposição a seguir.
+            <img src="imagens/tquestao87topico4parte1.png" alt="imagem da questão"></img>
+            Você configura os critérios da regra de dimensionamento automático conforme mostrado na exposição a seguir.
+            <img src="imagens/tquestao87topico4parte2.png" alt="imagem da questão"></img>
+            Use os menus suspensos para selecionar a opção de resposta que responde a cada pergunta com base nas informações apresentadas no gráfico.
+        `,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [
+            {
+            'text': `Depois que o uso da CPU atingir 80% por 15 minutos, [opção de resposta] estará em execução`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "1 instância",
+                    'correct': false
+                }, {
+                    'text': "2 instância",
+                    'correct': true
+                }, {
+                    'text': "3 instância",
+                    'correct': false
+                },
+                {
+                    'text': "4 instância",
+                    'correct': false
+                },
+                {
+                    'text': "5 instância",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Depois que a primeira instância de expansão for criada, o tempo mínimo antes da criação de uma instância adicional será [opção de resposta].',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "1 minuto",
+                    'correct': false
+                }, {
+                    'text': "5 minutos",
+                    'correct': false
+                }, {
+                    'text': "10 minutos",
+                    'correct': false
+                },
+                {
+                    'text': "15 minutos",
+                    'correct': true
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `A fonte e a maioria votou 2 e 15 mas há algumas dúvidas se na verdade seria 3 instâncias ou 5 minutos
+            
+        `
+    },
+    
+    {
         'question': `Questão 88 Tópico 4 
             \nVocê tem uma assinatura do Azure.\nVocê planeja implantar as instâncias de contêiner do Azure mostradas na tabela a seguir.
             <img src="imagens/squestao88topico4.png" alt="imagem da questão"></img>
@@ -7406,7 +7481,79 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nB (91%) 7%'
-    }, {
+    },
+
+    {
+        'question': `Questão 92 Tópico 4
+        Você precisa configurar um novo aplicativo do Azure App Service chamado WebApp1. A solução deve atender aos seguintes requisitos:
+
+        • O WebApp1 deve ser capaz de verificar um nome de domínio personalizado de app.contoso.com.
+        • O WebApp1 deve ser capaz de escalar automaticamente até oito instâncias.
+        • Os custos e o esforço administrativo devem ser minimizados.
+
+        Qual plano de preços você deve escolher e qual tipo de registro você deve usar para verificar o domínio? Para responder, selecione as opções apropriadas na área de resposta.
+        `,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Plano de preços:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Básico",
+                    'correct': false
+                }, {
+                    'text': "Grátis",
+                    'correct': false
+                }, {
+                    'text': "Compartilhado",
+                    'correct': false
+                },
+                {
+                    'text': "Padrão",
+                    'correct': true
+                }
+            ]
+        },
+
+        {
+            'text': 'Tipo de registro:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "A",
+                    'correct': false
+                }, {
+                    'text': "AAAA",
+                    'correct': false
+                }, {
+                    'text': "PTR",
+                    'correct': false
+                },
+                {
+                    'text': "TXT",
+                    'correct': true
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Com: Para verificar um domínio, o Azure usa registros TXT e MX.
+            
+`
+    },
+    
+    {
         'question': `Questão 94 Tópico 4 \nVocê planeja criar os aplicativos Web do Azure mostrados na tabela a seguir.
             <img src="imagens/squestao94topico4.png" alt="imagem da questão"></img>
             \nQual é o número mínimo de planos de Serviço de Aplicativo que você deve criar para os aplicativos Web?\n`,
@@ -7428,7 +7575,13 @@ const questionsAll = [
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (95%) 5%'
     }, {
-        'question': '96\nVocê tem um aplicativo do Serviço de Aplicativo do Azure chamado App1 que contém duas instâncias em execução.\nVocê tem uma regra de escalonamento automático configurada conforme mostrado na exposição a seguir.\nPara a configuração de condição de escala de limites de instância, defina Máximo como 5.\nDurante um período de 30 minutos, o App1 usa 80% da memória disponível.\nQual é o número máximo de instâncias do App1 durante o período de 30 minutos?\n',
+        'question': `Questão 96 Tópico 4
+            \nVocê tem um aplicativo do Serviço de Aplicativo do Azure chamado App1 que contém duas instâncias em execução.
+            \nVocê tem uma regra de escalonamento automático configurada conforme mostrado na exposição a seguir.
+            <img src="imagens/tquestao96topico4.png" alt="imagem da questão"></img>
+            \nPara a configuração de condição de escala de limites de instância, defina Máximo como 5.
+            \nDurante um período de 30 minutos, o App1 usa 80% da memória disponível.
+            \nQual é o número máximo de instâncias do App1 durante o período de 30 minutos?\n`,
         'number': '',
         'page': 293,
         'answers': [{
@@ -9755,7 +9908,8 @@ const questionsAll = [
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nB (100%)\nTópico 5'
     }, {
-        'question': '146\nVocê tem uma assinatura do Azure.\nVocê planeja migrar 50 máquinas virtuais do VMware vSphere para a assinatura.\nVocê cria um cofre dos Serviços de Recuperação.\nO que você deve fazer a seguir?\n',
+        'question': `146\nVocê tem uma assinatura do Azure.\nVocê planeja migrar 50 máquinas virtuais do VMware vSphere para a assinatura.\nVocê cria um cofre dos Serviços de Recuperação.
+            \nO que você deve fazer a seguir?\n`,
         'number': '',
         'page': 440,
         'answers': [{

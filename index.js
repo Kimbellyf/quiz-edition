@@ -29,6 +29,12 @@ let intervaloQuestaoFim = 0
 
 let currentQuestionIndex = 0
 let totalCorrect = 0
+let pontosRadioSimOuNao = 0;
+let isQuestionRadioSimOuNaoNoMomento = false;
+
+let pontosPorSelectCerto = 0;
+let pontosdosSelectCerto =  0;
+let ehQuestaoSelectNoMomento = false;
 
 
 let questions = []
@@ -117,8 +123,21 @@ function getIntervaloQuestoes() {
   intervaloQuestaoInicio = parseInt(document.getElementById('intervaloinicio').value)
   intervaloQuestaoFim = parseInt(document.getElementById('intervalofim').value)
 }
+/* 
+function verifyRadioYesOrNo(){
+  if(){
+
+  }
+}
+  */
 
 function displayNextQuestion() {
+  if(isQuestionRadioSimOuNaoNoMomento){
+    totalCorrect += pontosRadioSimOuNao<0? 0: pontosRadioSimOuNao;
+  }
+  if(ehQuestaoSelectNoMomento){
+    totalCorrect += pontosdosSelectCerto<0? 0 : pontosPorSelectCerto;
+  }
   resetState()
 
   if (questions.length === currentQuestionIndex) {
@@ -141,7 +160,7 @@ function questoesSelectOuDragDrop(questao) {
   if (questao.typeQuestion === "dragdrop") {
     addQuestionDragDrop(questao)
   } else if (questao.typeQuestion === "multiplecheckboxyesorno") {
-    addMultipleCheckbox(questao)
+    addMultipleRadioButtonSimOuNao(questao)
   } else {
     addQuestionSelect(questao)
   }
@@ -162,6 +181,10 @@ function questoesSimENao(questao) {
   $buttonVerResp.classList.remove("hide")
 }
 function addQuestionSelect(questao) {
+  let qtdSelects = questao.answers.length;
+  pontosPorSelectCerto = 1/qtdSelects;
+  ehQuestaoSelectNoMomento = true;
+
   questao.answers.forEach(answeroptions => {
     const textAnswer = document.createElement("p")
     textAnswer.textContent = answeroptions.text;
@@ -237,55 +260,55 @@ function addQuestionDragDrop(questao) {
 
 }
 
-function addMultipleCheckbox(questao) {
-  let newAsnwerCheckBoxHtml = `<div class="grid-container-yes-or-no">
+function addMultipleRadioButtonSimOuNao(questao) {
+  let newAsnwerRadioButtonSimOuNaoHtml = `<div class="grid-container-yes-or-no">
     <div class="grid-item-yes-or-no">
       </div>
       <div class="grid-item-yes-or-no">Sim</div>
       <div class="grid-item-yes-or-no">Não</div>
   `;
-  let asnwerCheckBoxRightHtml = `<div class="grid-container-yes-or-no" disabled>
+  let asnwerRadioButtonSimOuNaoRightHtml = `<div class="grid-container-yes-or-no" disabled>
       <div class="grid-item-yes-or-no">
       </div>
       <div class="grid-item-yes-or-no">Sim</div>
       <div class="grid-item-yes-or-no">Não</div> 
   `;
+  let optionNumber = 1;
   questao.answers.forEach(answer => {
-    let optionNumber = 1;
-    newAsnwerCheckBoxHtml += `<div class="grid-item-yes-or-no">` + answer.text + `</div>`;
-    asnwerCheckBoxRightHtml += `<div class="grid-item-yes-or-no" disabled>` + answer.text + `</div>`;
+    newAsnwerRadioButtonSimOuNaoHtml += `<div class="grid-item-yes-or-no">` + answer.text + `</div>`;
+    asnwerRadioButtonSimOuNaoRightHtml += `<div class="grid-item-yes-or-no" disabled>` + answer.text + `</div>`;
 
-    if (answer.correct) {
+    if (answer.correct) { //option yes
       //newAsnwer.dataset.correct = answer.correct
-      newAsnwerCheckBoxHtml += `<div class="grid-item-yes-or-no">
-        <input type="radio" id="check` + optionNumber + `" value=true>
+      newAsnwerRadioButtonSimOuNaoHtml += `<div class="grid-item-yes-or-no">
+        <input type="radio" id="checkcorrect` + optionNumber + `" value=true>
        </div>
       `
-      asnwerCheckBoxRightHtml += `<div class="grid-item-yes-or-no">
-          <input type="radio" id="check` + optionNumber + `" value=true checked >
+      asnwerRadioButtonSimOuNaoRightHtml += `<div class="grid-item-yes-or-no">
+          <input type="radio" id="checkAnswerRightT` + optionNumber + `" value=true checked >
         </div>`
-      newAsnwerCheckBoxHtml += `<div class="grid-item-yes-or-no">
-        <input type="radio" id="checkf` + optionNumber + `" value=false>
+      newAsnwerRadioButtonSimOuNaoHtml += `<div class="grid-item-yes-or-no">
+        <input type="radio" id="check` + optionNumber + `" value=false>
        </div>
       `
-      asnwerCheckBoxRightHtml += `<div class="grid-item-yes-or-no">
-        <input type="radio"` + optionNumber + `" value=false>
+      asnwerRadioButtonSimOuNaoRightHtml += `<div class="grid-item-yes-or-no">
+        <input type="radio" id="checkAnswerRightF` + optionNumber + `" value=false>
       </div>`
 
-    } else {
-      newAsnwerCheckBoxHtml += `<div class="grid-item-yes-or-no">
+    } else { //option nao
+      newAsnwerRadioButtonSimOuNaoHtml += `<div class="grid-item-yes-or-no">
         <input type="radio" id="check` + optionNumber + `" value=true >
         </div>
       `
-      asnwerCheckBoxRightHtml += `<div class="grid-item-yes-or-no">
-      <input type="radio" id="check` + optionNumber + `" value=true >
+      asnwerRadioButtonSimOuNaoRightHtml += `<div class="grid-item-yes-or-no">
+      <input type="radio" id="checkAnswerRightT` + optionNumber + `" value=true >
       </div>`
-      newAsnwerCheckBoxHtml += ` <div class="grid-item-yes-or-no">
-        <input type="radio" id="checkf` + optionNumber + `" value=false>
+      newAsnwerRadioButtonSimOuNaoHtml += ` <div class="grid-item-yes-or-no">
+        <input type="radio" id="checkcorrect` + optionNumber + `" value=false>
         </div>
       `
-      asnwerCheckBoxRightHtml += ` <div class="grid-item-yes-or-no">
-      <input type="radio"` + optionNumber + `" value=false checked>
+      asnwerRadioButtonSimOuNaoRightHtml += ` <div class="grid-item-yes-or-no">
+      <input type="radio" id="checkAnswerRightF` + optionNumber + `" value=false checked>
       </div>`
     }
     //$answersContainer.appendChild(newAsnwer)
@@ -293,20 +316,80 @@ function addMultipleCheckbox(questao) {
     //newAsnwer.addEventListener("click", selectAnswer)
     optionNumber++;
   })
-  newAsnwerCheckBoxHtml += `</div>`;
-  asnwerCheckBoxRightHtml += `</div>`;
+  newAsnwerRadioButtonSimOuNaoHtml += `</div>`;
+  asnwerRadioButtonSimOuNaoRightHtml += `</div>`;
 
-  $answersContainer.insertAdjacentHTML('beforeend', newAsnwerCheckBoxHtml);
-  $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', asnwerCheckBoxRightHtml);
+  $answersContainer.insertAdjacentHTML('beforeend', newAsnwerRadioButtonSimOuNaoHtml);
+  $imgOuTabelaAnswer.insertAdjacentHTML('beforeend', asnwerRadioButtonSimOuNaoRightHtml);
   $textAnswerOrigin.textContent = questao.explication
 
   $buttonVerResp.classList.remove("hide")
   //trat abaixo pq n chama o selectanswer
   $nextQuestionButton.classList.remove("hide")
+
+  addEventListenerRadiosButtonsSimOuNao();
+
   /*
   currentQuestionIndex++
   */
 
+
+}
+function addEventListenerRadiosButtonsSimOuNao(){
+  pontosRadioSimOuNao = 0;
+  isQuestionRadioSimOuNaoNoMomento = true;
+  const checkboxcorrect1 = document.getElementById("checkcorrect1");
+  const checkboxcorrect2 = document.getElementById("checkcorrect2");
+  const checkboxcorrect3 = document.getElementById("checkcorrect3");
+
+  const checkboxincorrect1 = document.getElementById("check1");
+  const checkboxincorrect2 = document.getElementById("check2");
+  const checkboxincorrect3 = document.getElementById("check3");
+
+  checkboxcorrect1.addEventListener("click", function() {
+      if (checkboxcorrect1.checked) {
+        checkboxincorrect1.checked = false;
+        console.log(checkboxcorrect1.value);
+        pontosRadioSimOuNao += 0.33
+      }
+    });
+  checkboxcorrect2.addEventListener("click", function() {
+    if (checkboxcorrect2.checked) {
+      checkboxincorrect2.checked = false;
+      pontosRadioSimOuNao += 0.33
+      console.log(checkboxcorrect2.value);
+    }
+  });
+  checkboxcorrect3.addEventListener("click", function() {
+    if (checkboxcorrect3.checked) {
+      checkboxincorrect3.checked = false;
+      pontosRadioSimOuNao += 0.33
+      console.log(checkboxcorrect3.value);
+    }
+  });
+
+checkboxincorrect1.addEventListener("click", function() {
+  if (checkboxincorrect1.checked) {
+    checkboxcorrect1.checked = false;
+    pontosRadioSimOuNao -= 0.33
+
+    console.log(checkboxincorrect1.value);
+  }
+});
+checkboxincorrect2.addEventListener("click", function() {
+  if (checkboxincorrect2.checked) {
+    checkboxcorrect2.checked = false;
+    pontosRadioSimOuNao -= 0.33
+    console.log(checkboxincorrect2.value);
+  }
+});
+checkboxincorrect3.addEventListener("click", function() {
+  if (checkboxincorrect3.checked) {
+    checkboxcorrect3.checked = false;
+    pontosRadioSimOuNao -= 0.33
+    console.log(checkboxincorrect3.value);
+  }
+});
 
 }
 function showAnswer() {
@@ -315,6 +398,8 @@ function showAnswer() {
 }
 
 function resetState() {
+  isQuestionRadioSimOuNaoNoMomento = false;
+  ehQuestaoSelectNoMomento = false;
   while ($answersContainer.firstChild) {
     $answersContainer.removeChild($answersContainer.firstChild)
   }
@@ -348,15 +433,13 @@ function selectAnswer(event) {
 
   if (answerClicked.tagName === "SELECT") {
     if (answerClicked.options[answerClicked.selectedIndex].dataset.correct) {
+      pontosdosSelectCerto += pontosPorSelectCerto;
       answerClicked.classList.add("correct")
     }
-  }
-
-  if (answerClicked.dataset.correct) {
-    document.body.classList.add("correct")
-    totalCorrect++
-  } else {
-    document.body.classList.add("incorrect")
+    else{
+      pontosdosSelectCerto -= pontosPorSelectCerto; //aj esse caso
+      answerClicked.classList.remove("correct")
+    }
   }
 
   document.querySelectorAll(".answer").forEach(button => {
@@ -375,6 +458,7 @@ function selectAnswer(event) {
   */
 }
 function nextQuestion() {
+  console.log("next")
   currentQuestionIndex++
 }
 
