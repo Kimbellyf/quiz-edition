@@ -2044,7 +2044,7 @@ const questionsAll = [
 
 
     {
-        'question': `Questão 45 tópico 2. 
+        'question': `Questão 44 tópico 2. 
             HOTSPOT –
             você tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1. A assinatura está vinculada a um locatário do Azure Active Directory (Azure AD) chamado contoso.com que sincroniza com um domínio do Active Directory local.
             O domínio contém as entidades de segurança mostradas na tabela a seguir.
@@ -4579,6 +4579,145 @@ const questionsAll = [
             cada ponto de extremidade estiver sincronizando com um grupo de sincronização exclusivo. Referência: https://docs.microsoft.com/en-us/answers/questions/110822/azure-file-sync-multiple-sync-directories-for-same.html https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide
 	`
     },
+    {
+        'question': `Questãon 10 Tópico 3
+        ARRASTAR E SOLTAR -
+        Você tem uma assinatura do Azure chamada Subscription1.
+        Você cria uma conta do Azure Storage chamada contosostorage e, em seguida, cria um compartilhamento de arquivos chamado data.
+        Qual caminho UNC você deve incluir em um script que faz referência a arquivos do compartilhamento de arquivos data? Para responder, arraste os valores apropriados para os destinos corretos. Cada valor pode ser usado uma vez, mais de uma vez ou nunca. Pode ser necessário arrastar a barra de divisão entre os painéis ou rolar para visualizar o conteúdo.
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+
+`,
+        'number': '31',
+        'page': 11,
+        'answers': [
+
+            [
+                {
+                    'text': '',
+                    'options': [
+                        { 'text': 'blob', 'correct': false, 'index': '-1' },
+                        { 'text': 'contosostorage', 'correct': true, 'index': '1' },
+                        { 'text': 'file', 'correct': false, 'index': '-1' },
+                        { 'text': 'portal.azure.com', 'correct': false, 'index': '-1' },
+                        { 'text': 'blob.core.windows.net', 'correct': false, 'index': '-1' },
+                        { 'text': 'data', 'correct': true, 'index': '3' },
+                        { 'text': 'file.core.windows.net', 'correct': true, 'index': '2' },
+                        { 'text': 'subscription1', 'correct': false, 'index': '-1' },
+
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': '',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `Fonte com essa resposta e os comentários concordam.
+            Caixa 1: contosostorage -
+
+            O nome da conta -
+
+            Caixa 2: file.core.windows.net -
+
+            Caixa 3: data -
+            O nome do compartilhamento de arquivo é data.
+            Exemplo:
+
+            Referência:
+            https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows
+        `,
+        'typeQuestion': 'dragdrop'
+    },
+
+    {
+        'question': `Questão 11 Tópico 3
+            Você tem uma assinatura do Azure que contém uma conta do Azure Storage.
+            Você planeja copiar uma imagem de máquina virtual local para um contêiner chamado vmimages.
+            Você precisa criar o contêiner para a imagem planejada.
+            Qual comando você deve executar? Para responder, selecione as opções apropriadas na área de resposta.
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `azcopy`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "make",
+                    'correct': true
+                }, {
+                    'text': "sync",
+                    'correct': false
+                }, {
+                    'text': "copy",
+                    'correct': false
+                },
+            ]
+        },
+
+        {
+            'text': 'https//mystorageaccount.',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "blob",
+                    'correct': true
+                }, {
+                    'text': "dfs",
+                    'correct': false
+                }, {
+                    'text': "queue",
+                    'correct': false
+                },
+                {
+                    'text': "table",
+                    'correct': false
+                },
+                {
+                    'text': "images",
+                    'correct': false
+                },
+                {
+                    'text': "file",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': '.core.windows.net/vmimages',
+            'options': [
+                {
+                    text: '',
+                    correct: true
+                },
+               
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `A origem e o comentário mais votado concordam, explicação dos comentários:
+         correta: azcopy make 'https://mystorageaccount.blob.core.windows.net/vmimages' Semelhante às imagens do sistema operacional, uma imagem de VM é uma coleção de metadados e ponteiros para um conjunto de VHDs (um VHD por disco) armazenados como blobs de página no Azure Storage. Referência: https://docs.microsoft.com/en-us/azure/storage/common/storage-ref-azcopy-make
+        `
+    },
 
     {
         'question': `Questão 12 Tópico 3
@@ -4983,7 +5122,93 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nNão é possível excluir um cofre dos Serviços de Recuperação se ele estiver registrado em um servidor e contiver dados de backup. Se você tentar excluir um cofre, mas não conseguir, o cofre será\nainda configurado para receber dados de backup.\nRemover dependências do vault e excluir o vault\nNo menu do painel do vault, role para baixo até a seção Itens Protegidos e clique em Itens de Backup. Neste menu, você pode parar e excluir o Azure\nServidores de arquivos, SQL\nServidores em VM do Azure e máquinas virtuais do Azure.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/backup/backup-azure-delete-vault\nDistribuição de votos da comunidade\nD (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 21 Tópico 3 
+        Você tem uma assinatura do Azure chamada Subscription1 que contém os recursos mostrados na tabela a seguir.
+
+        No storage1, você cria um contêiner de blob chamado blob1 e um compartilhamento de arquivo chamado share1.
+        Quais recursos podem ser copiados para o Vault1 e o Vault2? Para responder, selecione as opções apropriadas na área de resposta.
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Pode usar o Vault1 para backups:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Apenas VM1",
+                    'correct': true
+                }, {
+                    'text': "Somente VM1 e share1",
+                    'correct': false
+                }, {
+                    'text': "Somente VM1 e SQL1",
+                    'correct': false
+                },
+                {
+                    'text': "Somente VM1, storage1 e SQL1",
+                    'correct': false
+                },
+                {
+                    'text': "VM1, blob1, share1 e SQL1",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Pode usar o Vault2 para backups:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "storage1 apenas",
+                    'correct': false
+                }, {
+                    'text': "share1 apenas ",
+                    'correct': true
+                }, {
+                    'text': "Somente VM1 e share1",
+                    'correct': false
+                },
+                {
+                    'text': "somente blob1 e share1",
+                    'correct': false
+                },
+                {
+                    'text': "somente storage1 e SQL1",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Comentários discordam da fonta na segunda resposta. Fonte colocou storage1
+        enquanto nos comentários a maioria votou no share1. Comentário mais votado:
+        Resposta correta: Caixa 1: Somente VM1 
+        VM1 está na mesma região que Vault1. 
+        File1 não está na mesma região que Vautl1. SQL não está na mesma região que Vault1. Blobs não podem ser copiados para cofres de serviço.
+        Observação: para criar um Vault para proteger VMs, o Vault deve estar na mesma região que as VMs. Caixa 2: Somente Share1 Storage1 está na mesma região que Vault2. Share1 está em Storage1.
+        Observação: somente VM e Fileshare têm permissão para fazer backup.
+        Referência: https://docs.microsoft.com/bs-cyrl-ba/azure/backup/backup-create-rs-vault https://docs.microsoft.com/en-us/azure/backup/backup-afs https://feedback.azure.com/forums/217298-storage/suggestions/37096837-possibility-to-backup-blob-data-in-the-recovery-se
+            
+`
+    },
+    
+    
+    {
         'question': '22\nVocê tem uma assinatura do Azure chamada Subscription1.\nVocê tem 5 TB de dados que precisa transferir para a Assinatura1.\nVocê planeja usar um trabalho de importação/exportação do Azure.\nO que você pode usar como destino dos dados importados?\n',
         'number': '',
         'page': 137,
@@ -5002,7 +5227,93 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nO serviço de Importação/Exportação do Azure é usado para importar com segurança grandes quantidades de dados para o armazenamento de Blobs do Azure e Arquivos do Azure, enviando unidades de disco para\num datacenter do Azure.\nO tamanho máximo de um recurso de arquivos do Azure de um compartilhamento é de 5 TB.\nObservação:\nExistem várias versões desta questão no exame. A pergunta tem duas respostas corretas:\n1. Armazenamento de arquivos do Azure\n2. Armazenamento de Blobs do Azure\nA pergunta pode ter outras opções de resposta incorretas, incluindo as seguintes:\n✑ Armazenamento do Azure Data Lake\n✑ Banco de Dados SQL do Azure\n✑ Azure Data Factory\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-import-export-service\nDistribuição de votos da comunidade\nC (95%) 5%'
-    }, {
+    },
+
+    {
+        'question': `Questão 23 Tópico 3
+        Você tem uma assinatura do Azure.
+        Você cria a conta do Azure Storage mostrada na exposição a seguir.
+        <img src="imagens/pquestao23topico3.png" alt="imagem da questão"></img>
+        Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no gráfico.
+
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `O número mínimo de cópias da conta de armazenamento será [opção de resposta]`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "1",
+                    'correct': false
+                }, {
+                    'text': "2",
+                    'correct': false
+                }, {
+                    'text': "3",
+                    'correct': true
+                },
+                {
+                    'text': "4",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Para reduzir o custo de dados acessados ​​com pouca frequência na conta de armazenamento, você deve modificar a configuração [opção de resposta]',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Camada de acesso (padrão)",
+                    'correct': true
+                }, {
+                    'text': "Desempenho",
+                    'correct': false
+                }, {
+                    'text': "Tipo de conta",
+                    'correct': false
+                },
+                {
+                    'text': "Replicação",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            Os comentários concordam:
+            Caixa 1: 3 -
+            O Armazenamento redundante local (LRS) fornece armazenamento altamente durável e disponível em um único local (sub-região). Mantemos um equivalente a 3 cópias
+            (réplicas) dos seus dados no local principal, conforme descrito em nosso artigo SOSP; isso garante que podemos nos recuperar de falhas comuns (disco, nó, rack) sem afetar a disponibilidade e a durabilidade da sua conta de armazenamento.
+
+            Caixa 2: Camada de acesso -
+            Altere a camada de acesso de Quente para Frio.
+            Observação: o armazenamento do Azure oferece diferentes camadas de acesso, que permitem que você armazene dados de objetos blob da maneira mais econômica. As camadas de acesso disponíveis incluem:
+            Quente - Otimizado para armazenar dados acessados ​​com frequência.
+            Frio - Otimizado para armazenar dados acessados ​​com pouca frequência e armazenados por pelo menos 30 dias.
+            Arquivo - Otimizado para armazenar dados acessados ​​raramente e armazenados por pelo menos 180 dias com requisitos de latência flexíveis (na ordem de horas).
+            Referência:
+            https://azure.microsoft.com/en-us/blog/data-series-introducing-locally-redundant-storage-for-windows-azure-storage/ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers
+`
+    },
+
+
+    
+    
+    
+    {
         'question': '24\nVocê tem uma conta de Armazenamento do Azure chamada storage1.\nVocê planeja usar o AzCopy para copiar dados para o armazenamento1.\nVocê precisa identificar os serviços de armazenamento no storage1 para os quais você pode copiar os dados.\nQuais serviços de armazenamento você deve identificar?\n',
         'number': '',
         'page': 139,
@@ -5024,7 +5335,91 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nAzCopy é um utilitário de linha de comando que você pode usar para copiar blobs ou arquivos de ou para uma conta de armazenamento.\nRespostas incorretas:\nA, C, E: AzCopy não oferece suporte a serviços de armazenamento de tabelas e filas.\nD: AzCopy oferece suporte a serviços de armazenamento de arquivos, bem como serviços de armazenamento de blob.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 25 Tópico 3
+            Você tem uma conta do Azure Storage chamada storage1 que usa o Azure Blob storage e o Azure File storage.
+            Você precisa usar o AzCopy para copiar dados para o blob storage e o file storage no storage1.
+            Qual método de autenticação você deve usar para cada tipo de armazenamento? Para responder, selecione as opções apropriadas na área de resposta.
+        `,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Blob storage`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente Azure Active Directory (Azure AD)",
+                    'correct': false
+                }, {
+                    'text': "Somente assinaturas de acesso compartilhado (SAS)",
+                    'correct': false
+                }, {
+                    'text': "Somente chaves de acesso e assinaturas de acesso compartilhado (SAS)",
+                    'correct': false
+                },
+                {
+                    'text': "Somente Azure Active Directory (Azure AD) e assinaturas de acesso compartilhado (SAS)",
+                    'correct': true
+                },
+                {
+                    'text': "Azure Active Directory (Azure AD), chaves de acesso e assinaturas de acesso compartilhado (SAS)",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Armazenamento de arquivos:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente Azure Active Directory (Azure AD)",
+                    'correct': false
+                }, {
+                    'text': "Somente assinaturas de acesso compartilhado (SAS)",
+                    'correct': true
+                }, {
+                    'text': "Somente chaves de acesso e assinaturas de acesso compartilhado (SAS)",
+                    'correct': false
+                },
+                {
+                    'text': "Somente Azure Active Directory (Azure AD) e assinaturas de acesso compartilhado (SAS)",
+                    'correct': false
+                },
+                {
+                    'text': "Azure Active Directory (Azure AD), chaves de acesso e assinaturas de acesso compartilhado (SAS)",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            Você pode fornecer credenciais de autorização usando o Azure Active Directory (AD) ou usando um token Shared Access Signature (SAS).
+            Caixa 1:
+            O Azure Active Directory (AD) e o token Shared Access Signature (SAS) são suportados para armazenamento de Blobs.
+            Caixa 2:
+            Somente o token Shared Access Signature (SAS) é suportado para armazenamento de arquivos.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10
+            
+`
+    },
+
+    
+    {
         'question': '26\nVocê tem uma assinatura do Azure que contém uma conta do Armazenamento do Azure.\nVocê planeja criar uma instância de contêiner do Azure chamada container1 que usará uma imagem do Docker chamada Image1. Image1 contém um Microsoft SQL\nInstância de servidor que requer armazenamento persistente.\nVocê precisa configurar um serviço de armazenamento para Container1.\nO que você deve usar?\n',
         'number': '',
         'page': 141,
@@ -5084,6 +5479,64 @@ const questionsAll = [
     },
 
     {
+        'question': `Questão 29 Tópico 3
+        ARRASTAR E SOLTAR -
+        Você tem uma assinatura do Azure que contém um compartilhamento de arquivos do Azure.
+        Você tem um servidor local chamado Server1 que executa o Windows Server 2016.
+        Você planeja configurar o Azure File Sync entre o Server1 e o compartilhamento de arquivos do Azure.
+        Você precisa preparar a assinatura para o Azure File Sync planejado.
+        Quais duas ações você deve executar na assinatura do Azure? Para responder, arraste as ações apropriadas para os destinos corretos. Cada ação pode ser usada uma vez, mais de uma vez ou nem uma vez. Pode ser necessário arrastar a barra de divisão entre os painéis ou rolar para visualizar o conteúdo.
+`,
+        'number': '31',
+        'page': 11,
+        'answers': [
+
+            [
+                {
+                    'text': 'Primeira e segunda ação respectivamente',
+                    'options': [
+                        { 'text': 'Crie um serviço de sincronização/Sync de armazenamento', 'correct': true, 'index': '1' },
+                        { 'text': 'Instale o agente Azure File Sync', 'correct': true, 'index': '2' },
+                        { 'text': 'Crie um grupo de sincronização', 'correct': false, 'index': '-1' },
+                        { 'text': 'Execute o registro do servidor', 'correct': false, 'index': '-1' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': '',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `Muitos discordaram da fonte na segunda questão mas com base na grande dúvida...
+            Fonte:
+            Primeira ação: Criar um Serviço de Sincronização de Armazenamento
+            A implantação do Azure File Sync começa com a colocação de um recurso do Serviço de Sincronização de Armazenamento em um grupo de recursos da sua assinatura selecionada.
+            Segunda ação: Instalar o agente do Azure File Sync
+            O agente do Azure File Sync é um pacote para download que permite que o Windows Server seja sincronizado com um compartilhamento de arquivos do Azure.
+            Referência:
+            https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide
+                    
+             Um dos comentários mais votados:
+            Resposta correta: Primeira ação: Criar um Storage Sync Service A implantação do Azure File Sync 
+            começa com a colocação de um recurso do Storage Sync Service em um grupo de recursos da sua assinatura selecionada. 
+            
+            Segunda ação: Instalar o agente do Azure File Sync O agente do Azure File Sync é um pacote para download que permite que o Windows Server seja sincronizado com um compartilhamento de arquivos do Azure.
+            1. Prepare o Windows Server para usar com o Azure File Sync
+            2. Implante o Storage Sync Service
+            3. Instale o agente do Azure File Sync 
+            4. Registre o Windows Server com o Storage Sync Service
+            5. Crie um grupo de sincronização e um ponto de extremidade de nuvem 6. Crie um ponto de extremidade de servidor 7. Configure as configurações de firewall e rede virtual Referência: https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide https://docs.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal%2Cproactive-portal#deploy-the-storage-sync-service
+             `,
+        'typeQuestion': 'dragdrop'
+    },
+
+    {
         'question': `Questão 30 Tópico 3
             Você tem uma assinatura do Azure que contém os compartilhamentos de arquivos mostrados na tabela a seguir.
             <img src="imagens/rquestao30topico3parte1.png" alt="imagem da questão"></img>
@@ -5127,7 +5580,233 @@ const questionsAll = [
         `
 
     },
+
+    {
+        'question': `Questão 31 Tópico 3
+        Você tem uma assinatura do Azure chamada Subscription1 que contém os recursos mostrados na tabela a seguir:
+        <img src="imagens/pquestao31topico3.png" alt="imagem da questão"></img>
+        Você planeja configurar relatórios do Azure Backup para o Vault1.
+        Você está configurando as configurações de Diagnóstico para o log AzureBackupReports.
+        Quais contas de armazenamento e quais espaços de trabalho do Log Analytics você pode usar para os relatórios do Azure Backup do Vault1? 
+        Para responder, selecione as opções apropriadas na área de resposta.
+        `,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Contas de armazenamento/storage accounts:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "storage1 apenas",
+                    'correct': false
+                }, {
+                    'text': "somente storage2",
+                    'correct': false
+                }, {
+                    'text': "storage3 apenas",
+                    'correct': true
+                },
+                {
+                    'text': "storage1, storage2 e storage3",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Espaços de trabalho do Log Analytics:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Apenas Analytics1",
+                    'correct': false
+                }, {
+                    'text': "Somente Analytics2",
+                    'correct': false
+                }, {
+                    'text': "Apenas Analytics3",
+                    'correct': false
+                },
+                {
+                    'text': "Analytics1, Analytics2 e Analytics3",
+                    'correct': true
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Comentários mais votados discordam da fonte. 
+        Resposta correta: 
+        Contas de armazenamento: somente Storage 3 A conta de armazenamento deve estar na mesma região que o Recovery Services Vault.
+        Espaços de trabalho do Log Analytics: Analytics1, Analytics2 e Analytics3 Configure um ou mais espaços de trabalho do Log Analytics para armazenar seus dados de relatórios de backup.
+        O local e a assinatura onde este espaço de trabalho do Log Analytics pode ser criado são independentes do local e da assinatura onde seus Vaults existem.
+        Referência: https://docs.microsoft.com/en-us/azure/backup/configure-reports#1-create-a-log-analytics-workspace-or-use-an-existing-one 
+`
+    },
+
+    {
+        'question': `Questão 32 Tópico 3
+        Você tem uma assinatura do Azure que contém as contas de armazenamento mostradas na exposição a seguir.
+        <img src="imagens/pquestao32topico3.png" alt="imagem da questão"></img>
+        Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no gráfico.
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Você pode criar um compartilhamento de arquivos premium em`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "apenas contoso101",
+                    'correct': false
+                }, {
+                    'text': "apenas contoso104",
+                    'correct': true
+                }, {
+                    'text': "contoso101 ou contoso104 somente",
+                    'correct': false
+                },
+                {
+                    'text': "contoso101, contoso102 ou contoso104 somente",
+                    'correct': false
+                },
+                {
+                    'text': "contoso101, contoso102, contoso103 ou contoso104",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Você pode usar o nível de acesso Archive em',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "apenas contoso101",
+                    'correct': false
+                }, {
+                    'text': "contoso101 ou contoso103 somente",
+                    'correct': true
+                }, {
+                    'text': "somente contoso101, contoso102 e contoso103",
+                    'correct': false
+                },
+                {
+                    'text': "somente contoso101, contoso102 e contoso104",
+                    'correct': false
+                },
+                {
+                    'text': "contoso101, contoso102, contoso103 e contoso104",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Comentário mais votado não concorda com a fonte na segunda seleção.
+        Comentário:
+        Resposta correta: Caixa 1: contoso104 somente
+        Os compartilhamentos de arquivos Premium são hospedados em um tipo de conta de armazenamento de propósito especial, chamada de conta FileStorage.
+        Caixa 2: contoso101 e contos103 somente A divisão de dados de armazenamento de objetos entre quente, frio e arquivado é suportada em contas Blob Storage e General Purpose v2 (GPv2).
+        As contas General Purpose v1 (GPv1) não suportam divisão em camadas. A camada de arquivamento suporta apenas LRS, GRS e RA-GRS.
+        Referência: https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-create-premium-fileshare?tabs=azure-portal https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers
+            
+`
+    },
     
+    {
+        'question': `Questão 33 Tópico 3
+        Você tem uma assinatura do Azure chamada Subscription1.
+        Em Subscription1, você cria um compartilhamento de arquivo do Azure chamado share1.
+        Você cria uma assinatura de acesso compartilhado (SAS) chamada SAS1, conforme mostrado na seguinte exposição:
+        <img src="imagens/pquestao33topico3.png" alt="imagem da questão"></img>
+        Para responder, selecione as opções apropriadas na área de resposta.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Se, em 2 de setembro de 2018, você executar o Microsoft Azure Storage Explorer em um
+             computador que tenha um endereço IP 193.77.134.1 e usar SAS1 para se conectar à conta de armazenamento, você [responderá a opção].`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "solicitará credenciais",
+                    'correct': false
+                }, {
+                    'text': "não terá acesso",
+                    'correct': false
+                }, {
+                    'text': "terá acesso de leitura, gravação e lista",
+                    'correct': false
+                },
+                {
+                    'text': " terá acesso somente leitura",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': `Se em 10 de setembro de 2018,
+            você executar o comando net use em um computador que tenha um
+            endereço IP 193.77.134.50 e usar SAS1 como senha para se conectar
+            ao share1, você [opção de resposta].`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "solicitará credenciais",
+                    'correct': false
+                }, {
+                    'text': "não terá acesso",
+                    'correct': false
+                }, {
+                    'text': "terá acesso de leitura, gravação e lista",
+                    'correct': false
+                },
+                {
+                    'text': " terá acesso somente leitura",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Na segunda pergunta os comentários não concordaram.Mais votados:
+        A resposta não está correta. Não deve haver acesso para ambos os casos. - para o primeiro caso, porque o IP não está correspondendo aos requisitos do SAS - para o segundo caso, uma vez que está usando "net use" onde usa SMB. O protocolo SMB (Server Message Broker) não suporta SAS. Ele ainda pede nome de usuário/senha. Consequentemente,
+        ele dará erro de nome de usuário/senha errados e não fornecerá acesso.           
+`
+    },
     
     
     {
@@ -5368,7 +6047,79 @@ const questionsAll = [
         }
         ],
         'explication': 'AC\nPara aceder aos dados blob no portal Azure com credenciais AD Azure, um utilizador deve ter as seguintes atribuições de funções:\n* Uma função de acesso a dados, como Storage Blob Data Reader ou Storage Blob Data Contributor\n* A função de Leitor do Azure Resource Manager, no mínimo\nA função Leitor é uma função do Azure Resource Manager que permite aos utilizadores ver os recursos da conta de armazenamento, mas não modificá-los. Isso não\nforneça permissões de leitura para dados no Armazenamento do Azure, mas apenas para recursos de gerenciamento de contas. A função Leitor é necessária para que os usuários possam\nnavegue até contêineres de blob no portal do Azure.\nNota: em ordem da menor para a maior permissão:\nA função de leitor e acesso a dados -\nA função de Colaborador da Conta de Armazenamento\nA função de Colaborador do Azure Resource Manager\nA função de proprietário do Azure Resource Manager\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access\nDistribuição de votos da comunidade\nBC (67%) 14% Outros'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 44 Tópico 3
+        Você tem uma conta do Azure Storage chamada storage1 que armazena imagens.
+        Você precisa criar uma nova conta de armazenamento e replicar as imagens em storage1 para a nova conta usando a replicação de objetos.
+        Como você deve configurar a nova conta? Para responder, selecione as opções apropriadas na área de resposta.
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Tipo de conta:`,
+            'options': [
+        
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "StorageV2 apenas",
+                    'correct': false
+                },
+                {
+                    'text': "StorageV2 or FileStorage somente",
+                    'correct': false
+                }, {
+                    'text': "StorageV2 or BlobStorage somente",
+                    'correct': true
+                }, {
+                    'text': "StorageV2, BlobStorage, or FileStorage",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Tipo de objeto a ser criado na nova conta:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Container",
+                    'correct': true
+                }, {
+                    'text': "Compartilhamento de arquivo",
+                    'correct': false
+                }, {
+                    'text': "Tabela",
+                    'correct': false
+                },
+                {
+                    'text': "Fila",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Reference:
+        https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-overview          
+`
+    },
+
+    
+     {
         'question': '45\nVocê tem um servidor local que contém uma pasta chamada D:\\Folder1.\nVocê precisa copiar o conteúdo de D:\\Folder1 para o contêiner público em uma conta do Armazenamento do Azure chamada contosodata.\nQual comando você deve executar?\n',
         'number': '',
         'page': 158,
@@ -5406,7 +6157,49 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview https://docs.microsoft.com/en-\nus/azure/storage/blobs/storage-blob-performance-tiers\nDistribuição de votos da comunidade\nUm (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 47 Tópico 3
+        Você tem uma assinatura do Azure que contém as contas de armazenamento mostradas na tabela a seguir.
+        <img src="imagens/pquestao47topico3.png" alt="imagem da questão"></img>
+        Você planeja usar o AzCopy para copiar um blob do container1 diretamente para o share1.
+        Você precisa identificar qual método de autenticação usar ao usar o AzCopy.
+        O que você deve identificar para cada conta? Para responder, arraste os métodos de autenticação apropriados para as contas corretas. Cada método pode ser usado uma vez, mais de uma vez ou nunca. Pode ser necessário arrastar a barra de divisão entre os painéis ou rolar para visualizar o conteúdo.
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+
+`,
+        'number': '31',
+        'page': 11,
+        'answers': [
+
+            [
+                {
+                    'text': 'Metodos - Answer (storage 1 e storage2)',
+                    'options': [
+                        { 'text': 'OAuth', 'correct': false, 'index': '-1' },
+                        { 'text': 'Anônimo', 'correct': false, 'index': '-1' },
+                        { 'text': 'Uma chave de acesso à conta de armazenamento', 'correct': false, 'index': '-1' },
+                        { 'text': 'Um token de assinatura de acesso compartilhado (SAS)', 'correct': true, 'index': '1' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': '',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `Maioria concorda com a fonte e colocou Um token de assinatura de acesso compartilhado (SAS) nas duas seleções`,
+        'typeQuestion': 'dragdrop'
+    },
+    
+     {
         'question': '48\nVocê cria uma conta do Armazenamento do Azure.\nVocê planeja adicionar 10 contêineres de blobs à conta de armazenamento.\nPara um dos contêineres, você precisa usar uma chave diferente para criptografar os dados em repouso.\nO que você deve fazer antes de criar o contêiner?\n',
         'number': '',
         'page': 160,
@@ -5491,11 +6284,7 @@ const questionsAll = [
         'explication': `resposta da fonte
         `
 
-    },
-
-
-    
-    
+    }, 
     {
         'question': '51\nVocê tem um servidor local que contém uma pasta chamada D:\\Folder1.\nVocê precisa copiar o conteúdo de D:\\Folder1 para o contêiner público em uma conta do Armazenamento do Azure chamada contosodata.\nQual comando você deve executar?\n',
         'number': '',
@@ -5515,7 +6304,150 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 52 Tópico 3
+        Você tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1. A conta storage1 contém um contêiner chamado container1.
+
+        Você precisa criar uma regra de gerenciamento de ciclo de vida para storage1 que moverá automaticamente os blobs no container1 para a camada de menor custo após 90 dias.
+
+        Como você deve concluir a regra? Para responder, selecione as opções apropriadas na área de resposta.
+
+
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `{
+            regras": [
+                "rules": [
+                    {
+                    "enabled": true,
+                    "name": "rulel",
+                    "type": "Lifecycle",
+                    "definition": {
+                    "actions": {
+                    "baseblob": {
+            
+            `,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': '"enableAuto TierToHotFromCool":{',
+                    'correct': false
+                }, {
+                    'text': '"tierToArchive":{',
+                    'correct': true
+                }, {
+                    'text': '"tierToCool":{',
+                    'correct': false
+                },
+            ]
+        },
+
+        {
+            'text': `
+            "daysAfterModificationGreater Than": 90
+            ...
+            "filters": (
+            `,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': `"blobIndexMatch":[`,
+                    'correct': false
+                }, {
+                    'text': `"blobTypes":[`,
+                    'correct': false
+                }, {
+                    'text': `"prefixMatch":[`,
+                    'correct': true
+                },
+            ]
+        },
+
+         {
+            'text': `"containerl/" 
+                ...
+            `,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "",
+                    'correct': true
+                }
+            ]
+        }
+
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+            Fonte e comentários mais votados concordam.
+`
+    },
+
+    {
+        'question': `Questão 53 Tópico 3
+        Você tem uma assinatura do Azure que contém uma máquina virtual chamada VM1.
+
+        Você precisa fazer backup da VM1. A solução deve garantir que os backups sejam armazenados em três zonas de disponibilidade na região primária.
+
+        Quais três ações você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+
+`,
+        'number': '31',
+        'page': 11,
+        'answers': [
+
+        
+            [
+                {
+                    'text': 'Ações',
+                    'options': [
+                        { 'text': 'Configure uma política de replicação.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Defina a replicação para armazenamento com redundância de zona (ZRS).', 'correct': true, 'index': '2' },
+                        { 'text': 'Para VM1, crie uma política de backup e configure o backup.', 'correct': true, 'index': '3' },
+                        { 'text': 'Defina a replicação para armazenamento com redundância local (LRS).', 'correct': false, 'index': '-1' },
+                        { 'text': 'Crie um cofre dos Serviços de Recuperação.', 'correct': true, 'index': '1' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': '',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `Maioria concordou com a fonte.
+         1. Crie o Recovery Services Vault, 
+         2. Defina a política de replicação como ZRS (devido ao requisito de ter três zonas separadas)
+         3. Para VM1, crie uma política de backup`,
+        'typeQuestion': 'dragdrop'
+    },
+
+
+    
+    
+     {
         'question': '54\nVocê tem uma assinatura do Azure chamada Subscription1.\nVocê tem 5 TB de dados que precisa transferir para Subscription1.\nVocê planeja usar um trabalho de Importação/Exportação do Azure.\nO que você pode usar como destino dos dados importados?\n',
         'number': '',
         'page': 166,
@@ -5564,7 +6496,12 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)'
-    }, {
+    },
+
+    
+    
+    
+     {
         'question': '57\nVocê tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1.\nVocê planeja criar um contêiner de blob chamado container1.\nVocê precisa usar a criptografia de chave gerenciada pelo cliente para o contêiner1.\nQual chave você deve usar?\n',
         'number': '',
         'page': 170,
