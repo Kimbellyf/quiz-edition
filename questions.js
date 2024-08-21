@@ -11953,6 +11953,35 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         'explication': ` 
                 `
     },
+    {
+        'question': `questão 37 tópico 6
+            Você tem uma assinatura do Azure que contém várias máquinas virtuais na região do Azure West US.
+            Você precisa usar o Traffic Analytics no Azure Network Watcher para monitorar o tráfego da máquina virtual.
+            Quais dois recursos você deve criar? Cada resposta correta apresenta parte da solução.
+
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        `,
+        'number': '',
+        'page': 482,
+        'answers': [{
+            'text': 'A. um espaço de trabalho do Log Analytics\n',
+            'correct': true
+        }, {
+            'text': 'B.  uma pasta de trabalho do Azure Monitor\n',
+            'correct': false
+        }, {
+            'text': 'C.  uma conta de armazenamento\n',
+            'correct': false
+        }, {
+            'text': 'D. um espaço de trabalho do Microsoft Sentinel',
+            'correct': false
+        }, {
+            'text': 'e. uma Regra de Coleta de Dados (DCR) no Azure Monitor ',
+            'correct': true
+        }
+        ],
+        'explication': 'Distribuição de votos na comunidade AE (50%) CA (48%) outros 2%'
+    },
 
     {
         'question': '37\nVocê planeja implantar várias máquinas virtuais do Azure que executarão o Windows Server 2019 em um conjunto de escala de máquina virtual usando um recurso do Azure\nModelo de gerente.\nVocê precisa garantir que o NGINX esteja disponível em todas as máquinas virtuais após sua implantação.\nO que você deve usar?\n',
@@ -11962,7 +11991,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             'text': 'A. uma extensão Desired State Configuration (DSC)\n',
             'correct': true
         }, {
-            'text': 'B. o cmdlet New-AzCon guraçãoAssignment\n',
+            'text': 'B. o cmdlet New-AzConfigurationAssignment\n',
             'correct': false
         }, {
             'text': 'C. Informações sobre aplicativos do Azure\n',
@@ -12222,6 +12251,143 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         }
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nUm (100%)'
+    },
+
+    {
+        'question': `Questão 48 Tópico 6
+        Você tem uma assinatura do Azure que contém os alertas mostrados na exposição a seguir.
+        <img src="imagens/hquestao48topico6.png" alt="imagem da questão"></img>
+        Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no gráfico.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Para Alerta1, Resposta do usuário [opção de resposta].`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "não pode ser alterado",
+                    'correct': false
+                }, {
+                    'text': "pode ser alterado apenas para Novo",
+                    'correct': false
+                }, {
+                    'text': "pode ser alterado apenas para Reconhecido",
+                    'correct': false
+                },
+                {
+                    'text': "pode ser alterado para Novo ou Reconhecido",
+                    'correct': true
+                }
+            ]
+        },
+
+        {
+            'text': 'Para Alerta2, Resposta do usuário [opção de resposta].',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "não pode ser alterado",
+                    'correct': false
+                }, {
+                    'text': "pode ser alterado apenas para Reconhecido",
+                    'correct': false
+                }, {
+                    'text': "só pode ser alterado para fechado",
+                    'correct': false
+                },
+                {
+                    'text': "pode ser alterado para Reconhecido ou Fechado",
+                    'correct': true
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `comentarios mais votados não concordam com a fone
+        mais votado: 
+        Testado em laboratório. Resposta correta para:
+         Caixa1: pode ser alterada para Novo ou Reconhecido Explicação: "Alterar a resposta do usuário não afeta a condição do alerta" é o que o portal diz ao alterar a resposta de um alerta cuja resposta do usuário está fechada 
+        Caixa2: pode ser alterada para Reconhecido ou Fechado           
+`
+    },
+    {
+        'question': `Questão 49 Tópico 6
+        Você cria uma política de backup de cofre do Recovery Services chamada Policy1,
+        conforme mostrado na seguinte exposição:
+        <img src="imagens/hquestao49topico6.png" alt="imagem da questão"></img>
+        Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no gráfico.
+        `,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `O backup que ocorrer no domingo, 1º de março, será retido para [opção de resposta].`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "30 dias",
+                    'correct': false
+                }, {
+                    'text': "10 semanas",
+                    'correct': false
+                }, {
+                    'text': "36 meses",
+                    'correct': false
+                },
+                {
+                    'text': "10 anos",
+                    'correct': true
+                }
+            ]
+        },
+
+        {
+            'text': 'O backup que ocorrer no domingo, 1º de novembro, será retido para [opção de resposta].',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "30 dias",
+                    'correct': false
+                }, {
+                    'text': "10 semanas",
+                    'correct': false
+                }, {
+                    'text': "36 meses",
+                    'correct': true
+                },
+                {
+                    'text': "10 anos",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `concordaram . 
+        Caixa 1: 10 anos O ponto de backup anual ocorre em 1º de março e seu período de retenção é de 10 anos.
+        Caixa 2: 36 meses O ponto de backup mensal ocorre no dia 1º de cada mês e seu período de retenção é de 36 meses. Observação: a política de retenção do Azure leva o maior período de retenção para cada backup. Em caso de conflito entre 2 políticas diferentes. Referência: https://docs.microsoft.com/en-us/microsoft-365/compliance/retention?view=o365-worldwide
+            
+`
     },
 
     {
