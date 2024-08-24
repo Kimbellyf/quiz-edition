@@ -6748,7 +6748,49 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nE (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 69 Tópico 3
+            Você tem uma assinatura do Azure que contém os grupos de recursos mostrados na tabela a seguir.
+            
+            <img src="imagens/Xquestao69topico3parte1 (1).png" alt="imagem da questão"></img>
+
+            A assinatura contém as redes virtuais mostradas na tabela a seguir.
+
+            <img src="imagens/Xquestao69topico3parte1 (2).png" alt="imagem da questão"></img>
+
+            Você planeja implantar os clusters do Azure Kubernetes Service (AKS) mostrados na tabela a seguir.
+
+            <img src="imagens/Xquestao69topico3parte1 (3).png" alt="imagem da questão"></img>
+
+            Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+            NOTA: Cada seleção correta vale um ponto.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Você pode implantar AKS1 na VNET2',
+            'correct': false
+        }, {
+            'text': 'Você pode implantar AKS2 na VNET1',
+            'correct': true
+        }, {
+            'text': 'Você pode implantar AKS3 na VNET3',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*
+        `
+
+    },
+    
+
+    {
         'question': '70\nVocê planeja implantar várias máquinas virtuais do Azure que executarão o Windows Server 2019 em um conjunto de escala de máquina virtual usando um recurso do Azure\nModelo de gerente.\nVocê precisa garantir que o NGINX esteja disponível em todas as máquinas virtuais após sua implantação.\nO que você deve usar?\n',
         'number': '',
         'page': 182,
@@ -7072,6 +7114,8 @@ const questionsAll = [
             
 `
     },
+
+
 
     {
         'question': `Questão 89 Tópico 3
@@ -8259,7 +8303,112 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nUtilize modelos do Azure Resource Manager para instalar aplicações em conjuntos de escala de máquinas virtuais com a Extensão de Script Personalizado.\nObservação: a Extensão de Script Personalizado baixa e executa scripts em VMs do Azure. Esta extensão é útil para configuração pós-implantação,\ninstalação de software ou qualquer outra tarefa de configuração/gerenciamento.\nPara ver a Extensão de Script Personalizado em ação, crie um conjunto de dimensionamento que instale o servidor Web NGINX e produza o nome do host do conjunto de dimensionamento\nInstância de VM.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/tutorial-install-apps-template\nDistribuição de votos da comunidade\nC (95%) 5%'
-    }, {
+    },
+    {
+        'question': `Questão 80 Tópico 4
+        Você tem uma assinatura do Azure. A assinatura contém uma máquina virtual que executa o Windows 10.
+        Você precisa associar a máquina virtual a um domínio do Active Directory.
+        Como você deve preencher o modelo do Azure Resource Manager (ARM)? Para responder, selecione as opções apropriadas na área de resposta.
+        NOTA: Cada seleção correta vale um ponto.
+
+        <img src="imagens/Xquestao80topico4.png" alt="imagem da questão"></img>
+
+
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `type:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': '"Extensions"',
+                    'correct': false
+                }, {
+                    'text': '"Microsoft.Compute/VirtualMachines"',
+                    'correct': false
+                }, {
+                    'text': '"Microsoft.Comput/VirtualMachines"',
+                    'correct': true
+                },
+               
+            ]
+        },
+
+        {
+            'text': '',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': '"ProtectedSettings":{',
+                    'correct': true
+                }, {
+                    'text': '"Settings":{',
+                    'correct': false
+                }, {
+                    'text': '"Statuses":{',
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `********
+            
+`
+    },
+
+    
+
+    {
+        'question': `Questão 84 Tópico 4
+
+        Você tem uma assinatura do Azure.
+        Você cria o seguinte arquivo chamado Deploy.json.
+        <img src="imagens/Xquestao84topico4parte1.png" alt="imagem da questão"></img>
+        Você se conecta à assinatura e executa os seguintes comandos.
+        <img src="imagens/Xquestao84topico4parte2.png" alt="imagem da questão"></img>
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto.
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            'text': 'Os comandos criarão quatro novos recursos.',
+            'correct': true
+        }, {
+            'text': 'Os comandos criarão contas de armazenamento na região oeste do Azure dos EUA.',
+            'correct': false
+        }, {
+            'text': 'A primeira conta de armazenamento criada terá um prefixo 0.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*****
+        `
+
+    },
+
+
+    
+    
+    
+    {
         'question': '85\nVocê planeja implantar várias máquinas virtuais do Azure que executarão o Windows Server 2019 em um conjunto de escala de máquina virtual usando um recurso do Azure\nModelo de gerente.\nVocê precisa garantir que o NGINX esteja disponível em todas as máquinas virtuais após sua implantação.\nO que você deve usar?\n',
         'number': '',
         'page': 282,
@@ -8489,6 +8638,44 @@ const questionsAll = [
             
 `
     },
+
+
+    {
+        'question': `Questão 93 Tópico 4
+
+            Você tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir.
+            <img src="imagens/Xquestao93topico4parte1 (2).png" alt="imagem da questão"></img>
+            Você cria uma Azure Compute Gallery chamada ComputeGallery1, conforme mostrado na exposição da Azure Compute Gallery. (Clique na guia Azure Compute Gallery
+            .)
+            <img src="imagens/Xquestao93topico4parte1 (2).png" alt="imagem da questão"></img>
+            Na ComputeGallery1, você cria uma definição de imagem de máquina virtual chamada Image1, conforme mostrado na exposição de definição de imagem. (Clique na guia
+            Definição de imagem.)
+            <img src="imagens/Xquestao93topico4parte1 (3).png" alt="imagem da questão"></img>
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            'text': 'O disco do sistema operacional da VM1 pode ser usado como fonte para uma versão do Image1.',
+            'correct': true
+        }, {
+            'text': 'O disco do sistema operacional da VM2 pode ser usado como fonte para uma versão do Image1.',
+            'correct': true
+        }, {
+            'text': 'O disco do sistema operacional do VM3 pode ser usado como fonte para uma versão do Image1.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*****
+        `
+
+    },
+
+
+
     
     {
         'question': `Questão 94 Tópico 4 \nVocê planeja criar os aplicativos Web do Azure mostrados na tabela a seguir.
@@ -8511,7 +8698,47 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (95%) 5%'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 95 Tópico 4
+
+        Você tem uma assinatura do Azure que contém os grupos de recursos mostrados na tabela a seguir.
+        <img src="imagens/questao95topico4parte1 (1).png" alt="imagem da questão"></img>
+        Você cria o seguinte modelo do Azure Resource Manager (ARM) chamado deploy.json.
+        <img src="imagens/questao95topico4parte1 (2).png" alt="imagem da questão"></img>
+        Você implanta o modelo executando o seguinte cmdlet.
+        <img src="imagens/questao95topico4parte1 (3).png" alt="imagem da questão"></img>
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            'text': 'O modelo cria um grupo de recursos denominado RGO na região Leste do Azure dos EUA.',
+            'correct': true
+        }, {
+            'text': 'O modelo cria quatro novos grupos de recursos.',
+            'correct': false
+        }, {
+            'text': 'O modelo cria um grupo de recursos denominado RG3 na região oeste do Azure dos EUA.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*****
+        `
+
+    },
+    
+    
+    
+    
+    {
         'question': `Questão 96 Tópico 4
             \nVocê tem um aplicativo do Serviço de Aplicativo do Azure chamado App1 que contém duas instâncias em execução.
             \nVocê tem uma regra de escalonamento automático configurada conforme mostrado na exposição a seguir.
@@ -8616,7 +8843,47 @@ const questionsAll = [
             'correct': false
         }],
         'explication': 'A\nDistribuição de votos da comunidade\nB (68%) D (20%) 12%'
-    }, {
+    },
+
+    {
+        'question': `Questão 102 Tópico 4
+
+        Sua empresa compra uma nova assinatura do Azure.
+        Você cria um arquivo chamado Deploy.json, conforme mostrado na exposição a seguir.
+        <img src="imagens/questao102topico4.png" alt="imagem da questão"></img>
+        Você se conecta à assinatura e executa o seguinte cmdlet.
+        New-AzDeployment -Location westus -TemplateFile “deploy.json”
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            
+
+            'text': 'Você pode implantar uma máquina virtual no RG1.',
+            'correct': true
+        }, {
+            'text': 'Você pode implantar uma máquina virtual no RG2.',
+            'correct': false
+        }, {
+            'text': 'É possível criar manualmente um grupo de recursos denominado RG3.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*****
+        `
+
+    },
+    
+    
+    
+    {
         'question': `Questão 103 Tópico 4
             \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
             <img src="imagens/squestao103topico4.png" alt="imagem da questão"></img>
@@ -8638,7 +8905,43 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 104 Tópico 4
+            Você tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
+            <img src="imagens/questao104topico4parte1 (1).png" alt="imagem da questão"></img>
+            A assinatura contém as máquinas virtuais mostradas na tabela a seguir.
+            <img src="imagens/questao104topico4parte1 (2).png" alt="imagem da questão"></img>
+            A assinatura contém os aplicativos da Web do Azure App Service mostrados na tabela a seguir.
+            <img src="imagens/questao104topico4parte1 (3).png" alt="imagem da questão"></img>
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+                    
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            'text': 'WebApp1 pode se comunicar com VM2.',
+            'correct': true
+        }, {
+            'text': 'O NSG1 controla o tráfego de entrada para WebApp1.',
+            'correct': false
+        }, {
+            'text': 'WebApp2 pode se comunicar com VM1.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*****
+        `
+
+    },
+    
+
+    
+    {
         'question': `Questão 105 Tópico 4 
             \nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.
             <img src="imagens/squestao105topico4parte1.png" alt="imagem da questão"></img>
@@ -8777,7 +9080,43 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-point-to-site-routing\nDistribuição de votos da comunidade\nA (89%) 11%'
-    }, {
+    },
+
+    {
+        'question': `Questão 10 Tópico 5
+
+            Você tem uma assinatura do Azure. A assinatura contém máquinas virtuais que executam o Windows Server 2016 e são configuradas conforme mostrado na tabela a seguir.
+            <img src="imagens/questao10topico5parte1.png" alt="imagem da questão"></img>
+            Você cria uma zona pública de DNS do Azure chamada adatum.com e uma zona privada de DNS do Azure chamada contoso.com.
+            <img src="imagens/questao10topico5parte2.png" alt="imagem da questão"></img>
+            Você cria um link de rede virtual para contoso.com conforme mostrado na exposição a seguir.
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione N
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Quando a VM1 é iniciada, um registro para VM1 é adicionado à zona DNS contoso.com.',
+            'correct': true
+        }, {
+            'text': 'Quando a VM2 é iniciada, um registro para VM2 é adicionado à zona DNS contoso.com.',
+            'correct': true
+        }, {
+            'text': 'Quando o VM3 é iniciado, um registro para VM3 é adicionado à zona DNS do adatum.com.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*******
+        `
+
+    },
+    
+    
+    
+    {
         'question': `Questão 11 Tópico 5
             \nVocê tem uma assinatura do Azure que contém os recursos da tabela a seguir.
             <img src="imagens/squestao11topico5.png" alt="imagem da questão"></img>
