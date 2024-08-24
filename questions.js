@@ -9141,7 +9141,95 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nTodos os recursos do Azure são criados numa região e subscrição do Azure. Um recurso só pode ser criado em uma rede virtual que exista no mesmo\nregião e assinatura como recurso.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm\nDistribuição de votos da comunidade\nD (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 12 Tópico 5
+        Você tem uma assinatura do Azure que contém duas redes virtuais chamadas VNet1 e VNet2. As máquinas virtuais se conectam às redes virtuais.
+        As redes virtuais têm os espaços de endereço e as sub-redes configuradas conforme mostrado na tabela a seguir.
+        <img src="imagens/Xquestao12topico5parte1 (1).png" alt="imagem da questão"></img>
+        Você precisa adicionar o espaço de endereço de 10.33.0.0/16 à VNet1. A solução deve garantir que os hosts na VNet1 e na VNet2 possam se comunicar.
+        Quais três ações você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e
+        organize-as na ordem correta.
+        <img src="imagens/Xquestao12topico5parte1 (2).png" alt="imagem da questão"></img>
+`,
+        'number': '31',
+        'page': 11,
+        'answers': [
+            
+            [
+                {
+                    'text': '',
+                    'options': [
+                        { 'text': 'Remova VNet1.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Adicione o espaço de endereço 10.33.0.0/16 à VNet1.', 'correct': true, 'index': '2' },
+                        { 'text': 'Crie uma nova rede virtual chamada VNet1.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Na ligação de peering em VNet2, permita o trânsito do gateway.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Recrie o peering entre VNet1 e VNet2.', 'correct': true, 'index': '3' },
+                        { 'text': 'Na ligação de peering em VNet1, permita o trânsito do gateway.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Remova o peering entre VNet1 e VNet2.', 'correct': true, 'index': '1' },
+
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': '',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `**** fontee
+            Etapa 1: Remova o peering entre Vnet1 e VNet2.
+            Você não pode adicionar intervalos de endereços ou excluir intervalos de endereços do espaço de endereços de uma rede virtual depois que uma rede virtual é pareada com outra
+            rede virtual.
+            Para adicionar ou remover intervalos de endereços, exclua o peering, adicione ou remova os intervalos de endereços e, em seguida, recrie o peering.
+            Etapa 2: Adicione o espaço de endereço 10.44.0.0/16 à VNet1.
+            Etapa 3: Recrie o peering entre VNet1 e VNet2
+            Referência:
+            https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering
+        `,
+        'typeQuestion': 'dragdrop'
+    },
+
+    {
+        'question': `Questão 13 Tópico 5
+
+        Você tem uma assinatura do Azure que contém os grupos de recursos mostrados na tabela a seguir.
+        <img src="imagens/questao13topico5parte1 (2).png" alt="imagem da questão"></img>
+        RG1 contém os recursos mostrados na tabela a seguir.
+        <img src="imagens/questao13topico5parte1 (2).png" alt="imagem da questão"></img>
+        VM1 está em execução e se conecta a NIC1 e Disk1. NIC1 se conecta a VNET1.
+        RG2 contém um endereço IP público chamado IP2 que está no local East US. IP2 não é atribuído a uma máquina virtual.
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+           
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            'text': 'Você pode mover o armazenamento1 para RG2.',
+            'correct': true
+        }, {
+            'text': 'Você pode mover NIC1 para RG2.',
+            'correct': true
+        }, {
+            'text': 'Se você mover IP2 para RG1, a localização do IP2 mudará.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `******
+        `
+
+    },
+    
+    
+    {
         'question': '14\nVocê tem um aplicativo Web do Azure chamado webapp1.\nVocê tem uma rede virtual chamada VNET1 e uma máquina virtual do Azure chamada VM1 que hospeda um banco de dados MySQL. VM1 se conecta ao VNET1.\nVocê precisa garantir que o webapp1 possa acessar os dados hospedados na VM1.\nO que você deveria fazer?\n',
         'number': '',
         'page': 318,
@@ -9337,6 +9425,41 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-port-forwarding-portal https://pixelrobots.co.uk/2017/08/azure-\nbalanceador de carga para rds/\nDistribuição de votos da comunidade\nUm (100%)'
+    },
+    {
+        'question': `Questão 25 Tópico 5
+        Você tem uma assinatura do Azure chamada Subscription1 que contém as redes virtuais na tabela a seguir.
+        <img src="imagens/questao25topico5parte1 (1).png" alt="imagem da questão"></img>
+        Subscription1 contém as máquinas virtuais na tabela a seguir.
+        <img src="imagens/questao25topico5parte1 (2).png" alt="imagem da questão"></img>
+        Em Subscription1, você cria um balanceador de carga que tem as seguintes configurações:
+        ✑ Nome: LB1
+        ✑ SKU: Básico
+        ✑ Tipo: Interno
+        ✑ Sub-rede: Subnet12
+        ✑ Rede virtual: VNET1
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            'text': 'LB1 pode equilibrar o tráfego entre VM1 e VM2.',
+            'correct': true
+        }, {
+            'text': 'LB1 pode equilibrar o tráfego entre VM3 e VM4.',
+            'correct': false
+        }, {
+            'text': 'LB1 pode equilibrar o tráfego entre VM5 e VM6.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `***** fontee+
+        `
+
     },
 
     {
@@ -9551,7 +9674,47 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nO peering de rede virtual permite-lhe ligar perfeitamente redes na Rede Virtual do Azure. As redes virtuais aparecem como uma só para\npropósitos de conectividade. O tráfego entre máquinas virtuais utiliza a infraestrutura de backbone da Microsoft.\nRespostas incorretas:\nB, C: O ponto final de serviço da Rede Virtual (VNet) fornece conectividade segura e direta aos serviços do Azure através de uma rota otimizada sobre o Azure\nrede principal.\nOs pontos finais permitem-lhe proteger os seus recursos críticos do serviço Azure apenas para as suas redes virtuais. Endpoints de serviço permitem IP privado\nendereços na VNet para chegar ao ponto final de um serviço do Azure sem precisar de um endereço IP público na VNet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview https://docs.microsoft.com/en-\nus/azure/virtual-network/virtual-network-peering-overview\nDistribuição de votos da comunidade\nD (100%)'
-    }, {
+    }, 
+
+    {
+        'question': `Questão 38 Tópico 5
+
+        Você tem uma assinatura do Azure que contém as máquinas virtuais do Azure mostradas na tabela a seguir.
+        <img src="imagens/questao38topico5parte1.png" alt="imagem da questão"></img>
+        Você adiciona regras de segurança de entrada a um grupo de segurança de rede (NSG) chamado NSG1, conforme mostrado na tabela a seguir.
+        <img src="imagens/questao38topico5parte2.png" alt="imagem da questão"></img>
+        Você executa o Azure Network Watcher, conforme mostrado na exposição a seguir.
+        <img src="imagens/questao38topico5parte3.png" alt="imagem da questão"></img>
+        Você executa o Network Watcher novamente, conforme mostrado na exposição a seguir
+        <img src="imagens/questao38topico5parte4.png" alt="imagem da questão"></img>
+        <img src="imagens/questao38topico5parte5.png" alt="imagem da questão"></img>
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'NSG1 limita o tráfego VM1',
+            'correct': false
+        }, {
+            'text': 'NSG1 se aplica à VM2',
+            'correct': true
+        }, {
+            'text': 'VM1 e VM2 conectam-se à mesma rede virtual',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `******
+        `
+
+    },
+    
+    
+    
+    {
         'question': '39\nVocê tem a rede virtual do Azure chamada VNet1 que contém uma sub-rede chamada Subnet1. Subnet1 contém três máquinas virtuais do Azure. Cada\nmáquina virtual tem um endereço IP público.\nAs máquinas virtuais hospedam vários aplicativos que podem ser acessados \u200b\u200bpelos usuários na Internet pela porta 443.\nA sua rede local tem uma conexão VPN site a site com a VNet1.\nVocê descobre que as máquinas virtuais podem ser acessadas usando o Remote Desktop Protocol (RDP) da Internet e do local\nrede.\nVocê precisa impedir o acesso RDP às máquinas virtuais pela Internet, a menos que a conexão RDP seja estabelecida no local\nrede. A solução deve garantir que todos os aplicativos ainda possam ser acessados \u200b\u200bpelos usuários da Internet.\nO que você deveria fazer?\n',
         'number': '',
         'page': 344,
