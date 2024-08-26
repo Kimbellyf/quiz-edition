@@ -9684,10 +9684,10 @@ const questionsAll = [
         Você adiciona regras de segurança de entrada a um grupo de segurança de rede (NSG) chamado NSG1, conforme mostrado na tabela a seguir.
         <img src="imagens/questao38topico5parte2.png" alt="imagem da questão"></img>
         Você executa o Azure Network Watcher, conforme mostrado na exposição a seguir.
-        <img src="imagens/questao38topico5parte3.png" alt="imagem da questão"></img>
+        <img src="imagens/questao38topico5parte3.jpg" alt="imagem da questão"></img>
         Você executa o Network Watcher novamente, conforme mostrado na exposição a seguir
-        <img src="imagens/questao38topico5parte4.png" alt="imagem da questão"></img>
-        <img src="imagens/questao38topico5parte5.png" alt="imagem da questão"></img>
+        <img src="imagens/questao38topico5parte4.jpg" alt="imagem da questão"></img>
+        <img src="imagens/questao38topico5parte5.jpg" alt="imagem da questão"></img>
            
 
                     \n`,
@@ -9777,7 +9777,45 @@ const questionsAll = [
         }
         ],
         'explication': 'ADE\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal\nDistribuição de votos da comunidade\nABC (80%) 11%6%'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 43 Tópico 5
+
+        Você tem uma assinatura do Azure que contém os recursos na tabela a seguir.
+        <img src="imagens/xquestao43topico5parte1.png" alt="imagem da questão"></img>
+        Você instala a função de servidor Web Server (IIS) em VM1 e VM2 e, em seguida, adiciona VM1 e VM2 ao LB1.
+        LB1 é configurado conforme mostrado na exposição LB1. (Clique na guia LB1.)
+        <img src="imagens/xquestao43topico5parte2.png" alt="imagem da questão"></img>
+        Rule1 é configurado conforme mostrado na exposição Rule1. (Clique na guia Rule1.)
+        <img src="imagens/xquestao43topico5parte3.png" alt="imagem da questão"></img>
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            'text': 'VM1 está no mesmo conjunto de disponibilidade que VM2.',
+            'correct': true
+        }, {
+            'text': 'Se Probe1.htm estiver presente em VM1 e VM2, LB1 equilibrará a porta TCP 80 entre VM1 e VM2.',
+            'correct': true
+        }, {
+            'text': 'Se você excluir a Regra1, o LB1 equilibrará todas as solicitações entre VM1 e VM2 para todas as portas.',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*******
+        `
+
+    },
+     
+    
+     {
         'question': `Questão 45 Tópico 5 
             Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
             <img src="imagens/jquestao45topico5.png" alt="imagem da questão"></img>
@@ -9829,6 +9867,42 @@ const questionsAll = [
         ],
         'explication': 'A\nSe você usar o DNS fornecido pelo Azure, o DNS su x apropriado será aplicado automaticamente às suas máquinas virtuais. Para todas as outras opções você deve\nuse totalmente\nNomes de domínio qualificados (FQDN) ou aplique manualmente o suf x DNS apropriado às suas máquinas virtuais.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances\nDistribuição de votos da comunidade\nB (100%)'
     },
+
+    {
+        'question': `Questão 48 Tópico 5
+        Você tem uma assinatura do Azure que contém as máquinas virtuais do Azure mostradas na tabela a seguir.
+        <img src="imagens/xquestao48topico5parte1.png" alt="imagem da questão"></img>
+        Você configura as interfaces de rede das máquinas virtuais para usar as configurações mostradas na tabela a seguir.
+        <img src="imagens/xquestao48topico5parte2.png" alt="imagem da questão"></img>
+        Nas configurações do VNET1, você configura os servidores DNS mostrados na exposição a seguir.
+        <img src="imagens/xquestao48topico5parte3.png" alt="imagem da questão"></img>
+        As máquinas virtuais podem se conectar com sucesso ao servidor DNS que tem um endereço IP de 192.168.10.15 e ao servidor DNS que tem um
+        endereço IP de 193.77.134.10.
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+                
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'VM1 se conecta a 193.77.134.10 para consultas DNS.',
+            'correct': true
+        }, {
+            'text': 'VM2 se conecta a 193.77.134.10 para consultas DNS.',
+            'correct': false
+        }, {
+            'text': 'VM3 se conecta a 192.168.10.15 para consultas DNS.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `******
+        `
+
+    },
+
     {
         'question': `Questão 49 Tópico 5
             Você tem uma assinatura do Azure que contém os grupos de recursos mostrados na tabela a seguir.
@@ -10011,7 +10085,52 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nVocê deve usar uma definição de política.\nA definição de política de recursos usada pelo Azure Policy permite estabelecer convenções para recursos em sua organização, descrevendo quando o\npolítica é aplicada e qual o efeito a ter. Ao definir convenções, você pode controlar custos e gerenciar seus recursos com mais facilidade.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/azure-policy/policy-de nition\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 56 Tópico 5
+
+        Você gerencia duas assinaturas do Azure chamadas Subscription1 e Subscription2.
+        Subscription1 tem as seguintes redes virtuais:
+        <img src="imagens/xquestao56topico5parte1.png" alt="imagem da questão"></img>
+        As redes virtuais contêm as seguintes sub-redes:
+        <img src="imagens/xquestao56topico5parte2.png" alt="imagem da questão"></img>
+        Subscription2 contém a seguinte rede virtual:
+        <img src="imagens/xquestao56topico5parte3.png" alt="imagem da questão"></img>
+        ✑ Nome: VNETA
+        ✑ Espaço de endereço: 10.10.128.0/17
+        ✑ Localização: Canada Central
+        VNETA contém as seguintes sub-redes:
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto.
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Uma conexão site a site pode ser estabelecida entre VNET1 e VNET2.',
+            'correct': false
+        }, {
+            'text': 'VNET1 e VNET2 podem ser emparelhados.',
+            'correct': true
+        }, {
+            'text': 'VNET1 e VNETA podem ser emparelhados.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `******
+        `
+
+    },
+    
+    
+    
+    {
         'question': '57\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um aplicativo chamado App1 instalado em duas máquinas virtuais do Azure chamadas VM1 e VM2. As conexões com App1 são gerenciadas usando\numa carga do Azure\nBalanceador.\nAs configurações efetivas de segurança de rede para VM2 são mostradas na exposição a seguir.\nVocê descobre que as conexões com App1 de 131.107.100.50 pela porta TCP 443 falham.\nVocê verifica se as regras do Load Balancer estão configuradas corretamente.\nVocê precisa garantir que as conexões com o App1 possam ser estabelecidas com êxito a partir de 131.107.100.50 pela porta TCP 443.\nSolução: você cria uma regra de segurança de entrada que nega todo o tráfego da origem 131.107.100.50 e tem um custo de 64.999.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 363,
@@ -10201,7 +10320,79 @@ const questionsAll = [
         }
         ],
         'explication': 'CE\nC: Um gateway VPN é usado ao criar uma conexão VPN com sua rede local.\nDispositivos VPN baseados em rota usam seletores de tráfego qualquer-para-qualquer (curinga) e permitem que tabelas de roteamento/encaminhamento direcionem o tráfego para diferentes túneis IPsec. Isto\nnormalmente é construído em plataformas de roteador onde cada túnel IPsec é modelado como uma interface de rede ou VTI (interface de túnel virtual).\nE: Dispositivos VPN baseados em políticas usam as combinações de prefixos de ambas as redes para definir como o tráfego é criptografado/descriptografado por meio de IPsec.\ntúneis. Geralmente é construído em dispositivos de firewall que realizam filtragem de pacotes. A criptografia e descriptografia do túnel IPsec são adicionadas ao pacote\nmecanismo de filtragem e processamento.\nRespostas incorretas:\nF: As conexões ponto a site não exigem um dispositivo VPN ou um endereço IP público.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/create-routebased-vpn-gateway-portal https://docs.microsoft.com/en-us/azure/vpn-\ngateway/vpn-gateway-connect-multiple-policybased-rm-ps\nDistribuição de votos da comunidade\nCE (86%) 11%'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 70 Tópico 5
+
+        Você tem uma assinatura do Azure que contém os recursos na tabela a seguir:
+        <img src="imagens/xquestao70topico5parte1.png" alt="imagem da questão"></img>
+        No Azure, você cria uma zona DNS privada chamada adatum.com. Você define a rede virtual de registro para VNet2. A zona adatum.com é
+        configurada conforme mostrado na seguinte exposição:
+        <img src="imagens/xquestao70topico5parte2.png" alt="imagem da questão"></img>
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'O registro A para VM5 será registrado automaticamente na zona adatum.com.',
+            'correct': false
+        }, {
+            'text': 'VM5 pode resolver VM9.adatum.com.',
+            'correct': false
+        }, {
+            'text': 'VM6 pode resolver VM9.adatum.com.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*****
+        `
+
+    },
+
+    {
+        'question': `Questão 71 Tópico 5
+        Você tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
+        <img src="imagens/xquestao71topico5parte1.png" alt="imagem da questão"></img>
+        A assinatura contém as zonas DNS privadas mostradas na tabela a seguir.
+        <img src="imagens/xquestao71topico5parte2.png" alt="imagem da questão"></img>
+        Você adiciona links de rede virtual às zonas DNS privadas conforme mostrado na tabela a seguir.
+        <img src="imagens/xquestao71topico5parte3.png" alt="imagem da questão"></img>
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            'text': 'Você pode ativar o registro automático para Link2.',
+            'correct': true
+        }, {
+            'text': 'Você pode adicionar um link de rede virtual para VNET1 em Zone3.com.',
+            'correct': true
+        }, {
+            'text': 'Você pode adicionar um link de rede virtual para VNET2 ao Zone1.com e habilitar o registro automático.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `******
+        `
+
+    },
+    
+    
+    
+    
+    {
         'question': '73\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nGere uma rede virtual chamada VNet1 que está hospedada na região oeste do Azure dos EUA.\nA VNet1 hospeda duas máquinas virtuais chamadas VM1 e VM2 que executam o Windows Server.\nVocê precisa inspecionar todo o tráfego de rede da VM1 para a VM2 por um período de três horas.\nSolução: No Azure Network Watcher, você cria uma captura de pacotes.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 379,
@@ -10269,7 +10460,48 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nReferência:\nhttps://fastreroute.com/azure-network-security-groups-explained/\nDistribuição de votos da comunidade\nB (96%) 4%'
-    }, {
+    },
+
+    {
+        'question': `Questão 80 Tópico 5
+        Você tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
+        <img src="imagens/xquestao80topico5parte1.png" alt="imagem da questão"></img>
+        Você tem as máquinas virtuais mostradas na tabela a seguir.
+        <img src="imagens/xquestao80topico5parte2.png" alt="imagem da questão"></img>
+        Você tem as interfaces de rede virtual mostradas na tabela a seguir.
+        <img src="imagens/xquestao80topico5parte3.png" alt="imagem da questão"></img>
+        Server1 é um servidor DNS que contém os recursos mostrados na tabela a seguir.
+        <img src="imagens/xquestao80topico5parte4.png" alt="imagem da questão"></img>
+        Você tem uma zona DNS privada do Azure chamada contoso.com que tem um link de rede virtual para VNET2 e os registros mostrados na tabela a seguir.
+        <img src="imagens/xquestao80topico5parte5.png" alt="imagem da questão"></img>
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Server2 resolve host2.contoso.com para 131.107.50.50.',
+            'correct': true
+        }, {
+            'text': 'Server2 resolve host1.contoso.com para 131.107.10.15.',
+            'correct': false
+        }, {
+            'text': 'Server3 resolve host2.contoso.com para 131.107.50.50.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*******
+        `
+
+    },
+    
+    
+    
+    
+    {
         'question': `questão 81 tópico 5 \nVocê tem uma rede virtual chamada VNet1 conforme mostrado na exposição. (Clique na guia Exposição.)
             <img src="imagens/fquestao81topico5.png" alt="imagem da questão"></img>
             \nNenhum dispositivo está conectado ao VNet1.\nVocê planeja emparelhar a VNet1 com outra rede virtual chamada VNet2. VNet2 tem um espaço de endereço de 10.2.0.0/16.\nVocê precisa criar o peering.\nO que você deve fazer primeiro?\n`,
@@ -10409,7 +10641,52 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nCom Sticky Sessions, quando um cliente inicia uma sessão em um de seus servidores web, a sessão permanece nesse servidor específico. Para configurar um Azure\nBalanceador de carga para\nSessões fixas definem a persistência da sessão para o IP do cliente.\nNa imagem a seguir você pode ver a configuração da sessão fixa:\nObservação:\nExistem várias versões desta questão no exame. A pergunta pode ter outras opções de resposta incorretas, incluindo as seguintes:\n1. Tempo limite de inatividade (minutos) até 20\n2. Protocolo para UDP\nReferência:\nhttps://cloudopszone.com/con gure-azure-load-balancer-for-sticky-sessions/\nDistribuição de votos da comunidade\nD (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 90 Tópico 5
+            Você tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir:
+            <img src="imagens/xquestao90topico5.png" alt="imagem da questão"></img>
+            VM1 e VM2 usam endereços IP públicos. No Windows Server 2019 em VM1 e VM2, você permite conexões de entrada da Área de Trabalho Remota.
+            Subnet1 e Subnet2 estão em uma rede virtual chamada VNET1.
+            A assinatura contém dois grupos de segurança de rede (NSGs) chamados NSG1 e NSG2. NSG1 usa apenas as regras padrão.
+            NSG2 usa as regras padrão e a seguinte regra de entrada personalizada:
+            ✑ Prioridade: 100
+            ✑ Nome: Rule1
+            ✑ Porta: 3389
+            ✑ Protocolo: TCP
+            ✑ Origem: Qualquer
+            ✑ Destino: Qualquer
+            ✑ Ação: Permitir
+            NSG1 está associado à Subnet1. NSG2 está associado à interface de rede de VM2.
+            Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+            NOTA: Cada seleção correta vale um ponto.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Na Internet, você pode conectar-se à VM1 usando a Área de Trabalho Remota.',
+            'correct': false
+        }, {
+            'text': 'Na Internet, você pode conectar-se ao VM2 usando a Área de Trabalho Remota.',
+            'correct': true
+        }, {
+            'text': 'Da VM1, você pode se conectar à VM2 usando a Área de Trabalho Remota',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `******
+        `
+
+    },
+    
+    
+    
+    {
         'question': '91\nVocê tem uma assinatura do Azure que contém duas máquinas virtuais denominadas VM1 e VM2.\nVocê cria um balanceador de carga do Azure.\nVocê planeja criar uma regra de balanceamento de carga que balanceará a carga do tráfego HTTPS entre VM1 e VM2.\nQuais dois recursos adicionais do balanceador de carga você deve criar antes de criar a regra de balanceamento de carga? Cada resposta correta apresenta parte\nda solução.\nNOTA: Cada seleção correta vale um ponto.\n',
         'number': '',
         'page': 395,
@@ -10447,7 +10724,152 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nO gateway VPN suporta apenas Dinâmico.\nNota: O gateway VPN requer um endereço IP público para sua configuração. Um endereço IP público é usado como ponto de conexão externo da VPN.\nEspecifique nos valores para Endereço IP público. Essas configurações especificam o objeto de endereço IP público associado ao gateway VPN. O\no endereço IP público é atribuído dinamicamente a este objeto quando o gateway VPN é criado. A única vez que o endereço IP público muda é quando\no gateway é excluído e recriado.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal\nDistribuição de votos da comunidade\nB (88%) 12%'
-    }, {
+    },
+
+    {
+        'question': `Questão 93 Tópico 5
+
+        Você tem as máquinas virtuais do Azure mostradas na tabela a seguir.
+        <img src="imagens/xquestao93topico5parte1.png" alt="imagem da questão"></img>
+        VNET1, VNET2 e VNET3 são pareadas.
+        <img src="imagens/xquestao93topico5parte2.png" alt="imagem da questão"></img>
+        VNET1 e VNET2 são vinculadas a uma zona DNS privada do Azure chamada contoso.com que contém os registros mostrados na tabela a seguir.
+        <img src="imagens/xquestao93topico5parte3.png" alt="imagem da questão"></img>
+        As redes virtuais são configuradas para usar os servidores DNS mostrados na tabela a seguir.
+        <img src="imagens/xquestao93topico5parte4.png" alt="imagem da questão"></img>
+        Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            'text': 'Da VM1, server1.contoso.com é resolvido para 131.107.3.3.',
+            'correct': true
+        }, {
+            'text': 'Na VM2, server1.contoso.com é resolvido para 131.107.3.3.',
+            'correct': false
+        }, {
+            'text': 'Na VM3, server2.contoso.com é resolvido para 131.107.2.4.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `******
+        `
+
+    },
+    {
+        'question': `Questão 94 Tópico 5
+        Você tem duas máquinas virtuais do Azure, conforme mostrado na tabela a seguir.
+        <img src="imagens/xquestao94topico5parte1.png" alt="imagem da questão"></img>
+        Você cria as zonas DNS do Azure mostradas na tabela a seguir.
+        <img src="imagens/xquestao94topico5parte1.png" alt="imagem da questão"></img>
+        Você executa as seguintes ações:
+        ✑ ׀¢׀ 3/4fabrikam.com, você adiciona um link de rede virtual para vnet1 e habilita o registro automático.
+        ✑ Para contoso.com, você atribui a vm1 e vm2 a função Proprietário.
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'O registro DNS A para vm1 é adicionado a contoso.com e tem o endereço IP 131.107.50.20.',
+            'correct': false
+        }, {
+            'text': 'O registro DNS A para vm1 é adicionado a fabrikam.com e tem o endereço IP 10.0.1.4.',
+            'correct': true
+        }, {
+            'text': 'O registro DNS A para vm2 é adicionado a fabrikam.com e tem o endereço IP 10.0.1.5.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*****
+        `
+
+    },
+
+    {
+        'question': `Questão 96 Tópico 5
+        Você tem uma rede virtual chamada VNET1 que contém as sub-redes mostradas na tabela a seguir:
+        <img src="imagens/xquestao96topico5parte1.png" alt="imagem da questão"></img>
+        Você tem máquinas virtuais do Azure que têm as configurações de rede mostradas na tabela a seguir:
+        <img src="imagens/xquestao96topico5parte2.png" alt="imagem da questão"></img>
+        Para NSG1, você cria a regra de segurança de entrada mostrada na tabela a seguir:
+        <img src="imagens/xquestao96topico5parte3.png" alt="imagem da questão"></img>
+        Para NSG2, você cria a regra de segurança de entrada mostrada na tabela a seguir:
+        <img src="imagens/xquestao96topico5parte4.png" alt="imagem da questão"></img>
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto.
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+            'text': 'VM2 pode se conectar aos serviços da porta TCP 1433 em VM1.',
+            'correct': false
+        }, {
+            'text': 'VM1 pode se conectar aos serviços da porta TCP 1433 na VM2.',
+            'correct': true
+        }, {
+            'text': 'VM2 pode se conectar aos serviços da porta TCP 1433 em VM3.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `******
+        `
+
+    },
+
+    {
+        'question': `Questão 97 Tópico 5
+        Você tem uma assinatura do Azure chamada Subscription1.
+        Subscription1 contém as máquinas virtuais na tabela a seguir:
+        <img src="imagens/xquestao97topico5parte1.png" alt="imagem da questão"></img>
+        Subscription1 contém uma rede virtual chamada VNet1 que tem as sub-redes na tabela a seguir:
+        <img src="imagens/xquestao97topico5parte2.png" alt="imagem da questão"></img>
+        VM3 tem vários adaptadores de rede, incluindo um adaptador de rede chamado NIC3. O encaminhamento de IP está habilitado em NIC3. O roteamento está habilitado em VM3.
+        Você cria uma tabela de rotas chamada RT1 que contém as rotas na tabela a seguir:
+        <img src="imagens/xquestao97topico5parte3.png" alt="imagem da questão"></img>
+        
+        Você aplica RT1 a Subnet1 e Subnet2.
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'VM3 pode estabelecer uma conexão de rede com VM1.',
+            'correct': true
+        }, {
+            'text': 'Se a VM3 estiver desativada, a VM2 poderá estabelecer uma conexão de rede com a VM1.',
+            'correct': false
+        }, {
+            'text': 'VM1 pode estabelecer uma conexão de rede com VM2.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*****
+        `
+
+    },
+    
+    
+    
+    {
         'question': '98\nSua rede local contém um compartilhamento SMB chamado Share1.\nVocê tem uma assinatura do Azure que contém os seguintes recursos:\n✑ Um aplicativo da web chamado webapp1\n✑ Uma rede virtual chamada VNET1\nVocê precisa garantir que o webapp1 possa se conectar ao Share1.\nO que você deve implantar?\n',
         'number': '',
         'page': 403,
@@ -12137,7 +12559,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
             <img src="imagens/gquestao27topico6parte1.png" alt="imagem da questão"></img>
             O NSG1 é configurado conforme mostrado na exposição a seguir.
-            <img src="imagens/gquestao27topico6parte2.png" alt="imagem da questão"></img>
+            <img src="imagens/gquestao27topico6parte2.jpg" alt="imagem da questão"></img>
             Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
             OBSERVAÇÃO: Cada seleção correta vale um ponto.
             Hot Area:
