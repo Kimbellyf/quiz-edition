@@ -67,6 +67,13 @@ window.onload = function () {
   $startGameButton.addEventListener("click", startGame)
   $nextQuestionButton.addEventListener("click", displayNextQuestion)
   $elementProxButton.addEventListener("click", nextQuestion)
+  document.addEventListener('keypress', function(e){
+    if(e.charCode == 13){
+      if(currentQuestionIndex!=0){
+        displayNextQuestion()
+      }
+    }
+  }, false);
   botoesAndOnLoad();
 
 
@@ -149,6 +156,7 @@ function displayNextQuestion() {
   $questionText.textContent = '';
   $textAnswerOrigin.textContent = '';
   $questionText.insertAdjacentHTML('beforeend', questaoDoMomento.question);
+  $answersContainer.style.display = "grid";
   if (questaoDoMomento.hasOwnProperty("typeQuestion")) {
     questoesSelectOuDragDrop(questaoDoMomento);
   } else {
@@ -166,6 +174,7 @@ function questoesSelectOuDragDrop(questao) {
   }
 }
 function questoesSimENao(questao) {
+  $answersContainer.style.display = "contents";
   questao.answers.forEach(answer => {
     const newAsnwer = document.createElement("button")
     newAsnwer.classList.add("button", "answer")
@@ -174,6 +183,7 @@ function questoesSimENao(questao) {
       newAsnwer.dataset.correct = answer.correct
     }
     $answersContainer.appendChild(newAsnwer)
+    $answersContainer.insertAdjacentHTML('beforeend', '<br>');
 
     newAsnwer.addEventListener("click", selectAnswer)
   })
@@ -431,7 +441,7 @@ function selectAnswer(event) {
   console.log(event)
   const answerClicked = event.target
 
-  if (answerClicked.tagName === "SELECT") {
+  if (answerClicked.tagName === "SELECT" ) {
     if (answerClicked.options[answerClicked.selectedIndex].dataset.correct) {
       pontosdosSelectCerto += pontosPorSelectCerto;
       answerClicked.classList.add("correct")
@@ -440,6 +450,11 @@ function selectAnswer(event) {
       pontosdosSelectCerto -= pontosPorSelectCerto; //aj esse caso
       answerClicked.classList.remove("correct")
     }
+  }else if(answerClicked.tagName === "BUTTON"){
+    if(answerClicked.dataset.correct === 'true'){
+      totalCorrect+=1;
+    }
+
   }
 
   document.querySelectorAll(".answer").forEach(button => {
@@ -451,6 +466,7 @@ function selectAnswer(event) {
       button.classList.add("incorrect")
     }
   })
+  //totalCorrect+=pontosPorSelectCerto;
 
   $nextQuestionButton.classList.remove("hide")
   /*
