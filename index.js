@@ -151,6 +151,7 @@ function reiniciarTesteSomenteComOsQerrou(){
   resetState()
   colocandoHTMLQUESTIONAGAin()
   displayNextQuestion()
+  questionsqerrou = []
 }
 function colocandoHTMLQUESTIONAGAin(){
   const htmlQuestionContainer =  `<span class="question" style="overflow: auto;">Pergunta aqui?</span>
@@ -189,16 +190,17 @@ function verifyRadioYesOrNo(){
   */
 
 function displayNextQuestion() {
-  const totalCorrectAntes = totalCorrect;
-
   if(isQuestionRadioSimOuNaoNoMomento){
     totalCorrect += pontosRadioSimOuNao<0? 0: pontosRadioSimOuNao;
+    if(pontosRadioSimOuNao<0.98){
+      questionsqerrou.push(questaoatual)
+    }
   }
   if(ehQuestaoSelectNoMomento){
     totalCorrect += pontosdosSelectCerto<0? 0 : pontosPorSelectCerto;
-  }
-  if(totalCorrectAntes<totalCorrect){
-    questionsqerrou.push(questaoatual)
+    if(pontosdosSelectCerto<0.98){
+      questionsqerrou.push(questaoatual)
+    }
   }
   resetState()
 
