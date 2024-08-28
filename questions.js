@@ -8311,7 +8311,7 @@ const questionsAll = [
         Como você deve preencher o modelo do Azure Resource Manager (ARM)? Para responder, selecione as opções apropriadas na área de resposta.
         NOTA: Cada seleção correta vale um ponto.
 
-        <img src="imagens/Xquestao80topico4.png" alt="imagem da questão"></img>
+        <img src="imagens/Xquestao80topico4.jpg" alt="imagem da questão"></img>
 
 
 `,
@@ -8644,7 +8644,7 @@ const questionsAll = [
         'question': `Questão 93 Tópico 4
 
             Você tem uma assinatura do Azure que contém as máquinas virtuais mostradas na tabela a seguir.
-            <img src="imagens/Xquestao93topico4parte1 (2).png" alt="imagem da questão"></img>
+            <img src="imagens/Xquestao93topico4parte1 (1).png" alt="imagem da questão"></img>
             Você cria uma Azure Compute Gallery chamada ComputeGallery1, conforme mostrado na exposição da Azure Compute Gallery. (Clique na guia Azure Compute Gallery
             .)
             <img src="imagens/Xquestao93topico4parte1 (2).png" alt="imagem da questão"></img>
@@ -9147,11 +9147,10 @@ const questionsAll = [
         'question': `Questão 12 Tópico 5
         Você tem uma assinatura do Azure que contém duas redes virtuais chamadas VNet1 e VNet2. As máquinas virtuais se conectam às redes virtuais.
         As redes virtuais têm os espaços de endereço e as sub-redes configuradas conforme mostrado na tabela a seguir.
-        <img src="imagens/Xquestao12topico5parte1 (1).png" alt="imagem da questão"></img>
+        <img src="imagens/Xquestao12topico5parte1.png" alt="imagem da questão"></img>
         Você precisa adicionar o espaço de endereço de 10.33.0.0/16 à VNet1. A solução deve garantir que os hosts na VNet1 e na VNet2 possam se comunicar.
         Quais três ações você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e
         organize-as na ordem correta.
-        <img src="imagens/Xquestao12topico5parte1 (2).png" alt="imagem da questão"></img>
 `,
         'number': '31',
         'page': 11,
