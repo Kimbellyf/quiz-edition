@@ -39,23 +39,11 @@ let ehQuestaoSelectNoMomento = false;
 
 let questions = []
 
+let questionsqerrou = []
+let questaoatual;
+
 window.onload = function () {
-  $startGameButton = document.querySelector(".start-quiz")
-  $nextQuestionButton = document.querySelector(".next-question")
-  $questionsContainer = document.querySelector(".questions-container")
-  $questionText = document.querySelector(".question")
-  $answersContainer = document.querySelector(".answers-container")
-  $answers = document.querySelectorAll(".answer")
-
-
-  $textAnswerContainer = document.querySelector(".explication-container")
-  $textAnswerOrigin = document.querySelector(".textAAnswer")
-  $imgOuTabelaAnswer = document.getElementById("imgoutabelaAnswerX");
-
-  $buttonVerResp = document.querySelector(".btresp")
-
-  $elementSoStart = document.querySelector(".controls-container-just-inicio")
-  $titlebancoquestoes = document.getElementById("titlebancoquestoes")
+  getBasicElementsHTML();
 
   totalQuestoes = questionsAll.length;
 
@@ -76,6 +64,26 @@ window.onload = function () {
   }, false);
   botoesAndOnLoad();
 
+
+}
+function getBasicElementsHTML(){
+  $startGameButton = document.querySelector(".start-quiz")
+  $nextQuestionButton = document.querySelector(".next-question")
+  $questionsContainer = document.querySelector(".questions-container")
+  $questionText = document.querySelector(".question")
+  $answersContainer = document.querySelector(".answers-container")
+  $answers = document.querySelectorAll(".answer")
+
+
+  $textAnswerContainer = document.querySelector(".explication-container")
+  $textAnswerOrigin = document.querySelector(".textAAnswer")
+  $imgOuTabelaAnswer = document.getElementById("imgoutabelaAnswerX");
+
+  $buttonVerResp = document.querySelector(".btresp")
+
+  $elementSoStart = document.querySelector(".controls-container-just-inicio")
+  $titlebancoquestoes = document.getElementById("titlebancoquestoes")
+  $elementProxButton = document.getElementById("proxB")
 
 }
 
@@ -130,6 +138,48 @@ function getIntervaloQuestoes() {
   intervaloQuestaoInicio = parseInt(document.getElementById('intervaloinicio').value)
   intervaloQuestaoFim = parseInt(document.getElementById('intervalofim').value)
 }
+function reiniciarTesteSomenteComOsQerrou(){
+  $startGameButton.classList.add("hide")
+  $elementSoStart.classList.add("hide")
+  $questionsContainer.classList.remove("hide")
+  questions = questionsqerrou;
+  intervaloQuestaoInicio = 0;
+  intervaloQuestaoFim = questionsqerrou.length
+  currentQuestionIndex = 0;
+  totalCorrect = 0;
+  totalQuestoes = questionsqerrou.length
+  resetState()
+  colocandoHTMLQUESTIONAGAin()
+  displayNextQuestion()
+}
+function colocandoHTMLQUESTIONAGAin(){
+  const htmlQuestionContainer =  `<span class="question" style="overflow: auto;">Pergunta aqui?</span>
+  <div class="answers-container" style="overflow: auto;">
+    <button class="answer button">Resposta 1</button>
+    <select class="selectAnswer button" name="cars" id="cars">
+      <option value="voc"></option>
+    </select>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h5 draggable="true" ondragstart="drag(event)" id="drag1"></h5>
+    </div>
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  </div>
+  <div class="explication-container">
+    <div>
+      <button id="btverresp" class="btresp" onclick="showAnswer()"> Ver resposta </button>
+    </div>
+    <div>
+      <textarea id="textAreaAnswerX" class="textAAnswer" style="width:100%" title="resposta explicada"
+        rows="5"></textarea>
+      <div id="imgoutabelaAnswerX" disable="true"></div>
+    </div>
+  </div>
+  `
+  //$questionsContainer.insertAdjacentHTML('beforeend', htmlQuestionContainer);
+  $questionsContainer.innerHTML = htmlQuestionContainer;
+  getBasicElementsHTML();
+}
 /* 
 function verifyRadioYesOrNo(){
   if(){
@@ -139,11 +189,16 @@ function verifyRadioYesOrNo(){
   */
 
 function displayNextQuestion() {
+  const totalCorrectAntes = totalCorrect;
+
   if(isQuestionRadioSimOuNaoNoMomento){
     totalCorrect += pontosRadioSimOuNao<0? 0: pontosRadioSimOuNao;
   }
   if(ehQuestaoSelectNoMomento){
     totalCorrect += pontosdosSelectCerto<0? 0 : pontosPorSelectCerto;
+  }
+  if(totalCorrectAntes<totalCorrect){
+    questionsqerrou.push(questaoatual)
   }
   resetState()
 
@@ -152,6 +207,7 @@ function displayNextQuestion() {
   }
 
   let questaoDoMomento = questions[currentQuestionIndex]
+  questaoatual = questaoDoMomento
 
   $questionText.textContent = '';
   $textAnswerOrigin.textContent = '';
@@ -453,6 +509,8 @@ function selectAnswer(event) {
   }else if(answerClicked.tagName === "BUTTON"){
     if(answerClicked.dataset.correct === 'true'){
       totalCorrect+=1;
+    }else{
+      questionsqerrou.push(questaoatual);
     }
 
   }
@@ -511,6 +569,12 @@ function finishGame() {
       class="button"
     >
       Refazer teste
+    </button>
+    <button
+      onclick=reiniciarTesteSomenteComOsQerrou()
+      class="button"
+    >
+      Refazer teste somente com as que errou
     </button>
   `
 }
