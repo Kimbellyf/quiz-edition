@@ -56,9 +56,12 @@ window.onload = function () {
   $nextQuestionButton.addEventListener("click", displayNextQuestion)
   $elementProxButton.addEventListener("click", nextQuestion)
   document.addEventListener('keypress', function(e){
-    if(e.charCode == 13){
-      if(currentQuestionIndex!=0){
+    if(currentQuestionIndex!=0){
+      if(e.charCode == 13){
         displayNextQuestion()
+      }
+      if(e.key == "p"){
+        showAnswer();
       }
     }
   }, false);
@@ -172,7 +175,7 @@ function colocandoHTMLQUESTIONAGAin(){
     </div>
     <div>
       <textarea id="textAreaAnswerX" class="textAAnswer" style="width:100%" title="resposta explicada"
-        rows="5"></textarea>
+        rows="5" disabled="true"></textarea>
       <div id="imgoutabelaAnswerX" disable="true"></div>
     </div>
   </div>

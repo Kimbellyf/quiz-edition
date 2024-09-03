@@ -5127,7 +5127,7 @@ const questionsAll = [
     {
         'question': `Questão 21 Tópico 3 
         Você tem uma assinatura do Azure chamada Subscription1 que contém os recursos mostrados na tabela a seguir.
-
+        <img src="imagens/questao21topico3.png" alt="imagem da questão"></img>
         No storage1, você cria um contêiner de blob chamado blob1 e um compartilhamento de arquivo chamado share1.
         Quais recursos podem ser copiados para o Vault1 e o Vault2? Para responder, selecione as opções apropriadas na área de resposta.
         OBSERVAÇÃO: Cada seleção correta vale um ponto.
@@ -6523,7 +6523,171 @@ const questionsAll = [
         }
         ],
         'explication': 'E\nDistribuição de votos da comunidade\nE (98%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 58 Tópico 3
+        Você tem uma assinatura do Azure que contém um usuário chamado User1 e uma conta de armazenamento chamada storage1. A conta storage1 contém os
+        recursos mostrados na tabela a seguir.
+        <img src="imagens/questao58topico3parte1.png" alt="imagem da questão"></img>
+        O User1 recebe as seguintes funções para storage1:
+        • Storage Blob Data Reader
+        • Storage Table Data Contributor
+        • Storage File Data SMB Share Contributor
+        Para storage1, você cria uma assinatura de acesso compartilhado (SAS) chamada SAS1 que tem as configurações mostradas na exposição a seguir. (Clique na guia Exposição.)
+        <img src="imagens/questao58topico3parte2.png" alt="imagem da questão"></img>
+        Em quais recursos o User1 pode gravar usando SAS1 e key1? Para responder, selecione as opções apropriadas na área de resposta.
+        OBSERVAÇÃO: cada seleção correta vale um ponto.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `key1`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "somente Table1",
+                    'correct': false
+                }, {
+                    'text': "Table1 e somente container1",
+                    'correct': false
+                }, {
+                    'text': "folder1 e Table1 somente",
+                    'correct': false
+                },
+                {
+                    'text': "folder1 e somente container1 ",
+                    'correct': false
+                },
+                {
+                    'text': "Table1, folder1 e container1",
+                    'correct': true
+                }
+            ]
+        },
+
+        {
+            'text': 'sas1',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "somente Table1",
+                    'correct': true
+                }, {
+                    'text': "Table1 e somente container1",
+                    'correct': false
+                }, {
+                    'text': "folder1 e Table1 somente",
+                    'correct': false
+                },
+                {
+                    'text': "folder1 e somente container1 ",
+                    'correct': false
+                },
+                {
+                    'text': "Table1, folder1 e container1",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `******
+            
+`
+    },
+    
+    {
+        'question': `Questão 59 Tópico 3
+        Você tem uma assinatura do Azure que contém a conta de armazenamento mostrada na exposição a seguir.
+        <img src="imagens/questao59topico3.png" alt="imagem da questão"></img>
+        Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no gráfico. Você tem uma assinatura do Azure que contém a conta de armazenamento mostrada na exposição a seguir.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `O número máximo de políticas de acesso armazenadas adicionais que você pode criar para o container1 é [opção de resposta]`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "0",
+                    'correct': false
+                }, {
+                    'text': "1",
+                    'correct': false
+                },
+                {
+                    'text': "3",
+                    'correct': true
+                }, {
+                    'text': "4",
+                    'correct': false
+                },
+                {
+                    'text': "5",
+                    'correct': false
+                },
+                {
+                    'text': "6",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'O número máximo de políticas adicionais de armazenamento de blob imutáveis ​​que você pode criar para o contêiner1 é [opção de resposta]',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "0",
+                    'correct': false
+                }, {
+                    'text': "1",
+                    'correct': true
+                }, {
+                    'text': "2",
+                    'correct': false
+                },
+                {
+                    'text': "4",
+                    'correct': false
+                },
+                {
+                    'text': "5",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `*******
+            
+`
+    },
+    
+    
+    
+    {
         'question': '60\nVocê tem uma assinatura do Azure chamada Subscription1.\nVocê tem 5 TB de dados que precisa transferir para a Assinatura1.\nVocê planeja usar um trabalho de importação/exportação do Azure.\nO que você pode usar como destino dos dados importados?\n',
         'number': '',
         'page': 174,
@@ -6666,7 +6830,96 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 64 Tópico 3
+
+        Você tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1. A conta storage1 contém um contêiner chamado container1.
+        Você cria uma regra de ciclo de vida de blob chamada rule1.
+        Você precisa configurar rule1 para mover automaticamente blobs que NÃO foram atualizados por 45 dias do nível de acesso contido para o nível de acesso Cool.
+        Como você deve concluir a regra? Para responder, selecione as opções apropriadas na área de resposta.
+        OBSERVAÇÃO: cada seleção correta vale um ponto
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `{ "rules": [ 
+                { "enabled": true,
+                  "name": "rulel",
+                   "type": "Lifecycle", 
+                   "definition": { "actions": 
+                    { "baseBlob":
+                        { "tierToCool": {`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': '"daysAfterCreationCreaterThan"',
+                    'correct': false
+                }, {
+                    'text': '"daysAfterLastAccessTimeGreater Than"',
+                    'correct': false
+                }, {
+                    'text': '"daysAfter ModificationGreater Than"',
+                    'correct': true
+                }
+            ]
+        },
+
+        {
+            'text': '} }, ": ( "filters "blobTypes": [',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': '"AppendBlob"',
+                    'correct': false
+                }, {
+                    'text': '"Blockblob"',
+                    'correct': true
+                }, {
+                    'text': '"Pageblob"',
+                    'correct': false
+                },
+               
+            ]
+        },
+        {
+            'text': `
+            prefixMatch": [ "container1" 1
+        ]
+        }]}
+            `,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `******
+            
+`
+    },
+    
+    
+    
+    {
         'question': '65\nVocê tem uma assinatura do Azure chamada Subscription1.\nVocê tem 5 TB de dados que precisa transferir para a Assinatura1.\nVocê planeja usar um trabalho de importação/exportação do Azure.\nO que você pode usar como destino dos dados importados?\n',
         'number': '',
         'page': 178,
@@ -9086,10 +9339,10 @@ const questionsAll = [
         'question': `Questão 10 Tópico 5
 
             Você tem uma assinatura do Azure. A assinatura contém máquinas virtuais que executam o Windows Server 2016 e são configuradas conforme mostrado na tabela a seguir.
-            <img src="imagens/questao10topico5parte1.png" alt="imagem da questão"></img>
-            Você cria uma zona pública de DNS do Azure chamada adatum.com e uma zona privada de DNS do Azure chamada contoso.com.
             <img src="imagens/questao10topico5parte2.png" alt="imagem da questão"></img>
+            Você cria uma zona pública de DNS do Azure chamada adatum.com e uma zona privada de DNS do Azure chamada contoso.com.
             Você cria um link de rede virtual para contoso.com conforme mostrado na exposição a seguir.
+            <img src="imagens/questao10topico5parte1.jpg" alt="imagem da questão"></img>
             Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione N
 
                     \n`,
@@ -9788,7 +10041,7 @@ const questionsAll = [
         LB1 é configurado conforme mostrado na exposição LB1. (Clique na guia LB1.)
         <img src="imagens/xquestao43topico5parte2.png" alt="imagem da questão"></img>
         Rule1 é configurado conforme mostrado na exposição Rule1. (Clique na guia Rule1.)
-        <img src="imagens/xquestao43topico5parte3.png" alt="imagem da questão"></img>
+        <img src="imagens/xquestao43topico5parte3.jpg" alt="imagem da questão"></img>
         Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
         NOTA: Cada seleção correta vale um ponto
 
@@ -9812,6 +10065,8 @@ const questionsAll = [
         `
 
     },
+
+    
      
     
      {
@@ -10731,11 +10986,11 @@ const questionsAll = [
         Você tem as máquinas virtuais do Azure mostradas na tabela a seguir.
         <img src="imagens/xquestao93topico5parte1.png" alt="imagem da questão"></img>
         VNET1, VNET2 e VNET3 são pareadas.
-        <img src="imagens/xquestao93topico5parte2.png" alt="imagem da questão"></img>
+        <img src="imagens/xquestao93topico5parte2.jpg" alt="imagem da questão"></img>
         VNET1 e VNET2 são vinculadas a uma zona DNS privada do Azure chamada contoso.com que contém os registros mostrados na tabela a seguir.
-        <img src="imagens/xquestao93topico5parte3.png" alt="imagem da questão"></img>
+        <img src="imagens/xquestao93topico5parte3.jpg" alt="imagem da questão"></img>
         As redes virtuais são configuradas para usar os servidores DNS mostrados na tabela a seguir.
-        <img src="imagens/xquestao93topico5parte4.png" alt="imagem da questão"></img>
+        <img src="imagens/xquestao93topico5parte4.jpg" alt="imagem da questão"></img>
         Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
         NOTA: Cada seleção correta vale um ponto.
 
@@ -11093,7 +11348,7 @@ const questionsAll = [
     {
         'question': `Questão 111 Tópico 5
             Você planeja implantar o seguinte modelo do Azure Resource Manager (ARM).
-            <img src="imagens/gquestao111topico5.png" alt="imagem da questão"></img>
+            <img src="imagens/gquestao111topico5.png" alt="imagem da questão" style="max-width: 80%;"></img>
             Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
                     \n`,
         'number': '',
@@ -11962,7 +12217,44 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nReferência:\nhttps://docs.microsoft.com/en-us/azure/backup/about-azure-vm-restore\nDistribuição de votos da comunidade\nD (79%) C (18%)'
-    }, {
+    },
+
+
+    {
+        'question': `Questão 9 Tópico 6
+
+        Você tem um locatário do Azure Active Directory (Azure AD) chamado contoso.onmicrosoft.com que contém os usuários mostrados na tabela a seguir.
+        <img src="imagens/questao9topico6parte1.png" alt="imagem da questão"></img>
+        Você habilita a redefinição de senha para contoso.onmicrosoft.com conforme mostrado na exposição Redefinição de senha. (Clique na guia Redefinição de senha.)
+        <img src="imagens/questao9topico6parte2.png" alt="imagem da questão"></img>
+        Você configura os métodos de autenticação para redefinição de senha conforme mostrado na exposição Métodos de autenticação. (Clique na guia Métodos de autenticação
+        <img src="imagens/questao9topico6parte3.png" alt="imagem da questão"></img>
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Depois que o Usuário2 responder corretamente a três perguntas de segurança, ele poderá redefinir sua senha imediatamente.',
+            'correct': false
+        }, {
+            'text': 'Se o Usuário1 esquecer sua senha, ela poderá redefini-la usando o aplicativo do celular. ',
+            'correct': false
+        }, {
+            'text': 'User3 pode adicionar perguntas de segurança ao processo de redefinição de senha',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `******
+        `
+
+    },
+    
+    
+    
+    {
         'question': '10\nSua empresa possui um escritório principal em Londres que contém 100 computadores clientes.\nHá três anos, você migrou para o Azure Active Directory (Azure AD).\nA política de segurança da empresa afirma que todos os dispositivos pessoais e de propriedade corporativa devem ser registrados ou associados ao Azure AD.\nUm utilizador remoto chamado User1 não consegue aderir a um dispositivo pessoal ao Azure AD a partir de uma rede doméstica.\nVocê verifica se o Usuário1 conseguiu ingressar dispositivos no Azure AD no passado.\nVocê precisa garantir que o Usuário1 possa ingressar o dispositivo no Azure AD.\nO que você deveria fazer?\n',
         'number': '',
         'page': 454,
@@ -11981,7 +12273,84 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nA configuração Número máximo de dispositivos permite selecionar o número máximo de dispositivos que um usuário pode ter no Azure AD. Se um usuário\natingir essa cota, eles não poderão adicionar dispositivos adicionais até que um ou mais dispositivos existentes sejam removidos.\nRespostas incorretas:\nC: O Azure AD Join permite que os usuários ingressem seus dispositivos no Active Directory de qualquer lugar, desde que tenham conectividade com a Internet.\nD: A configuração Os usuários podem ingressar dispositivos no Azure AD permite selecionar os usuários que podem ingressar dispositivos no Azure AD. As opções são Todas, Selecionadas\ne Nenhum. O padrão é Todos.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal http://techgenix.com/pros-and-cons-azure-\njuntar-se ao anúncio/\nDistribuição de votos da comunidade\nB (92%) 8%'
-    }, {
+    },
+
+    {
+        'question': `Questão 11 Tópico 6
+
+            Você tem dois aplicativos do Azure App Service chamados App1 e App2. Cada aplicativo tem um slot de implantação de produção e um slot de implantação de teste.
+            As configurações de backup para os slots de produção são mostradas na tabela a seguir.
+            <img src="imagens/questao11topico6.jpg" alt="imagem da questão"></img>
+            Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+            NOTA: Cada seleção correta vale um ponto.
+           
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'Em 15 de janeiro de 2021, o App1 terá apenas um backup no armazenamento',
+            'correct': false
+        }, {
+            'text': 'O Em 6 de fevereiro de 2021, você poderá acessar o backup do slot de teste do App2 de 15 de janeiro de 2021',
+            'correct': false
+        }, {
+            'text': 'Em 15 de janeiro de 2021, você poderá restaurar o backup do slot de produção do App2 de 6 de janeiro para o slot de teste do App2.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': ` **********
+        `
+
+    },
+    
+    
+    {
+        'question': `Questão 12 Tópico 6
+
+        Você tem uma assinatura do Azure que contém um locatário do Azure Active Directory (Azure AD) chamado contoso.com. O locatário é sincronizado com o domínio do Active Directory no local. O domínio contém os usuários mostrados na tabela a seguir.
+        <img src="imagens/questao12topico6.png" alt="imagem da questão"></img>
+        Você habilita a redefinição de senha de autoatendimento (SSPR) para todos os usuários e configura o SSPR para ter os seguintes métodos de autenticação:
+
+        ✑ Número de métodos necessários para redefinir: 2
+        ✑ Métodos disponíveis para usuários: Celular, Perguntas de segurança
+        ✑ Número de perguntas necessárias para registrar: 3
+        ✑ Número de perguntas necessárias para redefinir: 3
+        Você seleciona as seguintes perguntas de segurança:
+        ✑ Qual é sua comida favorita?
+        ✑ Em que cidade foi seu primeiro emprego?
+        ✑ Qual era o nome do seu primeiro animal de estimação?
+        Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira. Caso contrário, selecione Não.
+        NOTA: Cada seleção correta vale um ponto.
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'O SecAdmin1 deve responder a seguinte pergunta durante a redefinição de senha do autoatendimento: Em que cidade foi seu primeiro emprego?',
+            'correct': false
+        }, {
+            'text': 'BillAdmin1 deve responder a seguinte pergunta durante a redefinição de senha do autoatendimento: Qual é a sua comida favorita?',
+            'correct': false
+        }, {
+            'text': 'O usuário1 deve responder a seguinte pergunta durante a redefinição de senha do autoatendimento: Qual era o nome do seu primeiro animal de estimação?',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*******
+        `
+
+    },
+    
+    
+    {
         'question': '13\nObservação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução exclusiva que\npode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os seguintes usuários em um locatário do Azure Active Directory chamado contoso.onmicrosoft.com:\nO usuário1 cria um novo locatário do Azure Active Directory chamado external.contoso.onmicrosoft.com.\nVocê precisa criar novas contas de usuário em external.contoso.onmicrosoft.com.\nSolução: você instrui o usuário1 a criar as contas de usuário.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 457,
