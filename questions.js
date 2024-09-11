@@ -12280,7 +12280,7 @@ const questionsAll = [
 
             Você tem dois aplicativos do Azure App Service chamados App1 e App2. Cada aplicativo tem um slot de implantação de produção e um slot de implantação de teste.
             As configurações de backup para os slots de produção são mostradas na tabela a seguir.
-            <img src="imagens/questao11topico6.jpg" alt="imagem da questão"></img>
+            <img src="imagens/questao11topico6.png" alt="imagem da questão"></img>
             Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
             NOTA: Cada seleção correta vale um ponto.
            
