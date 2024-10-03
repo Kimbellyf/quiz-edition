@@ -7,6 +7,13 @@ let $questionText = ".question";
 let $answersContainer = ".answers-container";
 let $answers = ".answer";
 
+let $startGameButtonSimu1 = ".start-quiz-simu1";
+let $startGameButtonSimu2 = ".start-quiz-simu2";
+let $startGameButtonSimu3 = ".start-quiz-simu3";
+let $startGameButtonSimu4 = ".start-quiz-simu4";
+
+
+
 
 let $textAnswerContainer = ".explication-container";
 let $textAnswerOrigin = ".textAAnswer";
@@ -53,6 +60,11 @@ window.onload = function () {
   $elementIntervaloQuestaoFim = document.getElementById("intervalofim")
 
   $startGameButton.addEventListener("click", startGame)
+  $startGameButtonSimu1.addEventListener("click", selecSimu1)
+  $startGameButtonSimu2.addEventListener("click", selecSimu2)
+  $startGameButtonSimu3.addEventListener("click", selecSimu3)
+  $startGameButtonSimu4.addEventListener("click", selecSimu4)
+
   $nextQuestionButton.addEventListener("click", displayNextQuestion)
   $elementProxButton.addEventListener("click", nextQuestion)
   document.addEventListener('keypress', function(e){
@@ -71,6 +83,10 @@ window.onload = function () {
 }
 function getBasicElementsHTML(){
   $startGameButton = document.querySelector(".start-quiz")
+  $startGameButtonSimu1 = document.querySelector(".start-quiz-simu1")
+  $startGameButtonSimu2 = document.querySelector(".start-quiz-simu2")
+  $startGameButtonSimu3 = document.querySelector(".start-quiz-simu3")
+  $startGameButtonSimu4 = document.querySelector(".start-quiz-simu4")
   $nextQuestionButton = document.querySelector(".next-question")
   $questionsContainer = document.querySelector(".questions-container")
   $questionText = document.querySelector(".question")
@@ -116,6 +132,30 @@ function startGame() {
   randomQuestions()
   displayNextQuestion()
 }
+function selecSimu1(){
+  tipo = -5
+  startSimuEscolhido()
+}
+function selecSimu2(){
+  tipo = -6
+  startSimuEscolhido()
+}
+function selecSimu3(){
+  tipo = -7
+  startSimuEscolhido()
+}
+function selecSimu4(){
+  tipo = -8
+  startSimuEscolhido()
+}
+function startSimuEscolhido(){ //tipo1 - tipo eh um numero 
+  intervaloQuestaoInicio = tipo
+  intervaloQuestaoFim = 1
+  document.getElementById('intervaloinicio').value = intervaloQuestaoInicio
+  document.getElementById('intervalofim').value = intervaloQuestaoFim
+  startGame()
+
+}
 function startWithJustTypeQuestion(type) {
   questions = questionsAll.filter((question) => {
     return question.typeQuestion && question.typeQuestion === type;
@@ -133,13 +173,50 @@ function randomQuestions() {
     startWithJustTypeQuestion('select');
   } else if (intervaloQuestaoInicio === -3) {
     startWithJustTypeQuestion('dragdrop');
-  } else {
+  }
+  else if(intervaloQuestaoInicio === -4 
+    |  intervaloQuestaoInicio === -5 //K001
+    | intervaloQuestaoInicio === -6 //K002
+    | intervaloQuestaoInicio === -7 //L001
+    | intervaloQuestaoInicio === -8 //L003
+  ){
+    startSimuCairamNasProvasConhecidas(intervaloQuestaoInicio)
+  }
+  else {
     questions = questionsAll.slice(intervaloQuestaoInicio, intervaloQuestaoFim)
   }
 }
 function getIntervaloQuestoes() {
   intervaloQuestaoInicio = parseInt(document.getElementById('intervaloinicio').value)
   intervaloQuestaoFim = parseInt(document.getElementById('intervalofim').value)
+}
+function startSimuCairamNasProvasConhecidas(codigo = 0){
+  if(codigo !== -4){
+    let pesquisa = '';
+    if(codigo === -5){
+      pesquisa = 'K001'
+    }
+    if(codigo === -6){
+      pesquisa = 'K002'
+    }
+    if(codigo === -7){
+      pesquisa = 'L001'
+    }
+    if(codigo === -8){
+      pesquisa = 'L003'
+    }
+    questions = questionsAll.filter((question) => {
+      return question.filters && (question.filters.includes(pesquisa))
+     
+    });
+  }else {
+    questions = questionsAll.filter((question) => {
+      return question.filters;
+    });
+  }
+  console.log(questions);
+  displayNextQuestion()
+
 }
 function reiniciarTesteSomenteComOsQerrou(){
   $startGameButton.classList.add("hide")
@@ -172,7 +249,7 @@ function colocandoHTMLQUESTIONAGAin(){
   <div class="explication-container">
     <div>
       <button id="btverresp" class="btresp" onclick="showAnswer()"> Ver resposta </button>
-    </div>
+    </div>f
     <div>
       <textarea id="textAreaAnswerX" class="textAAnswer" style="width:100%" title="resposta explicada"
         rows="5" disabled="true"></textarea>
