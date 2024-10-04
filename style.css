@@ -16,6 +16,7 @@ body {
   align-items: center;
 }
 
+
 div {
   overflow: auto;
 }
@@ -34,6 +35,12 @@ div {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 600px) {
+  .container {
+     display: block;
+  }
+}
+
 
 .questions-container {
   width: 100%;
@@ -190,4 +197,12 @@ img {
 
 b{
   white-space: pre-line;
+}
+.next-question.button{
+  font-size: larger !important;
+}
+#btverresp{
+  margin-top: 20px;
+  height: 60px;
+  font-size: medium !important;
 }
