@@ -7561,7 +7561,7 @@ const questionsAll = [
     {
         'question': `Questão 5 Tópico 4
         Você tem uma assinatura do Azure chamada Subscription1. Subscription1 contém os recursos na tabela a seguir.
-        <img src="imagens/questao5topico4.png" alt="imagem da questão"></img>
+        <img src="imagens/questao5topico4.PNG" alt="imagem da questão"></img>
         VNet1 está em RG1. VNet2 está em RG2. Não há conectividade entre VNet1 e VNet2.
         Um administrador chamado Admin1 cria uma máquina virtual do Azure chamada VM1 em RG1. VM1 usa um disco chamado Disk1 e se conecta a VNet1.
         Admin1 então instala um aplicativo personalizado em VM1.
@@ -8850,7 +8850,7 @@ const questionsAll = [
     }, {
         'question': `Questão 77 Tópico 4 
             \nVocê desenvolve o seguinte modelo do Azure Resource Manager (ARM) para criar um grupo de recursos e implantar uma conta do Armazenamento do Azure no\ngrupo de recursos.
-            <img src="imagens/gquestao77topico4.png" alt="imagem da questão"></img>
+            <img src="imagens/gquestao77topico4.jpg" alt="imagem da questão"></img>
             \nQual cmdlet você deve executar para implantar o modelo?\n`,
         'number': '',
         'page': 271,
@@ -12803,7 +12803,7 @@ const questionsAll = [
 
             Você tem dois aplicativos do Azure App Service chamados App1 e App2. Cada aplicativo tem um slot de implantação de produção e um slot de implantação de teste.
             As configurações de backup para os slots de produção são mostradas na tabela a seguir.
-            <img src="imagens/questao11topico6.jpg" alt="imagem da questão"></img>
+            <img src="imagens/questao11topico6.png" alt="imagem da questão"></img>
             Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
             NOTA: Cada seleção correta vale um ponto.
            

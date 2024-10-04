@@ -65,8 +65,8 @@ window.onload = function () {
   $startGameButtonSimu3.addEventListener("click", selecSimu3)
   $startGameButtonSimu4.addEventListener("click", selecSimu4)
 
-  $nextQuestionButton.addEventListener("click", displayNextQuestion)
   $elementProxButton.addEventListener("click", nextQuestion)
+  $nextQuestionButton.addEventListener("click", displayNextQuestion)
   document.addEventListener('keypress', function(e){
     if(currentQuestionIndex!=0){
       if(e.charCode == 13){
