@@ -162,10 +162,12 @@ span.question {
 }
 
 input[type="radio" i] {
-  max-width: 20px;
+  max-width: 30px;
   margin-left: 20%;
 }
-
+input[type="number" i] {
+  font-size: larger;
+}
 img {
   max-width: 100%;
 }
