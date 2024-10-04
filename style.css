@@ -187,3 +187,7 @@ img {
   font-size: unset;
   text-align: justify;
 }
+
+b{
+  white-space: pre-line;
+}
