@@ -270,16 +270,18 @@ function verifyRadioYesOrNo(){
   */
 
 function displayNextQuestion() {
-  if(isQuestionRadioSimOuNaoNoMomento){
-    totalCorrect += pontosRadioSimOuNao<0? 0: pontosRadioSimOuNao;
-    if(pontosRadioSimOuNao<0.98){
-      questionsqerrou.push(questaoatual)
+  if(currentQuestionIndex>0){
+    if(isQuestionRadioSimOuNaoNoMomento){
+      totalCorrect += pontosRadioSimOuNao<0? 0: pontosRadioSimOuNao;
+      if(pontosRadioSimOuNao<0.98){
+        questionsqerrou.push(questaoatual)
+      }
     }
-  }
-  if(ehQuestaoSelectNoMomento){
-    totalCorrect += pontosdosSelectCerto<0? 0 : pontosPorSelectCerto;
-    if(pontosdosSelectCerto<0.98){
-      questionsqerrou.push(questaoatual)
+    if(ehQuestaoSelectNoMomento){
+      totalCorrect += pontosdosSelectCerto<0? 0 : pontosPorSelectCerto;
+      if(pontosdosSelectCerto<0.98){
+        questionsqerrou.push(questaoatual)
+      }
     }
   }
   resetState()
