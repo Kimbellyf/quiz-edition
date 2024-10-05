@@ -346,6 +346,10 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nDepois de implantar uma máquina virtual, normalmente você precisa fazer algumas alterações antes que ela esteja pronta para uso. Isso é algo que você pode fazer manualmente ou\nvocê poderia usar\nPowerShell remoto para automatizar a configuração da sua VM após a implantação, por exemplo.\nMas agora há uma terceira alternativa disponível que permite personalizar sua VM: a extensão CustomScript.\nEsta extensão CustomScript é executada pelo VM Agent e é muito simples: você especifica quais arquivos ele precisa baixar do seu\nconta de armazenamento e qual arquivo ele precisa executar. Você pode até especificar argumentos que precisam ser passados \u200b\u200bao script. O único requisito\né que você executa um arquivo .ps1.\nReferência:\nhttps://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup\nhttps://azure.microsoft.com/en-us/blog/automating-vm-customization-tasks-using-custom-script-extension/\nDistribuição de votos da comunidade\nA (60%) C (40%)\nTópico 1'
+        ,
+        'filters':[
+            'K002',
+        ]
     }, {
         'question': '22\nSua empresa tem um locatário do Azure Active Directory (Azure AD) configurado para coexistência híbrida com o Active Directory local\ndomínio.\nVocê planeja implantar várias novas máquinas virtuais (VMs) no Azure. As VMs terão o mesmo sistema operacional e software personalizado\nrequisitos.\nVocê configura uma VM de referência no ambiente virtual local. Em seguida, você generaliza a VM para criar uma imagem.\nVocê precisa carregar a imagem no Azure para garantir que ela esteja disponível para seleção ao criar as novas VMs do Azure.\nQuais cmdlets do PowerShell você deve usar?\n',
         'number': '',
@@ -527,6 +531,10 @@ const questionsAll = [
         }
         ],
         'explication': 'E\nEspecifique um IP interno estático para uma VM criada anteriormente\nSe quiser definir um endereço IP estático para uma VM criada anteriormente, você poderá fazer isso usando os cmdlets a seguir. Se você já definiu um IP\nendereço para o\nVM e quiser alterá-lo para um endereço IP diferente, você precisará remover o endereço IP estático existente antes de executar esses cmdlets. Ver\nsiga as instruções abaixo para remover um IP estático.\nPara este procedimento, você usará o cmdlet Update-AzureVM. O cmdlet Update-AzureVM reinicia a VM como parte do processo de atualização. O mergulho\nque você especificar será atribuído após a reinicialização da VM. Neste exemplo, definimos o endereço IP para VM2, que está localizado no serviço de nuvem\nDemonstração estática.\nGet-AzureVM -ServiceName StaticDemo -Name VM2 | Set-AzureStaticVNetIP -IPAddress 192.168.4.7 | Atualização-AzureVM\nDistribuição de votos da comunidade\nE (69%) C (31%)\nTópico 1'
+        ,
+        'filters':[
+            'K002',
+        ]
     }, {
         'question': '32\nSua empresa tem uma assinatura do Azure Active Directory (Azure AD).\nVocê precisa implantar cinco máquinas virtuais (VMs) na sub-rede da rede virtual da sua empresa.\nCada uma das VMs terá um endereço IP público e privado. As regras de segurança de entrada e saída para todas essas máquinas virtuais devem ser\nidêntico.\nQual das opções a seguir representa a menor quantidade de interfaces de rede necessárias para esta configuração?\n',
         'number': '',
@@ -660,7 +668,7 @@ const questionsAll = [
         ],
         'explication': 'B\nO cmdlet New-AzureADUser cria um usuário no Azure Active Directory (Azure AD).\nEm vez disso, use o cmdlet New-AzureADMSInvitation que é usado para convidar um novo usuário externo para seu diretório.\nReferência:\nhttps://docs.microsoft.com/en-us/powershell/module/azuread/new-azureadmsinvitation\nDistribuição de votos da comunidade\nB (91%) 9%\nTópico 1'
     }, {
-        'question': '39\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um locatário do Azure Active Directory (Azure AD) chamado contoso.com.\nVocê tem um arquivo CSV que contém os nomes e endereços de e-mail de 500 usuários externos.\nVocê precisa criar uma conta de usuário convidado em contoso.com para cada um dos 500 usuários externos.\nSolução: No Azure AD no portal do Azure, você usa a operação de criação de usuário em massa.\nIsso atende ao objetivo?\n',
+        'question': '39\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um locatário do Azure Active Directory (Azure AD) chamado contoso.com.\nVocê tem um arquivo CSV que contém os nomes e endereços de e-mail de 500 usuários externos.\nVocê precisa criar uma conta de usuário convidado em contoso.com para cada um dos 500 usuários externos.\nSolução: No Azure AD no portal do Azure, você usa a operação de criação de usuário em massa. (bulk create user) \nIsso atende ao objetivo?\n',
         'number': '',
         'page': 21,
         'answers': [{
@@ -893,6 +901,10 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nVocê está impedido de criar servidores SQL do Azure em qualquer lugar da Assinatura 1, com exceção do ContosoRG1\nDistribuição de votos da comunidade\nB (100%)'
+        ,
+        'filters':[
+            'L003',
+        ]
     },
 
     {
@@ -958,7 +970,7 @@ const questionsAll = [
                         text: 'Grupo RG: apenas RG6',
                         correct: false
                     }, {
-                        'text': 'Rótulo: Somente valor1',
+                        'text': 'Label: Somente valor1',
                         'correct': true
                     },
                     {
@@ -1032,7 +1044,11 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nAtribuir uma função a um usuário -\n1. Inscreva-se no portal do Azure com uma conta que seja administrador global ou administrador com função privilegiada para o diretório.\n2. Selecione Azure Active Directory, selecione Usuários e selecione um usuário específico na lista.\n3. Para o usuário selecionado, selecione Função do diretório, selecione Adicionar função e escolha as funções administrativas apropriadas na lista Funções do diretório, como\nAdministrador de acesso condicional.\n4. Pressione Selecionar para salvar.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+        ,
+        'filters':[
+            'K001', 'L003'
+        ]
+    }, {    
         'question': '11\nVocê tem um locatário do Azure Active Directory (Azure AD) chamado contoso.onmicrosoft.com que contém 100 contas de usuário.\nVocê compra 10 licenças Azure AD Premium P2 para o locatário.\nVocê precisa garantir que 10 usuários possam usar todos os recursos do Azure AD Premium.\nO que você deveria fazer?\n',
         'number': '',
         'page': 32,
@@ -1486,6 +1502,10 @@ const questionsAll = [
         }
         ],
         'explication': 'EA\nO tráfego de rede do gateway VPN é roteado para o aplicativo em nuvem por meio de um balanceador de carga interno. O balanceador de carga está localizado no\nsub-rede front-end do aplicativo.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/vpn https://docs.microsoft.com/en-\nus/azure/load-balancer/load-balancer-overview https://docs.microsoft.com/en-us/azure/application-gateway/overview\nDistribuição de votos da comunidade\nEA (100%)\nTópico 2'
+        ,
+        'filters':[
+            'L003',
+        ]
     }, {
         'question': '27\nVocê tem uma assinatura do Azure.\nVocê tem 100 máquinas virtuais do Azure.\nVocê precisa identificar rapidamente máquinas virtuais subutilizadas que podem ter seu nível de serviço alterado para uma oferta mais barata.\nQual lâmina você deve usar?\n',
         'number': '',
@@ -1553,6 +1573,10 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nReferência:\nhttps://techcommunity.microsoft.com/t5/Azure-Active-Directory/Generic-authorization-exception-inviting-Azure-AD-gests/td-p/274742\nDistribuição de votos da comunidade\nA (100%)'
+        ,
+        'filters':[
+            'K001'
+        ]
     }, {
         'question': '30\nVocê tem uma assinatura do Azure vinculada a um locatário do Azure Active Directory. O locatário inclui uma conta de usuário chamada User1.\nVocê precisa garantir que o Usuário1 possa atribuir uma política ao grupo de gerenciamento raiz do locatário.\nO que você deveria fazer?\n',
         'number': '',
@@ -1572,6 +1596,10 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nO gráfico a seguir mostra a lista de funções e as ações suportadas em grupos de gestão.\nObservação:\nCada diretório recebe um único grupo de gerenciamento de nível superior denominado grupo de gerenciamento "Raiz". Este grupo de gerenciamento raiz está integrado ao\nhierarquia para que todos os grupos de gerenciamento e assinaturas sejam agrupados nela. Este grupo de gerenciamento raiz permite políticas globais e função do Azure\natribuições a serem aplicadas no nível do diretório. O Administrador Global do Azure AD precisa se elevar ao Acesso do Usuário\nFunção de administrador deste grupo raiz inicialmente. Após elevar o acesso, o administrador pode atribuir qualquer função do Azure a outros usuários do diretório ou\ngrupos para gerenciar a hierarquia. Como administrador, você pode atribuir sua própria conta como proprietário do grupo de gerenciamento raiz.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/governance/management-groups/overview\nDistribuição de votos da comunidade\nC (85%) Outros'
+        ,
+        'filters':[
+            'K001'
+        ]
     },
 
 
@@ -1772,6 +1800,10 @@ const questionsAll = [
             Referência:
             https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal
         `
+        ,
+        'filters':[
+            'K001'
+        ]
     },
 
 
@@ -1906,6 +1938,10 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nAs identidades geridas para recursos do Azure fornecem aos serviços do Azure uma identidade gerida automaticamente no Azure Ative Directory. Você pode usar\nesta identidade para autenticar qualquer serviço que suporte a autenticação do Azure AD, sem ter credenciais no seu código.\nVocê pode habilitar e desabilitar a identidade gerenciada atribuída pelo sistema para VM usando o portal do Azure.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/active-directory/owned-identities-azure-resources/qs-con gure-portal-windows-vm\nDistribuição de votos da comunidade\nA (84%) B (16%)'
+        ,
+        'filters':[
+            'K001', 'L003'
+        ]
     }, {
         'question': `39 Tópico 2
             \nVocê tem uma assinatura do Azure que contém um grupo de recursos chamado TestRG.
@@ -1950,6 +1986,10 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nVocê precisa criar um registro de servidor de nomes (NS) para a zona.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/dns/delegate-subdomain\nDistribuição de votos da comunidade\nUm (100%)'
+        ,
+        'filters':[
+            'K001'
+        ]
     },
 
 
@@ -2288,6 +2328,10 @@ const questionsAll = [
             Referência:
             https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json
         `
+        ,
+        'filters':[
+            'K001'
+        ]
     },
 
     {
@@ -2350,7 +2394,7 @@ const questionsAll = [
         }],
 
         'typeQuestion': 'multiplecheckboxyesorno',
-        'explication': ` Algumas discordâncias nos comentários mas o mais votado escolhido foi Não, não e não.
+        'explication': ` Algumas discordâncias nos comentários quanto a primeira alternativa ser sim ou não mas o mais votado escolhido foi Não, não e não.
             Caixa 1: Não -
             A Política do Azure adicionará Tag4 ao RG1.
 
@@ -2599,6 +2643,10 @@ const questionsAll = [
             https://docs.microsoft.com/en-us/azure/role-based-access -control/built-in-roles?source=recommendations#virtual-machine-administrator-login
              a resposta correta é dataActions e atribuíveisScopes
         `
+        ,
+        'filters':[
+            'K001'
+        ]
     },
 
 
@@ -2873,6 +2921,10 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nC (98%)\nTópico 2'
+        ,
+        'filters':[
+            'K001'
+        ]
     }, {
         'question': '65\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um locatário do Azure Active Directory (Azure AD) chamado contoso.com.\nVocê tem um arquivo CSV que contém os nomes e endereços de e-mail de 500 usuários externos.\nVocê precisa criar uma conta de usuário convidado em contoso.com para cada um dos 500 usuários externos.\nSolução: No Azure AD no portal do Azure, você usa a operação de convidar usuários em massa.\nIsso atende ao objetivo?\n',
         'number': '',
@@ -3865,7 +3917,7 @@ const questionsAll = [
     },
 
     {
-        'question': `Questão 93  Tópico 2
+        'question': `Questão 93 Tópico 2
             Você tem uma assinatura do Azure chamada Sub1 que contém os contêineres de blob mostrados na tabela a seguir.
 
             <img src="imagens/kquestao93topico2parte1.png" alt="imagem da questão"></img>
@@ -3910,6 +3962,10 @@ const questionsAll = [
                 Referências: 1. https://learn.microsoft.com/en-us/azure/role-based-access-control/conditions-format 
                 2. https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
 	    `
+        ,
+        'filters':[
+            'K001'
+        ]
     },
 
 
@@ -5129,6 +5185,10 @@ const questionsAll = [
                 Referência:
                 https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy-zrs
         `
+        ,
+        'filters':[
+            'K002',
+        ]
     },
 
 
@@ -5950,6 +6010,10 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nServer Message Block (SMB) é usado para conectar a um compartilhamento de arquivo do Azure pela Internet. O protocolo SMB requer que a porta TCP 445 esteja aberta.\nRespostas incorretas:\nA: A porta 80 é necessária para HTTP para um servidor web\nB: A porta 443 é necessária para HTTPS para um servidor web\nD: A porta 3389443 é necessária para conexões de protocolo de área de trabalho remota (RDP)\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/ les/storage-how-to-use- les-windows\nDistribuição de votos da comunidade\nC (100%)\nTópico 3'
+        ,
+        'filters':[
+            'K001'
+        ]
     }, {
         'question': '38\nVocê tem uma assinatura do Azure chamada Subscription1.\nVocê tem 5 TB de dados que precisa transferir para a Assinatura1.\nVocê planeja usar um trabalho de importação/exportação do Azure.\nO que você pode usar como destino dos dados importados?\n',
         'number': '',
@@ -6001,7 +6065,7 @@ const questionsAll = [
         'explication': `Referência:
                 https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?tabs=json
         `
-        , 'filters': ['K002']
+        , 'filters': ['K00','K002']
 
     },
     {
@@ -6081,6 +6145,10 @@ const questionsAll = [
         'explication': `Comentário bem votado: 
             Resposta correta NYY Dep1File1 é atingido pela regra 1, que arquivará o arquivo até o 10º, tornando-o ilegível. O arquivo 2 e o arquivo 3 não são atingidos pela primeira regra e são atingidos pela segunda regra, o que os tornará ainda legíveis até o 10º https://docs.microsoft.com/en-us/azure/storage/blobs/archive-rehydrate-overview#:~:text=While%20a%20blob%20is%20in,the%20hot%20or%20cool%20tier.
         `
+        ,
+        'filters':[
+            'L003',
+        ]
 
     },
     
@@ -6197,6 +6265,10 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nO comando azcopy copy copia um diretório (e todos os arquivos nesse diretório) para um contêiner de blob. O resultado é um diretório no contêiner\npelo mesmo nome.\nRespostas incorretas:\nB: O comando azcopy sync replica o local de origem para o local de destino. No entanto, o arquivo será ignorado se o último horário modificado em\no destino é mais recente.\nD: O comando az storage blob copy start-batch copia vários blobs para um contêiner de blob.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs https://docs.microsoft.com/en-\nus/azure/storage/common/storage-ref-azcopy-copy\nDistribuição de votos da comunidade\nC (100%)\nTópico 3'
+        ,
+        'filters':[
+            'K002',
+        ]
     }, {
         'question': '46\nVocê tem uma assinatura do Azure.\nNo portal do Azure, você planeja criar uma conta de armazenamento chamada storage1 que terá as seguintes configurações:\n✑ Desempenho: Padrão\n✑ Replicação: armazenamento com redundância de zona (ZRS)\n✑ Nível de acesso (padrão): Legal\n✑ Namespace hierárquico: desativado\nVocê precisa garantir que pode definir o tipo de conta para armazenamento1 como BlockBlobStorage.\nQual configuração você deve modificar primeiro?\nUma performance\nB. Replicação\nC. Nível de acesso (padrão)\nD. Namespace hierárquico',
         'number': '',
@@ -6363,6 +6435,10 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
+        ,
+        'filters':[
+            'K002',
+        ]
     },
 
     {
@@ -6456,7 +6532,11 @@ const questionsAll = [
         'caseStudy': false,
         'explication': `
             Fonte e comentários mais votados concordam.
-`
+        `
+        ,
+        'filters':[
+            'K002',
+        ]
     },
 
     {
@@ -6664,6 +6744,10 @@ const questionsAll = [
         'explication': `******
             
 `
+        ,
+        'filters':[
+            'L003',
+        ]
     },
     
     {
@@ -6741,7 +6825,12 @@ const questionsAll = [
         'caseStudy': false,
         'explication': `*******
             
-`
+        `
+        ,
+        'filters':[
+            'K001'
+        ]
+
     },
     
     
@@ -7311,7 +7400,11 @@ const questionsAll = [
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `Há algumas divergencias quanto a primeira alternativa ser verdadeira ou falsa, mas por não ter uma votação expressiva, foi escolhido 
         a resposta da fonte e algumas pesssoas concordaram.
-	`
+	    `
+        ,
+        'filters':[
+            'L003',
+        ]
     },
 
 
@@ -7462,7 +7555,10 @@ const questionsAll = [
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `resposta da fonte
         `
-        , 'filters': ['K002']
+        , 'filters': [
+            'K002',
+            'L001'
+        ]
 
     },
 
@@ -7561,7 +7657,7 @@ const questionsAll = [
     {
         'question': `Questão 5 Tópico 4
         Você tem uma assinatura do Azure chamada Subscription1. Subscription1 contém os recursos na tabela a seguir.
-        <img src="imagens/questao5topico4.PNG" alt="imagem da questão"></img>
+        <img src="imagens/questao5topico4.png" alt="imagem da questão"></img>
         VNet1 está em RG1. VNet2 está em RG2. Não há conectividade entre VNet1 e VNet2.
         Um administrador chamado Admin1 cria uma máquina virtual do Azure chamada VM1 em RG1. VM1 usa um disco chamado Disk1 e se conecta a VNet1.
         Admin1 então instala um aplicativo personalizado em VM1.
@@ -7657,7 +7753,11 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nVocê pode usar um modelo que permite implantar uma VM simples do Windows recuperando a senha armazenada em um Key Vault. Portanto, o\na senha nunca é colocada em texto simples no arquivo de parâmetros do modelo.\nReferência:\nhttps://azure.microsoft.com/en-us/resources/templates/101-vm-secure-password/\nDistribuição de votos da comunidade\nUm (100%)'
-    },
+        ,
+        'filters':[
+            'L003',
+        ]
+    },  
 
     {
         'question': `Questão 7 Tópico 4
@@ -8028,6 +8128,10 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nVocê pode usar um registro CNAME ou um registro A para mapear um nome DNS personalizado para o Serviço de Aplicativo.\nReferência:\nhttps://docs.microsoft.com/en-us/Azure/app-service/app-service-web-tutorial-custom-domain\nDistribuição de votos da comunidade\nUm (100%)\nTópico 4'
+        ,
+        'filters':[
+            'L003',
+        ]
     }, {
         'question': `20\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
             <img src="imagens/mquestao20topico4.png" alt="imagem da questão"></img>
@@ -8151,6 +8255,10 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nAo redimensionar a VM, ela deve estar parada.\nReferência:\nhttps://azure.microsoft.com/en-us/blog/resize-virtual-machines/\nDistribuição de votos da comunidade\nC (100%)'
+        ,
+        'filters':[
+            'K002','L003',
+        ]
     }, {
         'question': `Questão 29 Tópico 4 
             \nVocê tem um aplicativo chamado App1 que é executado em um aplicativo Web do Azure chamado webapp1.
@@ -8249,6 +8357,10 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nB (96%) 4%'
+        ,
+        'filters':[
+            'K002',
+        ]
     }, {
         'question': '34\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscription1. Subscription1 contém um grupo de recursos denominado RG1. RG1 contém recursos que foram\nimplantado usando modelos.\nVocê precisa visualizar a data e hora em que os recursos foram criados no RG1.\nSolução: na folha Assinaturas, selecione a assinatura e clique em Implantação programática.\nIsso atende ao objetivo?\n',
         'number': '',
@@ -8262,6 +8374,10 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nNa lâmina RG1, clique em Implantações. Você verá um histórico de implantação para o grupo de recursos.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create- rst-template?tabs=azure-powershell\nDistribuição de votos da comunidade\nB (100%)'
+        ,
+        'filters':[
+            'K002',
+        ]
     }, {
         'question': `Questão 35 Tópico 4 
             \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário.
@@ -8285,7 +8401,11 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nVocê deve excluir VM1. Você recria a VM1 e depois adiciona a interface de rede para VM1.\nNota: Ao criar uma máquina virtual (VM) do Azure, você deve criar uma rede virtual (VNet) ou usar uma VNet existente. Você pode alterar o\nsub-rede à qual uma VM está conectada depois de criada, mas não é possível alterar a VNet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+        ,
+        'filters':[
+            'K002',
+        ]
+    }, {    
         'question': `Questão 36 Tópico 4
             \nVocê tem um locatário do Azure Active Directory (Azure AD) chamado adatum.com que contém os usuários mostrados na tabela a seguir.
             <img src="imagens/squestao36topico4.png" alt="imagem da questão"></img>
@@ -8450,6 +8570,10 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nA localização do Grupo de Recursos do VMSS1 é a localização RG2, que é o Oeste dos EUA.\nApenas Proximity2, que também em RG2, está localizado no oeste dos EUA\nReferência:\nhttps://azure.microsoft.com/en-us/blog/introduzindo-proximity-placement-groups/\nDistribuição de votos da comunidade\nA (88%) 13%\nTópico 4'
+        ,
+        'filters':[
+            'L003',
+        ]
     }, {
         'question': '44\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscription1. Subscription1 contém um grupo de recursos denominado RG1. RG1 contém recursos que foram\nimplantado usando modelos.\nVocê precisa visualizar a data e hora em que os recursos foram criados no RG1.\nSolução: Na folha Assinaturas, selecione a assinatura e clique em Provedores de recursos.\nIsso atende ao objetivo?\n',
         'number': '',
@@ -8606,6 +8730,10 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
+        ,
+        'filters':[
+            'L003',
+        ]
     }, {
         'question': '56\nVocê tem uma assinatura do Azure.\nVocê tem uma máquina virtual local chamada VM1. As configurações para VM1 são mostradas na exposição. (Clique na guia Exposição.)\nVocê precisa garantir que pode usar os discos anexados à VM1 como modelo para máquinas virtuais do Azure.\nO que você deve modificar na VM1?\n',
         'number': '',
@@ -8628,7 +8756,11 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nNa exposição vemos que o disco está no formato VHDX.\nAntes de carregar uma máquina virtual (VM) do Windows local para o Microsoft Azure, você deve preparar o disco rígido virtual (VHD ou\nVHDX). O Azure suporta apenas VMs de geração 1 que estejam no formato de arquivo VHD e tenham um disco de tamanho fixo. O tamanho máximo permitido para o\nVHD tem 1.023 GB. Você pode converter uma VM de geração 1 do sistema de arquivos VHDX para VHD e de um disco de expansão dinâmica para tamanho xed.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image\nDistribuição de votos da comunidade\nC (100%)'
-    }, {
+        ,
+        'filters':[
+            'L003',
+        ]
+    }, {    
         'question': `Questão 59 Tópico 4
             \nVocê tem um aplicativo Web do Azure chamado App1. App1 possui os slots de implantação mostrados na tabela a seguir:
             <img src="imagens/squestao59topico4.png" alt="imagem da questão"></img>
@@ -8651,7 +8783,11 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nQuando você troca os slots de implantação, o Azure troca os endereços IP virtuais dos slots de origem e de destino, trocando assim as URLs do\nslots. Podemos facilmente reverter a implantação trocando de volta.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+        ,
+        'filters':[
+            'L001',
+        ]
+    }, {    
         'question': '61\nVocê planeja fazer backup de uma máquina virtual do Azure chamada VM1.\nVocê descobre que o status da Pré-verificação de backup exibe um status de Aviso.\nQual é a possível causa do status de Aviso?\n',
         'number': '',
         'page': 257,
@@ -8800,6 +8936,10 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nReferência:\nhttps://docs.microsoft.com/en-us/azure/backup/backup-azure-restore-windows-server\nDistribuição de votos da comunidade\nB (92%) 8%'
+        ,
+        'filters':[
+            'L003',
+        ]
     }, {
         'question': `Questão 74 Tópico 4
             \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.
@@ -8850,7 +8990,7 @@ const questionsAll = [
     }, {
         'question': `Questão 77 Tópico 4 
             \nVocê desenvolve o seguinte modelo do Azure Resource Manager (ARM) para criar um grupo de recursos e implantar uma conta do Armazenamento do Azure no\ngrupo de recursos.
-            <img src="imagens/gquestao77topico4.jpg" alt="imagem da questão"></img>
+            <img src="imagens/gquestao77topico4.png" alt="imagem da questão"></img>
             \nQual cmdlet você deve executar para implantar o modelo?\n`,
         'number': '',
         'page': 271,
@@ -8990,7 +9130,7 @@ const questionsAll = [
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `*****
         `
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'L001']
 
     },
 
@@ -9090,7 +9230,7 @@ const questionsAll = [
         'explication': `A fonte e a maioria votou 2 e 15 mas há algumas dúvidas se na verdade seria 3 instâncias ou 5 minutos
             
         `
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'L001']
     },
     
     {
@@ -9229,7 +9369,7 @@ const questionsAll = [
         'explication': `Com: Para verificar um domínio, o Azure usa registros TXT e MX.
             
 `
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'L001', 'L003']
     },
 
 
@@ -9326,6 +9466,10 @@ const questionsAll = [
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `*****
         `
+        ,
+        'filters':[
+            'L001',
+        ]
 
     },
     
@@ -9357,7 +9501,7 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nD (58%) B (41%)'
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'L001']
     }, {
         'question': '98\nVocê tem um locatário do Azure AD chamado contoso.com.\nVocê tem uma assinatura do Azure que contém um aplicativo Web do Serviço de Aplicativo do Azure chamado App1 e um cofre de chaves do Azure chamado KV1. KV1 contém um\ncertificado curinga para contoso.com.\nVocê tem um usuário chamado user1@contoso.com ao qual foi atribuída a função de Proprietário para App1 e KV1.\nVocê precisa configurar o App1 para usar o certificado curinga do KV1.\nO que você deve fazer primeiro?\n',
         'number': '',
@@ -9420,6 +9564,10 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nA (77%) D (18%)5%'
+        ,
+        'filters':[
+            'K001'
+        ]
     }, {
         'question': '101\nVocê tem uma assinatura do Azure que contém um grupo de recursos chamado RG1.\nVocê planeja criar uma conta de armazenamento chamada storage1.\nVocê tem um arquivo Bicep chamado File1.\nVocê precisa modificar o Arquivo1 para que ele possa ser usado para automatizar a implantação do armazenamento1 no RG1.\nQual propriedade você deve modificar?',
         'number': '',
@@ -9571,6 +9719,10 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)\nTópico 4'
+        ,
+        'filters':[
+            'K001'
+        ]
     }, {
         'question': '106\nVocê tem uma assinatura do Azure que contém um registro de contêiner do Azure chamado ContReg1.\nVocê habilita o usuário Admin para ContReg1.\nQual nome de usuário você pode usar para fazer login no ContReg1?',
         'number': '',
@@ -9643,7 +9795,7 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nOs espaços de endereço não devem sobrepor-se para permitir o emparelhamento VNet.\nRespostas incorretas:\nA, B, D: O espaço de endereço para VNet2 se sobrepõe ao VNet1. Portanto, não podemos estabelecer um peering entre VNet2 e VNet1.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/tutorial-connect-virtual-networks-portal https://docs.microsoft.com/en-\nus/azure/virtual-network/virtual-networks-faq#vnet-peering\nDistribuição de votos da comunidade\nC (100%)'
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'L001', 'L003']
     }, {
         'question': '8\nVocê tem uma assinatura do Azure que contém uma rede virtual chamada VNet1. VNet1 contém quatro sub-redes denominadas Gateway, Perimeter, NVA e\nProdução.\nA sub-rede NVA contém dois dispositivos virtuais de rede (NVAs) que realizarão a inspeção do tráfego de rede entre a sub-rede Perimeter e a sub-rede Perimeter.\nSub-rede de produção.\nVocê precisa implementar um balanceador de carga do Azure para as NVAs. A solução deve atender aos seguintes requisitos:\n✑ Os NVAs devem ser executados em uma configuração ativa-ativa que use failover automático.\n✑ O balanceador de carga deve balancear a carga do tráfego para dois serviços na sub-rede de Produção. Os serviços têm endereços IP diferentes.\nQuais são as três ações que você deve realizar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
         'number': '',
@@ -9669,6 +9821,10 @@ const questionsAll = [
         }
         ],
         'explication': 'BCF\nUm balanceador de carga padrão é necessário para as portas HA.\nSão necessários dois pools de back-end, pois há dois serviços com endereços IP diferentes.\nA regra de IP flutuante é usada onde as portas de back-end são reutilizadas.\nRespostas incorretas:\nE: As portas HA não estão disponíveis para o balanceador de carga básico.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-standard-overview https://docs.microsoft.com/en-us/azure/load-\nvisão geral do balanceador/balanceador de carga-multivip\nDistribuição de votos da comunidade\nBDE (39%) BCF (39%) BCE (20%)'
+        ,
+        'filters':[
+            'L003',
+        ]
     }, {
         'question': '9\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém duas redes virtuais do Azure chamadas VNet1 e VNet2. VNet1 contém uma VPN\ngateway nomeado\nVPNGW1 que usa roteamento estático. Há uma conexão VPN site a site entre sua rede local e a VNet1.\nEm um computador chamado Client1 que executa o Windows 10, você configura uma conexão VPN ponto a site com a VNet1.\nVocê configura o peering de rede virtual entre VNet1 e VNet2. Verifique se é possível conectar-se à VNet2 por meio da rede local. Cliente1\nnão consegue se conectar ao VNet2.\nVocê precisa garantir que pode conectar o Client1 à VNet2.\nO que você deveria fazer?\n',
         'number': '',
@@ -9855,6 +10011,10 @@ const questionsAll = [
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nC (100%)'
+        ,
+        'filters':[
+            'K001'
+        ]
     }, {
         'question': `Questão 15 tópico 5 
             Você cria uma VM do Azure chamada VM1 que executa o Windows Server 2019.
@@ -9880,6 +10040,10 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nO status é Parado (Desalocado).\nA extensão DSC para Windows requer que a máquina virtual alvo seja capaz de comunicar com o Azure.\nA VM precisa ser iniciada.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-windows\nDistribuição de votos da comunidade\nB (100%)'
+        ,
+        'filters':[
+            'L001', 'K002'
+        ]
     }, {
         'question': '16\nVocê tem cinco máquinas virtuais do Azure que executam o Windows Server 2016. As máquinas virtuais são configuradas como servidores web.\nVocê tem um balanceador de carga do Azure chamado LB1 que fornece serviços de balanceamento de carga para as máquinas virtuais.\nVocê precisa garantir que os visitantes sejam atendidos pelo mesmo servidor web para cada solicitação.\nO que você deve configurar?\n',
         'number': '',
@@ -9912,6 +10076,10 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nA porta padrão para RDP é a porta TCP 3389. Uma regra para permitir o tráfego RDP deve ser criada automaticamente quando você cria sua VM.\nNota sobre NSG-Subnet1: O Azure encaminha o tráfego de rede entre todas as sub-redes numa rede virtual, por padrão.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/troubleshoot-rdp-connection\nDistribuição de votos da comunidade\nA (69%) B (31%)'
+        ,
+        'filters':[
+            'K001'
+        ]
     }, {
         'question': '18\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os seguintes recursos:\n✑ Uma rede virtual que possui uma sub-rede chamada Subnet1\n✑ Dois grupos de segurança de rede (NSGs) denominados NSG-VM1 e NSG-Subnet1\n✑ Uma máquina virtual chamada VM1 que tenha as configurações necessárias do Windows Server para permitir conexões de Área de Trabalho Remota\nNSG-Subnet1 tem apenas as regras de segurança de entrada padrão.\nO NSG-VM1 tem as regras de segurança de entrada padrão e a seguinte regra de segurança de entrada personalizada:\n✑ Prioridade: 100\n✑ Fonte: Qualquer\n✑ Intervalo de portas de origem: *\n✑ Destino: *\n✑ Intervalo de portas de destino: 3389\nProtocolo: UDP -\n✑ Ação: Permitir\nVM1 possui um endereço IP público e está conectada à Subnet1. O NSG-VM1 está associado à interface de rede do VM1. NSG-Subnet1 está associado a\nSub-rede1.\nVocê precisa estabelecer conexões de Área de Trabalho Remota da Internet para a VM1.\nSolução: você adiciona uma regra de segurança de entrada ao NSG-Subnet1 que permite conexões da origem da Internet ao destino da VirtualNetwork para\nintervalo de portas 3389 e usa o protocolo UDP.\nIsso atende ao objetivo?\n',
         'number': '',
@@ -10245,7 +10413,7 @@ const questionsAll = [
         'explication': 'B\nDistribuição de votos da comunidade\nB (83%) A (17%)'
         ,
         'filters':[
-            'K001'
+            'K001', 'K002'
         ]
     }, {
         'question': `Questão 36 tópico 5
@@ -10529,6 +10697,10 @@ const questionsAll = [
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `******
         `
+        ,
+        'filters':[
+            'K001'
+        ]
 
     },
 
@@ -10631,7 +10803,11 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nUm pool de back-end configurado por endereço IP tem as seguintes limitações:\n✑ Somente balanceador de carga padrão\nReferência:\nhttps://docs.microsoft.com/en-us/azure/load-balancer/backend-pool-management\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+        ,
+        'filters':[
+            'K002',
+        ]
+    }, {    
         'question': `questao 51 tópico 5
             Nota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que
             pode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.
@@ -11087,6 +11263,10 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nReferência:\nhttps://azure.microsoft.com/en-us/updates/general-availability-azure-network-watcher-connection-monitor-in-all-public-regions/\nDistribuição de votos da comunidade\nB (100%)'
+        ,
+        'filters':[
+            'K001'
+        ]
     }, {
         'question': `questão 78 tópico 5 
             \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um aplicativo chamado App1 instalado em duas máquinas virtuais do Azure chamadas VM1 e VM2. As conexões com App1 são gerenciadas usando\numa carga do Azure\nBalanceador.\nAs configurações efetivas de segurança de rede para VM2 são mostradas na exposição a seguir.
@@ -11766,6 +11946,10 @@ const questionsAll = [
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `Maioria concordou com a fonte original
         `
+        ,
+        'filters':[
+            'K001'
+        ]
 
     },
 
@@ -11808,6 +11992,10 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nA (89%) 11%\nTópico 5'
+        ,
+        'filters':[
+            'K001'
+        ]
     }, {
         'question': `questão 114 tópico 5 
             \nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
@@ -12021,6 +12209,10 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nA (80%) B (20%)'
+        ,
+        'filters':[
+            'K002',
+        ]
     }, {
         'question': '123\nVocê tem cinco máquinas virtuais do Azure que executam o Windows Server 2016. As máquinas virtuais são configuradas como servidores web.\nVocê tem um balanceador de carga do Azure chamado LB1 que fornece serviços de balanceamento de carga para as máquinas virtuais.\nVocê precisa garantir que os visitantes sejam atendidos pelo mesmo servidor web para cada solicitação.\nO que você deve configurar?\n',
         'number': '',
@@ -12084,7 +12276,7 @@ const questionsAll = [
         'explication': 'D\nDistribuição de votos da comunidade\nD (94%) 6%\nTópico 5'
         ,
         'filters':[
-            'K001'
+            'K001', 'L003'
         ]
     }, {
         'question': '126\nVocê tem cinco máquinas virtuais do Azure que executam o Windows Server 2016. As máquinas virtuais são configuradas como servidores web.\nVocê tem um balanceador de carga do Azure chamado LB1 que fornece serviços de balanceamento de carga para as máquinas virtuais.\nVocê precisa garantir que os visitantes sejam atendidos pelo mesmo servidor web para cada solicitação.\nO que você deve configurar?\n',
@@ -12272,7 +12464,7 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'L001']
     },
     {
         'question': `Questão 135 Tópico 5
@@ -12604,7 +12796,7 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nC (100%)'
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'L003']
     }, {
         'question': '150\nVocê tem uma assinatura do Azure.\nVocê está criando uma nova instância de contêiner do Azure que terá as seguintes configurações:\n• Nome do contêiner: cont1\n• SKU: Padrão\n• Tipo de sistema operacional: Windows\n• Tipo de rede: Pública\n• Memória (GiB): 2,5\n• Número de núcleos de CPU: 2\nVocê descobre que a configuração Privada para o tipo de rede não está disponível.\nVocê precisa garantir que cont1 possa ser configurado para usar rede privada.\nQual configuração você deve alterar?\n',
         'number': '',
@@ -12695,7 +12887,7 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nUm cofre dos Serviços de Recuperação é uma entidade de armazenamento no Azure que aloja dados. Os dados normalmente são cópias de dados ou informações de configuração para\nmáquinas virtuais\n(VMs), cargas de trabalho, servidores ou estações de trabalho. Você pode usar cofres dos Serviços de Recuperação para armazenar dados de backup para vários serviços do Azure\nReferência:\nhttps://docs.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replicatio\nDistribuição de votos da comunidade\nUm (100%)'
-        , 'filters': ['K002']
+        , 'filters': ['K001','K002']
     }, {
         'question': `questao 5 tópico 6\n
             Você tem uma assinatura do Azure que contém as identidades mostradas na tabela a seguir.
@@ -12803,7 +12995,7 @@ const questionsAll = [
 
             Você tem dois aplicativos do Azure App Service chamados App1 e App2. Cada aplicativo tem um slot de implantação de produção e um slot de implantação de teste.
             As configurações de backup para os slots de produção são mostradas na tabela a seguir.
-            <img src="imagens/questao11topico6.png" alt="imagem da questão"></img>
+            <img src="imagens/questao11topico6.jpg" alt="imagem da questão"></img>
             Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
             NOTA: Cada seleção correta vale um ponto.
            
@@ -14913,45 +15105,6 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             Caixa 3: Não`
             ,
         'filters': ['K001','K002']
-    },
-
-    {
-        'question': `Questão 3 tópico 10. 
-            Informações introdutórias
-            Estudo de caso - Contoso..
-
-            Estudo de caso - Contoso link : https://kimbellyf.github.io/quiz-edition/contoso1.html
-
-    Pergunta
-            HOTSPOT -
-    Você precisa identificar os requisitos de armazenamento para a Contoso.
-            Para cada uma das seguintes afirmações, selecione Sim se a afirmação for verdadeira.Caso contrário, selecione Não.
-    NOTA: Cada seleção correta vale um ponto.
-            Hot Area:
-\n`,
-        'number': '',
-        'page': 549,
-        'studyCase': true,
-        'answers': [{
-
-            'text': ' A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento de Blobs.\n',
-            'correct': true
-        }, {
-            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao armazenamento da Tabela do Azure..\n',
-            'correct': false
-        }, {
-            'text': 'A Contoso requer uma conta de armazenamento que dê suporte ao Armazenamento de Arquivos do Azure.\n',
-            'correct': false
-        }],
-
-        'typeQuestion': 'multiplecheckboxyesorno',
-        'explication': `Caixa 1: Sim -
-    A Contoso está movendo os arquivos de blueprint do produto existente para o armazenamento de Blobs do Azure.
-            Use o armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais.Usamos Page Blobs para isso.
-
-    Caixa 2: Não -
-        Caixa 3: Não`
-        , 'filters': ['K001','K002']
     },
 
     {
