@@ -4233,6 +4233,293 @@ const questionsAll = [
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
     },
 
+    {
+        'question': `Questão 102 Tópico 2
+        HOTSPOT
+        -
+
+        Você tem um locatário do Microsoft Entra que está vinculado às assinaturas mostradas na tabela a seguir.
+        <img src="imagens/q102topico2parte1.png" alt="imagem da questão"></img>
+        Você tem os grupos de recursos mostrados na tabela a seguir.
+        <img src="imagens/q102topico2parte2.png" alt="imagem da questão"></img>
+        Você atribui funções aos usuários conforme mostrado na tabela a seguir.
+        <img src="imagens/q102topico2parte3.png" alt="imagem da questão"></img>
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'O usuário1 pode redimensionar a VM1',
+            'correct': true
+        }, {
+            'text': 'O User2 pode criar uma nova conta de armazenamento em RG1',
+            'correct': false
+        }, {
+            'text': ' Usuário3 pode atribuir ao Usuário1 a função de Proprietário para RG3.',
+            'correct': true
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': ` Concordaram com a fonte. Comentário mais votado:
+            YNY 1. O usuário 1 é um colaborador do MG2, que contém o sub 3 e o VM1. 2. O usuário 2 é um SA Cont somente no armazenamento 1. Só pode modificar isso. 3. O usuário 3 é um administrador de UA no nível do grupo de locatários. Pode atribuir funções a qualquer coisa abaixo.
+        `
+
+    },
+
+    {
+        'question': `Questão 103 tópico 2
+            Sua rede local contém um gateway VPN.
+            Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+            <img src="imagens/q103topico2parte1.png" alt="imagem da questão"></img>
+            Você precisa garantir que todo o tráfego da VM1 para o storage1 viaje pela rede de backbone da Microsoft.
+            O que você deve configurar?
+        `,
+        'number': '',
+        'page': 413,
+        'answers': [{
+            'text': 'A. um grupo de segurança de rede (NSG)\n',
+            'correct': false
+        }, {
+            'text': 'B.  endpoints privados\n',
+            'correct': true
+        }, {
+            'text': 'C. Proxy de aplicativo Microsoft Entra\n',
+            'correct': true
+        }, {
+            'text': 'D. WAN Virtual do Azure',
+            'correct': false
+        }
+        ],
+        'explication': '* B'
+    
+    },
+    {
+        'question': `Questão 104 tópico 2
+           Você tem um locatário do Microsoft Entra.
+
+            Você planeja executar uma importação em massa de usuários.
+
+            Você precisa garantir que os objetos de usuário importados sejam adicionados automaticamente como membros de um grupo específico com base no departamento de cada usuário. A solução deve minimizar o esforço administrativo.
+
+            Quais duas ações você deve executar? Cada resposta correta apresenta parte da solução.
+
+            OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        `,
+        'number': '',
+        'page': 413,
+        'answers': [{
+            'text': 'A. Crie grupos que usem o tipo de associação Atribuída.\n',
+            'correct': false
+        }, {
+            'text': 'B.  Crie um modelo do Azure Resource Manager (ARM).\n',
+            'correct': true
+        }, {
+            'text': 'C. Crie grupos que usem o tipo de associação Usuário Dinâmico.\n',
+            'correct': true
+        }, {
+            'text': 'D. Escreva um script do PowerShell que analise um arquivo de importação.',
+            'correct': false
+        }
+        , {
+            'text': 'E. Crie um arquivo XML que contenha informações do usuário e os atributos apropriados.',
+            'correct': false
+        }
+        , {
+            'text': ' F. Crie um arquivo CSV que contenha informações do usuário e os atributos apropriados.',
+            'correct': true
+        }
+        ],
+        'explication': '* CF'
+    
+    },
+
+    {
+        'question': `Questão 105 tópico 2
+           Você tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1.
+
+            Você precisa garantir que as chaves de acesso para storage1 girem automaticamente.
+
+            O que você deve configurar?
+        `,
+        'number': '',
+        'page': 413,
+        'answers': [{
+            'text': 'A. um cofre de backup\n',
+            'correct': false
+        }, {
+            'text': 'B. redundância para armazenamento1\n',
+            'correct': true
+        }, {
+            'text': 'C. gerenciamento do ciclo de vida para armazenamento1\n',
+            'correct': true
+        }, {
+            'text': 'D. um cofre de chaves do Azure Mais votado',
+            'correct': false
+        }
+        , {
+            'text': 'E. um cofre de serviços de recuperação',
+            'correct': false
+        }
+
+        ],
+        'explication': '* D D: Para garantir que as chaves de acesso da sua conta de armazenamento sejam rotacionadas automaticamente, você deve configurar o Azure Key Vault com a rotação de chaves da conta de Armazenamento do Azure.'
+    
+    },
+
+    ,
+    {
+        'question': `Questão 106 tópico 2
+        Você tem uma assinatura do Azure que contém as identidades do Microsoft Entra mostradas na tabela a seguir.
+        <img src="imagens/q106topico2parte1.png" alt="imagem da questão"></img>
+        Você precisa habilitar a redefinição de senha de autoatendimento (SSPR).
+
+        Para quais identidades você pode habilitar o SSPR no portal do Azure?
+          
+        `,
+        'number': '',
+        'page': 413,
+        'answers': [{
+            'text': 'A. Somente usuário 1',
+            'correct': false
+        }, {
+            'text': 'B. Grupo 1 apenas',
+            'correct': false
+        }, {
+            'text': 'C. Somente Usuário1 e Grupo1',
+            'correct': false
+        }, {
+            'text': 'D. Grupo 1 e Grupo 2 apenas',
+            'correct': true
+        }
+        , {
+            'text': 'E. Usuário1, Grupo1 e Grupo2 ',
+            'correct': false
+        }
+
+        ],
+        'explication': `*D Muita divergência nos comentários. Pergunta recente maioria disse C mas são poucas pessoas, os que dizem ter testado estão entre D e E
+        Resposta: Acabei de testar isso no meu laboratório hoje, 2-out-2024. Você só pode atribuir SSPR aos grupos de Segurança e Microsoft 365, mas não à conta de Usuários. A resposta deve ser D. Antes de comentar, sempre experimente no seu laboratório.
+        `
+    
+    },
+    {
+        'question': `Questão 107 Tópico 2
+        Você tem um locatário do Microsoft Entra.
+
+        Você precisa garantir que, quando um novo grupo do Microsoft 365 for criado, o nome do grupo seja formatado automaticamente da seguinte forma:
+        <Department><Group name>
+        Quais três ações você deve executar em sequência no centro de administração do Microsoft Entra? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+
+`,
+        'number': '31',
+        'page': 11,
+        'answers': [
+
+            [
+                {
+                    'text': '',
+                    'options': [
+                        { 'text': 'Adicionar sufixo ao atributo.', 'correct': false, 'index': '-1' },
+                        { 'text': 'Crie uma política de nomenclatura de grupo.', 'correct': true, 'index': '1' },
+                        { 'text': 'Defina Adicionar prefixo como Atributo', 'correct': true, 'index': '2' },
+                        { 'text': 'Defina Adicionar sufixo como String', 'correct': false, 'index': '-1' },
+                        { 'text': ' Defina Selecionar tipo como Departamento.', 'correct': true, 'index': '3' },
+                        { 'text': ' Personalize a marca da empresa.', 'correct': false, 'index': '-1' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': '',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `* Nova, concordaram com a fonte`,
+        'typeQuestion': 'dragdrop'
+    },
+    
+    {
+        'question': `Questão 108 Tópico 2
+        Você tem um locatário do Microsoft Entra que contém os usuários mostrados na tabela a seguir.
+        <img src="imagens/q108topico2parte1.png" alt="imagem da questão"></img>
+        O locatário contém os grupos mostrados na tabela a seguir.
+        <img src="imagens/q108topico2parte2.png" alt="imagem da questão"></img>
+        Quais usuários e grupos podem ser excluídos? Para responder, selecione as opções apropriadas na área de resposta.
+
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+`,
+
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Users`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente User4",
+                    'correct': false
+                }, {
+                    'text': "User3 e User4 somente",
+                    'correct': false
+                }, {
+                    'text': "User2 e User4 somente",
+                    'correct': false
+                },
+                {
+                    'text': "User1, User2, User3 e User4",
+                    'correct': true
+                }
+            ]
+        },
+
+        {
+            'text': 'Groups',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente Group1",
+                    'correct': false
+                }, {
+                    'text': "Somente Group4",
+                    'correct': false
+                }, {
+                    'text': "Somente Group1 e Group3",
+                    'correct': true
+                },
+                {
+                    'text': "Group1, Group2, Group3 e Group4",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `* Novo, concordaram com a fonte
+            
+	`,
+    },
+
+
+
+    
 
     {
         'question': `1 Tópico 3 \nVocê tem uma assinatura do Azure chamada Subscription1 que contém as
@@ -4694,6 +4981,8 @@ const questionsAll = [
         Você cria uma conta do Azure Storage chamada contosostorage e, em seguida, cria um compartilhamento de arquivos chamado data.
         Qual caminho UNC você deve incluir em um script que faz referência a arquivos do compartilhamento de arquivos data? Para responder, arraste os valores apropriados para os destinos corretos. Cada valor pode ser usado uma vez, mais de uma vez ou nunca. Pode ser necessário arrastar a barra de divisão entre os painéis ou rolar para visualizar o conteúdo.
         OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        <img src="imagens/q10topico3.jpg" alt="imagem da questão"></img>
+
 
 `,
         'number': '31',
@@ -5604,7 +5893,8 @@ const questionsAll = [
         Você planeja configurar o Azure File Sync entre o Server1 e o compartilhamento de arquivos do Azure.
         Você precisa preparar a assinatura para o Azure File Sync planejado.
         Quais duas ações você deve executar na assinatura do Azure? Para responder, arraste as ações apropriadas para os destinos corretos. Cada ação pode ser usada uma vez, mais de uma vez ou nem uma vez. Pode ser necessário arrastar a barra de divisão entre os painéis ou rolar para visualizar o conteúdo.
-`,
+        <img src="imagens/q29topico3.png" alt="imagem da questão"></img>
+        `,
         'number': '31',
         'page': 11,
         'answers': [
@@ -6298,6 +6588,8 @@ const questionsAll = [
         Você precisa identificar qual método de autenticação usar ao usar o AzCopy.
         O que você deve identificar para cada conta? Para responder, arraste os métodos de autenticação apropriados para as contas corretas. Cada método pode ser usado uma vez, mais de uma vez ou nunca. Pode ser necessário arrastar a barra de divisão entre os painéis ou rolar para visualizar o conteúdo.
         OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        <img src="imagens/q47topico3.jpg" alt="imagem da questão"></img>
+
 
 `,
         'number': '31',
@@ -6637,6 +6929,9 @@ const questionsAll = [
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)'
     },
 
+
+
+
     
     
     
@@ -6662,6 +6957,10 @@ const questionsAll = [
         }
         ],
         'explication': 'E\nDistribuição de votos da comunidade\nE (98%)'
+        ,
+        'filters':[
+            'K001',
+        ]
     },
 
     {
@@ -11973,6 +12272,7 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (94%) 6%'
+    
     }, {
         'question': '113\nVocê tem duas máquinas virtuais do Azure chamadas VM1 e VM2 que executam o Windows Server. As máquinas virtuais estão em uma sub-rede chamada Subnet1.\nA Subnet1 está numa rede virtual chamada VNet1.\nVocê precisa impedir que a VM1 acesse a VM2 na porta 3389.\nO que você deveria fazer?\n',
         'number': '',

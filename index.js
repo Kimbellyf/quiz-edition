@@ -181,6 +181,8 @@ function randomQuestions() {
     | intervaloQuestaoInicio === -8 //L003
   ){
     startSimuCairamNasProvasConhecidas(intervaloQuestaoInicio)
+  }else if(intervaloQuestaoInicio===-11){
+    filtroPergSimENao()
   }
   else {
     questions = questionsAll.slice(intervaloQuestaoInicio, intervaloQuestaoFim)
@@ -217,6 +219,20 @@ function startSimuCairamNasProvasConhecidas(codigo = 0){
   console.log(questions);
   displayNextQuestion()
 
+}
+function filtroPergSimENao(){
+  questions = questionsAll.filter((question) => {
+    return question.answers && (question.answers.length ===2 && 
+      (question.answers[0].text === 'Sim' || question.answers[0].text === 'Sim\n'))
+   
+  });
+  let qtdsim = questions.filter((question) => {
+    return question.answers && ( question.answers[0].correct)
+   
+  });
+  console.log(qtdsim);
+  console.log(questions);
+  displayNextQuestion()
 }
 function reiniciarTesteSomenteComOsQerrou(){
   $startGameButton.classList.add("hide")
