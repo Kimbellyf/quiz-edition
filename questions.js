@@ -4593,7 +4593,6 @@ const questionsAll = [
 	
     },
 
-    ,
     {
         'question': `Questão 110 tópico 2
           Você tem um locatário do Microsoft Entra chamado contoso.com.
@@ -4659,11 +4658,11 @@ const questionsAll = [
             'text': 'C. Contribuidor de backup de conta de armazenamento',
             'correct': false
         }, {
-            'text': 'D. Contribuidor de dados do Storage Blob Mais votado',
+            'text': 'D. Contribuidor de dados do Storage Blob',
             'correct': true
         }
         , {
-            'text': 'E. Proprietário de dados do blob de armazenamento Mais votado',
+            'text': 'E. Proprietário de dados do blob de armazenamento',
             'correct': true
         }, {
             'text': 'F. Delegador de Blobs de Armazenamento',
@@ -6724,7 +6723,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'number': '',
         'page': 158,
         'answers': [{
-            'text': 'A. Uma performance\n',
+            'text': 'A. Uma performance/desempenho\n',
             'correct': true
         }, {
             'text': 'B. Replicação\n',
@@ -6801,6 +6800,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'D\nOs escopos de criptografia permitem que você gerencie a criptografia com uma chave com escopo para um contêiner ou um blob individual. Você pode usar criptografia\nescopos para criar limites seguros entre dados que residem na mesma conta de armazenamento, mas pertencem a clientes diferentes.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/blobs/encryption-scope-overview\nDistribuição de votos da comunidade\nD (96%) 4%'
+        ,
+        'filters':[
+            'K001'
+        ]
     },
 
     {
@@ -7335,6 +7338,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (88%) 12%'
+        ,
+        'filters':[
+            'K001'
+        ]
     },
 
     {
