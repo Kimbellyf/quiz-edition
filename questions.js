@@ -4518,7 +4518,166 @@ const questionsAll = [
 
     },
 
+    {
+        'question': `Questão 109 Tópico 2
+        
+        Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+        <img src="imagens/q109topico2parte1.png" alt="imagem da questão"></img>
 
+        Você planeja usar um cofre de chaves do Azure para fornecer um segredo para o app1.
+
+        O que você deve criar para o app1 acessar o cofre de chaves e de qual cofre de chaves o segredo pode ser usado? Para responder, selecione as opções apropriadas na área de resposta.
+        `,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Crie um:`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Identidade gerenciada",
+                    'correct': true
+                }, {
+                    'text': "Endpoint privado",
+                    'correct': false
+                }, {
+                    'text': "Serviço principal",
+                    'correct': false
+                },
+                {
+                    'text': "Conta de usuário ",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Use o segredo de:',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Somente Vault1",
+                    'correct': false
+                },
+                {
+                    'text': "Somente Vault1 e Vault2",
+                    'correct': false
+                },
+                {
+                    'text': "Somente Vault1 e Vault3",
+                    'correct': false
+                }, {
+                    'text': "Vault1, Vault2 ou Vault3",
+                    'correct': true
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `* + nova poucos comentários, divergências sobre a segunda seleção
+        Comentário:
+        O Azure Key Vault permite que segredos sejam acessados ​​de diferentes regiões e grupos de recursos,
+         desde que as permissões necessárias sejam configuradas corretamente. Isso significa que o app1 pode acessar segredos do Vault1, Vault2 e Vault3, desde que tenha as permissões de acesso necessárias para esses cofres de chaves. Melhor opção: Vault1 — devido à mesma região e grupo de recursos, oferecendo o melhor equilíbrio entre desempenho e simplicidade de gerenciamento. Segunda melhor: Vault3 — bom para baixa latência, mas pode precisar de mais atenção para permissões e gerenciamento devido a estar em um grupo de recursos diferente. Terceira opção: Vault2 — viável, mas não ideal devido a estar em uma região diferente, o que pode levar à latência e custos adicionais.
+            
+	`,
+	
+    },
+
+    ,
+    {
+        'question': `Questão 110 tópico 2
+          Você tem um locatário do Microsoft Entra chamado contoso.com.
+
+            Você colabora com um parceiro externo chamado fabrikam.com.
+
+            Você planeja convidar usuários em fabrikam.com para o locatário contoso.com.
+
+            Você precisa garantir que os convites possam ser enviados somente para usuários do fabrikam.com.
+
+            O que você deve fazer no centro de administração do Microsoft Entra?
+        `,
+        'number': '',
+        'page': 413,
+        
+        'answers': [{
+            'text': 'A. Nas configurações de acesso entre locatários, configure as configurações de restrições do locatário.',
+            'correct': false
+        }, {
+            'text': 'B. Em Configurações de acesso entre locatários, configure as configurações de nuvem da Microsoft.',
+            'correct': false
+        }, {
+            'text': 'C. Em Configurações de colaboração externa, configure as configurações de restrições de acesso do usuário convidado.',
+            'correct': false
+        }, {
+            'text': 'D. Em Configurações de colaboração externa, configure as configurações de restrições de colaboração.',
+            'correct': true
+        }
+
+        ],
+        'explication': `* D
+        Comentários:
+        As configurações de restrições de colaboração no Microsoft Entra (antigo Azure AD)
+         são projetadas especificamente para controlar quais domínios externos podem ser convidados.
+
+         Entre no centro de administração do Microsoft Entra: Certifique-se de ter a função Administrador do Provedor de Identidade Externa. 
+         Navegue até Configurações de Colaboração Externa: Vá para Identidade > Identidades Externas > Configurações de colaboração externa.
+          Configure uma lista de permissões: Em Restrições de colaboração, selecione Permitir convites somente para os domínios especificados (mais restritivos).
+        `
+    
+    }
+    ,
+    {
+        'question': `Questão 111 tópico 2
+        Você tem uma assinatura do Azure que contém uma conta de armazenamento chamada storage1. A conta storage1 contém dados de blob.
+
+        Você precisa atribuir uma função a um usuário chamado User1 para garantir que o usuário possa acessar os dados de blob em storage1. A atribuição de função deve oferecer suporte a condições.
+
+        Quais duas funções você pode atribuir ao User1? Cada resposta correta apresenta uma solução completa.
+
+        OBSERVAÇÃO: cada seleção correta vale um ponto.
+          
+        `,
+        'number': '',
+        'page': 413,
+        'answers': [{
+            'text': 'A. Proprietário',
+            'correct': false
+        }, {
+            'text': 'B. Contribuidor de conta de armazenamento',
+            'correct': false
+        }, {
+            'text': 'C. Contribuidor de backup de conta de armazenamento',
+            'correct': false
+        }, {
+            'text': 'D. Contribuidor de dados do Storage Blob Mais votado',
+            'correct': true
+        }
+        , {
+            'text': 'E. Proprietário de dados do blob de armazenamento Mais votado',
+            'correct': true
+        }, {
+            'text': 'F. Delegador de Blobs de Armazenamento',
+            'correct': false
+        }
+
+        ],
+        'explication': `* + novo 
+        Comentário: Resposta selecionada: DE
+Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta função permite que o usuário leia, grave e exclua dados do blob.
+ Ela oferece suporte a condições, o que significa que você pode usar o Azure Role-Based Access Control (RBAC) para definir condições na atribuição de função, se necessário. E. Proprietário de dados do Storage Blob • Motivo: esta função permite que o usuário gerencie dados do blob, incluindo leitura, gravação e exclusão,
+  e também gerencie o contêiner e os dados do blob. Ela oferece suporte a condições, possibilitando a aplicação de condições do RBAC na atribuição de função.`
+    
+    },
 
 
 
