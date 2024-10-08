@@ -8695,7 +8695,76 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'B\nVocê cria aplicativos Web do Azure em um plano do Serviço de Aplicativo.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 27 Tópico 4
+        Você planeja implantar uma instância de contêiner do Azure usando o seguinte modelo do Azure Resource Manager.
+        <img src="imagens/q27topico4.png" alt="imagem da questão"></img>
+        Use os menus suspensos para selecionar a opção de resposta que completa cada declaração com base nas informações apresentadas no modelo.
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+        Hot Area:
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Usuários da Internet [opção de resposta]. `,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "pode se conectar ao contêiner a partir de qualquer dispositivo",
+                    'correct': true
+                }, {
+                    'text': "não pode se conectar ao contêiner",
+                    'correct': false
+                }, {
+                    'text': "só pode se conectar ao contêiner a partir de dispositivos que executam o Windows ",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'Se os Serviços de Informações da Internet (IIS) no contêiner falharem, [opção de resposta].',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "o contêiner será reiniciado automaticamente",
+                    'correct': true
+                }, {
+                    'text': "o contêiner só será reiniciado manualmente",
+                    'correct': false
+                }, {
+                    'text': "o contêiner deverá ser reimplantado",
+                    'correct': false
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Concordaram com a fonte. Comentário : 1) Usuários da Internet "podem se conectar ao contêiner de qualquer dispositivo" 2) Se o Internet Information Services (IIS) no contêiner falhar, "o contêiner será reiniciado automaticamente". Explicação: Nenhuma restrição de acesso foi especificada. A "restartPolicy" está definida como "OnFailure".
+            
+	`,
+	'filters':[
+		'L001', 'GN001'
+	]
+    },
+
+
+    
+    
+    
+    {
         'question': '28\nVocê tem uma assinatura do Azure que contém uma máquina virtual chamada VM1. VM1 hospeda um aplicativo de linha de negócios que está disponível 24 horas por dia\ndia. VM1 possui uma interface de rede e um disco gerenciado. VM1 usa o tamanho D4s v3.\nVocê planeja fazer as seguintes alterações na VM1:\n✑ Altere o tamanho para D8s v3.\n✑ Adicione um disco gerenciado de 500 GB.\n✑ Adicione a extensão Puppet Agent.\n✑ Ative o gerenciamento de configuração do estado desejado.\nQual alteração causará tempo de inatividade para VM1?\n',
         'number': '',
         'page': 226,
@@ -11709,7 +11778,57 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'B\nUtilize a funcionalidade Monitor de Ligação do Azure Network Watcher.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-monitoring-overview\nDistribuição de votos da comunidade\nB (100%)'
-    }, {
+    },
+
+    {
+        'question': `Questão 76 Tópico 5
+        Você tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir.
+        <img src="imagens/q76topico5.png" alt="imagem da questão"></img>
+        Você precisa balancear a carga das conexões HTTPS para vm1 e vm2 usando lb1.
+        Quais três ações você deve executar em sequência? Para responder, mova as ações apropriadas da lista de ações para a área de resposta e organize-as na ordem correta.
+        Selecionar e posicionar:
+
+`,
+        'number': '31',
+        'page': 11,
+        'answers': [
+
+            [
+                {
+                    'text': '',
+                    'options': [
+                        { 'text': 'Remover nsg1', 'correct': false, 'index': '-1' },
+                        { 'text': 'Remova os endereços IP públicos de vm1 e vm2', 'correct': true, 'index': '1' },
+                        { 'text': 'Crie uma investigação de integridade e um pool de back-end em lb1', 'correct': true, 'index': '2' },
+                        { 'text': 'Crie um conjunto de disponibilidade', 'correct': false, 'index': '-1' },
+                        { 'text': 'Crie uma regra de balanceamento de carga em lb1', 'correct': true, 'index': '3' },
+                    ],
+                    'function': 'origin'
+
+                },
+                {
+                    'text': '',
+                    'options': [
+                    ],
+                    'function': 'destiny'
+
+                }
+            ],
+
+        ],
+        'explication': `Referência:
+https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-standard-public-zone-redundant-portal . Comentário :A resposta está correta: 1) Remova os endereços IP públicos. Eles são IPs públicos básicos e estamos usando um Standard Load Balancer que não são compatíveis. 2) Crie um pool de backend e health probes. 3) Crie uma regra de load balancer.`,
+        'typeQuestion': 'dragdrop'
+        ,
+        'filters':[
+            'GN001',
+        ]
+    },
+
+
+
+    
+    {
         'question': '77\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nGere uma rede virtual chamada VNet1 que está hospedada na região oeste do Azure dos EUA.\nA VNet1 hospeda duas máquinas virtuais chamadas VM1 e VM2 que executam o Windows Server.\nVocê precisa inspecionar todo o tráfego de rede da VM1 para a VM2 por um período de três horas.\nSolução: No Azure Monitor, você cria uma métrica de entrada e saída de rede.\nIsso atende ao objetivo?\n',
         'number': '',
         'page': 382,
@@ -13048,7 +13167,53 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nA (65%) B (30%) 5%'
         , 'filters': ['K002']
-    }, {
+    },
+
+    {
+        'question': `Questão 137 Tópico 5
+        Você tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
+        <img src="imagens/q137topico5parte1.png" alt="imagem da questão"></img>
+        A assinatura contém as máquinas virtuais mostradas na tabela a seguir.
+        <img src="imagens/q137topico5parte2.png" alt="imagem da questão"></img>
+        Cada máquina virtual contém apenas um endereço IP privado.
+
+        Você cria um bastião do Azure para VNet1, conforme mostrado na exposição a seguir.
+        <img src="imagens/q137topico5parte3.png" alt="imagem da questão"></img>
+
+        Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
+
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+
+           
+
+                    \n`,
+        'number': '',
+        'page': 549,
+        'studyCase': false,
+        'answers': [{
+
+            'text': 'O cliente Remote Desktop Connection (mstsc.exe) pode ser usado para conectar-se à VM1 por meio do Bastion1. ',
+            'correct': false
+        }, {
+            'text': 'O portal Azure pode usar SSH para ligar-se ao VM2 através do Bastion1. ',
+            'correct': true
+        }, {
+            'text': 'O portal do Azure pode ser usado para conectar-se ao VM3 por meio do Bastion',
+            'correct': false
+        }
+        ],
+        'typeQuestion': 'multiplecheckboxyesorno',
+        'explication': `*****
+        `,
+        'filters':[
+            'L003'
+        ]
+
+    },
+    
+    
+    
+    {
         'question': '139\nVocê planeja implantar várias máquinas virtuais do Azure que executarão o Windows Server 2019 em um conjunto de escala de máquina virtual usando um recurso do Azure\nModelo de gerente.\nVocê precisa garantir que o NGINX esteja disponível em todas as máquinas virtuais após sua implantação.\nO que você deve usar?\n',
         'number': '',
         'page': 435,
