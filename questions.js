@@ -4367,7 +4367,7 @@ const questionsAll = [
         ],
         'explication': '* D D: Para garantir que as chaves de acesso da sua conta de armazenamento sejam rotacionadas automaticamente, você deve configurar o Azure Key Vault com a rotação de chaves da conta de Armazenamento do Azure.'
     
-    },
+    }
 
     ,
     {
@@ -4515,11 +4515,12 @@ const questionsAll = [
         'explication': `* Novo, concordaram com a fonte
             
 	`,
+
     },
 
 
 
-    
+
 
     {
         'question': `1 Tópico 3 \nVocê tem uma assinatura do Azure chamada Subscription1 que contém as
