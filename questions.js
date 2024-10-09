@@ -789,7 +789,7 @@ const questionsAll = [
         }
         ],
         'explication': 'AC\nVocê pode definir a política de expiração somente para grupos do Office 365 no Azure Active Directory (Azure AD).\nObservação: Com o aumento no uso dos Grupos do Office 365, os administradores e usuários precisam de uma maneira de limpar grupos não utilizados. As políticas de expiração podem\najude a remover grupos inativos do sistema e torne as coisas mais limpas.\nQuando um grupo expira, todos os seus serviços associados (caixa de correio, Planner, site do SharePoint, etc.) também são excluídos.\nVocê pode configurar uma regra para associação dinâmica em grupos de segurança ou grupos do Office 365.\nRespostas incorretas:\nB, D, E: você pode definir a política de expiração somente para grupos do Office 365 no Azure Active Directory (Azure AD).\nReferência:\nhttps://docs.microsoft.com/en-us/o ce365/admin/create-groups/o ce-365-groups-expiration-policy?view=o365-worldwide\nDistribuição de votos da comunidade\nCA (92%) 6%'
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'GN001']
     },
 
     {
@@ -2769,7 +2769,7 @@ const questionsAll = [
         `
         ,
         'filters':[
-            'K001'
+            'K001', 'GN001'
         ]
     },
 
@@ -3712,6 +3712,10 @@ const questionsAll = [
         }
         ],
         'explication': 'Editar prop e B2B são as respostas'
+        ,
+        'filters':[
+            'GN001'
+        ]
     },
 
 
@@ -3888,7 +3892,7 @@ const questionsAll = [
         'caseStudy': false,
         'explication': `
         `
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'GN001']
     },
 
     {
@@ -5190,6 +5194,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
             https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows
         `,
         'typeQuestion': 'dragdrop'
+        ,
+        'filters':[
+            'GN001'
+        ]
     },
 
     {
@@ -5420,7 +5428,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
 
             https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows https://azure.microsoft.com/en-us/blog/azure-backup-now-supports-storage-accounts-secured-with-azure-storage-firewalls-and-virtual-networks/
         `
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'GN001']
     },
 
     {
@@ -6841,6 +6849,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `concordado com a origem
         `
+        ,
+        'filters':[
+            'GN001'
+        ]
 
     },
 
@@ -8058,7 +8070,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': `Bem votado:
             O usuário NNN 1 não tem a função Storage Blob Data Reader ou Storage Blob Data Contributor para ler o File1. https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=portal
         `
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'GN001']
 
     },
 
@@ -8424,6 +8436,89 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
     },
 
     {
+        'question': `Questão 10 Tópico 4
+        Você tem um cluster do Azure Kubernetes Service (AKS) chamado AKS1 e um computador chamado Computer1 que executa o Windows 10. Computer1 que tem o Azure CLI instalado.
+        
+        Você precisa instalar o cliente kubectl no Computer1.
+        Qual comando você deve executar? Para responder, selecione as opções apropriadas na área de resposta.
+        OBSERVAÇÃO: Cada seleção correta vale um ponto.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': ``,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "AZ",
+                    'correct': true
+                }, {
+                    'text': "docker",
+                    'correct': false
+                }, {
+                    'text': "msiexec.exe",
+                    'correct': false
+                },
+                {
+                    'text': "Install-Module",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': '',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "aks",
+                    'correct': true
+                }, {
+                    'text': "/package",
+                    'correct': false
+                }, {
+                    'text': "-name",
+                    'correct': false
+                },
+                {
+                    'text': "pull",
+                    'correct': false
+                }
+            ]
+        }
+        ,{
+            'text': 'install-cli',
+            'options': [
+                {
+                    text: ' ',
+                    correct: true
+                },
+                
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `Para instalar o kubectl localmente, use o comando az aks install-cli: az aks install-cli
+        Referência:
+        https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough
+            
+	`,
+	'filters':[
+		'L003'
+	]
+    },
+
+    {
         'question': `Questão 11 Tópico 4 
             Você integra 10 máquinas virtuais do Azure ao Azure Automation State Configuration.
             Você precisa usar o Azure Automation State Configuration para gerenciar a consistência contínua das configurações da máquina virtual.
@@ -8644,6 +8739,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'B\nEm vez disso, você deve excluir VM1. Você recria a VM1 e depois adiciona a interface de rede para VM1.\nNota: Ao criar uma máquina virtual (VM) do Azure, você deve criar uma rede virtual (VNet) ou usar uma VNet existente. Você pode alterar o\nsub-rede à qual uma VM está conectada depois de criada, mas não é possível alterar a VNet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview\nDistribuição de votos da comunidade\nB (100%)'
+        ,
+        'filters':[
+            'GN001'
+        ]
     },
 
     {
@@ -8824,6 +8923,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'AD\nDistribuição de votos da comunidade\nAD (100%)'
+        ,
+        'filters':[
+            'GN001'
+        ]
     }, {
         'question': '30\nVocê tem uma assinatura do Azure chamada Subscription1 que possui os seguintes provedores registrados:\n✑ Autorização\n✑ Automação\n✑ Recursos\n✑ Calcular\n✑ KeyVault\n✑ Rede\n✑ Armazenamento\n✑ Faturamento\n✑ Rede\nA assinatura1 contém uma máquina virtual do Azure chamada VM1 que possui as seguintes configurações:\n✑ Endereço IP privado: 10.0.0.4 (dinâmico)\n✑ Grupo de segurança de rede (NSG): NSG1\n✑ Endereço IP público: Nenhum\n✑ Conjunto de disponibilidade: AVSet\n✑ Sub-rede: 10.0.0.0/24\n✑ Discos gerenciados: Não\n✑ Localização: Leste dos EUA\nVocê precisa registrar todas as tentativas de conexão bem-sucedidas e malsucedidas com a VM1.\nQuais são as três ações que você deve realizar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
         'number': '',
@@ -9320,7 +9423,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'B\nQuando você troca os slots de implantação, o Azure troca os endereços IP virtuais dos slots de origem e de destino, trocando assim as URLs do\nslots. Podemos facilmente reverter a implantação trocando de volta.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots\nDistribuição de votos da comunidade\nB (100%)'
         ,
         'filters':[
-            'L001',
+            'L001','GN001'
         ]
     }, {    
         'question': '61\nVocê planeja fazer backup de uma máquina virtual do Azure chamada VM1.\nVocê descobre que o status da Pré-verificação de backup exibe um status de Aviso.\nQual é a possível causa do status de Aviso?\n',
@@ -9341,6 +9444,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'B\nO estado de Aviso indica um ou mais problemas na configuração da VM que podem levar a falhas de backup e fornece etapas recomendadas para\ngarantir backups bem-sucedidos. Não ter o VM Agent mais recente instalado, por exemplo, pode fazer com que os backups falhem intermitentemente e caiam neste\nclasse de questões.\nReferência:\nhttps://azure.microsoft.com/en-us/blog/azure-vm-backup-pre-checks/\nDistribuição de votos da comunidade\nB (100%)\nTópico 4'
+        ,
+        'filters':[
+            'K002'
+        ]
     }, {
         'question': '62\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma máquina virtual do Azure chamada VM1. A VM1 foi implantada usando um modelo personalizado do Azure Resource Manager chamado ARM1.json.\nVocê recebe uma notificação de que a VM1 será afetada pela manutenção.\nVocê precisa mover a VM1 para um host diferente imediatamente.\nSolução: Na folha Visão geral, você move a máquina virtual para um grupo de recursos diferente.\nIsso atende ao objetivo?\n',
         'number': '',
@@ -9904,7 +10011,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': `Com: Para verificar um domínio, o Azure usa registros TXT e MX.
             
 `
-        , 'filters': ['K002', 'L001', 'L003']
+        , 'filters': ['K002', 'L001', 'L003', 'GN001']
     },
 
 
@@ -10036,7 +10143,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nD (58%) B (41%)'
-        , 'filters': ['K002', 'L001']
+        , 'filters': ['K002', 'L001', 'GN001']
     }, {
         'question': '98\nVocê tem um locatário do Azure AD chamado contoso.com.\nVocê tem uma assinatura do Azure que contém um aplicativo Web do Serviço de Aplicativo do Azure chamado App1 e um cofre de chaves do Azure chamado KV1. KV1 contém um\ncertificado curinga para contoso.com.\nVocê tem um usuário chamado user1@contoso.com ao qual foi atribuída a função de Proprietário para App1 e KV1.\nVocê precisa configurar o App1 para usar o certificado curinga do KV1.\nO que você deve fazer primeiro?\n',
         'number': '',
@@ -11381,7 +11488,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'A\nUm pool de back-end configurado por endereço IP tem as seguintes limitações:\n✑ Somente balanceador de carga padrão\nReferência:\nhttps://docs.microsoft.com/en-us/azure/load-balancer/backend-pool-management\nDistribuição de votos da comunidade\nA (83%) B (17%)'
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'GN001']
     }, {
         'question': '53\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um computador chamado Computer1 que tem uma conexão VPN ponto a site com uma rede virtual do Azure chamada VNet1. O ponto-a-site\nconexão usa um certificado autoassinado.\nNo Azure, você baixa e instala o pacote de configuração do cliente VPN em um computador chamado Computer2.\nVocê precisa garantir que pode estabelecer uma conexão VPN ponto a site com a VNet1 do Computador2.\nSolução: você exporta o certificado de cliente do Computador1 e instala o certificado no Computador2.\nIsso atende ao objetivo?\n',
         'number': '',
@@ -11566,6 +11673,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nUm (100%)\nTópico 5'
+        ,
+        'filters':[
+            'GN001'
+        ]
     }, {
         'question': '63\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém 10 redes virtuais. As redes virtuais são hospedadas em grupos de recursos separados.\nOutro administrador planeia criar vários grupos de segurança de rede (NSGs) na subscrição.\nVocê precisa garantir que, quando um NSG for criado, ele bloqueie automaticamente a porta TCP 8080 entre as redes virtuais.\nSolução: você configura uma definição de política personalizada e, em seguida, atribui a política à assinatura.\nIsso atende ao objetivo?\n',
         'number': '',
@@ -11759,6 +11870,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'A\nA captura de pacotes variáveis \u200b\u200bdo Network Watcher permite criar sessões de captura de pacotes para rastrear o tráfego de e para uma máquina virtual. Pacote\nA captura ajuda a diagnosticar anomalias de rede de forma reativa e proativa. Outros usos incluem a coleta de estatísticas de rede, obtenção de\ninformações sobre invasões de rede, para depurar comunicações cliente-servidor e muito mais.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-packet-capture-overview\nDistribuição de votos da comunidade\nA (81%) B (19%)\nTópico 5'
+        ,
+        'filters':[
+            'GN001'
+        ]
     }, {
         'question': '74\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nGere uma rede virtual chamada VNet1 que está hospedada na região oeste do Azure dos EUA.\nA VNet1 hospeda duas máquinas virtuais chamadas VM1 e VM2 que executam o Windows Server.\nVocê precisa inspecionar todo o tráfego de rede da VM1 para a VM2 por um período de três horas.\nSolução: No Azure Network Watcher, você cria um monitor de conexão.\nIsso atende ao objetivo?\n',
         'number': '',
@@ -13145,7 +13260,7 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
             
 	`,
 	'filters':[
-		'K002','L003'
+		'K002','L003', 'GN001'
 	]
     },
 
@@ -13627,7 +13742,7 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
 
             Você tem dois aplicativos do Azure App Service chamados App1 e App2. Cada aplicativo tem um slot de implantação de produção e um slot de implantação de teste.
             As configurações de backup para os slots de produção são mostradas na tabela a seguir.
-            <img src="imagens/questao11topico6.jpg" alt="imagem da questão"></img>
+            <img src="imagens/questao11topico6.png" alt="imagem da questão"></img>
             Para cada uma das seguintes declarações, selecione Sim se a declaração for verdadeira. Caso contrário, selecione Não.
             NOTA: Cada seleção correta vale um ponto.
            
@@ -14596,7 +14711,8 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         'typeQuestion': 'select',
         'caseStudy': true,
         'explication': ` 
-                `    , 'filters': ['K002']
+                `
+        , 'filters': ['K002', 'GN001']
     },
     {
         'question': `questão 37 tópico 6
@@ -15178,7 +15294,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         'caseStudy': true,
         'explication': ` 
                 `
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'GN001']
     },
 
 

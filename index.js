@@ -11,6 +11,7 @@ let $startGameButtonSimu1 = ".start-quiz-simu1";
 let $startGameButtonSimu2 = ".start-quiz-simu2";
 let $startGameButtonSimu3 = ".start-quiz-simu3";
 let $startGameButtonSimu4 = ".start-quiz-simu4";
+let $startGameButtonSimu5 = ".start-quiz-simu5";
 
 
 
@@ -64,6 +65,7 @@ window.onload = function () {
   $startGameButtonSimu2.addEventListener("click", selecSimu2)
   $startGameButtonSimu3.addEventListener("click", selecSimu3)
   $startGameButtonSimu4.addEventListener("click", selecSimu4)
+  $startGameButtonSimu5.addEventListener("click", selecSimu5)
 
   $elementProxButton.addEventListener("click", nextQuestion)
   $nextQuestionButton.addEventListener("click", displayNextQuestion)
@@ -87,6 +89,7 @@ function getBasicElementsHTML(){
   $startGameButtonSimu2 = document.querySelector(".start-quiz-simu2")
   $startGameButtonSimu3 = document.querySelector(".start-quiz-simu3")
   $startGameButtonSimu4 = document.querySelector(".start-quiz-simu4")
+  $startGameButtonSimu5 = document.querySelector(".start-quiz-simu5")
   $nextQuestionButton = document.querySelector(".next-question")
   $questionsContainer = document.querySelector(".questions-container")
   $questionText = document.querySelector(".question")
@@ -148,6 +151,10 @@ function selecSimu4(){
   tipo = -8
   startSimuEscolhido()
 }
+function selecSimu5(){
+  tipo = -9
+  startSimuEscolhido()
+}
 function startSimuEscolhido(){ //tipo1 - tipo eh um numero 
   intervaloQuestaoInicio = tipo
   intervaloQuestaoFim = 1
@@ -179,6 +186,7 @@ function randomQuestions() {
     | intervaloQuestaoInicio === -6 //K002
     | intervaloQuestaoInicio === -7 //L001
     | intervaloQuestaoInicio === -8 //L003
+    | intervaloQuestaoInicio === -9 //GN001
   ){
     startSimuCairamNasProvasConhecidas(intervaloQuestaoInicio)
   }else if(intervaloQuestaoInicio===-11){
@@ -206,6 +214,9 @@ function startSimuCairamNasProvasConhecidas(codigo = 0){
     }
     if(codigo === -8){
       pesquisa = 'L003'
+    }
+    if(codigo === -9){
+      pesquisa = 'GN001'
     }
     questions = questionsAll.filter((question) => {
       return question.filters && (question.filters.includes(pesquisa))
