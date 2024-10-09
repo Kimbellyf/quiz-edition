@@ -13498,7 +13498,88 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)'
         , 'filters': ['K002']
 
-    }, {
+    },
+
+    {
+        'question': `Questão  Tópico 
+        Você tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
+        <img src="imagens/q147topico5.png" alt="imagem da questão"></img>
+        Cada rede virtual tem 50 máquinas virtuais conectadas.
+
+        Você precisa implementar o Azure Bastion. A solução deve atender aos seguintes requisitos:
+
+        • Suporte ao dimensionamento do host.
+        • Suporte ao upload e download de arquivos.
+        • Suporte às máquinas virtuais na VNet1 e na VNet2.
+        • Minimize o número de endereços na sub-rede do Azure Bastion.
+
+        Como você deve configurar o Azure Bastion? Para responder, selecione as opções na área de resposta.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `tamanho da Subnet`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "/23",
+                    'correct': false
+                }, {
+                    'text': "/26",
+                    'correct': true
+                }, {
+                    'text': "/28",
+                    'correct': false
+                },
+                {
+                    'text': "/29",
+                    'correct': false
+                }
+            ]
+        },
+
+        {
+            'text': 'IP público',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "SKU básico com alocação dinâmica",
+                    'correct': false
+                }, {
+                    'text': "SKU básico com alocação estática ",
+                    'correct': false
+                }, {
+                    'text': "SKU padrão com alocação estática",
+                    'correct': true
+                }
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `concordaram com a fonte. Comentário :
+        Tamanho da sub-rede: /26 O tamanho de sub-rede recomendado para o Azure Bastion é /26 "O tamanho da sub-rede deve ser /26 ou maior (/25, /24 etc.)." "Para dimensionamento de host, uma sub-rede /26 ou maior é recomendada. 
+        Usar um espaço de sub-rede menor limita o número de unidades de escala" "Para recursos do Azure Bastion implantados em ou após 2 de novembro de 2021, o tamanho mínimo do AzureBastionSubnet é /26 ou maior (/25, /24 etc.)" 
+        IP público: SKU padrão com uma alocação estática Somente o SKU padrão do Azure Bastion oferece suporte a 'Dimensionamento de host' e 'Carregar ou baixar arquivos'. Além disso, o endereço IP público recomendado pela Microsoft deve ser Padrão e Estático
+         Referências: https://learn.microsoft.com/en-us/azure/bastion/configuration-settings https://learn.microsoft.com/en-us/azure/bastion/bastion-faq
+            
+	`,
+	'filters':[
+		'GN001'
+	]
+    },
+    
+    
+    {
         'question': `questao 148 tópico 6 
             \nVocê tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
             <img src="imagens/fquestao148topico6.png" alt="imagem da questão"></img>
