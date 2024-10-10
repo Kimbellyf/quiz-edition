@@ -789,7 +789,7 @@ const questionsAll = [
         }
         ],
         'explication': 'AC\nVocê pode definir a política de expiração somente para grupos do Office 365 no Azure Active Directory (Azure AD).\nObservação: Com o aumento no uso dos Grupos do Office 365, os administradores e usuários precisam de uma maneira de limpar grupos não utilizados. As políticas de expiração podem\najude a remover grupos inativos do sistema e torne as coisas mais limpas.\nQuando um grupo expira, todos os seus serviços associados (caixa de correio, Planner, site do SharePoint, etc.) também são excluídos.\nVocê pode configurar uma regra para associação dinâmica em grupos de segurança ou grupos do Office 365.\nRespostas incorretas:\nB, D, E: você pode definir a política de expiração somente para grupos do Office 365 no Azure Active Directory (Azure AD).\nReferência:\nhttps://docs.microsoft.com/en-us/o ce365/admin/create-groups/o ce-365-groups-expiration-policy?view=o365-worldwide\nDistribuição de votos da comunidade\nCA (92%) 6%'
-        , 'filters': ['K002', 'GN001']
+        , 'filters': ['K002', 'GN001', 'K003']
     },
 
     {
@@ -1296,6 +1296,8 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nA função Colaborador pode gerir todos os recursos (e adicionar recursos) num Grupo de Recursos.\nDistribuição de votos da comunidade\nUm (100%)'
+        ,
+	    filters: ['K003']
     },
 
     {
@@ -1423,7 +1425,7 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nVocê pode mover um aplicativo para outro plano do Serviço de Aplicativo, desde que o plano de origem e o plano de destino estejam no mesmo grupo de recursos e\nregião geográfica.\nA região em que a sua aplicação é executada é a região do plano do Serviço de Aplicações em que se encontra. No entanto, não é possível alterar a região de um plano do Serviço de Aplicações.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/app-service/app-service-plan-manage\nDistribuição de votos da comunidade\nA (86%) 10%'
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'K003']
     }, {
         question: `25. Você tem uma assinatura do Azure chamada Subscription1 que possui uma ID de assinatura c276fc76-9cd4-44c9-99a7-4fd71546436e.
             Você precisa criar uma função RBAC personalizada chamada CR1 que atenda aos seguintes requisitos:
@@ -1575,7 +1577,7 @@ const questionsAll = [
         'explication': 'A\nReferência:\nhttps://techcommunity.microsoft.com/t5/Azure-Active-Directory/Generic-authorization-exception-inviting-Azure-AD-gests/td-p/274742\nDistribuição de votos da comunidade\nA (100%)'
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
     }, {
         'question': '30\nVocê tem uma assinatura do Azure vinculada a um locatário do Azure Active Directory. O locatário inclui uma conta de usuário chamada User1.\nVocê precisa garantir que o Usuário1 possa atribuir uma política ao grupo de gerenciamento raiz do locatário.\nO que você deveria fazer?\n',
@@ -1833,6 +1835,8 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nSua conta deve atender a um dos seguintes requisitos para habilitar a análise de tráfego:\nSua conta deve ter qualquer uma das seguintes funções do Azure no escopo da assinatura: proprietário, colaborador, leitor ou colaborador de rede.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/network-watcher/tra c-analytics-faq\nDistribuição de votos da comunidade\nA (71%) B (29%)'
+        ,
+	    filters: ['K003']
     }, {
         'question': '35\nObservação: esta pergunta faz parte de uma série de perguntas que apresentam o mesmo cenário. Cada pergunta da série contém uma solução única que\npode atender aos objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, essas perguntas não aparecerão na tela de revisão.\nVocê precisa garantir que um usuário do Azure Active Directory (Azure AD) chamado Admin1 tenha a função necessária para habilitar o Tra c Analytics para uma\nassinatura do Azure.\nSolução: você atribui a função Reader no nível da assinatura ao Admin1.\nIsso atende à meta?\n',
         'number': '',
@@ -1846,6 +1850,8 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nSua conta deve atender a um dos seguintes requisitos para permitir a análise de tráfego:\nA sua conta deve ter qualquer uma das seguintes funções do Azure no âmbito da subscrição: proprietário, contribuidor, leitor ou contribuidor de rede.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/network-watcher/tra c-analytics-faq\nDistribuição de votos da comunidade\nB (73%) A (27%)\nTópico 2'
+        ,
+	    filters: ['K003']
     }, {
         'question': '36\nVocê tem uma assinatura do Azure que contém um usuário chamado User1.\nVocê precisa garantir que o Usuário1 possa implantar máquinas virtuais e gerenciar redes virtuais. A solução deve usar o princípio do menor privilégio.\nQual função de controle de acesso baseado em função (RBAC) você deve atribuir ao Usuário1?\n',
         'number': '',
@@ -1917,6 +1923,8 @@ const questionsAll = [
             Caixa 2: Sim Admi3 é Proprietário da Assinatura. Isso é válido. 
             Caixa 3: Não Admin2 é apenas um GA no escopo do Azure AD. Ele não tem permissão na Assinatura. Referência: https://docs.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal-subscription-admin
         `
+        ,
+	    filters: ['K003']
     },
 
     {
@@ -1967,6 +1975,8 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nQuando você exclui um grupo de recursos, todos os seus recursos também são excluídos. A exclusão de um grupo de recursos exclui todas as suas implantações de modelo e\noperações atualmente armazenadas.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/azure-resource-manager/management/delete-resource-group?tabs=azure-powershell\nDistribuição de votos da comunidade\nB (52%) A (32%) Outros\nTópico 2'
+        ,
+	    filters: ['K003']
     }, {
         'question': '40\nVocê tem uma zona DNS do Azure chamada adatum.com.\nVocê precisa delegar um subdomínio chamado research.adatum.com a um servidor DNS diferente no Azure.\nO que você deveria fazer?\n',
         'number': '',
@@ -2145,7 +2155,7 @@ const questionsAll = [
          `
          ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
     },
 
@@ -2456,6 +2466,8 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles\nDistribuição de votos da comunidade\nA (50%) B (49%)'
+        ,
+	    filters: ['K003']
     },
 
 
@@ -2544,6 +2556,8 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nTem acesso total a todos os recursos, incluindo o direito de delegar acesso a outros.\nObservação:\nExistem várias versões desta questão no exame. A pergunta tem duas possíveis respostas corretas:\n✑ Atribua ao Usuário1 a função de Administrador de Acesso de Usuário para VNet1.\n✑ Atribua ao Usuário1 a função de Proprietário para VNet1.\nOutras opções de respostas incorretas que você pode ver no exame incluem o seguinte:\n✑ Remova o Usuário1 das funções Leitor de Segurança e Leitor da Assinatura1. Atribua ao Usuário1 a função de Colaborador para Assinatura1.\n✑ Remova o Usuário1 das funções Leitor de Segurança e Leitor da Assinatura1.\n✑ Atribua ao Usuário1 a função de Contribuidor de Rede para RG1.\nReferências:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/rbac-and-directory-admin-roles https://docs.microsoft.com/en-\nus/azure/controle de acesso baseado em função/visão geral\nDistribuição de votos da comunidade\nB (97%)'
+        ,
+	    filters: ['K003']
     },
 
     {
@@ -2769,7 +2783,7 @@ const questionsAll = [
         `
         ,
         'filters':[
-            'K001', 'GN001'
+            'K001', 'GN001', 'K003'
         ]
     },
 
@@ -2803,7 +2817,7 @@ const questionsAll = [
         'explication': 'A\nApenas um administrador global pode adicionar utilizadores a este inquilino.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/devops/organizations/accounts/add-users-to-azure-ad\nDistribuição de votos da comunidade\nB (92%) 8%'
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
     }, {
         'question': `59\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os seguintes usuários em um locatário do Azure Active Directory chamado contoso.onmicrosoft.com:
@@ -2855,6 +2869,8 @@ const questionsAll = [
         }
         ],
         'explication': 'A\nPode ser usado como:\n"AssignableScopes": [\n"/subscriptions/{Sub1},",\n"/subscriptions/{Sub2},",\nObservação: Exemplo de função personalizada:\nO seguinte mostra a aparência de uma função personalizada conforme exibida usando o Azure PowerShell no formato JSON. Esta função personalizada pode ser usada para\nmonitorar e reiniciar máquinas virtuais.\n{\n"Name": "Operador de máquina virtual",\n"Id": "88888888-8888-8888-8888-88888888888",\n"IsCustom": true,\n"Description": "Pode monitorar e reiniciar máquinas virtuais.",\n"Actions": [\n"Microsoft.Storage/*/read",\n"Microsoft.Network/*/read",\n"Microsoft.Compute/*/read",\n"Microsoft.Compute/virtualMachines/start/action",\n"Microsoft.Compute/virtualMachines/restart/action",\n"Microsoft.Authorization/*/read",\n"Microsoft.ResourceHealth/availabilityStatuses/read",\n"Microsoft.Resources/subscriptions/resourceGroups/read",\n"Microsoft.Insights/alertRules/*",\n"Microsoft.Insights/diagnosticSettings/*",\n"Microsoft.Support/*"\n],\n"NotActions": [],\n"DataActions": [],\n"NotDataActions": [],\n"AssignableScopes": [\n"/subscriptions/{subscriptionId1},",\n"/subscriptions/{subscriptionId2},",\n"/providers/Microsoft.Management/managementGroups/{groupId1},"\n]\n},\nReferência:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles\nDistribuição de votos da comunidade\nA (100%)'
+        ,
+	    filters: ['K003']
     }, {
         'question': `62 Tópico 2
             \nVocê tem uma assinatura do Azure que contém uma conta de armazenamento chamada storageacct1234 e dois usuários chamados Usuário1 e Usuário2.
@@ -2883,6 +2899,8 @@ const questionsAll = [
         }
         ],
         'explication': 'EA\nDistribuição de votos da comunidade\nBD (99%)\nTópico 2'
+        ,
+	    filters: ['K003']
     }, {
         'question': '63\nVocê tem uma assinatura do Azure chamada Subscription1 que contém um espaço de trabalho do Azure Log Analytics chamado Workspace1.\nVocê precisa visualizar os eventos de erro de uma tabela chamada Event.\nQual consulta você deve executar no Workspace1?\n',
         'number': '',
@@ -3171,6 +3189,8 @@ const questionsAll = [
             Y - Porque..math https://learn.microsoft.com/en-us/azure/active-directory/governance/entitlement-management-access-package-resources Quando a atribuição do pacote de acesso de um usuário expira, eles são removidos do grupo ou equipe, a menos
             que tenham atualmente uma atribuição a outro pacote de acesso que inclua esse mesmo grupo ou equipe.
 	    `
+        ,
+	    filters: ['K003']
     },
 
 
@@ -3193,6 +3213,8 @@ const questionsAll = [
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
+        ,
+	    filters: ['K003']
     },
 
 
@@ -3263,6 +3285,8 @@ const questionsAll = [
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
+        ,
+	    filters: ['K003']
     },
     {
         'question': `Questão 74 Tópico 2
@@ -3290,7 +3314,7 @@ const questionsAll = [
         'explication': 'B\nDistribuição de votos da comunidade\nB (98%)'
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
     },
 
@@ -3382,9 +3406,10 @@ const questionsAll = [
 
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `
-	`
+	`,
+    
+	    filters: ['K003']
     },
-
 
     {
         'question': '78\nVocê tem uma assinatura do Azure que contém os recursos mostrados na tabela a seguir. <img src="imagens/kquestao78topico2.png" alt="imagem da questão"></img> \nVocê precisa atribuir ao Usuário1 a função de Colaborador de compartilhamento SMB de dados de arquivo de armazenamento para share1.\nO que você deve fazer primeiro?\n',
@@ -3892,7 +3917,7 @@ const questionsAll = [
         'caseStudy': false,
         'explication': `
         `
-        , 'filters': ['K002', 'GN001']
+        , 'filters': ['K002', 'GN001', 'K003']
     },
 
     {
@@ -3968,7 +3993,7 @@ const questionsAll = [
 	    `
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
     },
 
