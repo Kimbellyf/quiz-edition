@@ -201,6 +201,8 @@ function randomQuestions() {
     startSimuCairamNasProvasConhecidas(intervaloQuestaoInicio)
   }else if(intervaloQuestaoInicio===-11){
     filtroPergSimENao()
+  }else if(intervaloQuestaoInicio === -12){
+    filtroEstudo()
   }
   else {
     questions = questionsAll.slice(intervaloQuestaoInicio, intervaloQuestaoFim)
@@ -255,6 +257,14 @@ function filtroPergSimENao(){
    
   });
   console.log(qtdsim);
+  console.log(questions);
+  displayNextQuestion()
+}
+function filtroEstudo(){
+  questions = questionsAll.filter((question) => {
+    return (question.caseStudy && question.caseStudy === true)
+   
+  });
   console.log(questions);
   displayNextQuestion()
 }

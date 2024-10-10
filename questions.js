@@ -13353,7 +13353,7 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
         'explication': `*****
         `,
         'filters':[
-            'L003'
+            'L003', 'K003'
         ]
 
     },
@@ -14084,7 +14084,7 @@ HOTSPOT –
         }
         ],
         'typeQuestion': 'select',
-        'caseStudy': true,
+        'caseStudy': false,
         'explication': `
             Caixa 1: Um cofre dos Serviços de Recuperação
             Você pode configurar um cofre dos Serviços de Recuperação e configurar o backup para várias VMs do Azure.
@@ -14260,7 +14260,7 @@ TimeGenerated, OperationNameValue, ResouceId'
 
         ],
         'typeQuestion': 'select',
-        'caseStudy': true,
+        'caseStudy': false,
         'explication': ` 
             Caixa 1: AzureActivity -
     A tabela AzureActivity possui entradas do log de atividades do Azure, que fornece informações sobre eventos de nível de assinatura ou de grupo de gerenciamento que ocorrem no Azure.
@@ -14815,7 +14815,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         }
         ],
         'typeQuestion': 'select',
-        'caseStudy': true,
+        'caseStudy': false,
         'explication': ` 
                 `
         , 'filters': ['K002', 'GN001']
@@ -15397,7 +15397,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         }
         ],
         'typeQuestion': 'select',
-        'caseStudy': true,
+        'caseStudy': false,
         'explication': ` 
                 `
         , 'filters': ['K002', 'GN001']
@@ -15602,6 +15602,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             'correct': true
         }
         ],
+        'caseStudy': true,
         'explication': `
             Veja a resposta em :
             
@@ -15636,6 +15637,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             'correct': true
         }
         ],
+        'caseStudy': true,
         'explication': 'D\nCenário:\n✑ Designe um novo usuário chamado Admin1 como administrador de serviço da assinatura do Azure.\n✑ Admin1 deve receber alertas por e-mail sobre interrupções no serviço.\nSiga estas etapas para alterar o Administrador de Serviço no portal do Azure.\n1. Certifique-se de que seu cenário seja suportado verificando as limitações para alterar o Administrador de Serviço.\n2. Entre no portal do Azure como administrador da conta.\n3. Abra Cost Management + Billing e selecione uma assinatura.\n4. Na navegação esquerda, clique em Propriedades.\n5. Clique em Administrador de serviço.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/classic-administrators\nDistribuição de votos da comunidade\nD (56%) C (44%)'
         , 'filters': ['K001','K002']
     },
@@ -15721,6 +15723,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             }
 
         ],
+        'caseStudy': true,
         typeQuestion: 'select',
         'explication': `Caixa 1: 3 –
             Se você tiver fontes de dados em várias regiões, crie um cofre dos Serviços de Recuperação para cada região.
@@ -15777,6 +15780,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             ],
 
         ],
+        'caseStudy': true,
         'explication': 'Comentário mais votado: Não tenho certeza, mas acho que a resposta deveria ser: 1. Crie um espaço de trabalho do log Analytics. 2. Colete contadores de desempenho do Windows dos agentes do Log Analytics. 3. Crie uma regra de alerta.',
         'typeQuestion': 'dragdrop'
     },
@@ -15847,6 +15851,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             }
 
         ],
+        'caseStudy': true,
         typeQuestion: 'select',
         explication: 'Comentário mais votado: A resposta correta é: VNET1 terá apenas a tag Department: D1 e a VNET 2 terá apenas a tag Label: Value1'
     },
@@ -15873,6 +15878,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             'correct': false
         }
         ],
+        'caseStudy': true,
         'explication': 'A\nOs Arquivos do Azure dão suporte à autenticação baseada em identidade por meio do Bloco de Mensagens do Servidor (SMB) por meio dos Serviços de Domínio do Active Directory locais\n(AD DS) e Azure\nServiços de Domínio Active Directory (Azure AD DS).\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/les/storage-les-active-directory-overview'
     }, {
         'question': `Questão 1. Tópico 10
@@ -15895,6 +15901,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             'correct': true
         }
         ],
+        'caseStudy': true,
         'explication': 'D\nUm cofre dos Serviços de Recuperação é um contentor lógico que armazena os dados de backup para cada recurso protegido, como VMs do Azure. Quando o backup\ntrabalho para um recurso protegido é executado, ele cria um ponto de recuperação dentro do cofre dos Serviços de Recuperação.\nCenário:\nExistem três níveis de aplicativos, cada um com cinco máquinas virtuais.\nMova todas as máquinas virtuais do App1 para o Azure.\nCertifique-se de que todas as máquinas virtuais do App1 estejam protegidas por backups.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/backup/quick-backup-vm-portal\nDistribuição de votos da comunidade\nD (100%)'
         , 'filters': ['K001','K002']
     },
@@ -15920,6 +15927,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             'correct': false
         }
         ],
+        'caseStudy': true,
         'explication': 'B\nO Azure Storage Explorer é uma ferramenta gratuita da Microsoft que permite que você trabalhe com dados do Azure Storage no Windows, macOS e Linux. Você pode\nusá-lo para carregar e baixar dados do armazenamento de blobs do Azure.\nCenário:\nAs alterações planejadas incluem: mover os arquivos de blueprint do produto existente para o armazenamento de blobs do Azure.\nOs requisitos técnicos incluem: copiar os arquivos de blueprint para o Azure pela Internet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/move-data-to-azure-blob-using-azure-storage-explorer\nDistribuição de votos da comunidade\nB (100%)'
         , 'filters': ['K001','K002']
     },
@@ -15951,6 +15959,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         }
         ],
         'typeQuestion': 'multiplecheckboxyesorno',
+        'caseStudy': true,
         'explication': `Caixa 1: Sim -
             A Contoso está movendo os arquivos de blueprint do produto existente para o armazenamento de Blobs do Azure.
             Use o armazenamento padrão não gerenciado para os discos rígidos das máquinas virtuais. Usamos Page Blobs para isso.
@@ -16182,6 +16191,7 @@ HOTSPOT -
             }
         ],
         typeQuestion: 'select',
+        'caseStudy': true,
         explication: `Referência:
 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers https://docs.microsoft.com/en-us/azure/storage/ comum/visão geral da conta de armazenamento`
     },
@@ -16244,6 +16254,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
             }
         ],
         typeQuestion: 'select',
+        'caseStudy': true,
         explication: `Referência:
         https://docs.microsoft.com/en-us/azure/storage/blobs/object-replication-configure?tabs=portal`
     },
@@ -16274,6 +16285,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
             'correct': false
         }
         ],
+        'caseStudy': true,
         'explication': `B.
             Comentário mais votado:
             Por pelo menos dois motivos, storage2 é o único candidato: 
@@ -16310,6 +16322,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
             'correct': true
         }
         ],
+        'caseStudy': true,
         'explication': 'E\nCenário: A Contoso deve atender aos requisitos técnicos, incluindo:\nCertifique-se de que o VM3 possa estabelecer conexões de saída pela porta TCP 8080 com os servidores de aplicativos no escritório de Montreal.\nA verificação de fluxo de IP verifica se um pacote é permitido ou negado para ou de uma máquina virtual. As informações consistem em direção, protocolo, IP local,\nIP remoto, porta local e porta remota. Se o pacote for negado por um grupo de segurança, o nome da regra que negou o pacote será retornado. Enquanto\nqualquer IP de origem ou destino pode ser escolhido,\nA verificação de fluxo de IP ajuda os administradores a diagnosticar rapidamente problemas de conectividade de ou para a Internet e de ou para o ambiente local.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/network-watcher/network-watcher-ip-ow-verify-overview\nDistribuição de votos da comunidade\nE (100%)'
     }, {
         'question': `Questão 1. Tópico 13. Estudo de caso Litware. 
@@ -16331,6 +16344,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
             'correct': false
         }
         ],
+        'caseStudy': true,
         'explication': 'C\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal\nDistribuição de votos da comunidade\nB (89%) 11%'
     },
 
@@ -16404,6 +16418,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
         }
         ],
         'typeQuestion': 'select',
+        'caseStudy': true,
         'explication': `Caixa 1: Crie um gateway de rede virtual e um gateway de rede local.
         Gateway VPN do Azure. O serviço de gateway VPN permite-lhe ligar a VNet à rede local através de um dispositivo VPN. Para obter mais informações, consulte
         Conectar uma rede local a uma rede virtual do Microsoft Azure. O gateway VPN inclui os seguintes elementos:
@@ -16481,6 +16496,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
         }
         ],
         'typeQuestion': 'select',
+        'caseStudy': true,
         'explication': `Comentário mais votado: Conforme os requisitos: 
         - Você tem um aplicativo público chamado App1. 
         O App1 é composto pelas três camadas a seguir: Um banco de dados SQL,
@@ -16518,6 +16534,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
             'correct': false
         }
         ],
+        'caseStudy': true,
         'explication': 'A\nApenas a sub-rede do servidor Web e de entrada, pois os usuários acessam o front-end da Web usando apenas HTTPS.\nObservação Cenário: você tem um aplicativo público chamado App1. App1 é composto pelas três camadas a seguir:\n✑ Um banco de dados SQL\n✑ Um front-end da web\n✑ Uma camada intermediária de processamento\nCada camada é composta por cinco máquinas virtuais. Os usuários acessam o front-end da web usando apenas HTTPS.\nDistribuição de votos da comunidade\nUm (100%)'
         ,
         'filters': ['K001','K002']
@@ -16549,6 +16566,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
         }
         ],
         'typeQuestion': 'multiplecheckboxyesorno',
+        'caseStudy': true,
         'explication': 'Resposta mais votada : Acho que as respostas deveriam ser: SSN VM1 tem regras de entrada, portanto, não há restrição de saída. VM2 possui regras de saída, portanto, não há restrições de entrada. Conseqüentemente, VM1 pode estabelecer RDP para VM2. VM2 —ping—> VM3: Sim (nenhuma restrição além de RDP de saída) VM2 —RDP—> VM3: Não (RDP de saída não é permitido em VM2).'
     },
 
@@ -16573,6 +16591,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
             'correct': false
         }
         ],
+        'caseStudy': true,
         'explication': `Reference:
                         https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-internal-portal
                         Community vote distribution
@@ -16666,6 +16685,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
         }
         ],
         'typeQuestion': 'select',
+        'caseStudy': true,
         'explication': 'Get-AzRoleDefinition e ConvertTo-Json'
     },
 
@@ -16693,6 +16713,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
             'correct': false
         }
         ],
+        'caseStudy': true,
         'explication': 'B\nCenário: Garanta a Autenticação Multifator (MFA) do Azure somente para os usuários no departamento financeiro.\nA recomendação é usar políticas de acesso condicional que podem ser direcionadas a grupos de usuários, aplicativos específicos ou outras\ncondições.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-userstates\nDistribuição de votos da comunidade\nB (100%)'
     },
     /*
