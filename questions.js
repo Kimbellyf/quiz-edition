@@ -6895,7 +6895,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         `
         ,
         'filters':[
-            'GN001'
+            'GN001', 'K003'
         ]
 
     },
@@ -8114,7 +8114,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': `Bem votado:
             O usuário NNN 1 não tem a função Storage Blob Data Reader ou Storage Blob Data Contributor para ler o File1. https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access?tabs=portal
         `
-        , 'filters': ['K002', 'GN001']
+        , 'filters': ['K002', 'GN001', 'K003']
 
     },
 
@@ -8450,6 +8450,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         https://docs.microsoft.com/en-us/azure/azure-monitor/platform/autoscale-overview https://docs.microsoft.com/en-us/azure/azure-monitor/platform/autoscale-best-practices https://docs.microsoft.com/en-us/azure/azure-monitor/platform/autoscale-common-scale-patterns
             
         `
+        ,
+        filters : [
+            'K003',
+        ]
     },
 
     
@@ -10101,7 +10105,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': `Com: Para verificar um domínio, o Azure usa registros TXT e MX.
             
 `
-        , 'filters': ['K002', 'L001', 'L003', 'GN001']
+        , 'filters': ['K002', 'L001', 'L003', 'GN001', 'K003']
     },
 
 
@@ -10388,6 +10392,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
+        ,
+        filters : [
+            'K003',
+        ]
     },
 
 
@@ -10419,6 +10427,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `*****
         `
+        ,
+        filters : [
+            'K003',
+        ]
 
     },
     
@@ -10555,7 +10567,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'BCF\nUm balanceador de carga padrão é necessário para as portas HA.\nSão necessários dois pools de back-end, pois há dois serviços com endereços IP diferentes.\nA regra de IP flutuante é usada onde as portas de back-end são reutilizadas.\nRespostas incorretas:\nE: As portas HA não estão disponíveis para o balanceador de carga básico.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-standard-overview https://docs.microsoft.com/en-us/azure/load-\nvisão geral do balanceador/balanceador de carga-multivip\nDistribuição de votos da comunidade\nBDE (39%) BCF (39%) BCE (20%)'
         ,
         'filters':[
-            'L003',
+            'L003', 'K003'
         ]
     }, {
         'question': '9\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém duas redes virtuais do Azure chamadas VNet1 e VNet2. VNet1 contém uma VPN\ngateway nomeado\nVPNGW1 que usa roteamento estático. Há uma conexão VPN site a site entre sua rede local e a VNet1.\nEm um computador chamado Client1 que executa o Windows 10, você configura uma conexão VPN ponto a site com a VNet1.\nVocê configura o peering de rede virtual entre VNet1 e VNet2. Verifique se é possível conectar-se à VNet2 por meio da rede local. Cliente1\nnão consegue se conectar ao VNet2.\nVocê precisa garantir que pode conectar o Client1 à VNet2.\nO que você deveria fazer?\n',
@@ -10576,6 +10588,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'A\nReferência:\nhttps://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-point-to-site-routing\nDistribuição de votos da comunidade\nA (89%) 11%'
+        ,
+        filters : [
+            'K003',
+        ]
     },
 
     {
@@ -10774,7 +10790,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'B\nO status é Parado (Desalocado).\nA extensão DSC para Windows requer que a máquina virtual alvo seja capaz de comunicar com o Azure.\nA VM precisa ser iniciada.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-windows\nDistribuição de votos da comunidade\nB (100%)'
         ,
         'filters':[
-            'L001', 'K002'
+            'L001', 'K002', 'K003'
         ]
     }, {
         'question': '16\nVocê tem cinco máquinas virtuais do Azure que executam o Windows Server 2016. As máquinas virtuais são configuradas como servidores web.\nVocê tem um balanceador de carga do Azure chamado LB1 que fornece serviços de balanceamento de carga para as máquinas virtuais.\nVocê precisa garantir que os visitantes sejam atendidos pelo mesmo servidor web para cada solicitação.\nO que você deve configurar?\n',
@@ -10810,7 +10826,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'B\nA porta padrão para RDP é a porta TCP 3389. Uma regra para permitir o tráfego RDP deve ser criada automaticamente quando você cria sua VM.\nNota sobre NSG-Subnet1: O Azure encaminha o tráfego de rede entre todas as sub-redes numa rede virtual, por padrão.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/troubleshoot-rdp-connection\nDistribuição de votos da comunidade\nA (69%) B (31%)'
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
     }, {
         'question': '18\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure que contém os seguintes recursos:\n✑ Uma rede virtual que possui uma sub-rede chamada Subnet1\n✑ Dois grupos de segurança de rede (NSGs) denominados NSG-VM1 e NSG-Subnet1\n✑ Uma máquina virtual chamada VM1 que tenha as configurações necessárias do Windows Server para permitir conexões de Área de Trabalho Remota\nNSG-Subnet1 tem apenas as regras de segurança de entrada padrão.\nO NSG-VM1 tem as regras de segurança de entrada padrão e a seguinte regra de segurança de entrada personalizada:\n✑ Prioridade: 100\n✑ Fonte: Qualquer\n✑ Intervalo de portas de origem: *\n✑ Destino: *\n✑ Intervalo de portas de destino: 3389\nProtocolo: UDP -\n✑ Ação: Permitir\nVM1 possui um endereço IP público e está conectada à Subnet1. O NSG-VM1 está associado à interface de rede do VM1. NSG-Subnet1 está associado a\nSub-rede1.\nVocê precisa estabelecer conexões de Área de Trabalho Remota da Internet para a VM1.\nSolução: você adiciona uma regra de segurança de entrada ao NSG-Subnet1 que permite conexões da origem da Internet ao destino da VirtualNetwork para\nintervalo de portas 3389 e usa o protocolo UDP.\nIsso atende ao objetivo?\n',
@@ -10844,7 +10860,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'A\nA porta padrão para RDP é a porta TCP 3389. Uma regra para permitir o tráfego RDP deve ser criada automaticamente quando você cria sua VM.\nNota sobre NSG-Subnet1: O Azure encaminha o tráfego de rede entre todas as sub-redes numa rede virtual, por padrão.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/troubleshooting/troubleshoot-rdp-connection\nDistribuição de votos da comunidade\nA (55%) B (45%)'
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
     }, {
         'question': `Questão 21 tópico 5
@@ -10902,6 +10918,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'A\nA política do Azure de tipos de recursos não permitidos proíbe a implantação de tipos de recursos especi cados. Você especifica uma matriz de tipos de recursos para\nbloquear.\nRedes Virtuais e Máquinas Virtuais são proibidas.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/governance/policy/samples/not-allowed-resource-types\nDistribuição de votos da comunidade\nUm (100%)'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': '23\nSua empresa tem uma assinatura do Azure chamada Subscription1.\nA empresa também possui dois servidores locais chamados Server1 e Server2 que executam o Windows Server 2016. Server1 é configurado como um servidor DNS\nque possui uma zona DNS primária chamada adatum.com. Adatum.com contém 1.000 registros DNS.\nVocê gerencia o Servidor1 e a Assinatura1 do Servidor2. Server2 possui as seguintes ferramentas instaladas:\n✑ O console do Gerenciador DNS\n✑ AzurePowerShell\n✑ CLI do Azure 2.0\nVocê precisa mover a zona adatum.com para uma zona DNS do Azure na Assinatura1. A solução deve minimizar o esforço administrativo.\nO que você deve usar?\n',
         'number': '',
@@ -10976,7 +10996,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         `
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
 
     },
@@ -11055,6 +11075,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'C\nVocê pode associar ou dissociar um grupo de segurança de rede de uma interface de rede ou sub-rede.\nO NSG tem a regra apropriada para bloquear o acesso dos usuários à Internet. Precisamos apenas associá-lo à Subnet1.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/manage-network-security-group\nDistribuição de votos da comunidade\nC (100%)'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': '29\nVocê tem duas assinaturas denominadas Assinatura1 e Assinatura2. Cada assinatura está associada a um locatário diferente do Azure AD.\nA assinatura1 contém uma rede virtual chamada VNet1. VNet1 contém uma máquina virtual do Azure chamada VM1 e tem um espaço de endereço IP de\n10.0.0.0/16.\nA assinatura2 contém uma rede virtual chamada VNet2. VNet2 contém uma máquina virtual do Azure chamada VM2 e tem um espaço de endereço IP de\n10.10.0.0/24.\nVocê precisa conectar VNet1 a VNet2.\nO que você deve fazer primeiro?\n',
         'number': '',
@@ -11173,6 +11197,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'D\nRespostas incorretas:\nR: As regras são processadas em ordem de prioridade, com os números mais baixos processados \u200b\u200bantes dos números mais altos, porque os números mais baixos têm prioridade mais alta.\nQuando o tráfego corresponde a uma regra, o processamento é interrompido. O RDP já tem o número mais baixo e, portanto, a prioridade mais alta.\nB: A interface de rede já foi adicionada à VM.\nC: As regras de saída são boas.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/security-overview\nDistribuição de votos da comunidade\nD (100%)'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': `Questão 37 Tópico 5 
             
@@ -11626,7 +11654,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'B\nVocê deve usar uma definição de política.\nA definição de política de recursos usada pelo Azure Policy permite estabelecer convenções para recursos em sua organização, descrevendo quando o\npolítica é aplicada e qual o efeito a ter. Ao definir convenções, você pode controlar custos e gerenciar seus recursos com mais facilidade.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/azure-policy/policy-de nition\nDistribuição de votos da comunidade\nB (100%)'
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
     },
 
@@ -11668,6 +11696,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `******
         `
+        ,
+        filters : [
+            'K003',
+        ]
 
     },
     
@@ -11686,6 +11718,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'B\nReferência:\nhttps://fastreroute.com/azure-network-security-groups-explained/\nDistribuição de votos da comunidade\nB (100%)'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': '58\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem um aplicativo chamado App1 instalado em duas máquinas virtuais do Azure chamadas VM1 e VM2. As conexões com App1 são gerenciadas usando\numa carga do Azure\nBalanceador.\nAs configurações efetivas de segurança de rede para VM2 são mostradas na exposição a seguir.\nVocê descobre que as conexões com App1 de 131.107.100.50 pela porta TCP 443 falham.\nVocê verifica se as regras do Load Balancer estão configuradas corretamente.\nVocê precisa garantir que as conexões com o App1 possam ser estabelecidas com êxito a partir de 131.107.100.50 pela porta TCP 443.\nSolução: você exclui a regra de segurança de entrada BlockAllOther443.\nIsso atende ao objetivo?\n',
         'number': '',
@@ -12114,7 +12150,7 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
         `
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
 
     },
@@ -12143,6 +12179,10 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
         }
         ],
         'explication': 'A\nAs redes virtuais que você peer devem ter espaços de endereço IP não sobrepostos. A exposição indica que VNet1 tem um espaço de endereço de\n10.2.0.0/16, que é igual ao VNet2 e, portanto, se sobrepõe. Precisamos alterar o espaço de endereço do VNet1.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering#requirements-and-constraints\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq\nDistribuição de votos da comunidade\nUm (100%)'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': `questão 82 tópico 5 
             \nVocê tem as máquinas virtuais do Azure mostradas na tabela a seguir.
@@ -12224,6 +12264,10 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
         }
         ],
         'explication': 'C\nSKUs correspondentes são necessários para balanceadores de carga e recursos de IP público. Você não pode ter uma mistura de recursos de SKU básico e SKU padrão\nrecursos.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/ip-services/public-ip-addresses\nDistribuição de votos da comunidade\nC (100%)\nTópico 5'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': '87\nVocê tem uma assinatura do Azure.\nVocê está implantando um cluster do Azure Kubernetes Service (AKS) que conterá vários pods. Os pods usarão rede kubernet.\nVocê precisa restringir o tráfego de rede entre os pods.\nO que você deve configurar no cluster AKS?\n',
         'number': '',
@@ -12785,7 +12829,7 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
         'explication': 'A\nDistribuição de votos da comunidade\nA (89%) 11%\nTópico 5'
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
     }, {
         'question': `questão 114 tópico 5 
@@ -13188,7 +13232,7 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
         'explication': 'C\nDistribuição de votos da comunidade\nC (100%)'
         ,
         'filters':[
-            'K001'
+            'K001','K003'
         ]
     }, {
         'question': `questão 132 tópico 5
@@ -13232,6 +13276,10 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (100%)'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': `questao 134 tópico 5
             \nVocê cria uma VM do Azure chamada VM1 que executa o Windows Server 2019.
@@ -13350,7 +13398,7 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
             
 	`,
 	'filters':[
-		'K002','L003', 'GN001'
+		'K002','L003', 'GN001', 'K003'
 	]
     },
 
@@ -13566,6 +13614,10 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nB (100%)\nTópico 5'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': `146\nVocê tem uma assinatura do Azure.\nVocê planeja migrar 50 máquinas virtuais do VMware vSphere para a assinatura.\nVocê cria um cofre dos Serviços de Recuperação.
             \nO que você deve fazer a seguir?\n`,
@@ -13586,12 +13638,12 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
         }
         ],
         'explication': 'D\nDistribuição de votos da comunidade\nD (100%)'
-        , 'filters': ['K002']
+        , 'filters': ['K002', 'K003']
 
     },
 
     {
-        'question': `Questão  Tópico 
+        'question': `Questão 147 Tópico 5
         Você tem uma assinatura do Azure que contém as redes virtuais mostradas na tabela a seguir.
         <img src="imagens/q147topico5.png" alt="imagem da questão"></img>
         Cada rede virtual tem 50 máquinas virtuais conectadas.
@@ -13664,7 +13716,7 @@ https://docs.microsoft.com/en-us/azure/load-balancer/tutorial-load-balancer-stan
             
 	`,
 	'filters':[
-		'GN001'
+		'GN001', 'K003'
 	]
     },
     
@@ -14883,7 +14935,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         'caseStudy': false,
         'explication': ` 
                 `
-        , 'filters': ['K002', 'GN001']
+        , 'filters': ['K002', 'GN001', 'K003']
     },
     {
         'question': `questão 37 tópico 6
@@ -15054,7 +15106,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         `
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
 
     },
@@ -15368,6 +15420,10 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': ` Algumas divergências mas resposta dada aqui igual a fonte
         `
+        ,
+        filters : [
+            'K003',
+        ]
 
     },
 
@@ -15520,6 +15576,10 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         }
         ],
         'explication': 'B\nDistribuição de votos da comunidade\nB (80%) C (20%)\nTópico 6'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': '56\nVocê tem uma assinatura do Azure que contém uma máquina virtual chamada VM1.\nVocê tem um datacenter local que contém um controlador de domínio denominado DC1. ExpressRoute é usado para conectar o datacenter local\npara o Azure.\nVocê precisa usar o Connection Monitor para identificar a latência da rede entre VM1 e DC1.\nO que você deve instalar no DC1?\n',
         'number': '',
