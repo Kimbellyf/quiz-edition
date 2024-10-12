@@ -13,6 +13,8 @@ let $startGameButtonSimu3 = ".start-quiz-simu3";
 let $startGameButtonSimu4 = ".start-quiz-simu4";
 let $startGameButtonSimu5 = ".start-quiz-simu5";
 let $startGameButtonSimu6 = ".start-quiz-simu6";
+let $startGameButtonSimu7 = ".start-quiz-simu7";
+
 
 
 
@@ -69,6 +71,7 @@ window.onload = function () {
   $startGameButtonSimu4.addEventListener("click", selecSimu4)
   $startGameButtonSimu5.addEventListener("click", selecSimu5)
   $startGameButtonSimu6.addEventListener("click", selecSimu6)
+  $startGameButtonSimu7.addEventListener("click", selecSimu7)
 
   $elementProxButton.addEventListener("click", nextQuestion)
   $nextQuestionButton.addEventListener("click", displayNextQuestion)
@@ -94,6 +97,7 @@ function getBasicElementsHTML(){
   $startGameButtonSimu4 = document.querySelector(".start-quiz-simu4")
   $startGameButtonSimu5 = document.querySelector(".start-quiz-simu5")
   $startGameButtonSimu6 = document.querySelector(".start-quiz-simu6")
+  $startGameButtonSimu7 = document.querySelector(".start-quiz-simu7")
 
   $nextQuestionButton = document.querySelector(".next-question")
   $questionsContainer = document.querySelector(".questions-container")
@@ -164,6 +168,10 @@ function selecSimu6(){
   tipo = -10
   startSimuEscolhido()
 }
+function selecSimu7(){
+  tipo = -20
+  startSimuEscolhido()
+}
 function startSimuEscolhido(){ //tipo1 - tipo eh um numero 
   intervaloQuestaoInicio = tipo
   intervaloQuestaoFim = 1
@@ -203,6 +211,8 @@ function randomQuestions() {
     filtroPergSimENao()
   }else if(intervaloQuestaoInicio === -12){
     filtroEstudo()
+  } else if(intervaloQuestaoInicio === -20){
+    filtroMaisCairamQueForamMapeadas()
   }
   else {
     questions = questionsAll.slice(intervaloQuestaoInicio, intervaloQuestaoFim)
@@ -245,6 +255,12 @@ function startSimuCairamNasProvasConhecidas(codigo = 0){
   console.log(questions);
   displayNextQuestion()
 
+}
+function filtroMaisCairamQueForamMapeadas(){
+  questions = questionsAll.filter((question) => {
+    return question.filters && (question.filters.length>2)
+  });
+  console.log(questions);
 }
 function filtroPergSimENao(){
   questions = questionsAll.filter((question) => {

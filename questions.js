@@ -8972,9 +8972,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         ],
         'explication': 'AD\nDistribuição de votos da comunidade\nAD (100%)'
         ,
-        'filters':[
-            'GN001', 'K003'
-        ]
+       
     }, {
         'question': '30\nVocê tem uma assinatura do Azure chamada Subscription1 que possui os seguintes provedores registrados:\n✑ Autorização\n✑ Automação\n✑ Recursos\n✑ Calcular\n✑ KeyVault\n✑ Rede\n✑ Armazenamento\n✑ Faturamento\n✑ Rede\nA assinatura1 contém uma máquina virtual do Azure chamada VM1 que possui as seguintes configurações:\n✑ Endereço IP privado: 10.0.0.4 (dinâmico)\n✑ Grupo de segurança de rede (NSG): NSG1\n✑ Endereço IP público: Nenhum\n✑ Conjunto de disponibilidade: AVSet\n✑ Sub-rede: 10.0.0.0/24\n✑ Discos gerenciados: Não\n✑ Localização: Leste dos EUA\nVocê precisa registrar todas as tentativas de conexão bem-sucedidas e malsucedidas com a VM1.\nQuais são as três ações que você deve realizar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
         'number': '',
