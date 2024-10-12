@@ -4661,6 +4661,10 @@ const questionsAll = [
          Navegue até Configurações de Colaboração Externa: Vá para Identidade > Identidades Externas > Configurações de colaboração externa.
           Configure uma lista de permissões: Em Restrições de colaboração, selecione Permitir convites somente para os domínios especificados (mais restritivos).
         `
+        ,
+        filters : [
+            'K003',
+        ]
     
     }
     ,
@@ -4704,7 +4708,10 @@ const questionsAll = [
 Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta função permite que o usuário leia, grave e exclua dados do blob.
  Ela oferece suporte a condições, o que significa que você pode usar o Azure Role-Based Access Control (RBAC) para definir condições na atribuição de função, se necessário. E. Proprietário de dados do Storage Blob • Motivo: esta função permite que o usuário gerencie dados do blob, incluindo leitura, gravação e exclusão,
   e também gerencie o contêiner e os dados do blob. Ela oferece suporte a condições, possibilitando a aplicação de condições do RBAC na atribuição de função.`
-    
+        ,
+        filters : [
+            'K003',
+        ]
     },
 
 
@@ -6034,7 +6041,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'A\nReferência:\nhttps://azure.microsoft.com/en-us/blog/persistent-docker-volumes-with-azure-le-storage/ https://docs.microsoft.com/en-\nus/azure/aks/concepts-storage\nDistribuição de votos da comunidade\nA (94%) 5%\nTópico 3'
         ,
         'filters':[
-            'K001'
+            'K001', 'K003'
         ]
     }, {
         'question': '27\nVocê tem um aplicativo chamado App1 que é executado em duas máquinas virtuais do Azure chamadas VM1 e VM2.\nVocê planeja implementar um conjunto de disponibilidade do Azure para App1. A solução deve garantir que o App1 esteja disponível durante a manutenção planejada do\nalojamento de hardware\nVM1 e VM2.\nO que você deve incluir no conjunto de disponibilidade?\n',
@@ -6178,6 +6185,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
             Referência:
             https://docs.microsoft.com/en-us/azure/storage/files/storage-sync-files-deployment-guide?tabs=azure-portal%2Cproactive-portal#create-a-sync-group-and-a- cloud-endpoint
         `
+        ,
+        filters : [
+            'K003',
+        ]
 
     },
 
@@ -6547,7 +6558,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': `Referência:
                 https://docs.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts?tabs=json
         `
-        , 'filters': ['K00','K002']
+        , 'filters': ['K00','K002','K003']
 
     },
     {
@@ -6593,6 +6604,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'B\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview?tabs=azure-portal\nDistribuição de votos da comunidade\nB (100%)'
+        ,
+        filters : [
+            'K003',
+        ]
     },
     
     {
@@ -6629,7 +6644,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         `
         ,
         'filters':[
-            'L003',
+            'L003', 'K003'
         ]
 
     },
@@ -6656,6 +6671,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'AC\nPara aceder aos dados blob no portal Azure com credenciais AD Azure, um utilizador deve ter as seguintes atribuições de funções:\n* Uma função de acesso a dados, como Storage Blob Data Reader ou Storage Blob Data Contributor\n* A função de Leitor do Azure Resource Manager, no mínimo\nA função Leitor é uma função do Azure Resource Manager que permite aos utilizadores ver os recursos da conta de armazenamento, mas não modificá-los. Isso não\nforneça permissões de leitura para dados no Armazenamento do Azure, mas apenas para recursos de gerenciamento de contas. A função Leitor é necessária para que os usuários possam\nnavegue até contêineres de blob no portal do Azure.\nNota: em ordem da menor para a maior permissão:\nA função de leitor e acesso a dados -\nA função de Colaborador da Conta de Armazenamento\nA função de Colaborador do Azure Resource Manager\nA função de proprietário do Azure Resource Manager\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access\nDistribuição de votos da comunidade\nBC (67%) 14% Outros'
+        ,
+        filters : [
+            'K003',
+        ]
     },
 
 
@@ -6749,7 +6768,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'C\nO comando azcopy copy copia um diretório (e todos os arquivos nesse diretório) para um contêiner de blob. O resultado é um diretório no contêiner\npelo mesmo nome.\nRespostas incorretas:\nB: O comando azcopy sync replica o local de origem para o local de destino. No entanto, o arquivo será ignorado se o último horário modificado em\no destino é mais recente.\nD: O comando az storage blob copy start-batch copia vários blobs para um contêiner de blob.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-blobs https://docs.microsoft.com/en-\nus/azure/storage/common/storage-ref-azcopy-copy\nDistribuição de votos da comunidade\nC (100%)\nTópico 3'
         ,
         'filters':[
-            'K002',
+            'K002','K003'
         ]
     }, {
         'question': '46\nVocê tem uma assinatura do Azure.\nNo portal do Azure, você planeja criar uma conta de armazenamento chamada storage1 que terá as seguintes configurações:\n✑ Desempenho: Padrão\n✑ Replicação: armazenamento com redundância de zona (ZRS)\n✑ Nível de acesso (padrão): Legal\n✑ Namespace hierárquico: desativado\nVocê precisa garantir que pode definir o tipo de conta para armazenamento1 como BlockBlobStorage.\nQual configuração você deve modificar primeiro?\nUma performance\nB. Replicação\nC. Nível de acesso (padrão)\nD. Namespace hierárquico',
@@ -8916,7 +8935,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'C\nAo redimensionar a VM, ela deve estar parada.\nReferência:\nhttps://azure.microsoft.com/en-us/blog/resize-virtual-machines/\nDistribuição de votos da comunidade\nC (100%)'
         ,
         'filters':[
-            'K002','L003',
+            'K002','L003', 'K003'
         ]
     }, {
         'question': `Questão 29 Tópico 4 
@@ -8950,7 +8969,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'AD\nDistribuição de votos da comunidade\nAD (100%)'
         ,
         'filters':[
-            'GN001'
+            'GN001', 'K003'
         ]
     }, {
         'question': '30\nVocê tem uma assinatura do Azure chamada Subscription1 que possui os seguintes provedores registrados:\n✑ Autorização\n✑ Automação\n✑ Recursos\n✑ Calcular\n✑ KeyVault\n✑ Rede\n✑ Armazenamento\n✑ Faturamento\n✑ Rede\nA assinatura1 contém uma máquina virtual do Azure chamada VM1 que possui as seguintes configurações:\n✑ Endereço IP privado: 10.0.0.4 (dinâmico)\n✑ Grupo de segurança de rede (NSG): NSG1\n✑ Endereço IP público: Nenhum\n✑ Conjunto de disponibilidade: AVSet\n✑ Sub-rede: 10.0.0.0/24\n✑ Discos gerenciados: Não\n✑ Localização: Leste dos EUA\nVocê precisa registrar todas as tentativas de conexão bem-sucedidas e malsucedidas com a VM1.\nQuais são as três ações que você deve realizar? Cada resposta correta apresenta parte da solução.\nNOTA: Cada seleção correta vale um ponto.\n',
@@ -9022,7 +9041,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'A\nDistribuição de votos da comunidade\nB (96%) 4%'
         ,
         'filters':[
-            'K002',
+            'K002','K003'
         ]
     }, {
         'question': '34\nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscription1. Subscription1 contém um grupo de recursos denominado RG1. RG1 contém recursos que foram\nimplantado usando modelos.\nVocê precisa visualizar a data e hora em que os recursos foram criados no RG1.\nSolução: na folha Assinaturas, selecione a assinatura e clique em Implantação programática.\nIsso atende ao objetivo?\n',
@@ -9066,7 +9085,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'explication': 'B\nVocê deve excluir VM1. Você recria a VM1 e depois adiciona a interface de rede para VM1.\nNota: Ao criar uma máquina virtual (VM) do Azure, você deve criar uma rede virtual (VNet) ou usar uma VNet existente. Você pode alterar o\nsub-rede à qual uma VM está conectada depois de criada, mas não é possível alterar a VNet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/network-overview\nDistribuição de votos da comunidade\nB (100%)'
         ,
         'filters':[
-            'K002',
+            'K002', 'K003'
         ]
     }, {    
         'question': `Questão 36 Tópico 4
@@ -9333,6 +9352,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'B\nAo implantar uma máquina virtual a partir de um modelo, você deve especificar:\n✑ o nome e o local do Grupo de Recursos da VM\n✑ o nome de usuário e senha do administrador\n✑ um nome DNS exclusivo para o IP público\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-machines/windows/ps-template\nDistribuição de votos da comunidade\nD (81%) Outros'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': '51\nVocê tem uma assinatura do Azure que contém uma máquina virtual do Azure chamada VM1. VM1 executa um aplicativo de relatórios financeiros chamado App1 que não\nsuportar múltiplas instâncias ativas.\nNo final de cada mês, o uso da CPU para VM1 atinge o pico quando o App1 é executado.\nVocê precisa criar um runbook agendado para aumentar o desempenho do processador da VM1 no final de cada mês.\nQue tarefa você deve incluir no runbook?\n',
         'number': '',
@@ -9623,6 +9646,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'A\nA máquina virtual à qual você conecta uma interface de rede e a rede virtual à qual você a conecta devem existir no mesmo local, aqui no oeste dos EUA,\ntambém chamada de região.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface\nDistribuição de votos da comunidade\nA (75%) B (25%)'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': `Questão 75 Tópico 4 \nNota: Esta questão faz parte de uma série de questões que apresentam o mesmo cenário. Cada questão da série contém uma solução única que\npode atingir os objetivos declarados. Alguns conjuntos de perguntas podem ter mais de uma solução correta, enquanto outros podem não ter uma solução correta.\nDepois de responder a uma pergunta nesta seção, você NÃO poderá retornar a ela. Como resultado, estas perguntas não aparecerão na tela de revisão.\nVocê tem uma assinatura do Azure chamada Subscrição1 que contém os recursos mostrados na tabela a seguir.
         <img src="imagens/squestao74topico4.png" alt="imagem da questão"></img>
@@ -9654,6 +9681,10 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'A\nA máquina virtual à qual você conecta uma interface de rede e a rede virtual à qual você a conecta devem existir no mesmo local, aqui no oeste dos EUA,\ntambém chamada de região.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface\nDistribuição de votos da comunidade\nUm (100%)'
+        ,
+        filters : [
+            'K003',
+        ]
     }, {
         'question': `Questão 77 Tópico 4 
             \nVocê desenvolve o seguinte modelo do Azure Resource Manager (ARM) para criar um grupo de recursos e implantar uma conta do Armazenamento do Azure no\ngrupo de recursos.
@@ -9763,6 +9794,40 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
             
 `
     },
+    ,
+    {
+        'question': `Questão 81 tópico 3
+        Você tem uma assinatura do Azure que contém três máquinas virtuais chamadas VM1, VM2 e VM3. Todas as máquinas virtuais estão em um conjunto de disponibilidade chamado AVSet1.
+
+        Você precisa escalar a VM1 para um novo tamanho de máquina virtual, mas o tamanho pretendido não está disponível.
+
+        O que você deve fazer primeiro?
+          
+        `,
+        'number': '',
+        'page': 413,
+        'answers': [{
+            'text': 'A. Crie um grupo de posicionamento de proximidade. \n',
+            'correct': false
+        }, {
+            'text': 'B.  Desalocar VM1.',
+            'correct': true
+        }, {
+            'text': 'C. Converta AvSet1 em um conjunto de disponibilidade gerenciado.',
+            'correct': false
+        }, {
+            'text': 'D. Desligue o VM3 e o VM3.',
+            'correct': false
+        }
+
+        ],
+        'explication': '* nova comentário: B - Quando você precisa escalar uma máquina virtual (VM1) para um novo tamanho, e o tamanho pretendido não está disponível, o motivo mais provável é que o tamanho não está disponível no cluster de hardware atual onde a VM está hospedada. Para tornar o novo tamanho disponível, você deve mover a VM para um cluster diferente, o que requer a desalocação da VM.'
+        ,
+        filters : [
+            'K003',
+        ]
+    
+    },
 
     
 
@@ -9797,7 +9862,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         'typeQuestion': 'multiplecheckboxyesorno',
         'explication': `*****
         `
-        , 'filters': ['K002', 'L001']
+        , 'filters': ['K002', 'L001', 'K003']
 
     },
 
@@ -15613,7 +15678,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             Caixa 2: Sim -
             Certifique-se de que quando os usuários ingressam em dispositivos no Azure Active Directory (Azure AD), os usuários usam um telefone celular para verificar sua identidade.`
             ,
-        'filters': ['K001','K002']
+        'filters': ['L001']
     },
 
 
@@ -15639,7 +15704,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         ],
         'caseStudy': true,
         'explication': 'D\nCenário:\n✑ Designe um novo usuário chamado Admin1 como administrador de serviço da assinatura do Azure.\n✑ Admin1 deve receber alertas por e-mail sobre interrupções no serviço.\nSiga estas etapas para alterar o Administrador de Serviço no portal do Azure.\n1. Certifique-se de que seu cenário seja suportado verificando as limitações para alterar o Administrador de Serviço.\n2. Entre no portal do Azure como administrador da conta.\n3. Abra Cost Management + Billing e selecione uma assinatura.\n4. Na navegação esquerda, clique em Propriedades.\n5. Clique em Administrador de serviço.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/role-based-access-control/classic-administrators\nDistribuição de votos da comunidade\nD (56%) C (44%)'
-        , 'filters': ['K001','K002']
+        , 'filters': ['K001','K002','K003']
     },
 
 
@@ -15903,7 +15968,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         ],
         'caseStudy': true,
         'explication': 'D\nUm cofre dos Serviços de Recuperação é um contentor lógico que armazena os dados de backup para cada recurso protegido, como VMs do Azure. Quando o backup\ntrabalho para um recurso protegido é executado, ele cria um ponto de recuperação dentro do cofre dos Serviços de Recuperação.\nCenário:\nExistem três níveis de aplicativos, cada um com cinco máquinas virtuais.\nMova todas as máquinas virtuais do App1 para o Azure.\nCertifique-se de que todas as máquinas virtuais do App1 estejam protegidas por backups.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/backup/quick-backup-vm-portal\nDistribuição de votos da comunidade\nD (100%)'
-        , 'filters': ['K001','K002']
+        , 'filters': ['K001','K002','K003']
     },
 
     {
@@ -15929,7 +15994,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
         ],
         'caseStudy': true,
         'explication': 'B\nO Azure Storage Explorer é uma ferramenta gratuita da Microsoft que permite que você trabalhe com dados do Azure Storage no Windows, macOS e Linux. Você pode\nusá-lo para carregar e baixar dados do armazenamento de blobs do Azure.\nCenário:\nAs alterações planejadas incluem: mover os arquivos de blueprint do produto existente para o armazenamento de blobs do Azure.\nOs requisitos técnicos incluem: copiar os arquivos de blueprint para o Azure pela Internet.\nReferência:\nhttps://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/move-data-to-azure-blob-using-azure-storage-explorer\nDistribuição de votos da comunidade\nB (100%)'
-        , 'filters': ['K001','K002']
+        , 'filters': ['K001','K002','K003']
     },
 
     {
@@ -15967,7 +16032,7 @@ https://github.com/MicrosoftDocs/dataexplorer-docs/blob/main/data-explorer/kusto
             Caixa 2: Não -
             Caixa 3: Não`
             ,
-        'filters': ['K001','K002']
+        'filters': ['K001','K002', 'K003']
     },
 
     {
@@ -16509,7 +16574,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
           Caixa 2: 3 3 sub-redes (1 sub-rede para cada camada do App1).
            As camadas podem se comunicar entre si, porque estão dentro da mesma VNET. Claro que você precisaria de NSGs adicionais para restringir o tráfego. Referência: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/n-tier/n-tier-sql-server
         `,
-        'filters': ['K001','K002']
+        'filters': ['K001','K002', 'K003']
     },
 
 
@@ -16537,7 +16602,7 @@ https://docs.microsoft.com/en-us/azure/storage/blobs/storage-blob-storage-tiers 
         'caseStudy': true,
         'explication': 'A\nApenas a sub-rede do servidor Web e de entrada, pois os usuários acessam o front-end da Web usando apenas HTTPS.\nObservação Cenário: você tem um aplicativo público chamado App1. App1 é composto pelas três camadas a seguir:\n✑ Um banco de dados SQL\n✑ Um front-end da web\n✑ Uma camada intermediária de processamento\nCada camada é composta por cinco máquinas virtuais. Os usuários acessam o front-end da web usando apenas HTTPS.\nDistribuição de votos da comunidade\nUm (100%)'
         ,
-        'filters': ['K001','K002']
+        'filters': ['K001','K002','K003']
     },
 
     {
