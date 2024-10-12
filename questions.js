@@ -5460,7 +5460,7 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
 
             https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows https://azure.microsoft.com/en-us/blog/azure-backup-now-supports-storage-accounts-secured-with-azure-storage-firewalls-and-virtual-networks/
         `
-        , 'filters': ['K002', 'GN001']
+        , 'filters': ['K002', 'GN001', 'K003']
     },
 
     {
@@ -10517,7 +10517,78 @@ Respostas corretas: D. Contribuidor de dados do Storage Blob • Motivo: esta fu
         }
         ],
         'explication': 'A\nDistribuição de votos da comunidade\nA (70%) B (29%)'
-    }, {
+    }, 
+
+    {
+        'question': `Questão 6 Tópico 5
+        Você tem uma rede virtual do Azure chamada VNet1 que se conecta à sua rede local usando uma VPN site a site. A VNet1 contém uma sub-rede chamada
+        Sunet1.
+        A sub-rede1 está associada a um grupo de segurança de rede (NSG) chamado NSG1. A sub-rede1 contém um balanceador de carga interno básico chamado ILB1. O ILB1 tem três máquinas virtuais do Azure no pool de backend.
+        Você precisa coletar dados sobre os endereços IP que se conectam ao ILB1. Você deve conseguir executar consultas interativas do portal do Azure em relação aos dados coletados.
+        O que você deve fazer? Para responder, selecione as opções apropriadas na área de resposta.
+`,
+        'number': 17,
+        'page': 11,
+        'studyCase': true,
+
+
+        'answers': [{
+            'text': `Recurso para criar`,
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "Uma Grade de Eventos",
+                    'correct': false
+                }, {
+                    'text': "Um espaço de trabalho de análise",
+                    'correct': true
+                }, {
+                    'text': "Uma conta de armazenamento",
+                    'correct': false
+                },
+            ]
+        },
+
+        {
+            'text': '',
+            'options': [
+                {
+                    text: 'Selecione',
+                    correct: false
+                },
+                {
+                    'text': "ILB1",
+                    'correct': false
+                }, {
+                    'text': "NSG1",
+                    'correct': true
+                }, {
+                    'text': "Uma máquina virtual Azure",
+                    'correct': false
+                },
+            ]
+        }
+        ],
+        'typeQuestion': 'select',
+        'caseStudy': false,
+        'explication': `
+        Comentário:
+        Resposta correta: Caixa 1: Um espaço de trabalho do Azure Log Analytics No portal do Azure, você pode configurar um espaço de trabalho do Log Analytics, que é um ambiente exclusivo do Log Analytics com seu próprio repositório de dados, fontes de dados e soluções.
+         Caixa 2: NSG1 Os logs de fluxo do NSG permitem a visualização de informações sobre o tráfego IP de entrada e saída por meio de um grupo de segurança de rede. Por meio disso, os endereços IP que se conectam ao ILB podem ser monitorados quando os diagnósticos são habilitados em um grupo de segurança de rede. Não podemos habilitar diagnósticos em um balanceador de carga interno para verificar os endereços IP. Quanto ao LB interno, ele é básico. O básico só pode se conectar à conta de armazenamento. Além disso, o LB básico tem apenas logs de atividade, o que não inclui o fluxo de trabalho de conectividade.
+         Portanto, precisamos usar o NSG para atender aos requisitos mencionados.
+            
+	`
+	,
+	filters : [
+		'K003',
+	]
+    },
+    
+    
+    {
         'question': `Questão 7 Tópico 5
             \nVocê tem as redes virtuais do Azure mostradas na tabela a seguir.
             <img src="imagens/squestao7topico5.png" alt="imagem da questão"></img>
